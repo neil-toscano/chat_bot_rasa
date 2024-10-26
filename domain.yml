@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - afirmacion
+  - negacion
+  - animo_bien
+  - animo_mal
+  - bot_challenge
+
+responses:
+  utter_saludo:
+   - text: "¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO. ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:"
+     buttons:
+     - title: "FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL"
+       payload: "/animo_bien"
+     - title: "GESTIÓN DEL RIESGO DE DESASTRES"
+       payload: "/animo_mal"
+     - title: "ORIENTACIÓN Y REGISTRO"
+       payload: "/animo_mal"
+     - title: "REGISTRO CIVIL"
+       payload: "/animo_mal"
+     - title: "OBRAS PRIVADAS Y HABILITACIÓN URBANA"
+       payload: "/animo_mal"
+
+  utter_animo:
+  - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_sirvio_de_ayuda:
+  - text: "¿Te ha ayudado?"
+
+  utter_feliz:
+  - text: "Genial, continua así"
+
+  utter_despedida:
+  - text: "Hasta luego"
+
+  utter_soy_bot:
+  - text: "Soy un bot, entrenado por la MSJL."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
