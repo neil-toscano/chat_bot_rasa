@@ -8,15 +8,19 @@ intents:
   - animo_bien
   - animo_mal
   - bot_challenge
+  - item2
+  - gestion_info
+  - gestion_necesidad
+  - gestion_costo
 
 responses:
   utter_saludo:
    - text: "¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO. ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:"
      buttons:
      - title: "FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL"
-       payload: "/animo_bien"
-     - title: "GESTIÓN DEL RIESGO DE DESASTRES"
        payload: "/animo_mal"
+     - title: "GESTIÓN DEL RIESGO DE DESASTRES"
+       payload: "/item2"
      - title: "ORIENTACIÓN Y REGISTRO"
        payload: "/animo_mal"
      - title: "REGISTRO CIVIL"
@@ -38,7 +42,43 @@ responses:
   - text: "Hasta luego"
 
   utter_soy_bot:
-  - text: "Soy un bot, entrenado por la MSJL."
+  - text: "Soy un bot, entrenado por la Municipalidad de San Juan de Lurigancho."
+
+  # 2. GESTIÓN DE RIESGO DE DESASTRES :
+  utter_item2:
+  - text: "Bienvenido al área de GESTIÓN DEL RIESGO DE DESASTRES ..."
+    buttons:
+    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO BAJO"
+      payload: "/animo_mal"
+    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO BAJO"
+      payload: "/animo_mal"
+    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MEDIO"
+      payload: "/animo_mal"
+    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MEDIO"
+      payload: "/animo_mal"
+    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO ALTO"
+      payload: "/animo_mal"
+    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO ALTO"
+      payload: "/animo_mal"
+    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MUY ALTO"
+      payload: "/animo_mal"
+    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MUY ALTO"
+      payload: "/animo_mal"
+    - title: "EVALUACIÓN DE CONDICIONES DE SEGURIDAD EN ESPECTÁCULOS PÚBLICOS DEPORTIVOS Y NO DEPORTIVOS (ECSE) CON UNA CONCURRENCIA DE HASTA 3,000 PERSONAS"
+      payload: "animo_mal"
+    - title: "DUPLICADO DEL CERTIFICADO DE INSPECCIÓN TECNICA DE SEGURIDAD EN EDIFICACIONES"
+      payload: "/animo_mal"
+    - title: "Volver al módulo anterior..."
+      payload: "/saludo"
+
+  utter_obtener_gestion_info:
+  - text: "Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo."
+
+  utter_obtener_gestion_necesidad:
+  - text: "Solicitud de ITSE, indicando número y fecha de pago"
+
+  utter_obtener_gestion_costo:
+  - text: "S/ 138.50"
 
 session_config:
   session_expiration_time: 60

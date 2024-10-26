@@ -28,3 +28,29 @@ stories:
   - action: utter_sirvio_de_ayuda
   - intent: negacion
   - action: utter_despedida
+
+- story: Selección de Gestión del Riesgo de Desastres
+  steps:
+    - intent: item2
+    - action: utter_item2
+
+# -----------------------------------------------------------------------------------------------------------------------
+# 2. GESTIÓN DE RIESGO DE DESASTRES :
+# 2.1 :
+
+- story: Información del item
+  steps:
+  - intent: gestion_info
+  - action: utter_obtener_gestion_info
+
+- story: Necesidades del item
+  steps:
+  - intent: gestion_necesidad
+  - action: utter_obtener_gestion_necesidad
+
+- story: Costo del item
+  steps:
+  - intent: gestion_costo
+  - action: utter_obtener_gestion_costo
+
+# -----------------------------------------------------------------------------------------------------------------------
