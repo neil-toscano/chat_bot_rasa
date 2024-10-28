@@ -17,17 +17,22 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
    git clone url...
    cd nombre-del-repositorio
 
-3. Entrena el modelo
+3. Correr el script de Python
+
+   ```bash
+   py scripts/
+
+4. Entrena el modelo
    
    ```bash
    rasa train
 
-4. Ejecuta el modelo
+5. Ejecuta el modelo
 
     ```bash
     rasa run
 
-5. Interactua con el modelo
+6. Interactua con el modelo
 
     ```bash
     rasa shell

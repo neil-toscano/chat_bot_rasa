@@ -1,85 +1,205 @@
-version: "3.1"
-
+actions: []
+e2e_actions: []
+entities: []
+forms: {}
 intents:
-  - saludo
-  - despedida
-  - afirmacion
-  - negacion
-  - animo_bien
-  - animo_mal
-  - bot_challenge
-  - item2
-  - gestion_info
-  - gestion_necesidad
-  - gestion_costo
-
+- formalizacion
+- pregunta_costo
+- afirmacion
+- gestion
+- animo_mal
+- saludo
+- reto_bot
+- animo_bien
+- negacion
+- seleccionar_opcion
+- pregunta_consulta
+- pregunta_necesidad
+- obras
+- despedida
+- orientacion
+- registro
 responses:
-  utter_saludo:
-   - text: "¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO. ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:"
-     buttons:
-     - title: "FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL"
-       payload: "/animo_mal"
-     - title: "GESTIÓN DEL RIESGO DE DESASTRES"
-       payload: "/item2"
-     - title: "ORIENTACIÓN Y REGISTRO"
-       payload: "/animo_mal"
-     - title: "REGISTRO CIVIL"
-       payload: "/animo_mal"
-     - title: "OBRAS PRIVADAS Y HABILITACIÓN URBANA"
-       payload: "/animo_mal"
-
   utter_animo:
-  - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_sirvio_de_ayuda:
-  - text: "¿Te ha ayudado?"
-
-  utter_feliz:
-  - text: "Genial, continua así"
-
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Siento escuchar eso, aquí hay algo que te va dar ánimo
   utter_despedida:
-  - text: "Hasta luego"
-
+  - text: Hasta luego
+  utter_feliz:
+  - text: Genial, continua así
+  utter_formalizacion:
+  - buttons:
+    - payload: '/seleccionar_opcion{''opcion'': ''formalizacion_item01''}'
+      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
+        RIESGO BAJO (Con ITSE posterior)
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item02"}'
+      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
+        RIESGO MEDIO (Con ITSE posterior)
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item03"}'
+      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
+        RIESGO ALTO (Con ITSE posterior)
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item04"}'
+      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
+        RIESGO MUY ALTO (Con ITSE posterior)
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item05"}'
+      title: TRANSFERENCIA DE LICENCIA DE FUNCIONAMIENTO O CAMBIO DE DENOMINACIÓN
+        O NOMBRE COMERCIAL DE LA PERSONA JURÍDICA
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item06"}'
+      title: LICENCIA DE FUNCIONAMIENTO PARA CAMBIO DE GIRO
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item07"}'
+      title: 'AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS
+        - TIPO: AFICHE Y PLANCHETA PUBLICITARIA. EN BIENES DE DOMINIO PRIVADO'
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item08"}'
+      title: 'AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS
+        - TIPO: LETRAS RECORTADAS, LETRERO, PLACA, Y TOLDO. EN BIENES DE DOMINIO PRIVADO.
+        VINCULADO A LICENCIA DE FUNCIONAMIENTO'
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item09"}'
+      title: DUPLICADO DEL CERTIFICADO DE LICENCIA DE FUNCIONAMIENTO
+    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item10"}'
+      title: DUPLICADO DE LA RESOLUCIÓN DE AUTORIZACIÓN PARA LA UBICACIÓN DEL ELEMENTO
+        DE PUBLICIDAD EXTERIOR
+    - payload: /saludo
+      title: Volver al módulo anterior...
+    text: Bienvenido(a) al área de FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL...
+  utter_gestion:
+  - buttons:
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item01"}'
+      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO
+        DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON
+        NIVEL DE RIESGO BAJO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item02"}'
+      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
+        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
+        BAJO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item03"}'
+      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO
+        DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON
+        NIVEL DE RIESGO MEDIO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item04"}'
+      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
+        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
+        MEDIO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item05"}'
+      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE
+        ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL
+        DE RIESGO ALTO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item06"}'
+      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
+        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
+        ALTO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item07"}'
+      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE
+        ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL
+        DE RIESGO MUY ALTO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item08"}'
+      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
+        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
+        MUY ALTO
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item09"}'
+      title: EVALUACIÓN DE CONDICIONES DE SEGURIDAD EN ESPECTÁCULOS PÚBLICOS DEPORTIVOS
+        Y NO DEPORTIVOS (ECSE) CON UNA CONCURRENCIA DE HASTA 3,000 PERSONAS
+    - payload: '/seleccionar_opcion{"opcion": "gestion_item10"}'
+      title: DUPLICADO DEL CERTIFICADO DE INSPECCIÓN TECNICA DE SEGURIDAD EN EDIFICACIONES
+    - payload: /saludo
+      title: Volver al módulo anterior...
+    text: Bienvenido(a) al área de GESTIÓN DEL RIESGO DE DESASTRES...
+  utter_obras:
+  - buttons:
+    - payload: '/seleccionar_opcion{"opcion": "obras_item01"}'
+      title: CERTIFICADO DE PARÁMETROS URBANÍSTICOS Y EDIFICATORIOS
+    - payload: '/seleccionar_opcion{"opcion": "obras_item02"}'
+      title: VISACIÓN DE PLANOS PARA TRÁMITES DE PRESCRIPCIÓN ADQUISITIVA DE DOMINIO,
+        TÍTULO SUPLETORIO Y RECTIFICACIÓN DE LINDEROS Y ÁREAS (Para predios urbanos)
+    - payload: '/seleccionar_opcion{"opcion": "obras_item03"}'
+      title: 'LICENCIA DE EDIFICACIÓN MODALIDAD A: APROBACIÓN AUTOMÁTICA CON FIRMA
+        DE PROFESIONALES - CONSTRUCCIÓN DE UNA VIVIENDA UNIFAMILIAR DE HASTA 120 M2
+        CONSTRUIDOS, SIEMPRE QUE CONSTITUYA LA ÚNICA EDIFICACIÓN EN EL LOTE '
+    - payload: '/seleccionar_opcion{"opcion": "obras_item04"}'
+      title: 'LICENCIA DE EDIFICACIÓN MODALIDAD A: APROBACIÓN AUTOMÁTICA CON FIRMA
+        DE PROFESIONALES - DEMOLICIÓN TOTAL DE EDIFICACIONES DE HASTA TRES (03) PISOS
+        DE ALTURA, QUE NO CUENTEN CON SEMISÓTANOS Y SÓTANOS, SIEMPRE QUE NO HAGA USO
+        DE EXPLOSIVOS'
+    - payload: '/seleccionar_opcion{"opcion": "obras_item05"}'
+      title: INSCRIPCIÓN POR COMPRA-VENTA
+    - payload: '/seleccionar_opcion{"opcion": "obras_item06"}'
+      title: INSCRIPCIÓN DE UNA INDEPENDIZACIÓN O SUBDIVISIÓN DE LOTES
+    - payload: /saludo
+      title: Volver al módulo anterior...
+    text: Bienvenido(a) al área de OBRAS PRIVADAS Y HABILITACIÓN URBANA...
+  utter_opciones_preguntas:
+  - buttons:
+    - payload: /pregunta_consulta
+      title: ¿Qué es?
+    - payload: /pregunta_necesidad
+      title: ¿Qué necesito?
+    - payload: /pregunta_costo
+      title: ¿Cuánto cuesta el derecho de trámite?
+    text: Has seleccionado {opcion}. ¿En qué puedo ayudarte?
+  utter_orientacion:
+  - buttons:
+    - payload: '/seleccionar_opcion{"opcion": "orientacion_item01"}'
+      title: INSCRIPCIÓN POR SUCESIÓN INDIVISA
+    - payload: '/seleccionar_opcion{"opcion": "orientacion_item02"}'
+      title: INSCRIPCIÓN POR SUCESIÓN INTESTADA
+    - payload: /saludo
+      title: Volver al módulo anterior...
+    text: Bienvenido(a) al área de ORIENTACIÓN Y REGISTRO...
+  utter_registro:
+  - buttons:
+    - payload: '/seleccionar_opcion{"opcion": "registro_item01"}'
+      title: MATRIMONIO CIVIL
+    - payload: '/seleccionar_opcion{"opcion": "registro_item02"}'
+      title: PUBLICACIÓN DE EDICTO MATRIMONIAL TRAMITADO EN OTROS DISTRITOS
+    - payload: '/seleccionar_opcion{"opcion": "registro_item03"}'
+      title: REPROGRAMACIÓN DE FECHA Y HORA DE CEREMONIA MATRIMONIAL
+    - payload: '/seleccionar_opcion{"opcion": "registro_item04"}'
+      title: 'SEPARACIÓN CONVENCIONAL Y DIVORCIO ULTERIOR: SEPARACIÓN CONVENCIONAL'
+    - payload: /saludo
+      title: Volver al módulo anterior...
+    text: Bienvenido(a) al área de REGISTRO CIVIL...
+  utter_respuesta_consulta:
+  - text: '{opcion}: {consulta}'
+  utter_respuesta_costo:
+  - text: '{opcion}: {costo}'
+  utter_respuesta_necesidad:
+  - text: '{opcion}: {necesidad}'
+  utter_saludo:
+  - buttons:
+    - payload: /formalizacion
+      title: FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
+    - payload: /gestion
+      title: GESTIÓN DEL RIESGO DE DESASTRES
+    - payload: /orientacion
+      title: ORIENTACIÓN Y REGISTRO
+    - payload: /registro
+      title: REGISTRO CIVIL
+    - payload: /obras
+      title: OBRAS PRIVADAS Y HABILITACIÓN URBANA
+    text: '¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN
+      DE LURIGANCHO. ¿Sobre qué área te gustaría obtener información? Por favor, elige
+      una de las siguientes opciones:'
+  utter_sirvio_de_ayuda:
+  - text: ¿Te ha ayudado?
   utter_soy_bot:
-  - text: "Soy un bot, entrenado por la Municipalidad de San Juan de Lurigancho."
-
-  # 2. GESTIÓN DE RIESGO DE DESASTRES :
-  utter_item2:
-  - text: "Bienvenido al área de GESTIÓN DEL RIESGO DE DESASTRES ..."
-    buttons:
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO BAJO"
-      payload: "/animo_mal"
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO BAJO"
-      payload: "/animo_mal"
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MEDIO"
-      payload: "/animo_mal"
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MEDIO"
-      payload: "/animo_mal"
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO ALTO"
-      payload: "/animo_mal"
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO ALTO"
-      payload: "/animo_mal"
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MUY ALTO"
-      payload: "/animo_mal"
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MUY ALTO"
-      payload: "/animo_mal"
-    - title: "EVALUACIÓN DE CONDICIONES DE SEGURIDAD EN ESPECTÁCULOS PÚBLICOS DEPORTIVOS Y NO DEPORTIVOS (ECSE) CON UNA CONCURRENCIA DE HASTA 3,000 PERSONAS"
-      payload: "animo_mal"
-    - title: "DUPLICADO DEL CERTIFICADO DE INSPECCIÓN TECNICA DE SEGURIDAD EN EDIFICACIONES"
-      payload: "/animo_mal"
-    - title: "Volver al módulo anterior..."
-      payload: "/saludo"
-
-  utter_obtener_gestion_info:
-  - text: "Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo."
-
-  utter_obtener_gestion_necesidad:
-  - text: "Solicitud de ITSE, indicando número y fecha de pago"
-
-  utter_obtener_gestion_costo:
-  - text: "S/ 138.50"
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - text: Soy un bot, entrenado por la Municipalidad de San Juan de Lurigancho.
+slots:
+  opcion:
+    influence_conversation: false
+    mappings:
+    - intent: seleccionar_opcion
+      type: from_intent
+      value: formalizacion_item01
+    - intent: seleccionar_opcion
+      type: from_intent
+      value: gestion_item01
+    - intent: seleccionar_opcion
+      type: from_intent
+      value: orientacion_item01
+    - intent: seleccionar_opcion
+      type: from_intent
+      value: registro_item01
+    - intent: seleccionar_opcion
+      type: from_intent
+      value: obras_item01
+    type: categorical
+version: '3.1'

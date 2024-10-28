@@ -29,28 +29,27 @@ stories:
   - intent: negacion
   - action: utter_despedida
 
-- story: Selección de Gestión del Riesgo de Desastres
+- story: Selección de FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
   steps:
-    - intent: item2
-    - action: utter_item2
+  - intent: formalizacion
+  - action: utter_formalizacion
 
-# -----------------------------------------------------------------------------------------------------------------------
-# 2. GESTIÓN DE RIESGO DE DESASTRES :
-# 2.1 :
-
-- story: Información del item
+- story: Selección de GESTIÓN DEL RIESGO DE DESASTRES
   steps:
-  - intent: gestion_info
-  - action: utter_obtener_gestion_info
+    - intent: gestion
+    - action: utter_gestion
 
-- story: Necesidades del item
+- story: Selección de ORIENTACIÓN Y REGISTRO
   steps:
-  - intent: gestion_necesidad
-  - action: utter_obtener_gestion_necesidad
+  - intent: orientacion
+  - action: utter_orientacion
 
-- story: Costo del item
+- story: Selección de REGISTRO CIVIL
   steps:
-  - intent: gestion_costo
-  - action: utter_obtener_gestion_costo
+  - intent: registro
+  - action: utter_registro
 
-# -----------------------------------------------------------------------------------------------------------------------
+- story: Selección de OBRAS PRIVADAS Y HABILITACIÓN URBANA
+  steps:
+  - intent: obras
+  - action: utter_obras

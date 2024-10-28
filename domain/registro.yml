@@ -1,0 +1,18 @@
+version: "3.1"
+
+responses:
+  
+  # 4. REGISTRO CIVIL :
+  utter_registro:
+  - text: "Bienvenido(a) al área de REGISTRO CIVIL..."
+    buttons:
+    - title: "MATRIMONIO CIVIL"
+      payload: '/seleccionar_opcion{"opcion": "registro_item01"}'
+    - title: "PUBLICACIÓN DE EDICTO MATRIMONIAL TRAMITADO EN OTROS DISTRITOS"
+      payload: '/seleccionar_opcion{"opcion": "registro_item02"}'
+    - title: "REPROGRAMACIÓN DE FECHA Y HORA DE CEREMONIA MATRIMONIAL"
+      payload: '/seleccionar_opcion{"opcion": "registro_item03"}'
+    - title: "SEPARACIÓN CONVENCIONAL Y DIVORCIO ULTERIOR: SEPARACIÓN CONVENCIONAL"
+      payload: '/seleccionar_opcion{"opcion": "registro_item04"}'
+    - title: "Volver al módulo anterior..."
+      payload: "/saludo"

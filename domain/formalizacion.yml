@@ -1,0 +1,30 @@
+version: "3.1"
+
+responses:
+
+  # 1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+  utter_formalizacion:
+  - text: "Bienvenido(a) al área de FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL..."
+    buttons:
+    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO BAJO (Con ITSE posterior)"
+      payload: "/seleccionar_opcion{'opcion': 'formalizacion_item01'}"
+    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO MEDIO (Con ITSE posterior)"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item02"}'
+    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO ALTO (Con ITSE posterior)"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item03"}'
+    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO MUY ALTO (Con ITSE posterior)"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item04"}'
+    - title: "TRANSFERENCIA DE LICENCIA DE FUNCIONAMIENTO O CAMBIO DE DENOMINACIÓN O NOMBRE COMERCIAL DE LA PERSONA JURÍDICA"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item05"}'
+    - title: "LICENCIA DE FUNCIONAMIENTO PARA CAMBIO DE GIRO"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item06"}'
+    - title: "AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS - TIPO: AFICHE Y PLANCHETA PUBLICITARIA. EN BIENES DE DOMINIO PRIVADO"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item07"}'
+    - title: "AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS - TIPO: LETRAS RECORTADAS, LETRERO, PLACA, Y TOLDO. EN BIENES DE DOMINIO PRIVADO. VINCULADO A LICENCIA DE FUNCIONAMIENTO"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item08"}'
+    - title: "DUPLICADO DEL CERTIFICADO DE LICENCIA DE FUNCIONAMIENTO"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item09"}'
+    - title: "DUPLICADO DE LA RESOLUCIÓN DE AUTORIZACIÓN PARA LA UBICACIÓN DEL ELEMENTO DE PUBLICIDAD EXTERIOR"
+      payload: '/seleccionar_opcion{"opcion": "formalizacion_item10"}'
+    - title: "Volver al módulo anterior..."
+      payload: "/saludo"

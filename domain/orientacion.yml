@@ -1,0 +1,14 @@
+version: "3.1"
+
+responses:
+
+  # 3. ORIENTACIÓN Y REGISTRO :
+  utter_orientacion:
+  - text: "Bienvenido(a) al área de ORIENTACIÓN Y REGISTRO..."
+    buttons:
+    - title: "INSCRIPCIÓN POR SUCESIÓN INDIVISA"
+      payload: '/seleccionar_opcion{"opcion": "orientacion_item01"}'
+    - title: "INSCRIPCIÓN POR SUCESIÓN INTESTADA"
+      payload: '/seleccionar_opcion{"opcion": "orientacion_item02"}'
+    - title: "Volver al módulo anterior..."
+      payload: "/saludo"
