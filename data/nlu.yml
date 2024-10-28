@@ -84,3 +84,36 @@ nlu:
     - ¿eres humano?
     - ¿estoy hablando con un bot?
     - ¿estoy hablando con un humano?
+
+# FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
+
+# ===========*==============
+- intent: formalizacion_promocion_empresarial
+  examples: |
+    - Quiero hablar sobre formalización y promoción empresarial
+    - hablemos sobre formalización
+    - Formalización
+    - Promoción empresarial
+# ==========**=======================
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  examples: |
+    - Funcionamiento para edificaciones
+    - Licencia de funcionamiento para edificaciones
+    - Edificaciones calificadas con nivel de riesgo bajo
+# =================***===============
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo bajo
+
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo bajo
+
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# GESTIÓN DEL RIESGO DE DESASTRES

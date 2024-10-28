@@ -31,3 +31,8 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
     ```bash
     rasa shell
+
+6. Abilitar Endpoint rasa
+
+   ```bash
+   rasa run --enable-api --cors "*"  

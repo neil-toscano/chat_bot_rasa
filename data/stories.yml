@@ -28,3 +28,35 @@ stories:
   - action: utter_sirvio_de_ayuda
   - intent: negacion
   - action: utter_despedida
+
+# INCIO
+
+# FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
+- story: formalizacion y promocion empresarial
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: formalizacion_promocion_empresarial
+  - action: utter_formalizacion_promocion_empresarial
+
+- story: licencia funcionamiento riesgo bajo
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+
+
+- story: licencia funcionamiento riego bajo que es
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+
+
+- story: licencia funcionamiento riesgo bajo que necesito
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+
+- story: licencia funcionamiento riesgo bajo que cuanto cuesta
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
