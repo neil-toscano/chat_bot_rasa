@@ -16,9 +16,6 @@ def consolidate_domain_files():
 
     yaml_directory = 'domain'  # Carpeta de domain modularizado
 
-    with open('domain.yml', 'w', encoding='utf-8') as outfile:
-        outfile.write("")  # Borra el contenido anterior
-
     for root, dirs, files in os.walk(yaml_directory):
         for filename in files:
             if filename.endswith('.yml'):
@@ -43,9 +40,6 @@ def consolidate_nlu_files():
     consolidated_data = {"version": "3.1", "nlu": []}
     yaml_directory = 'nlu'  # Carpeta de nlu modularizado
 
-    with open('data/nlu.yml', 'w', encoding='utf-8') as outfile:
-        outfile.write("")  # Borra el contenido anterior
-
     for root, dirs, files in os.walk(yaml_directory):
         for filename in files:
             if filename.endswith('.yml'):
@@ -53,7 +47,12 @@ def consolidate_nlu_files():
                 with open(file_path, 'r', encoding='utf-8') as file:
                     data = yaml.safe_load(file)
                     if data and "nlu" in data:
-                        consolidated_data["nlu"].extend(data["nlu"])
+                        for intent in data["nlu"]:
+                            intent_data = {
+                                "intent": intent["intent"],
+                                "examples": "\n".join([f"- {ex.strip()}" for ex in intent["examples"].split('\n') if ex.strip()])
+                            }
+                            consolidated_data["nlu"].append(intent_data)
 
     with open('data/nlu.yml', 'w', encoding='utf-8') as outfile:
         yaml.dump(consolidated_data, outfile, default_flow_style=False, allow_unicode=True)
@@ -62,9 +61,6 @@ def consolidate_nlu_files():
 def consolidate_stories_files():
     consolidated_data = {"version": "3.1", "stories": []}
     yaml_directory = 'stories'  # Carpeta de stories modularizado
-
-    with open('data/stories.yml', 'w', encoding='utf-8') as outfile:
-        outfile.write("")  # Borra el contenido anterior
 
     for root, dirs, files in os.walk(yaml_directory):
         for filename in files:
@@ -82,4 +78,4 @@ if __name__ == "__main__":
     consolidate_domain_files()
     consolidate_nlu_files()
     consolidate_stories_files()
-    print("Consolidación completada para domain.yml, nlu.yml, y stories.yml")
+    print("Consolidación completada para domain.yml, data/nlu.yml, y data/stories.yml")

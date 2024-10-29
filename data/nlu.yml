@@ -1,655 +1,585 @@
 nlu:
-- examples: '- Quiero hablar sobre formalización y promoción empresarial
+- examples: '- - Quiero hablar sobre formalización y promoción empresarial
 
-    - hablemos sobre formalización
+    - - hablemos sobre formalización
 
-    - Formalización
+    - - Formalización
 
-    - Promoción empresarial'
+    - - Promoción empresarial'
   intent: formalizacion_promocion_empresarial
-- examples: '- Quiero hablar sobre gestión del riesgo de desastres
+- examples: '- - Quiero hablar sobre gestión del riesgo de desastres
 
-    - hablemos sobre gestión
+    - - hablemos sobre gestión
 
-    - Gestión
+    - - Gestión
 
-    - Riesgo de desastres
+    - - Riesgo de desastres
 
-    - desastres'
+    - - desastres'
   intent: gestion
-- examples: '- hola
+- examples: '- - hola
 
-    - qué tal
+    - - qué tal
 
-    - buenos días
+    - - buenos días
 
-    - buenas tardes
+    - - buenas tardes
 
-    - buenas noches
+    - - buenas noches
 
-    - hola, ¿cómo estás?
+    - - hola, ¿cómo estás?
 
-    - ¿qué onda?
+    - - ¿qué onda?
 
-    - hola a todos
+    - - hola a todos
 
-    - cómo andas
+    - - cómo andas
 
-    - qué hay
+    - - qué hay
 
-    - hey
+    - - hey
 
-    - qué pasa
+    - - qué pasa
 
-    - saludos
+    - - saludos
 
-    - hola amigo
+    - - hola amigo
 
-    - hola, buenas
-
-    '
+    - - hola, buenas'
   intent: saludo
-- examples: '- adiós
+- examples: '- - adiós
 
-    - nos vemos
+    - - nos vemos
 
-    - hasta luego
+    - - hasta luego
 
-    - que tengas un buen día
+    - - que tengas un buen día
 
-    - buenas noches
+    - - buenas noches
 
-    - chau
+    - - chau
 
-    - hasta la próxima
+    - - hasta la próxima
 
-    - cuídate
+    - - cuídate
 
-    - nos vemos luego
-
-    '
+    - - nos vemos luego'
   intent: despedida
-- examples: '- sí
+- examples: '- - sí
 
-    - claro
+    - - claro
 
-    - por supuesto
+    - - por supuesto
 
-    - correcto
+    - - correcto
 
-    - eso suena bien
+    - - eso suena bien
 
-    - exacto
-
-    '
+    - - exacto'
   intent: afirmacion
-- examples: '- no
+- examples: '- - no
 
-    - nunca
+    - - nunca
 
-    - no me gusta eso
+    - - no me gusta eso
 
-    - de ninguna manera
+    - - de ninguna manera
 
-    - no lo creo
+    - - no lo creo
 
-    - no es así
-
-    '
+    - - no es así'
   intent: negacion
-- examples: '- perfecto
+- examples: '- - perfecto
 
-    - genial
+    - - genial
 
-    - increíble
+    - - increíble
 
-    - me siento como un rey
+    - - me siento como un rey
 
-    - maravilloso
+    - - maravilloso
 
-    - me siento muy bien
+    - - me siento muy bien
 
-    - estoy genial
+    - - estoy genial
 
-    - estoy increíble
+    - - estoy increíble
 
-    - voy a salvar el mundo
+    - - voy a salvar el mundo
 
-    - súper feliz
+    - - súper feliz
 
-    - extremadamente bien
+    - - extremadamente bien
 
-    - tan perfecto
+    - - tan perfecto
 
-    - todo bien
-
-    '
+    - - todo bien'
   intent: animo_bien
-- examples: '- mi día fue horrible
+- examples: '- - mi día fue horrible
 
-    - estoy triste
+    - - estoy triste
 
-    - no me siento muy bien
+    - - no me siento muy bien
 
-    - estoy decepcionado
+    - - estoy decepcionado
 
-    - súper triste
+    - - súper triste
 
-    - muy triste
+    - - muy triste
 
-    - infeliz
+    - - infeliz
 
-    - no estoy bien
+    - - no estoy bien
 
-    - extremadamente triste
+    - - extremadamente triste
 
-    - tan triste
-
-    '
+    - - tan triste'
   intent: animo_mal
-- examples: '- ¿eres un bot?
+- examples: '- - ¿eres un bot?
 
-    - ¿eres humano?
+    - - ¿eres humano?
 
-    - ¿estoy hablando con un bot?
+    - - ¿estoy hablando con un bot?
 
-    - ¿estoy hablando con un humano?'
+    - - ¿estoy hablando con un humano?'
   intent: reto_bot
-- examples: '- Quiero hablar sobre obras privadas y habilitación urbana
+- examples: '- - Quiero hablar sobre obras privadas y habilitación urbana
 
-    - hablemos sobre obras privadas
+    - - hablemos sobre obras privadas
 
-    - hablemos sobre habilitación urbana
+    - - hablemos sobre habilitación urbana
 
-    - Obras privadas
+    - - Obras privadas
 
-    - Habilitación urbana
+    - - Habilitación urbana
 
-    - quiero saber acerca de obras privadas'
+    - - quiero saber acerca de obras privadas'
   intent: obras
-- examples: '- Quiero hablar sobre orientación y registro
+- examples: '- - Quiero hablar sobre orientación y registro
 
-    - hablemos sobre orientación
+    - - hablemos sobre orientación
 
-    - Orientación y registro
+    - - Orientación y registro
 
-    - orientacion
+    - - orientacion
 
-    - Háblame más de orientación'
+    - - Háblame más de orientación'
   intent: orientacion
-- examples: '- Quiero hablar sobre registro civil
+- examples: '- - Quiero hablar sobre registro civil
 
-    - hablemos sobre registro civil
+    - - hablemos sobre registro civil
 
-    - Registro civil
+    - - Registro civil
 
-    - Civil
+    - - Civil
 
-    - dime acerca de registro civil'
+    - - dime acerca de registro civil'
   intent: registro
-- examples: '- Funcionamiento para edificaciones
+- examples: '- - Funcionamiento para edificaciones
 
-    - Licencia de funcionamiento para edificaciones
+    - - Licencia de funcionamiento para edificaciones
 
-    - Edificaciones calificadas con nivel de riesgo bajo
-
-    '
+    - - Edificaciones calificadas con nivel de riesgo bajo'
   intent: licencia_funcionamiento_edificacion_riesgo_bajo
-- examples: '- Qué es la licencia de funcionamiento para edificaciones
+- examples: '- - Qué es la licencia de funcionamiento para edificaciones
 
-    - Qué es la licencia de funcionamiento para edificaciones de riesgo bajo
-
-    '
+    - - Qué es la licencia de funcionamiento para edificaciones de riesgo bajo'
   intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
-- examples: '- Qué necesito para la licencia de funcionamiento para edificaciones
+- examples: '- - Qué necesito para la licencia de funcionamiento para edificaciones
 
-    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo
-    bajo
-
-    '
+    - - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo
+    bajo'
   intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
-- examples: '- Cuánto cuesta la licencia de funcionamiento para edificaciones
+- examples: '- - Cuánto cuesta la licencia de funcionamiento para edificaciones
 
-    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo'
+    - - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo'
   intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
-- examples: '- Inspección Técnica de Seguridad en edificaciones posterior al inicio
+- examples: '- - Inspección Técnica de Seguridad en edificaciones posterior al inicio
     de actividades para establecimientos objeto de inspección clasificados con Nivel
     de Riesgo Bajo
 
-    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
 
-    - Inspección Técnica Seguridad Riesgo Bajo
+    - - Inspección Técnica Seguridad Riesgo Bajo
 
-    - Inspección Técnica Riesgo Bajo
-
-    '
+    - - Inspección Técnica Riesgo Bajo'
   intent: gestion_item01
-- examples: '- Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
+- examples: '- - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
     Riesgo Bajo
 
-    - Qué es la Inspección Técnica Seguridad Riesgo Bajo
+    - - Qué es la Inspección Técnica Seguridad Riesgo Bajo
 
-    - En que consiste la Inspección Técnica Seguridad Riesgo Bajo
-
-    '
+    - - En que consiste la Inspección Técnica Seguridad Riesgo Bajo'
   intent: gestion_item01_consulta
-- examples: '- Qué necesito para la Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Qué necesito para la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Bajo
 
-    - Qué necesito para la Inspección Técnica Seguridad Riesgo Bajo
+    - - Qué necesito para la Inspección Técnica Seguridad Riesgo Bajo
 
-    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Bajo
-
-    '
+    - - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Bajo'
   intent: gestion_item01_necesidad
-- examples: '- Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de
-    Nivel Riesgo Bajo
-
-    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Bajo
-
-    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Bajo
-
-    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Bajo'
-  intent: gestion_item01_costo
-- examples: '- Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
-    para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
-
-    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Bajo
 
-    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
+    - - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Bajo
+
+    - - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Bajo
+
+    - - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Bajo'
+  intent: gestion_item01_costo
+- examples: '- - Renovación del Certificado de Inspección Técnica de Seguridad en
+    edificaciones para establecimientos objeto de inspección clasificados con Nivel
+    de Riesgo Bajo
+
+    - - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+    de Nivel Riesgo Bajo
+
+    - - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
     Bajo
 
-    - Renovación de Inspección Técnica Riesgo Bajo
+    - - Renovación de Inspección Técnica Riesgo Bajo
 
-    - Renovación Riesgo Bajo
-
-    '
+    - - Renovación Riesgo Bajo'
   intent: gestion_item02
-- examples: '- Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
+- examples: '- - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
     en edificaciones de Nivel Riesgo Bajo
 
-    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
-
-    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Bajo
-
-    - Qué es la Renovación de Inspección Técnica Riesgo Bajo
-
-    - Qué es la Renovación Riesgo Bajo
-
-    '
-  intent: gestion_item02_consulta
-- examples: '- Qué necesito para la Renovación del Certificado de Inspección Técnica
-    de Seguridad en edificaciones de Nivel Riesgo Bajo
-
-    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Bajo
-
-    - Qué necesito para la Renovación Inspección Técnica Riesgo Bajo
-
-    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Bajo
-
-    '
-  intent: gestion_item02_necesidad
-- examples: '- Cuánto cuesta la Renovación del Certificado de Inspección Técnica de
-    Seguridad en edificaciones de Nivel Riesgo Bajo
-
-    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
+    - - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
     Bajo
 
-    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Bajo
+    - - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Bajo
 
-    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Bajo'
+    - - Qué es la Renovación de Inspección Técnica Riesgo Bajo
+
+    - - Qué es la Renovación Riesgo Bajo'
+  intent: gestion_item02_consulta
+- examples: '- - Qué necesito para la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Bajo
+
+    - - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Bajo
+
+    - - Qué necesito para la Renovación Inspección Técnica Riesgo Bajo
+
+    - - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Bajo'
+  intent: gestion_item02_necesidad
+- examples: '- - Cuánto cuesta la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Bajo
+
+    - - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Bajo
+
+    - - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Bajo
+
+    - - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Bajo'
   intent: gestion_item02_costo
-- examples: '- Inspección Técnica de Seguridad en edificaciones posterior al inicio
+- examples: '- - Inspección Técnica de Seguridad en edificaciones posterior al inicio
     de actividades para establecimientos objeto de inspección clasificados con Nivel
     de Riesgo Medio
 
-    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
 
-    - Inspección Técnica Seguridad Riesgo Medio
+    - - Inspección Técnica Seguridad Riesgo Medio
 
-    - Inspección Técnica Riesgo Medio
-
-    '
+    - - Inspección Técnica Riesgo Medio'
   intent: gestion_item03
-- examples: '- Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
+- examples: '- - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
     Riesgo Medio
 
-    - Qué es la Inspección Técnica Seguridad Riesgo Medio
+    - - Qué es la Inspección Técnica Seguridad Riesgo Medio
 
-    - En que consiste la Inspección Técnica Seguridad Riesgo Medio
-
-    '
+    - - En que consiste la Inspección Técnica Seguridad Riesgo Medio'
   intent: gestion_item03_consulta
-- examples: '- Qué necesito para la Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Qué necesito para la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Medio
 
-    - Qué necesito para la Inspección Técnica Seguridad Riesgo Medio
+    - - Qué necesito para la Inspección Técnica Seguridad Riesgo Medio
 
-    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Medio
-
-    '
+    - - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Medio'
   intent: gestion_item03_necesidad
-- examples: '- Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de
-    Nivel Riesgo Medio
-
-    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Medio
-
-    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Medio
-
-    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Medio'
-  intent: gestion_item03_costo
-- examples: '- Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
-    para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
-
-    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Medio
 
-    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
+    - - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Medio
+
+    - - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Medio
+
+    - - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Medio'
+  intent: gestion_item03_costo
+- examples: '- - Renovación del Certificado de Inspección Técnica de Seguridad en
+    edificaciones para establecimientos objeto de inspección clasificados con Nivel
+    de Riesgo Medio
+
+    - - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+    de Nivel Riesgo Medio
+
+    - - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
     Medio
 
-    - Renovación de Inspección Técnica Riesgo Medio
+    - - Renovación de Inspección Técnica Riesgo Medio
 
-    - Renovación Riesgo Bajo
-
-    '
+    - - Renovación Riesgo Bajo'
   intent: gestion_item04
-- examples: '- Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
+- examples: '- - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
     en edificaciones de Nivel Riesgo Medio
 
-    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
-
-    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Medio
-
-    - Qué es la Renovación de Inspección Técnica Riesgo Medio
-
-    - Qué es la Renovación Riesgo Bajo
-
-    '
-  intent: gestion_item04_consulta
-- examples: '- Qué necesito para la Renovación del Certificado de Inspección Técnica
-    de Seguridad en edificaciones de Nivel Riesgo Medio
-
-    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Medio
-
-    - Qué necesito para la Renovación Inspección Técnica Riesgo Medio
-
-    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Medio
-
-    '
-  intent: gestion_item04_necesidad
-- examples: '- Cuánto cuesta la Renovación del Certificado de Inspección Técnica de
-    Seguridad en edificaciones de Nivel Riesgo Medio
-
-    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
+    - - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
     Medio
 
-    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Medio
+    - - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Medio
 
-    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Medio'
+    - - Qué es la Renovación de Inspección Técnica Riesgo Medio
+
+    - - Qué es la Renovación Riesgo Bajo'
+  intent: gestion_item04_consulta
+- examples: '- - Qué necesito para la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Medio
+
+    - - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Medio
+
+    - - Qué necesito para la Renovación Inspección Técnica Riesgo Medio
+
+    - - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Medio'
+  intent: gestion_item04_necesidad
+- examples: '- - Cuánto cuesta la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Medio
+
+    - - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Medio
+
+    - - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Medio
+
+    - - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Medio'
   intent: gestion_item04_costo
-- examples: '- Inspección Técnica de Seguridad en edificaciones posterior al inicio
+- examples: '- - Inspección Técnica de Seguridad en edificaciones posterior al inicio
     de actividades para establecimientos objeto de inspección clasificados con Nivel
     de Riesgo Alto
 
-    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
 
-    - Inspección Técnica Seguridad Riesgo Alto
+    - - Inspección Técnica Seguridad Riesgo Alto
 
-    - Inspección Técnica Riesgo Alto
-
-    '
+    - - Inspección Técnica Riesgo Alto'
   intent: gestion_item05
-- examples: '- Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
+- examples: '- - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
     Riesgo Alto
 
-    - Qué es la Inspección Técnica Seguridad Riesgo Alto
+    - - Qué es la Inspección Técnica Seguridad Riesgo Alto
 
-    - En que consiste la Inspección Técnica Seguridad Riesgo Alto
-
-    '
+    - - En que consiste la Inspección Técnica Seguridad Riesgo Alto'
   intent: gestion_item05_consulta
-- examples: '- Qué necesito para la Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Qué necesito para la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Alto
 
-    - Qué necesito para la Inspección Técnica Seguridad Riesgo Alto
+    - - Qué necesito para la Inspección Técnica Seguridad Riesgo Alto
 
-    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Alto
-
-    '
+    - - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Alto'
   intent: gestion_item05_necesidad
-- examples: '- Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de
-    Nivel Riesgo Alto
-
-    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Alto
-
-    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Alto
-
-    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Alto'
-  intent: gestion_item05_costo
-- examples: '- Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
-    para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
-
-    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Alto
 
-    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
+    - - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Alto
+
+    - - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Alto
+
+    - - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Alto'
+  intent: gestion_item05_costo
+- examples: '- - Renovación del Certificado de Inspección Técnica de Seguridad en
+    edificaciones para establecimientos objeto de inspección clasificados con Nivel
+    de Riesgo Alto
+
+    - - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+    de Nivel Riesgo Alto
+
+    - - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
     Alto
 
-    - Renovación de Inspección Técnica Riesgo Alto
+    - - Renovación de Inspección Técnica Riesgo Alto
 
-    - Renovación Riesgo Alto
-
-    '
+    - - Renovación Riesgo Alto'
   intent: gestion_item06
-- examples: '- Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
+- examples: '- - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
     en edificaciones de Nivel Riesgo Alto
 
-    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
-
-    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Alto
-
-    - Qué es la Renovación de Inspección Técnica Riesgo Alto
-
-    - Qué es la Renovación Riesgo Alto
-
-    '
-  intent: gestion_item06_consulta
-- examples: '- Qué necesito para la Renovación del Certificado de Inspección Técnica
-    de Seguridad en edificaciones de Nivel Riesgo Alto
-
-    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Alto
-
-    - Qué necesito para la Renovación Inspección Técnica Riesgo Alto
-
-    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Alto
-
-    '
-  intent: gestion_item06_necesidad
-- examples: '- Cuánto cuesta la Renovación del Certificado de Inspección Técnica de
-    Seguridad en edificaciones de Nivel Riesgo Alto
-
-    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
+    - - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
     Alto
 
-    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Alto
+    - - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Alto
 
-    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Alto'
+    - - Qué es la Renovación de Inspección Técnica Riesgo Alto
+
+    - - Qué es la Renovación Riesgo Alto'
+  intent: gestion_item06_consulta
+- examples: '- - Qué necesito para la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Alto
+
+    - - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Alto
+
+    - - Qué necesito para la Renovación Inspección Técnica Riesgo Alto
+
+    - - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Alto'
+  intent: gestion_item06_necesidad
+- examples: '- - Cuánto cuesta la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Alto
+
+    - - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Alto
+
+    - - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Alto
+
+    - - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Alto'
   intent: gestion_item06_costo
-- examples: '- Inspección Técnica de Seguridad en edificaciones posterior al inicio
+- examples: '- - Inspección Técnica de Seguridad en edificaciones posterior al inicio
     de actividades para establecimientos objeto de inspección clasificados con Nivel
     de Riesgo Muy Alto
 
-    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
 
-    - Inspección Técnica Seguridad Riesgo Muy Alto
+    - - Inspección Técnica Seguridad Riesgo Muy Alto
 
-    - Inspección Técnica Riesgo Muy Alto
-
-    '
+    - - Inspección Técnica Riesgo Muy Alto'
   intent: gestion_item07
-- examples: '- Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
+- examples: '- - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
     Riesgo Muy Alto
 
-    - Qué es la Inspección Técnica Seguridad Riesgo Muy Alto
+    - - Qué es la Inspección Técnica Seguridad Riesgo Muy Alto
 
-    - En que consiste la Inspección Técnica Seguridad Riesgo Muy Alto
-
-    '
+    - - En que consiste la Inspección Técnica Seguridad Riesgo Muy Alto'
   intent: gestion_item07_consulta
-- examples: '- Qué necesito para la Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Qué necesito para la Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Muy Alto
 
-    - Qué necesito para la Inspección Técnica Seguridad Riesgo Muy Alto
+    - - Qué necesito para la Inspección Técnica Seguridad Riesgo Muy Alto
 
-    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Muy Alto
-
-    '
+    - - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Muy Alto'
   intent: gestion_item07_necesidad
-- examples: '- Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de
-    Nivel Riesgo Muy Alto
+- examples: '- - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones
+    de Nivel Riesgo Muy Alto
 
-    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Muy Alto
+    - - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Muy Alto
 
-    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Muy Alto
+    - - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Muy Alto
 
-    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Muy Alto'
+    - - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Muy Alto'
   intent: gestion_item07_costo
-- examples: '- Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
-    para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+- examples: '- - Renovación del Certificado de Inspección Técnica de Seguridad en
+    edificaciones para establecimientos objeto de inspección clasificados con Nivel
+    de Riesgo Alto
 
-    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
     de Nivel Riesgo Alto
 
-    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
+    - - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo
     Alto
 
-    - Renovación de Inspección Técnica Riesgo Alto
+    - - Renovación de Inspección Técnica Riesgo Alto
 
-    - Renovación Riesgo Alto
-
-    '
+    - - Renovación Riesgo Alto'
   intent: gestion_item08
-- examples: '- Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
+- examples: '- - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad
     en edificaciones de Nivel Riesgo Muy Alto
 
-    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Muy
-    Alto
-
-    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Muy Alto
-
-    - Qué es la Renovación de Inspección Técnica Riesgo Muy Alto
-
-    - Qué es la Renovación Riesgo Muy Alto
-
-    '
-  intent: gestion_item08_consulta
-- examples: '- Qué necesito para la Renovación del Certificado de Inspección Técnica
-    de Seguridad en edificaciones de Nivel Riesgo Muy Alto
-
-    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
-    Riesgo Muy Alto
-
-    - Qué necesito para la Renovación Inspección Técnica Riesgo Muy Alto
-
-    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Muy
-    Alto
-
-    '
-  intent: gestion_item08_necesidad
-- examples: '- Cuánto cuesta la Renovación del Certificado de Inspección Técnica de
-    Seguridad en edificaciones de Nivel Riesgo Muy Alto
-
-    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
+    - - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo
     Muy Alto
 
-    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Muy Alto
+    - - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Muy Alto
 
-    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Muy Alto'
+    - - Qué es la Renovación de Inspección Técnica Riesgo Muy Alto
+
+    - - Qué es la Renovación Riesgo Muy Alto'
+  intent: gestion_item08_consulta
+- examples: '- - Qué necesito para la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+
+    - - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Muy Alto
+
+    - - Qué necesito para la Renovación Inspección Técnica Riesgo Muy Alto
+
+    - - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Muy
+    Alto'
+  intent: gestion_item08_necesidad
+- examples: '- - Cuánto cuesta la Renovación del Certificado de Inspección Técnica
+    de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+
+    - - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel
+    Riesgo Muy Alto
+
+    - - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Muy Alto
+
+    - - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Muy Alto'
   intent: gestion_item08_costo
-- examples: '- Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos
+- examples: '- - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos
     y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
 
-    - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y
-    no deportivos
+    - - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos
+    y no deportivos
 
-    - Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - - Evaluación de Condiciones de Seguridad en espectáculos públicos
 
-    - Evaluación de Condiciones de Seguridad Espectáculos
-
-    '
+    - - Evaluación de Condiciones de Seguridad Espectáculos'
   intent: gestion_item09
-- examples: '- Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos
-    deportivos y no deportivos
+- examples: '- - Qué es la Evaluación de Condiciones de Seguridad en espectáculos
+    públicos deportivos y no deportivos
 
-    - Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - - Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos
 
-    - En que consiste la Evaluación de Condiciones de Seguridad en espectáculos públicos
-
-    '
+    - - En que consiste la Evaluación de Condiciones de Seguridad en espectáculos
+    públicos'
   intent: gestion_item09_consulta
-- examples: '- Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos
+- examples: '- - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos
     públicos deportivos y no deportivos
 
-    - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos
+    - - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos
     públicos
 
-    - Qué requisitos piden para la Evaluación de Condiciones de Seguridad en espectáculos
-    públicos
-
-    '
+    - - Qué requisitos piden para la Evaluación de Condiciones de Seguridad en espectáculos
+    públicos'
   intent: gestion_item09_necesidad
-- examples: '- Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos
+- examples: '- - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos
     públicos deportivos y no deportivos
 
-    - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos públicos
 
-    - Cuánto debo pagar por la Evaluación de Condiciones de Seguridad en espectáculos
+    - - Cuánto debo pagar por la Evaluación de Condiciones de Seguridad en espectáculos
     públicos
 
-    - Cuánto es el monto de la Evaluación de Condiciones de Seguridad en espectáculos
+    - - Cuánto es el monto de la Evaluación de Condiciones de Seguridad en espectáculos
     públicos'
   intent: gestion_item09_costo
-- examples: '- Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+- examples: '- - Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
 
-    - Duplicado del Certificado de Inspección en edificaciones
+    - - Duplicado del Certificado de Inspección en edificaciones
 
-    - Duplicado del Certificado Edificaciones
-
-    '
+    - - Duplicado del Certificado Edificaciones'
   intent: gestion_item10
-- examples: '- Qué es el Duplicado del Certificado de Inspección Técnica de Seguridad
+- examples: '- - Qué es el Duplicado del Certificado de Inspección Técnica de Seguridad
     en edificaciones
 
-    - Qué es el Duplicado del Certificado de Inspección en edificaciones
+    - - Qué es el Duplicado del Certificado de Inspección en edificaciones
 
-    - En que consiste el Duplicado del Certificado de Inspección en edificaciones
-
-    '
+    - - En que consiste el Duplicado del Certificado de Inspección en edificaciones'
   intent: gestion_item10_consulta
-- examples: '- Qué necesito para el Duplicado del Certificado de Inspección Técnica
+- examples: '- - Qué necesito para el Duplicado del Certificado de Inspección Técnica
     de Seguridad en edificaciones
 
-    - Qué necesito para el Duplicado del Certificado de Inspección en edificaciones
+    - - Qué necesito para el Duplicado del Certificado de Inspección en edificaciones
 
-    - Qué requisitos piden para el Duplicado del Certificado de Inspección en edificaciones
-
-    '
+    - - Qué requisitos piden para el Duplicado del Certificado de Inspección en edificaciones'
   intent: gestion_item10_necesidad
-- examples: '- Cuánto cuesta el Duplicado del Certificado de Inspección Técnica de
-    Seguridad en edificaciones
+- examples: '- - Cuánto cuesta el Duplicado del Certificado de Inspección Técnica
+    de Seguridad en edificaciones
 
-    - Cuánto cuesta el Duplicado del Certificado de Inspección en edificaciones
+    - - Cuánto cuesta el Duplicado del Certificado de Inspección en edificaciones
 
-    - Cuánto debo pagar por el Duplicado del Certificado de Inspección en edificaciones
+    - - Cuánto debo pagar por el Duplicado del Certificado de Inspección en edificaciones
 
-    - Cuánto es el monto del Duplicado del Certificado de Inspección en edificaciones'
+    - - Cuánto es el monto del Duplicado del Certificado de Inspección en edificaciones'
   intent: gestion_item10_costo
 version: '3.1'
