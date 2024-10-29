@@ -1,0 +1,31 @@
+version: "3.1"
+
+# >> STORIES - INDEX
+stories:
+
+- story: happy path
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: animo_bien
+  - action: utter_feliz
+
+- story: sad path 1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: animo_mal
+  - action: utter_animo
+  - action: utter_sirvio_de_ayuda
+  - intent: afirmacion
+  - action: utter_feliz
+
+- story: sad path 2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: animo_mal
+  - action: utter_animo
+  - action: utter_sirvio_de_ayuda
+  - intent: negacion
+  - action: utter_despedida

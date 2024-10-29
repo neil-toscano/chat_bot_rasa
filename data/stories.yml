@@ -1,16 +1,17 @@
-version: "3.1"
-
 stories:
-
-- story: happy path
-  steps:
+- steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: formalizacion_promocion_empresarial
+  - action: utter_formalizacion_promocion_empresarial
+  story: formalizacion y promocion empresarial
+- steps:
   - intent: saludo
   - action: utter_saludo
   - intent: animo_bien
   - action: utter_feliz
-
-- story: sad path 1
-  steps:
+  story: happy path
+- steps:
   - intent: saludo
   - action: utter_saludo
   - intent: animo_mal
@@ -18,9 +19,8 @@ stories:
   - action: utter_sirvio_de_ayuda
   - intent: afirmacion
   - action: utter_feliz
-
-- story: sad path 2
-  steps:
+  story: sad path 1
+- steps:
   - intent: saludo
   - action: utter_saludo
   - intent: animo_mal
@@ -28,28 +28,21 @@ stories:
   - action: utter_sirvio_de_ayuda
   - intent: negacion
   - action: utter_despedida
-
-- story: Selección de FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
-  steps:
-  - intent: formalizacion
-  - action: utter_formalizacion
-
-- story: Selección de GESTIÓN DEL RIESGO DE DESASTRES
-  steps:
-    - intent: gestion
-    - action: utter_gestion
-
-- story: Selección de ORIENTACIÓN Y REGISTRO
-  steps:
-  - intent: orientacion
-  - action: utter_orientacion
-
-- story: Selección de REGISTRO CIVIL
-  steps:
-  - intent: registro
-  - action: utter_registro
-
-- story: Selección de OBRAS PRIVADAS Y HABILITACIÓN URBANA
-  steps:
-  - intent: obras
-  - action: utter_obras
+  story: sad path 2
+- steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+  story: licencia funcionamiento riesgo bajo
+- steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  story: licencia funcionamiento riego bajo que es
+- steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  story: licencia funcionamiento riesgo bajo que necesito
+- steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  story: licencia funcionamiento riesgo bajo que cuanto cuesta
+version: '3.1'

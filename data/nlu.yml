@@ -1,87 +1,173 @@
-version: "3.1"
-
 nlu:
-- intent: saludo
-  examples: |
-    - hello
-    - hola
+- examples: '- Quiero hablar sobre formalización y promoción empresarial
+
+    - hablemos sobre formalización
+
+    - Formalización
+
+    - Promoción empresarial'
+  intent: formalizacion_promocion_empresarial
+- examples: '- hola
+
     - qué tal
+
     - buenos días
+
     - buenas tardes
+
     - buenas noches
+
     - hola, ¿cómo estás?
+
     - ¿qué onda?
+
     - hola a todos
+
     - cómo andas
+
     - qué hay
+
     - hey
+
     - qué pasa
+
     - saludos
+
     - hola amigo
+
     - hola, buenas
 
-- intent: despedida
-  examples: |
-    - adiós
+    '
+  intent: saludo
+- examples: '- adiós
+
     - nos vemos
+
     - hasta luego
+
     - que tengas un buen día
+
     - buenas noches
+
     - chau
+
     - hasta la próxima
+
     - cuídate
+
     - nos vemos luego
 
-- intent: afirmacion
-  examples: |
-    - sí
+    '
+  intent: despedida
+- examples: '- sí
+
     - claro
+
     - por supuesto
+
     - correcto
+
     - eso suena bien
+
     - exacto
 
-- intent: negacion
-  examples: |
-    - no
+    '
+  intent: afirmacion
+- examples: '- no
+
     - nunca
+
     - no me gusta eso
+
     - de ninguna manera
+
     - no lo creo
+
     - no es así
 
-- intent: animo_bien
-  examples: |
-    - perfecto
+    '
+  intent: negacion
+- examples: '- perfecto
+
     - genial
+
     - increíble
+
     - me siento como un rey
+
     - maravilloso
+
     - me siento muy bien
+
     - estoy genial
+
     - estoy increíble
+
     - voy a salvar el mundo
+
     - súper feliz
+
     - extremadamente bien
+
     - tan perfecto
+
     - todo bien
 
-- intent: animo_mal
-  examples: |
-    - mi día fue horrible
+    '
+  intent: animo_bien
+- examples: '- mi día fue horrible
+
     - estoy triste
+
     - no me siento muy bien
+
     - estoy decepcionado
+
     - súper triste
+
     - muy triste
+
     - infeliz
+
     - no estoy bien
+
     - extremadamente triste
+
     - tan triste
 
-- intent: reto_bot
-  examples: |
-    - ¿eres un bot?
+    '
+  intent: animo_mal
+- examples: '- ¿eres un bot?
+
     - ¿eres humano?
+
     - ¿estoy hablando con un bot?
-    - ¿estoy hablando con un humano?
+
+    - ¿estoy hablando con un humano?'
+  intent: reto_bot
+- examples: '- Funcionamiento para edificaciones
+
+    - Licencia de funcionamiento para edificaciones
+
+    - Edificaciones calificadas con nivel de riesgo bajo
+
+    '
+  intent: licencia_funcionamiento_edificacion_riesgo_bajo
+- examples: '- Qué es la licencia de funcionamiento para edificaciones
+
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo bajo
+
+    '
+  intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+- examples: '- Qué necesito para la licencia de funcionamiento para edificaciones
+
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo
+    bajo
+
+    '
+  intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+- examples: '- Cuánto cuesta la licencia de funcionamiento para edificaciones
+
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo'
+  intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+version: '3.1'

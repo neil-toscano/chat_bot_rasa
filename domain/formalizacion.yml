@@ -1,30 +1,87 @@
 version: "3.1"
 
+intents:
+  - formalizacion_promocion_empresarial
+
 responses:
 
-  # 1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
-  utter_formalizacion:
-  - text: "Bienvenido(a) al área de FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL..."
-    buttons:
-    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO BAJO (Con ITSE posterior)"
-      payload: "/seleccionar_opcion{'opcion': 'formalizacion_item01'}"
-    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO MEDIO (Con ITSE posterior)"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item02"}'
-    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO ALTO (Con ITSE posterior)"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item03"}'
-    - title: "LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE RIESGO MUY ALTO (Con ITSE posterior)"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item04"}'
-    - title: "TRANSFERENCIA DE LICENCIA DE FUNCIONAMIENTO O CAMBIO DE DENOMINACIÓN O NOMBRE COMERCIAL DE LA PERSONA JURÍDICA"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item05"}'
-    - title: "LICENCIA DE FUNCIONAMIENTO PARA CAMBIO DE GIRO"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item06"}'
-    - title: "AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS - TIPO: AFICHE Y PLANCHETA PUBLICITARIA. EN BIENES DE DOMINIO PRIVADO"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item07"}'
-    - title: "AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS - TIPO: LETRAS RECORTADAS, LETRERO, PLACA, Y TOLDO. EN BIENES DE DOMINIO PRIVADO. VINCULADO A LICENCIA DE FUNCIONAMIENTO"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item08"}'
-    - title: "DUPLICADO DEL CERTIFICADO DE LICENCIA DE FUNCIONAMIENTO"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item09"}'
-    - title: "DUPLICADO DE LA RESOLUCIÓN DE AUTORIZACIÓN PARA LA UBICACIÓN DEL ELEMENTO DE PUBLICIDAD EXTERIOR"
-      payload: '/seleccionar_opcion{"opcion": "formalizacion_item10"}'
-    - title: "Volver al módulo anterior..."
-      payload: "/saludo"
+  # >> FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+  utter_formalizacion_promocion_empresarial:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                *🟢 Opciones de Trámite:*
+                1️. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
+                  _(con ITSE posterior)_
+
+                2️. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio
+                  _(con ITSE posterior)_
+
+                3️. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
+                  _(con ITSE posterior)_
+                
+                4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto
+                  _(con ITSE posterior)_
+
+                5. Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+                
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "Consulta Trámites"
+            body:
+              text: |
+                6. Licencia de funcionamiento para cambio de giro
+                
+                7. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
+                
+                8. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
+                
+                9. Duplicado del certificado de licencia de funcionamiento
+                
+                10. Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoja trámite"
+                  rows:
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
+                      title: "Trámite 1"
+                      description: "RIESGO BAJO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_medio"
+                      title: "Trámite 2"
+                      description: "RIESGO MEDIO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_alto"
+                      title: "Trámite 3"
+                      description: "RIESGO ALTO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_muy_alto"
+                      title: "Trámite 4"
+                      description: "RIESGO MUY ALTO"
+                    - id: "/transferencia_licencia_cambio_denominacion"
+                      title: "Trámite 5"
+                      description: "TRANSFERENCIA O CAMBIO"
+                    - id: "/licencia_funcionamiento_cambio_giro"
+                      title: "Trámite 6"
+                      description: "CAMBIO DE GIRO"
+                    - id: "/autorizacion_publicidad_afiche_privada"
+                      title: "Trámite 7"
+                      description: "PUBLICIDAD AFICHE"
+                    - id: "/autorizacion_publicidad_letras_privada"
+                      title: "Trámite 8"
+                      description: "PUBLICIDAD LETRAS"
+                    - id: "/duplicado_certificado_funcionamiento"
+                      title: "Trámite 9"
+                      description: "DUPLICADO"
+                    - id: "/duplicado_resolucion_autorizacion"
+                      title: "Trámite 10"
+                      description: "DUPLICADO RESOLUCIÓN"
+              button: "Opciones"

@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO BAJO :
+- story: licencia funcionamiento riesgo bajo
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+
+# >> 1.1... STORIES - CONSULTA
+- story: licencia funcionamiento riego bajo que es
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+
+# >> 1.1... STORIES - NECESIDAD
+- story: licencia funcionamiento riesgo bajo que necesito
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+
+# >> 1.1... STORIES - COSTO
+- story: licencia funcionamiento riesgo bajo que cuanto cuesta
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta

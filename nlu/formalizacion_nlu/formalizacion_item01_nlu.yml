@@ -1,0 +1,28 @@
+version: "3.1"
+
+nlu:
+
+# >> 1.1. NLU - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO BAJO :
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  examples: |
+    - Funcionamiento para edificaciones
+    - Licencia de funcionamiento para edificaciones
+    - Edificaciones calificadas con nivel de riesgo bajo
+
+# >> 1.1... NLU - CONSULTA
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> 1.1... NLU - NECESIDAD
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> 1.1... NLU - COSTO
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo

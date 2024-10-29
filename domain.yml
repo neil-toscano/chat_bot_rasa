@@ -3,22 +3,19 @@ e2e_actions: []
 entities: []
 forms: {}
 intents:
-- formalizacion
-- pregunta_costo
-- afirmacion
-- gestion
-- animo_mal
-- saludo
-- reto_bot
+- formalizacion_promocion_empresarial
+- licencia_funcionamiento_edificacion_riesgo_bajo
 - animo_bien
+- bot_challenge
+- licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+- licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+- licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
 - negacion
-- seleccionar_opcion
-- pregunta_consulta
-- pregunta_necesidad
-- obras
 - despedida
-- orientacion
-- registro
+- afirmacion
+- animo_mal
+- gestion
+- saludo
 responses:
   utter_animo:
   - image: https://i.imgur.com/nGF1K8f.jpg
@@ -27,82 +24,270 @@ responses:
   - text: Hasta luego
   utter_feliz:
   - text: Genial, continua así
-  utter_formalizacion:
-  - buttons:
-    - payload: '/seleccionar_opcion{''opcion'': ''formalizacion_item01''}'
-      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
-        RIESGO BAJO (Con ITSE posterior)
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item02"}'
-      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
-        RIESGO MEDIO (Con ITSE posterior)
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item03"}'
-      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
-        RIESGO ALTO (Con ITSE posterior)
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item04"}'
-      title: LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES CALIFICADAS CON NIVEL DE
-        RIESGO MUY ALTO (Con ITSE posterior)
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item05"}'
-      title: TRANSFERENCIA DE LICENCIA DE FUNCIONAMIENTO O CAMBIO DE DENOMINACIÓN
-        O NOMBRE COMERCIAL DE LA PERSONA JURÍDICA
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item06"}'
-      title: LICENCIA DE FUNCIONAMIENTO PARA CAMBIO DE GIRO
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item07"}'
-      title: 'AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS
-        - TIPO: AFICHE Y PLANCHETA PUBLICITARIA. EN BIENES DE DOMINIO PRIVADO'
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item08"}'
-      title: 'AUTORIZACIÓN PARA LA UBICACIÓN DE ELEMENTO DE PUBLICIDAD EXTERIOR SENCILLOS
-        - TIPO: LETRAS RECORTADAS, LETRERO, PLACA, Y TOLDO. EN BIENES DE DOMINIO PRIVADO.
-        VINCULADO A LICENCIA DE FUNCIONAMIENTO'
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item09"}'
-      title: DUPLICADO DEL CERTIFICADO DE LICENCIA DE FUNCIONAMIENTO
-    - payload: '/seleccionar_opcion{"opcion": "formalizacion_item10"}'
-      title: DUPLICADO DE LA RESOLUCIÓN DE AUTORIZACIÓN PARA LA UBICACIÓN DEL ELEMENTO
-        DE PUBLICIDAD EXTERIOR
-    - payload: /saludo
-      title: Volver al módulo anterior...
-    text: Bienvenido(a) al área de FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL...
+  utter_formalizacion_promocion_empresarial:
+  - custom:
+      blocks:
+      - text:
+          body: "*\U0001F7E2 Opciones de Trámite:*\n1️. Licencia de funcionamiento\
+            \ para edificaciones calificadas con nivel de riesgo bajo\n  _(con ITSE\
+            \ posterior)_\n\n2️. Licencia de funcionamiento para edificaciones calificadas\
+            \ con nivel de riesgo medio\n  _(con ITSE posterior)_\n\n3️. Licencia\
+            \ de funcionamiento para edificaciones calificadas con nivel de riesgo\
+            \ alto\n  _(con ITSE posterior)_\n\n4. Licencia de funcionamiento para\
+            \ edificaciones calificadas con nivel de riesgo muy alto\n  _(con ITSE\
+            \ posterior)_\n\n5. Transferencia de licencia de funcionamiento o cambio\
+            \ de denominación o nombre comercial de la persona jurídica\n"
+          preview_url: false
+        type: text
+      - interactive:
+          action:
+            button: Opciones
+            sections:
+            - rows:
+              - description: RIESGO BAJO
+                id: /licencia_funcionamiento_edificacion_riesgo_bajo
+                title: Trámite 1
+              - description: RIESGO MEDIO
+                id: /licencia_funcionamiento_edificacion_riesgo_medio
+                title: Trámite 2
+              - description: RIESGO ALTO
+                id: /licencia_funcionamiento_edificacion_riesgo_alto
+                title: Trámite 3
+              - description: RIESGO MUY ALTO
+                id: /licencia_funcionamiento_edificacion_riesgo_muy_alto
+                title: Trámite 4
+              - description: TRANSFERENCIA O CAMBIO
+                id: /transferencia_licencia_cambio_denominacion
+                title: Trámite 5
+              - description: CAMBIO DE GIRO
+                id: /licencia_funcionamiento_cambio_giro
+                title: Trámite 6
+              - description: PUBLICIDAD AFICHE
+                id: /autorizacion_publicidad_afiche_privada
+                title: Trámite 7
+              - description: PUBLICIDAD LETRAS
+                id: /autorizacion_publicidad_letras_privada
+                title: Trámite 8
+              - description: DUPLICADO
+                id: /duplicado_certificado_funcionamiento
+                title: Trámite 9
+              - description: DUPLICADO RESOLUCIÓN
+                id: /duplicado_resolucion_autorizacion
+                title: Trámite 10
+              title: Escoja trámite
+          body:
+            text: '6. Licencia de funcionamiento para cambio de giro
+
+
+              7. Autorización para la ubicación de elemento de publicidad exterior
+              sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio
+              privado
+
+
+              8. Autorización para la ubicación de elemento de publicidad exterior
+              sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes
+              de dominio privado, vinculado a licencia de funcionamiento
+
+
+              9. Duplicado del certificado de licencia de funcionamiento
+
+
+              10. Duplicado de la resolución de autorización para la ubicación del
+              elemento de publicidad exterior
+
+              '
+          footer:
+            text: '**Seleccione el trámite abajo**'
+          header:
+            text: Consulta Trámites
+            type: text
+          type: list
+        type: interactive
   utter_gestion:
-  - buttons:
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item01"}'
-      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO
-        DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON
-        NIVEL DE RIESGO BAJO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item02"}'
-      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
-        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
-        BAJO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item03"}'
-      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO
-        DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON
-        NIVEL DE RIESGO MEDIO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item04"}'
-      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
-        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
-        MEDIO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item05"}'
-      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE
-        ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL
-        DE RIESGO ALTO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item06"}'
-      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
-        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
-        ALTO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item07"}'
-      title: INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE
-        ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL
-        DE RIESGO MUY ALTO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item08"}'
-      title: RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES
-        PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO
-        MUY ALTO
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item09"}'
-      title: EVALUACIÓN DE CONDICIONES DE SEGURIDAD EN ESPECTÁCULOS PÚBLICOS DEPORTIVOS
-        Y NO DEPORTIVOS (ECSE) CON UNA CONCURRENCIA DE HASTA 3,000 PERSONAS
-    - payload: '/seleccionar_opcion{"opcion": "gestion_item10"}'
-      title: DUPLICADO DEL CERTIFICADO DE INSPECCIÓN TECNICA DE SEGURIDAD EN EDIFICACIONES
-    - payload: /saludo
-      title: Volver al módulo anterior...
-    text: Bienvenido(a) al área de GESTIÓN DEL RIESGO DE DESASTRES...
+  - custom:
+      blocks:
+      - text:
+          body: '*🟢 Opciones de Trámite:*
+
+
+            1. Inspección Técnica de Seguridad en edificaciones posterior al inicio
+            de actividades para establecimientos objeto de inspección clasificados
+            con Nivel de Riesgo Bajo
+
+
+            2. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+            para establecimientos objeto de inspección clasificados con Nivel de Riesgo
+            Bajo
+
+
+            3. Inspección Técnica de Seguridad en edificaciones posterior al inicio
+            de actividades para establecimientos objeto de inspección clasificados
+            con Nivel de Riesgo Medio
+
+
+            4. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones
+            para establecimientos objeto de inspección clasificados con Nivel De Riesgo
+            Medio
+
+
+            5. Inspección Técnica de Seguridad en edificaciones previa al inicio de
+            actividades para establecimientos objeto de inspección clasificados con
+            Nivel de Riesgo Alto
+
+            '
+          preview_url: false
+        type: text
+      - interactive:
+          action:
+            button: Opciones
+            sections:
+            - rows:
+              - description: RIESGO BAJO
+                id: /licencia_funcionamiento_edificacion_riesgo_bajo
+                title: Trámite 1
+              - description: RIESGO MEDIO
+                id: /licencia_funcionamiento_edificacion_riesgo_medio
+                title: Trámite 2
+              - description: RIESGO ALTO
+                id: /licencia_funcionamiento_edificacion_riesgo_alto
+                title: Trámite 3
+              - description: RIESGO MUY ALTO
+                id: /licencia_funcionamiento_edificacion_riesgo_muy_alto
+                title: Trámite 4
+              - description: TRANSFERENCIA O CAMBIO
+                id: /transferencia_licencia_cambio_denominacion
+                title: Trámite 5
+              - description: CAMBIO DE GIRO
+                id: /licencia_funcionamiento_cambio_giro
+                title: Trámite 6
+              - description: PUBLICIDAD AFICHE
+                id: /autorizacion_publicidad_afiche_privada
+                title: Trámite 7
+              - description: PUBLICIDAD LETRAS
+                id: /autorizacion_publicidad_letras_privada
+                title: Trámite 8
+              - description: DUPLICADO
+                id: /duplicado_certificado_funcionamiento
+                title: Trámite 9
+              - description: DUPLICADO RESOLUCIÓN
+                id: /duplicado_resolucion_autorizacion
+                title: Trámite 10
+              title: Escoja trámite
+          body:
+            text: '6. Renovación del Certificado de Inspección Técnica de Seguridad
+              en edificaciones para establecimientos objeto de inspección clasificados
+              con Nivel de Riesgo Alto
+
+
+              7. Inspección Técnica de Seguridad en edificaciones previa al inicio
+              de actividades para establecimientos objeto de inspección clasificados
+              con Nivel de Riesgo Muy Alto
+
+
+              8. Renovación del Certificado de Inspección Técnica de Seguridad en
+              edificaciones para establecimientos objeto de inspección clasificados
+              con Nivel de Riesgo Muy Alto
+
+
+              9. Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos
+              y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
+
+
+              10. Duplicado del Certificado de Inspección Técnica de Seguridad en
+              edificaciones
+
+              '
+          footer:
+            text: '**Seleccione el trámite abajo**'
+          header:
+            text: Consulta Trámites
+            type: text
+          type: list
+        type: interactive
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo:
+  - custom:
+      blocks:
+      - interactive:
+          action:
+            button: Opciones
+            sections:
+            - rows:
+              - description: ¿Qué es?
+                id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+                title: Trámite 1
+              - description: ¿Qué necesito?
+                id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+                title: Trámite 2
+              - description: ¿Cuánto cuesta?
+                id: /licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+                title: Trámite 3
+              title: Escoja la pregunta
+          body:
+            text: '*Haz seleccionado licencia de funcionamiento de edificacion de
+              riesgo bajo*
+
+
+              *🟢Opciones de pregunta:*
+
+              1️. ¿Qué es?
+
+
+              2️. ¿Qué necesito?
+
+
+              3️. ¿Cuánto cuesta el derecho de trámite?
+
+              '
+          footer:
+            text: '**Seleccione la pregunta abajo**'
+          header:
+            text: Consulta Trámites
+            type: text
+          type: list
+        type: interactive
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta:
+  - custom:
+      blocks:
+      - text:
+          body: S/ 229.20
+          preview_url: false
+        type: text
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es:
+  - custom:
+      blocks:
+      - text:
+          body: 'Es un permiso otorgado por la municipalidad para que un negocio inicie
+            su actividad comercial  en un local que ha sido clasificado como de riesgo
+            bajo
+
+            '
+          preview_url: false
+        type: text
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito:
+  - custom:
+      blocks:
+      - text:
+          body: 'Es un permiso otorgado por la municipalidad para que un negocio inicie
+            su actividad comercial  en un local que ha sido clasificado como de riesgo
+            bajo \n https://www.meta.com/quest/quest-3
+
+            '
+          preview_url: true
+        type: text
+      - text:
+          body: 'Declaración jurada de cumplimiento de las condiciones de seguridad
+            en la edificación. \n https://www.meta.com/quest/quest-3
+
+            '
+          preview_url: true
+        type: text
+      - text:
+          body: 'Declaración jurada de representante legal, en el caso de personas
+            jurídicas, Copia literal de la vigencia de poder actualizada
+
+            '
+          preview_url: true
+        type: text
   utter_obras:
   - buttons:
     - payload: '/seleccionar_opcion{"opcion": "obras_item01"}'
@@ -126,15 +311,6 @@ responses:
     - payload: /saludo
       title: Volver al módulo anterior...
     text: Bienvenido(a) al área de OBRAS PRIVADAS Y HABILITACIÓN URBANA...
-  utter_opciones_preguntas:
-  - buttons:
-    - payload: /pregunta_consulta
-      title: ¿Qué es?
-    - payload: /pregunta_necesidad
-      title: ¿Qué necesito?
-    - payload: /pregunta_costo
-      title: ¿Cuánto cuesta el derecho de trámite?
-    text: Has seleccionado {opcion}. ¿En qué puedo ayudarte?
   utter_orientacion:
   - buttons:
     - payload: '/seleccionar_opcion{"opcion": "orientacion_item01"}'
@@ -157,49 +333,58 @@ responses:
     - payload: /saludo
       title: Volver al módulo anterior...
     text: Bienvenido(a) al área de REGISTRO CIVIL...
-  utter_respuesta_consulta:
-  - text: '{opcion}: {consulta}'
-  utter_respuesta_costo:
-  - text: '{opcion}: {costo}'
-  utter_respuesta_necesidad:
-  - text: '{opcion}: {necesidad}'
   utter_saludo:
-  - buttons:
-    - payload: /formalizacion
-      title: FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
-    - payload: /gestion
-      title: GESTIÓN DEL RIESGO DE DESASTRES
-    - payload: /orientacion
-      title: ORIENTACIÓN Y REGISTRO
-    - payload: /registro
-      title: REGISTRO CIVIL
-    - payload: /obras
-      title: OBRAS PRIVADAS Y HABILITACIÓN URBANA
-    text: '¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN
-      DE LURIGANCHO. ¿Sobre qué área te gustaría obtener información? Por favor, elige
-      una de las siguientes opciones:'
+  - custom:
+      blocks:
+      - interactive:
+          action:
+            button: Seleccionar consulta
+            sections:
+            - rows:
+              - description: Formalización
+                id: /formalizacion_promocion_empresarial
+                title: Trámite 1
+              - description: Gestión
+                id: /gestion_riesgo_desastre
+                title: Trámite 2
+              - description: Orientación
+                id: /orientacion_registro
+                title: Trámite 3
+              - description: Registro
+                id: /registro_civil
+                title: Trámite 4
+              - description: Obras
+                id: /obras_privadas_habilitacion_urbana
+                title: Trámite 5
+              title: Escoja trámite
+          body:
+            text: '¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN
+              JUAN DE LURIGANCHO.
+
+              ¿Sobre qué área te gustaría obtener información? Por favor, elige una
+              de las siguientes opciones:
+
+              1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
+
+              2. GESTIÓN DEL RIESGO DE DESASTRES
+
+              3. ORIENTACIÓN Y REGISTRO
+
+              4. REGISTRO CIVIL
+
+              5. OBRAS PRIVADAS Y HABILITACIÓN URBANA
+
+              '
+          footer:
+            text: seleccione el trámite abajo
+          header:
+            text: Consulta Trámites
+            type: text
+          type: list
+        type: interactive
   utter_sirvio_de_ayuda:
   - text: ¿Te ha ayudado?
   utter_soy_bot:
-  - text: Soy un bot, entrenado por la Municipalidad de San Juan de Lurigancho.
-slots:
-  opcion:
-    influence_conversation: false
-    mappings:
-    - intent: seleccionar_opcion
-      type: from_intent
-      value: formalizacion_item01
-    - intent: seleccionar_opcion
-      type: from_intent
-      value: gestion_item01
-    - intent: seleccionar_opcion
-      type: from_intent
-      value: orientacion_item01
-    - intent: seleccionar_opcion
-      type: from_intent
-      value: registro_item01
-    - intent: seleccionar_opcion
-      type: from_intent
-      value: obras_item01
-    type: categorical
+  - text: Soy un bot, entrenado por la MSJL.
+slots: {}
 version: '3.1'

@@ -1,30 +1,84 @@
 version: "3.1"
 
+intents:
+  - gestion
+
 responses:
 
-  # 2. GESTIÓN DE RIESGO DE DESASTRES :
+  # >> GESTIÓN DEL RIESGO DE DESASTRES :
   utter_gestion:
-  - text: "Bienvenido(a) al área de GESTIÓN DEL RIESGO DE DESASTRES..."
-    buttons:
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO BAJO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item01"}'
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO BAJO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item02"}'
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES POSTERIOR AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MEDIO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item03"}'
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MEDIO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item04"}'
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO ALTO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item05"}'
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO ALTO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item06"}'
-    - title: "INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PREVIA AL INICIO DE ACTIVIDADES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MUY ALTO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item07"}'
-    - title: "RENOVACIÓN DEL CERTIFICADO DE INSPECCIÓN TÉCNICA DE SEGURIDAD EN EDIFICACIONES PARA ESTABLECIMIENTOS OBJETO DE INSPECCIÓN CLASIFICADOS CON NIVEL DE RIESGO MUY ALTO"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item08"}'
-    - title: "EVALUACIÓN DE CONDICIONES DE SEGURIDAD EN ESPECTÁCULOS PÚBLICOS DEPORTIVOS Y NO DEPORTIVOS (ECSE) CON UNA CONCURRENCIA DE HASTA 3,000 PERSONAS"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item09"}'
-    - title: "DUPLICADO DEL CERTIFICADO DE INSPECCIÓN TECNICA DE SEGURIDAD EN EDIFICACIONES"
-      payload: '/seleccionar_opcion{"opcion": "gestion_item10"}'
-    - title: "Volver al módulo anterior..."
-      payload: "/saludo"
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                *🟢 Opciones de Trámite:*
+
+                1. Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+
+                2. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+
+                3. Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+
+                4. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio
+
+                5. Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "Consulta Trámites"
+            body:
+              text: |
+                6. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+
+                7. Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+
+                8. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+
+                9. Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
+
+                10. Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoja trámite"
+                  rows:
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
+                      title: "Trámite 1"
+                      description: "RIESGO BAJO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_medio"
+                      title: "Trámite 2"
+                      description: "RIESGO MEDIO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_alto"
+                      title: "Trámite 3"
+                      description: "RIESGO ALTO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_muy_alto"
+                      title: "Trámite 4"
+                      description: "RIESGO MUY ALTO"
+                    - id: "/transferencia_licencia_cambio_denominacion"
+                      title: "Trámite 5"
+                      description: "TRANSFERENCIA O CAMBIO"
+                    - id: "/licencia_funcionamiento_cambio_giro"
+                      title: "Trámite 6"
+                      description: "CAMBIO DE GIRO"
+                    - id: "/autorizacion_publicidad_afiche_privada"
+                      title: "Trámite 7"
+                      description: "PUBLICIDAD AFICHE"
+                    - id: "/autorizacion_publicidad_letras_privada"
+                      title: "Trámite 8"
+                      description: "PUBLICIDAD LETRAS"
+                    - id: "/duplicado_certificado_funcionamiento"
+                      title: "Trámite 9"
+                      description: "DUPLICADO"
+                    - id: "/duplicado_resolucion_autorizacion"
+                      title: "Trámite 10"
+                      description: "DUPLICADO RESOLUCIÓN"
+              button: "Opciones"
