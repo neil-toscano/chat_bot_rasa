@@ -20,7 +20,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 3. Correr el script de Python
 
    ```bash
-   py scripts/
+   py scripts/modularizar.py
 
 4. Entrena el modelo
    
