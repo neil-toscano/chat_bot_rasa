@@ -1,0 +1,83 @@
+version: "3.1"
+
+intents:
+  - gestion_item03_consulta
+  - gestion_item03_necesidad
+  - gestion_item03_costo
+
+responses:
+
+  # >> 2.3. INSPECCIÓN RIESGO MEDIO
+  utter_gestion_item03:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "Consulta Trámites"
+            body:
+              text: |
+                Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*
+
+                *🟢 Opciones de pregunta:*
+
+                1. ¿Qué es?
+
+                2. ¿Qué necesito?
+
+                3. ¿Cuánto cuesta el derecho de trámite?
+            footer:
+              text: "**Seleccione la pregunta abajo**"
+
+            action:
+              sections:
+                - title: "Escoge la pregunta"
+                  rows:
+                    - id: "/gestion_item03_consulta"
+                      title: "Pregunta 1"
+                      description: "¿Qué es?"
+                    - id: "/gestion_item03_necesidad"
+                      title: "Pregunta 2"
+                      description: "¿Qué necesito?"
+                    - id: "/gestion_item03_costo"
+                      title: "Pregunta 3"
+                      description: "¿Cuánto cuesta?"
+              button: "Opciones"
+
+  # >> 2.3... CONSULTA
+  utter_gestion_item03_consulta:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.
+
+  # >> 2.3... NECESIDAD
+  utter_gestion_item03_necesidad:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: true
+            body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+  
+        - type: "text"
+          text:
+            preview_url: true
+            body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.3... COSTO
+  utter_gestion_item03_costo:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                S/ 162.70

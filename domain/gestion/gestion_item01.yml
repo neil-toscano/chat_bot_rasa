@@ -8,7 +8,7 @@ intents:
 responses:
 
   # >> 2.1. INSPECCIÓN RIESGO BAJO
-  utter_gestion_item01_consulta:
+  utter_gestion_item01:
   - custom:
       blocks:
         - type: interactive
@@ -19,9 +19,9 @@ responses:
               text: "Consulta Trámites"
             body:
               text: |
-                *Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*
+                Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*
 
-                *🟢Opciones de pregunta:*
+                *🟢 Opciones de pregunta:*
 
                 1. ¿Qué es?
 
@@ -33,9 +33,9 @@ responses:
 
             action:
               sections:
-                - title: "Escoja la pregunta"
+                - title: "Escoge la pregunta"
                   rows:
-                    - id: "gestion_item01_consulta"
+                    - id: "/gestion_item01_consulta"
                       title: "Pregunta 1"
                       description: "¿Qué es?"
                     - id: "/gestion_item01_necesidad"

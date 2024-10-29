@@ -19,9 +19,9 @@ responses:
               text: "Consulta Trámites"
             body:
               text: |
-                *Haz seleccionado licencia de funcionamiento de edificacion de riesgo bajo*
+                Haz seleccionado *Licencia de funcionamiento de edificacion de riesgo bajo*
 
-                *🟢Opciones de pregunta:*
+                *🟢 Opciones de pregunta:*
 
                 1. ¿Qué es?
 
@@ -33,7 +33,7 @@ responses:
 
             action:
               sections:
-                - title: "Escoja la pregunta"
+                - title: "Escoge la pregunta"
                   rows:
                     - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_que_es"
                       title: "Pregunta 1"
