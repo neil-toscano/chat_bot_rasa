@@ -1,14 +1,38 @@
 version: "3.1"
 
+intents:
+  - orientacion
+
 responses:
 
-  # 3. ORIENTACIÓN Y REGISTRO :
-  utter_orientacion:
-  - text: "Bienvenido(a) al área de ORIENTACIÓN Y REGISTRO..."
-    buttons:
-    - title: "INSCRIPCIÓN POR SUCESIÓN INDIVISA"
-      payload: '/seleccionar_opcion{"opcion": "orientacion_item01"}'
-    - title: "INSCRIPCIÓN POR SUCESIÓN INTESTADA"
-      payload: '/seleccionar_opcion{"opcion": "orientacion_item02"}'
-    - title: "Volver al módulo anterior..."
-      payload: "/saludo"
+  # >> 3. ORIENTACIÓN Y REGISTRO :
+  utter_gestion:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "🟢 Opciones de Trámite:"
+            body:
+              text: |
+                1. Inscripción por Sucesión Indivisa
+
+                2. Inscripción por Sucesión Intestada
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoge el trámite"
+                  rows:
+                    - id: "/orientacion_item01"
+                      title: "Trámite 1"
+                      description: "SUCESIÓN INDIVISA"
+                    - id: "/orientacion_item02"
+                      title: "Trámite 2"
+                      description: "SUCESIÓN INTESTADA"
+              button: "Opciones"

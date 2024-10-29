@@ -26,6 +26,7 @@ responses:
   utter_soy_bot:
   - text: "Soy un bot, entrenado por la MSJL."
   
+  # >> INDEX - MENU
   utter_saludo:
   - custom:
       blocks:
@@ -48,23 +49,23 @@ responses:
               text: "seleccione el trámite abajo"
             action:
               sections:
-                - title: "Escoja trámite"
+                - title: "Escoge el trámite"
                   rows:
                     - id: "/formalizacion_promocion_empresarial"
                       title: "Trámite 1"
-                      description: "Formalización"
-                    - id: "/gestion_riesgo_desastre"
+                      description: "FORMALIZACIÓN"
+                    - id: "/gestion"
                       title: "Trámite 2"
-                      description: "Gestión"
-                    - id: "/orientacion_registro"
+                      description: "GESTIÓN"
+                    - id: "/orientacion"
                       title: "Trámite 3"
-                      description: "Orientación"
-                    - id: "/registro_civil"
+                      description: "ORIENTACIÓN"
+                    - id: "/registro"
                       title: "Trámite 4"
-                      description: "Registro"
-                    - id: "/obras_privadas_habilitacion_urbana"
+                      description: "REGISTRO"
+                    - id: "/obras"
                       title: "Trámite 5"
-                      description: "Obras"
+                      description: "OBRAS"
               button: "Seleccionar consulta"
 
 session_config:

@@ -1,18 +1,48 @@
 version: "3.1"
 
+intents:
+  - gestion
+
 responses:
-  
-  # 4. REGISTRO CIVIL :
-  utter_registro:
-  - text: "Bienvenido(a) al área de REGISTRO CIVIL..."
-    buttons:
-    - title: "MATRIMONIO CIVIL"
-      payload: '/seleccionar_opcion{"opcion": "registro_item01"}'
-    - title: "PUBLICACIÓN DE EDICTO MATRIMONIAL TRAMITADO EN OTROS DISTRITOS"
-      payload: '/seleccionar_opcion{"opcion": "registro_item02"}'
-    - title: "REPROGRAMACIÓN DE FECHA Y HORA DE CEREMONIA MATRIMONIAL"
-      payload: '/seleccionar_opcion{"opcion": "registro_item03"}'
-    - title: "SEPARACIÓN CONVENCIONAL Y DIVORCIO ULTERIOR: SEPARACIÓN CONVENCIONAL"
-      payload: '/seleccionar_opcion{"opcion": "registro_item04"}'
-    - title: "Volver al módulo anterior..."
-      payload: "/saludo"
+
+  # >> 4. REGISTRO CIVIL :
+  utter_gestion:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "🟢 Opciones de Trámite:"
+            body:
+              text: |
+                1. Matrimonio Civil
+
+                2. Publicación de Edicto Matrimonial tramitado en otros distritos
+
+                3. Reprogramación de fecha y hora de Ceremonia Matrimonial
+
+                4. Separación Convencional y Divorcio Ulterior: Separación Convencional
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoge el trámite"
+                  rows:
+                    - id: "/registro_item01"
+                      title: "Trámite 1"
+                      description: "MATROMONIO"
+                    - id: "/registro_item02"
+                      title: "Trámite 2"
+                      description: "PUBLICACIÓN"
+                    - id: "/registro_item03"
+                      title: "Trámite 3"
+                      description: "REPROGRAMACIÓN"
+                    - id: "/registro_item04"
+                      title: "Trámite 4"
+                      description: "SEPARACIÓN"
+              button: "Opciones"

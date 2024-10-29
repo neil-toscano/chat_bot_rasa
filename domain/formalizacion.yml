@@ -5,7 +5,7 @@ intents:
 
 responses:
 
-  # >> FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+  # >> 1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
   utter_formalizacion_promocion_empresarial:
   - custom:
       blocks:
@@ -52,7 +52,7 @@ responses:
             # >> LISTADO DE OPCIONES :
             action:
               sections:
-                - title: "Escoja trámite"
+                - title: "Escoge el trámite"
                   rows:
                     - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
                       title: "Trámite 1"

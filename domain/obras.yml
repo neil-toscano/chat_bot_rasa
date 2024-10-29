@@ -1,22 +1,58 @@
 version: "3.1"
 
+intents:
+  - gestion
+
 responses:
 
-  # 5. OBRAS PRIVADAS Y HABILITACIÓN URBANA :
-  utter_obras:
-  - text: "Bienvenido(a) al área de OBRAS PRIVADAS Y HABILITACIÓN URBANA..."
-    buttons:
-    - title: "CERTIFICADO DE PARÁMETROS URBANÍSTICOS Y EDIFICATORIOS"
-      payload: '/seleccionar_opcion{"opcion": "obras_item01"}'
-    - title: "VISACIÓN DE PLANOS PARA TRÁMITES DE PRESCRIPCIÓN ADQUISITIVA DE DOMINIO, TÍTULO SUPLETORIO Y RECTIFICACIÓN DE LINDEROS Y ÁREAS (Para predios urbanos)"
-      payload: '/seleccionar_opcion{"opcion": "obras_item02"}'
-    - title: "LICENCIA DE EDIFICACIÓN MODALIDAD A: APROBACIÓN AUTOMÁTICA CON FIRMA DE PROFESIONALES - CONSTRUCCIÓN DE UNA VIVIENDA UNIFAMILIAR DE HASTA 120 M2 CONSTRUIDOS, SIEMPRE QUE CONSTITUYA LA ÚNICA EDIFICACIÓN EN EL LOTE "
-      payload: '/seleccionar_opcion{"opcion": "obras_item03"}'
-    - title: "LICENCIA DE EDIFICACIÓN MODALIDAD A: APROBACIÓN AUTOMÁTICA CON FIRMA DE PROFESIONALES - DEMOLICIÓN TOTAL DE EDIFICACIONES DE HASTA TRES (03) PISOS DE ALTURA, QUE NO CUENTEN CON SEMISÓTANOS Y SÓTANOS, SIEMPRE QUE NO HAGA USO DE EXPLOSIVOS"
-      payload: '/seleccionar_opcion{"opcion": "obras_item04"}'
-    - title: "INSCRIPCIÓN POR COMPRA-VENTA"
-      payload: '/seleccionar_opcion{"opcion": "obras_item05"}'
-    - title: "INSCRIPCIÓN DE UNA INDEPENDIZACIÓN O SUBDIVISIÓN DE LOTES"
-      payload: '/seleccionar_opcion{"opcion": "obras_item06"}'
-    - title: "Volver al módulo anterior..."
-      payload: "/saludo"
+  # >> 5. OBRAS PRIVADAS Y HABILITACIÓN URBANA :
+  utter_gestion:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "🟢 Opciones de Trámite:"
+            body:
+              text: |
+                1. Certificado de Parámetros Urbanísticos y Edificatorios
+
+                2. Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+
+                3. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+
+                4. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+
+                5. Inscripción por Compra-Venta
+
+                6. Inscripción de una Independización o Subdivisión de Lotes
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoge el trámite"
+                  rows:
+                    - id: "/obras_item01"
+                      title: "Trámite 1"
+                      description: "CERTIFICADO"
+                    - id: "/obras_item02"
+                      title: "Trámite 2"
+                      description: "VISACIÓN"
+                    - id: "/obras_item03"
+                      title: "Trámite 3"
+                      description: "LICENCIA CONSTRUCCIÓN"
+                    - id: "/obras_item04"
+                      title: "Trámite 4"
+                      description: "LICENCIA DEMOLICIÓN"
+                    - id: "/obras_item05"
+                      title: "Trámite 5"
+                      description: "COMPRA-VENTA"
+                    - id: "/obras_item06"
+                      title: "Trámite 6"
+                      description: "INDEPENDIZACIÓN"
+              button: "Opciones"

@@ -5,7 +5,7 @@ intents:
 
 responses:
 
-  # >> GESTIÓN DEL RIESGO DE DESASTRES :
+  # >> 2. GESTIÓN DEL RIESGO DE DESASTRES :
   utter_gestion:
   - custom:
       blocks:
@@ -49,36 +49,36 @@ responses:
             # >> LISTADO DE OPCIONES :
             action:
               sections:
-                - title: "Escoja trámite"
+                - title: "Escoge el trámite"
                   rows:
-                    - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
+                    - id: "/gestion_item01"
                       title: "Trámite 1"
-                      description: "RIESGO BAJO"
-                    - id: "/licencia_funcionamiento_edificacion_riesgo_medio"
+                      description: "INSPECCIÓN RIESGO BAJO"
+                    - id: "/gestion_item02"
                       title: "Trámite 2"
-                      description: "RIESGO MEDIO"
-                    - id: "/licencia_funcionamiento_edificacion_riesgo_alto"
+                      description: "RENOVACIÓN RIESGO BAJO"
+                    - id: "/gestion_item03"
                       title: "Trámite 3"
-                      description: "RIESGO ALTO"
-                    - id: "/licencia_funcionamiento_edificacion_riesgo_muy_alto"
+                      description: "INSPECCIÓN RIESGO MEDIO"
+                    - id: "/gestion_item04"
                       title: "Trámite 4"
-                      description: "RIESGO MUY ALTO"
-                    - id: "/transferencia_licencia_cambio_denominacion"
+                      description: "RENOVACIÓN RIESGO MEDIO"
+                    - id: "/gestion_item05"
                       title: "Trámite 5"
-                      description: "TRANSFERENCIA O CAMBIO"
-                    - id: "/licencia_funcionamiento_cambio_giro"
+                      description: "INSPECCIÓN RIESGO ALTO"
+                    - id: "/gestion_item06"
                       title: "Trámite 6"
-                      description: "CAMBIO DE GIRO"
-                    - id: "/autorizacion_publicidad_afiche_privada"
+                      description: "RENOVACIÓN RIESGO ALTO"
+                    - id: "/gestion_item07"
                       title: "Trámite 7"
-                      description: "PUBLICIDAD AFICHE"
-                    - id: "/autorizacion_publicidad_letras_privada"
+                      description: "INSPECCIÓN RIESGO MUY ALTO"
+                    - id: "/gestion_item08"
                       title: "Trámite 8"
-                      description: "PUBLICIDAD LETRAS"
-                    - id: "/duplicado_certificado_funcionamiento"
+                      description: "RENOVACIÓN RIESGO MUY ALTO"
+                    - id: "/gestion_item09"
                       title: "Trámite 9"
-                      description: "DUPLICADO"
-                    - id: "/duplicado_resolucion_autorizacion"
+                      description: "EVALUACIÓN"
+                    - id: "/gestion_item10"
                       title: "Trámite 10"
-                      description: "DUPLICADO RESOLUCIÓN"
+                      description: "DUPLICADO"
               button: "Opciones"
