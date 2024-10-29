@@ -7,6 +7,16 @@ nlu:
 
     - Promoción empresarial'
   intent: formalizacion_promocion_empresarial
+- examples: '- Quiero hablar sobre gestión del riesgo de desastres
+
+    - hablemos sobre gestión
+
+    - Gestión
+
+    - Riesgo de desastres
+
+    - desastres'
+  intent: gestion
 - examples: '- hola
 
     - qué tal
@@ -145,6 +155,38 @@ nlu:
 
     - ¿estoy hablando con un humano?'
   intent: reto_bot
+- examples: '- Quiero hablar sobre obras privadas y habilitación urbana
+
+    - hablemos sobre obras privadas
+
+    - hablemos sobre habilitación urbana
+
+    - Obras privadas
+
+    - Habilitación urbana
+
+    - quiero saber acerca de obras privadas'
+  intent: obras
+- examples: '- Quiero hablar sobre orientación y registro
+
+    - hablemos sobre orientación
+
+    - Orientación y registro
+
+    - orientacion
+
+    - Háblame más de orientación'
+  intent: orientacion
+- examples: '- Quiero hablar sobre registro civil
+
+    - hablemos sobre registro civil
+
+    - Registro civil
+
+    - Civil
+
+    - dime acerca de registro civil'
+  intent: registro
 - examples: '- Funcionamiento para edificaciones
 
     - Licencia de funcionamiento para edificaciones
@@ -170,4 +212,43 @@ nlu:
 
     - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo'
   intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+- examples: '- Inspección Técnica de Seguridad en edificaciones posterior al inicio
+    de actividades para establecimientos objeto de inspección clasificados con Nivel
+    de Riesgo Bajo
+
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+
+    - Inspección Técnica Seguridad Riesgo Bajo
+
+    - Inspección Técnica Riesgo Bajo
+
+    '
+  intent: gestion_item01
+- examples: '- Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel
+    Riesgo Bajo
+
+    - Qué es la Inspección Técnica Seguridad Riesgo Bajo
+
+    - En que consiste la Inspección Técnica Seguridad Riesgo Bajo
+
+    '
+  intent: gestion_item01_consulta
+- examples: '- Qué necesito para la Inspección Técnica de Seguridad en edificaciones
+    de Nivel Riesgo Bajo
+
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Bajo
+
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Bajo
+
+    '
+  intent: gestion_item01_necesidad
+- examples: '- Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de
+    Nivel Riesgo Bajo
+
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Bajo
+
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Bajo
+
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Bajo'
+  intent: gestion_item01_costo
 version: '3.1'

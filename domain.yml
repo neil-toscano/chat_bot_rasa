@@ -3,19 +3,26 @@ e2e_actions: []
 entities: []
 forms: {}
 intents:
-- formalizacion_promocion_empresarial
-- licencia_funcionamiento_edificacion_riesgo_bajo
-- animo_bien
-- bot_challenge
 - licencia_funcionamiento_edificacion_riesgo_bajo_que_es
-- licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
-- licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
-- negacion
-- despedida
-- afirmacion
-- animo_mal
+- registro
 - gestion
+- formalizacion_promocion_empresarial
+- gestion_item01
+- gestion_item01_costo
 - saludo
+- afirmacion
+- licencia_funcionamiento_edificacion_riesgo_bajo
+- licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+- animo_mal
+- gestion_item01_necesidad
+- orientacion
+- bot_challenge
+- despedida
+- animo_bien
+- negacion
+- obras
+- gestion_item01_consulta
+- licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
 responses:
   utter_animo:
   - image: https://i.imgur.com/nGF1K8f.jpg
@@ -28,15 +35,15 @@ responses:
   - custom:
       blocks:
       - text:
-          body: "*\U0001F7E2 Opciones de Trámite:*\n1️. Licencia de funcionamiento\
+          body: "*\U0001F7E2 Opciones de Trámite:*\n1. Licencia de funcionamiento\
             \ para edificaciones calificadas con nivel de riesgo bajo\n  _(con ITSE\
-            \ posterior)_\n\n2️. Licencia de funcionamiento para edificaciones calificadas\
-            \ con nivel de riesgo medio\n  _(con ITSE posterior)_\n\n3️. Licencia\
-            \ de funcionamiento para edificaciones calificadas con nivel de riesgo\
-            \ alto\n  _(con ITSE posterior)_\n\n4. Licencia de funcionamiento para\
-            \ edificaciones calificadas con nivel de riesgo muy alto\n  _(con ITSE\
-            \ posterior)_\n\n5. Transferencia de licencia de funcionamiento o cambio\
-            \ de denominación o nombre comercial de la persona jurídica\n"
+            \ posterior)_\n\n2. Licencia de funcionamiento para edificaciones calificadas\
+            \ con nivel de riesgo medio\n  _(con ITSE posterior)_\n\n3. Licencia de\
+            \ funcionamiento para edificaciones calificadas con nivel de riesgo alto\n\
+            \  _(con ITSE posterior)_\n\n4. Licencia de funcionamiento para edificaciones\
+            \ calificadas con nivel de riesgo muy alto\n  _(con ITSE posterior)_\n\
+            \n5. Transferencia de licencia de funcionamiento o cambio de denominación\
+            \ o nombre comercial de la persona jurídica\n"
           preview_url: false
         type: text
       - interactive:
@@ -74,7 +81,7 @@ responses:
               - description: DUPLICADO RESOLUCIÓN
                 id: /duplicado_resolucion_autorizacion
                 title: Trámite 10
-              title: Escoja trámite
+              title: Escoge el trámite
           body:
             text: '6. Licencia de funcionamiento para cambio de giro
 
@@ -142,37 +149,37 @@ responses:
             button: Opciones
             sections:
             - rows:
-              - description: RIESGO BAJO
-                id: /licencia_funcionamiento_edificacion_riesgo_bajo
+              - description: INSPECCIÓN RIESGO BAJO
+                id: /gestion_item01
                 title: Trámite 1
-              - description: RIESGO MEDIO
-                id: /licencia_funcionamiento_edificacion_riesgo_medio
+              - description: RENOVACIÓN RIESGO BAJO
+                id: /gestion_item02
                 title: Trámite 2
-              - description: RIESGO ALTO
-                id: /licencia_funcionamiento_edificacion_riesgo_alto
+              - description: INSPECCIÓN RIESGO MEDIO
+                id: /gestion_item03
                 title: Trámite 3
-              - description: RIESGO MUY ALTO
-                id: /licencia_funcionamiento_edificacion_riesgo_muy_alto
+              - description: RENOVACIÓN RIESGO MEDIO
+                id: /gestion_item04
                 title: Trámite 4
-              - description: TRANSFERENCIA O CAMBIO
-                id: /transferencia_licencia_cambio_denominacion
+              - description: INSPECCIÓN RIESGO ALTO
+                id: /gestion_item05
                 title: Trámite 5
-              - description: CAMBIO DE GIRO
-                id: /licencia_funcionamiento_cambio_giro
+              - description: RENOVACIÓN RIESGO ALTO
+                id: /gestion_item06
                 title: Trámite 6
-              - description: PUBLICIDAD AFICHE
-                id: /autorizacion_publicidad_afiche_privada
+              - description: INSPECCIÓN RIESGO MUY ALTO
+                id: /gestion_item07
                 title: Trámite 7
-              - description: PUBLICIDAD LETRAS
-                id: /autorizacion_publicidad_letras_privada
+              - description: RENOVACIÓN RIESGO MUY ALTO
+                id: /gestion_item08
                 title: Trámite 8
-              - description: DUPLICADO
-                id: /duplicado_certificado_funcionamiento
+              - description: EVALUACIÓN
+                id: /gestion_item09
                 title: Trámite 9
-              - description: DUPLICADO RESOLUCIÓN
-                id: /duplicado_resolucion_autorizacion
+              - description: DUPLICADO
+                id: /gestion_item10
                 title: Trámite 10
-              title: Escoja trámite
+              title: Escoge el trámite
           body:
             text: '6. Renovación del Certificado de Inspección Técnica de Seguridad
               en edificaciones para establecimientos objeto de inspección clasificados
@@ -204,6 +211,39 @@ responses:
             type: text
           type: list
         type: interactive
+  utter_gestion_item01_consulta:
+  - custom:
+      blocks:
+      - text:
+          body: 'Es una inspección técnica de seguridad que se realiza en establecimientos
+            con nivel de riesgo bajo.
+
+            '
+          preview_url: false
+        type: text
+  utter_gestion_item01_costo:
+  - custom:
+      blocks:
+      - text:
+          body: S/ 138.50
+          preview_url: false
+        type: text
+  utter_gestion_item01_necesidad:
+  - custom:
+      blocks:
+      - text:
+          body: 'Solicitud de ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+
+            '
+          preview_url: true
+        type: text
+      - text:
+          body: 'Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+            \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+            '
+          preview_url: true
+        type: text
   utter_licencia_funcionamiento_edificacion_riesgo_bajo:
   - custom:
       blocks:
@@ -214,13 +254,13 @@ responses:
             - rows:
               - description: ¿Qué es?
                 id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_es
-                title: Trámite 1
+                title: Pregunta 1
               - description: ¿Qué necesito?
                 id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
-                title: Trámite 2
+                title: Pregunta 2
               - description: ¿Cuánto cuesta?
                 id: /licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
-                title: Trámite 3
+                title: Pregunta 3
               title: Escoja la pregunta
           body:
             text: '*Haz seleccionado licencia de funcionamiento de edificacion de
@@ -229,13 +269,14 @@ responses:
 
               *🟢Opciones de pregunta:*
 
-              1️. ¿Qué es?
+
+              1. ¿Qué es?
 
 
-              2️. ¿Qué necesito?
+              2. ¿Qué necesito?
 
 
-              3️. ¿Cuánto cuesta el derecho de trámite?
+              3. ¿Cuánto cuesta el derecho de trámite?
 
               '
           footer:
@@ -289,50 +330,136 @@ responses:
           preview_url: true
         type: text
   utter_obras:
-  - buttons:
-    - payload: '/seleccionar_opcion{"opcion": "obras_item01"}'
-      title: CERTIFICADO DE PARÁMETROS URBANÍSTICOS Y EDIFICATORIOS
-    - payload: '/seleccionar_opcion{"opcion": "obras_item02"}'
-      title: VISACIÓN DE PLANOS PARA TRÁMITES DE PRESCRIPCIÓN ADQUISITIVA DE DOMINIO,
-        TÍTULO SUPLETORIO Y RECTIFICACIÓN DE LINDEROS Y ÁREAS (Para predios urbanos)
-    - payload: '/seleccionar_opcion{"opcion": "obras_item03"}'
-      title: 'LICENCIA DE EDIFICACIÓN MODALIDAD A: APROBACIÓN AUTOMÁTICA CON FIRMA
-        DE PROFESIONALES - CONSTRUCCIÓN DE UNA VIVIENDA UNIFAMILIAR DE HASTA 120 M2
-        CONSTRUIDOS, SIEMPRE QUE CONSTITUYA LA ÚNICA EDIFICACIÓN EN EL LOTE '
-    - payload: '/seleccionar_opcion{"opcion": "obras_item04"}'
-      title: 'LICENCIA DE EDIFICACIÓN MODALIDAD A: APROBACIÓN AUTOMÁTICA CON FIRMA
-        DE PROFESIONALES - DEMOLICIÓN TOTAL DE EDIFICACIONES DE HASTA TRES (03) PISOS
-        DE ALTURA, QUE NO CUENTEN CON SEMISÓTANOS Y SÓTANOS, SIEMPRE QUE NO HAGA USO
-        DE EXPLOSIVOS'
-    - payload: '/seleccionar_opcion{"opcion": "obras_item05"}'
-      title: INSCRIPCIÓN POR COMPRA-VENTA
-    - payload: '/seleccionar_opcion{"opcion": "obras_item06"}'
-      title: INSCRIPCIÓN DE UNA INDEPENDIZACIÓN O SUBDIVISIÓN DE LOTES
-    - payload: /saludo
-      title: Volver al módulo anterior...
-    text: Bienvenido(a) al área de OBRAS PRIVADAS Y HABILITACIÓN URBANA...
+  - custom:
+      blocks:
+      - interactive:
+          action:
+            button: Opciones
+            sections:
+            - rows:
+              - description: CERTIFICADO
+                id: /obras_item01
+                title: Trámite 1
+              - description: VISACIÓN
+                id: /obras_item02
+                title: Trámite 2
+              - description: LICENCIA CONSTRUCCIÓN
+                id: /obras_item03
+                title: Trámite 3
+              - description: LICENCIA DEMOLICIÓN
+                id: /obras_item04
+                title: Trámite 4
+              - description: COMPRA-VENTA
+                id: /obras_item05
+                title: Trámite 5
+              - description: INDEPENDIZACIÓN
+                id: /obras_item06
+                title: Trámite 6
+              title: Escoge el trámite
+          body:
+            text: '1. Certificado de Parámetros Urbanísticos y Edificatorios
+
+
+              2. Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio,
+              Título Supletorio y Rectificación de Linderos y Áreas (Para predios
+              urbanos)
+
+
+              3. Licencia de Edificación Modalidad a: Aprobación Automática con firma
+              de profesionales - Construcción de una Vivienda Unifamiliar de hasta
+              120 m2 construidos, siempre que constituya la única edificación en el
+              lote
+
+
+              4. Licencia de Edificación Modalidad a: Aprobación Automática con firma
+              de profesionales - Demolición Total de Edificaciones de hasta tres (03)
+              pisos de altura, que no cuenten con semisótanos y sótanos, siempre que
+              no haga uso de explosivos
+
+
+              5. Inscripción por Compra-Venta
+
+
+              6. Inscripción de una Independización o Subdivisión de Lotes
+
+              '
+          footer:
+            text: '**Seleccione el trámite abajo**'
+          header:
+            text: '🟢 Opciones de Trámite:'
+            type: text
+          type: list
+        type: interactive
   utter_orientacion:
-  - buttons:
-    - payload: '/seleccionar_opcion{"opcion": "orientacion_item01"}'
-      title: INSCRIPCIÓN POR SUCESIÓN INDIVISA
-    - payload: '/seleccionar_opcion{"opcion": "orientacion_item02"}'
-      title: INSCRIPCIÓN POR SUCESIÓN INTESTADA
-    - payload: /saludo
-      title: Volver al módulo anterior...
-    text: Bienvenido(a) al área de ORIENTACIÓN Y REGISTRO...
+  - custom:
+      blocks:
+      - interactive:
+          action:
+            button: Opciones
+            sections:
+            - rows:
+              - description: SUCESIÓN INDIVISA
+                id: /orientacion_item01
+                title: Trámite 1
+              - description: SUCESIÓN INTESTADA
+                id: /orientacion_item02
+                title: Trámite 2
+              title: Escoge el trámite
+          body:
+            text: '1. Inscripción por Sucesión Indivisa
+
+
+              2. Inscripción por Sucesión Intestada
+
+              '
+          footer:
+            text: '**Seleccione el trámite abajo**'
+          header:
+            text: '🟢 Opciones de Trámite:'
+            type: text
+          type: list
+        type: interactive
   utter_registro:
-  - buttons:
-    - payload: '/seleccionar_opcion{"opcion": "registro_item01"}'
-      title: MATRIMONIO CIVIL
-    - payload: '/seleccionar_opcion{"opcion": "registro_item02"}'
-      title: PUBLICACIÓN DE EDICTO MATRIMONIAL TRAMITADO EN OTROS DISTRITOS
-    - payload: '/seleccionar_opcion{"opcion": "registro_item03"}'
-      title: REPROGRAMACIÓN DE FECHA Y HORA DE CEREMONIA MATRIMONIAL
-    - payload: '/seleccionar_opcion{"opcion": "registro_item04"}'
-      title: 'SEPARACIÓN CONVENCIONAL Y DIVORCIO ULTERIOR: SEPARACIÓN CONVENCIONAL'
-    - payload: /saludo
-      title: Volver al módulo anterior...
-    text: Bienvenido(a) al área de REGISTRO CIVIL...
+  - custom:
+      blocks:
+      - interactive:
+          action:
+            button: Opciones
+            sections:
+            - rows:
+              - description: MATROMONIO
+                id: /registro_item01
+                title: Trámite 1
+              - description: PUBLICACIÓN
+                id: /registro_item02
+                title: Trámite 2
+              - description: REPROGRAMACIÓN
+                id: /registro_item03
+                title: Trámite 3
+              - description: SEPARACIÓN
+                id: /registro_item04
+                title: Trámite 4
+              title: Escoge el trámite
+          body:
+            text: '1. Matrimonio Civil
+
+
+              2. Publicación de Edicto Matrimonial tramitado en otros distritos
+
+
+              3. Reprogramación de fecha y hora de Ceremonia Matrimonial
+
+
+              4. Separación Convencional y Divorcio Ulterior: Separación Convencional
+
+              '
+          footer:
+            text: '**Seleccione el trámite abajo**'
+          header:
+            text: '🟢 Opciones de Trámite:'
+            type: text
+          type: list
+        type: interactive
   utter_saludo:
   - custom:
       blocks:
@@ -341,22 +468,22 @@ responses:
             button: Seleccionar consulta
             sections:
             - rows:
-              - description: Formalización
+              - description: FORMALIZACIÓN
                 id: /formalizacion_promocion_empresarial
                 title: Trámite 1
-              - description: Gestión
-                id: /gestion_riesgo_desastre
+              - description: GESTIÓN
+                id: /gestion
                 title: Trámite 2
-              - description: Orientación
-                id: /orientacion_registro
+              - description: ORIENTACIÓN
+                id: /orientacion
                 title: Trámite 3
-              - description: Registro
-                id: /registro_civil
+              - description: REGISTRO
+                id: /registro
                 title: Trámite 4
-              - description: Obras
-                id: /obras_privadas_habilitacion_urbana
+              - description: OBRAS
+                id: /obras
                 title: Trámite 5
-              title: Escoja trámite
+              title: Escoge el trámite
           body:
             text: '¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN
               JUAN DE LURIGANCHO.

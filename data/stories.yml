@@ -8,6 +8,12 @@ stories:
 - steps:
   - intent: saludo
   - action: utter_saludo
+  - intent: gestion
+  - action: utter_gestion
+  story: gestion del riesgo de desastres
+- steps:
+  - intent: saludo
+  - action: utter_saludo
   - intent: animo_bien
   - action: utter_feliz
   story: happy path
@@ -30,6 +36,24 @@ stories:
   - action: utter_despedida
   story: sad path 2
 - steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: obras
+  - action: utter_obras
+  story: formalizacion y promocion empresarial
+- steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: orientacion
+  - action: utter_orientacion
+  story: orientacion y registro
+- steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: registro
+  - action: utter_registro
+  story: registro civil
+- steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
   story: licencia funcionamiento riesgo bajo
@@ -45,4 +69,20 @@ stories:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
   story: licencia funcionamiento riesgo bajo que cuanto cuesta
+- steps:
+  - intent: gestion_item01
+  - action: utter_gestion_item01
+  story: inspeccion riesgo bajo
+- steps:
+  - intent: gestion_item01_consulta
+  - action: utter_gestion_item01_consulta
+  story: inspeccion riesgo bajo consulta
+- steps:
+  - intent: gestion_item01_necesidad
+  - action: utter_gestion_item01_necesidad
+  story: inspeccion riesgo bajo necesidad
+- steps:
+  - intent: gestion_item01_costo
+  - action: utter_gestion_item01_costo
+  story: inspeccion riesgo bajo costo
 version: '3.1'
