@@ -1,0 +1,11 @@
+version: "3.1"
+
+# >> 2. STORIES - GESTIÓN DEL RIESGO DE DESASTRES :
+stories:
+
+- story: gestion del riesgo de desastres
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: gestion
+  - action: utter_gestion

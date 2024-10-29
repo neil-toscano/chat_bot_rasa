@@ -1,12 +1,12 @@
 version: "3.1"
 
 intents:
-  - gestion
+  - obras
 
 responses:
 
   # >> 5. OBRAS PRIVADAS Y HABILITACIÓN URBANA :
-  utter_gestion:
+  utter_obras:
   - custom:
       blocks:
         - type: interactive

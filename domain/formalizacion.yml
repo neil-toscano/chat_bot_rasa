@@ -2,6 +2,7 @@ version: "3.1"
 
 intents:
   - formalizacion_promocion_empresarial
+  - licencia_funcionamiento_edificacion_riesgo_bajo
 
 responses:
 
@@ -14,13 +15,13 @@ responses:
             preview_url: false
             body: |
                 *🟢 Opciones de Trámite:*
-                1️. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
+                1. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
                   _(con ITSE posterior)_
 
-                2️. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio
+                2. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio
                   _(con ITSE posterior)_
 
-                3️. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
+                3. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
                   _(con ITSE posterior)_
                 
                 4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto

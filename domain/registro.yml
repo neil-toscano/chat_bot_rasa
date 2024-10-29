@@ -1,12 +1,12 @@
 version: "3.1"
 
 intents:
-  - gestion
+  - registro
 
 responses:
 
   # >> 4. REGISTRO CIVIL :
-  utter_gestion:
+  utter_registro:
   - custom:
       blocks:
         - type: interactive

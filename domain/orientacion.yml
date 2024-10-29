@@ -6,7 +6,7 @@ intents:
 responses:
 
   # >> 3. ORIENTACIÓN Y REGISTRO :
-  utter_gestion:
+  utter_orientacion:
   - custom:
       blocks:
         - type: interactive
