@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.9. NLU - EVALUACIÓN CONDICIONES DE SEGURIDAD :
+- intent: gestion_item09
+  examples: |
+    - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
+    - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Evaluación de Condiciones de Seguridad Espectáculos
+
+# >> 2.9... NLU - CONSULTA
+- intent: gestion_item09_consulta
+  examples: |
+    - Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - En que consiste la Evaluación de Condiciones de Seguridad en espectáculos públicos
+
+# >> 2.9... NLU - NECESIDAD
+- intent: gestion_item09_necesidad
+  examples: |
+    - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Qué requisitos piden para la Evaluación de Condiciones de Seguridad en espectáculos públicos
+
+# >> 2.9... NLU - COSTO
+- intent: gestion_item09_costo
+  examples: |
+    - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Cuánto debo pagar por la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Cuánto es el monto de la Evaluación de Condiciones de Seguridad en espectáculos públicos

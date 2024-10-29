@@ -1,0 +1,37 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.1. NLU - RENOVACIÓN RIESGO BAJO :
+- intent: gestion_item02
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Renovación de Inspección Técnica Riesgo Bajo
+    - Renovación Riesgo Bajo
+
+# >> 2.1... NLU - CONSULTA
+- intent: gestion_item02_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - Qué es la Renovación de Inspección Técnica Riesgo Bajo
+    - Qué es la Renovación Riesgo Bajo
+
+# >> 2.1... NLU - NECESIDAD
+- intent: gestion_item02_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Bajo
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Bajo
+
+# >> 2.1... NLU - COSTO
+- intent: gestion_item02_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Bajo
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Bajo
