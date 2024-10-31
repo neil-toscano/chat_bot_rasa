@@ -155,6 +155,24 @@ version: "3.1"
   - Qué necesito para la licencia de funcionamiento para edificaciones
   - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo bajo
 
+# >> SERVICIO DE SALUD :
+- intent: servicio_de_salud
+  examples: |
+  - Licencia para servicio de salud
+  - Licencia de funcionamiento para edificaciones de servicio de salud
+
+# >> ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: actividad_requiere_autorizacion
+  examples: |
+  - Solicitud de autorización para evento
+  - Permiso para actividad comercial
+
+# >> MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: monumento_del_patrimonio_cultural
+  examples: |
+  - Licencia para monumento del patrimonio cultural
+  - Autorización para uso de monumento histórico
+
 # >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO CUANTO CUESTA :
 - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
   examples: |
