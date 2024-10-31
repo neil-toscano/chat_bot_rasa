@@ -1,60 +1,39 @@
 import os
 import yaml
+from ruamel.yaml import YAML
 
-# Consolidación de archivos de domain con estructura de comentarios y bloques
+# Consolidación de archivos de domain
 def consolidate_domain_files():
-    consolidated_data = {
+    yaml = YAML()
+    yaml.indent(mapping=2, sequence=4, offset=2)
+    combined_content = {
         "version": "3.1",
         "intents": [],
-        "entities": [],
-        "slots": {},
-        "responses": {},
-        "actions": [],
-        "forms": {},
-        "e2e_actions": []
+        "responses": {}
     }
 
-    yaml_directory = 'domain'  # Carpeta de domain modularizado
-
-    for root, dirs, files in os.walk(yaml_directory):
+    # Función para leer archivos recursivamente
+    for root, _, files in os.walk("domain"):
         for filename in files:
-            if filename.endswith('.yml'):
+            if filename.endswith(".yml"):
                 file_path = os.path.join(root, filename)
                 with open(file_path, 'r', encoding='utf-8') as file:
-                    data = yaml.safe_load(file)
-                    if data:
-                        for key, value in data.items():
-                            if key in ["intents", "entities", "actions", "e2e_actions"]:
-                                consolidated_data[key].extend(value)
-                            elif key == "slots":
-                                consolidated_data["slots"].update(value)
-                            elif key == "responses":
-                                for response_key, response_value in value.items():
-                                    consolidated_data["responses"][response_key] = response_value
+                    content = yaml.load(file)
+                    
+                    # Verificar que el contenido no sea None
+                    if content is None:
+                        continue
+                    
+                    # Combinar intents y responses de cada archivo
+                    if "intents" in content:
+                        combined_content["intents"].extend(content["intents"])
+                    
+                    if "responses" in content:
+                        combined_content["responses"].update(content["responses"])
 
-    # Eliminamos duplicados en listas como "intents" y "entities"
-    for key in ["intents", "entities", "actions", "e2e_actions"]:
-        consolidated_data[key] = list(set(consolidated_data[key]))
-
-    with open('domain.yml', 'w', encoding='utf-8') as outfile:
-        outfile.write("version: \"3.1\"\n\n")
-        
-        if consolidated_data["intents"]:
-            outfile.write("intents:\n")
-            for intent in consolidated_data["intents"]:
-                outfile.write(f"  - {intent}\n")
-            outfile.write("\n")
-        
-        if consolidated_data["responses"]:
-            outfile.write("responses:\n\n")
-            for response_key, response_content in consolidated_data["responses"].items():
-                # Añade un comentario con el título del bloque de respuestas en mayúsculas
-                formatted_title = response_key.replace("_", " ").upper()
-                outfile.write(f"  # >> {formatted_title} :\n")
-                outfile.write(f"  {response_key}:\n")
-                for response in response_content:
-                    yaml.dump(response, outfile, allow_unicode=True, default_style=None, default_flow_style=False, indent=4)
-                outfile.write("\n")
+    # Escribir el archivo combinado en el archivo principal
+    with open("domain.yml", 'w', encoding='utf-8') as output:
+        yaml.dump(combined_content, output)
 
 # Consolidación de archivos de nlu
 def consolidate_nlu_files():

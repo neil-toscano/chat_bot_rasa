@@ -38,9 +38,6 @@ responses:
         - type: interactive
           interactive:
             type: list
-            header:
-              type: text
-              text: "Consulta Trámites"
             body:
               text: |
                 6. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
