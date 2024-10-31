@@ -1,7 +1,6 @@
 version: "3.1"
 
 nlu:
-
 # >> 1.1. NLU - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO BAJO :
 - intent: licencia_funcionamiento_edificacion_riesgo_bajo
   examples: |
@@ -20,6 +19,24 @@ nlu:
   examples: |
     - Qué necesito para la licencia de funcionamiento para edificaciones
     - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> 1.1... NLU - SERVICIO SALUD
+- intent: servicio_de_salud
+  examples: |
+    - Licencia para servicio de salud
+    - Licencia de funcionamiento para edificaciones de servicio de salud
+
+# >> 1.1... NLU - REQUIERE AUTORIZACION
+- intent: actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento
+    - Permiso para actividad comercial
+    
+# >> 1.1... NLU - PATRIMONIO CULTURAL
+- intent: monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural
+    - Autorización para uso de monumento histórico
 
 # >> 1.1... NLU - COSTO
 - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
