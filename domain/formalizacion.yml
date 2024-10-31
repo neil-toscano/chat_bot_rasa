@@ -15,26 +15,19 @@ responses:
             preview_url: false
             body: |
                 *🟢 Opciones de Trámite:*
-                1. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
-                  _(con ITSE posterior)_
+                1. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo _(con ITSE posterior)_
 
-                2. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio
-                  _(con ITSE posterior)_
+                2. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio _(con ITSE posterior)_
 
-                3. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
-                  _(con ITSE posterior)_
+                3. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto _(con ITSE posterior)_
                 
-                4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto
-                  _(con ITSE posterior)_
+                4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto _(con ITSE posterior)_
 
                 5. Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
                 
         - type: interactive
           interactive:
             type: list
-            header:
-              type: text
-              text: "Consulta Trámites"
             body:
               text: |
                 6. Licencia de funcionamiento para cambio de giro
