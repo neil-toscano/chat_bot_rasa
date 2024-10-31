@@ -54,12 +54,12 @@ def consolidate_nlu_files():
                         for intent_data in data["nlu"]:
                             formatted_intent = {
                                 "intent": intent_data["intent"],
-                                "examples": "\n".join(f"  {line}" for line in intent_data["examples"].strip().splitlines())
+                                "examples": "\n".join(f"    {line}" for line in intent_data["examples"].strip().splitlines())
                             }
                             consolidated_data["nlu"].append(formatted_intent)
 
     with open('data/nlu.yml', 'w', encoding='utf-8') as outfile:
-        outfile.write("version: \"3.1\"\n\n")
+        outfile.write("version: \"3.1\"\n\nnlu:\n")
         for intent in consolidated_data["nlu"]:
             outfile.write(f"# >> {intent['intent'].replace('_', ' ').upper()} :\n")
             outfile.write(f"- intent: {intent['intent']}\n")
