@@ -31,7 +31,7 @@ nlu:
   examples: |
     - Solicitud de autorización para evento
     - Permiso para actividad comercial
-    
+
 # >> 1.1... NLU - PATRIMONIO CULTURAL
 - intent: monumento_del_patrimonio_cultural
   examples: |

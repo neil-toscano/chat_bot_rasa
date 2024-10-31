@@ -20,21 +20,21 @@ version: "3.1"
 # >> SALUDO :
 - intent: saludo
   examples: |
-  - hola
-  - qué tal
-  - buenos días
-  - buenas tardes
-  - buenas noches
-  - hola, ¿cómo estás?
-  - ¿qué onda?
-  - hola a todos
-  - cómo andas
-  - qué hay
-  - hey
-  - qué pasa
-  - saludos
-  - hola amigo
-  - hola, buenas
+    - hola
+    - qué tal
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - hola, ¿cómo estás?
+    - ¿qué onda?
+    - hola a todos
+    - cómo andas
+    - qué hay
+    - hey
+    - qué pasa
+    - saludos
+    - hola amigo
+    - hola, buenas
 
 # >> DESPEDIDA :
 - intent: despedida
