@@ -1,6 +1,18 @@
-version: "3.1"
-
+version: '3.1'
 intents:
+  - formalizacion_promocion_empresarial
+  - licencia_funcionamiento_edificacion_riesgo_bajo
+  - gestion
+  - gestion_item01
+  - gestion_item02
+  - gestion_item03
+  - gestion_item04
+  - gestion_item05
+  - gestion_item06
+  - gestion_item07
+  - gestion_item08
+  - gestion_item09
+  - gestion_item10
   - saludo
   - despedida
   - afirmacion
@@ -8,38 +20,1213 @@ intents:
   - animo_bien
   - animo_mal
   - bot_challenge
-
+  - obras
+  - orientacion
+  - registro
+  - licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - gestion_item01_consulta
+  - gestion_item01_necesidad
+  - gestion_item01_costo
+  - gestion_item02_consulta
+  - gestion_item02_necesidad
+  - gestion_item02_costo
+  - gestion_item03_consulta
+  - gestion_item03_necesidad
+  - gestion_item03_costo
+  - gestion_item04_consulta
+  - gestion_item04_necesidad
+  - gestion_item04_costo
+  - gestion_item05_consulta
+  - gestion_item05_necesidad
+  - gestion_item05_costo
+  - gestion_item06_consulta
+  - gestion_item06_necesidad
+  - gestion_item06_costo
+  - gestion_item07_consulta
+  - gestion_item07_necesidad
+  - gestion_item07_costo
+  - gestion_item08_consulta
+  - gestion_item08_necesidad
+  - gestion_item08_costo
+  - gestion_item09_consulta
+  - gestion_item09_necesidad
+  - gestion_item09_costo
+  - gestion_item10_consulta
+  - gestion_item10_necesidad
+  - gestion_item10_costo
 responses:
-  utter_saludo:
-   - text: "¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO. ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:"
-     buttons:
-     - title: "FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL"
-       payload: "/animo_bien"
-     - title: "GESTIÓN DEL RIESGO DE DESASTRES"
-       payload: "/animo_mal"
-     - title: "ORIENTACIÓN Y REGISTRO"
-       payload: "/animo_mal"
-     - title: "REGISTRO CIVIL"
-       payload: "/animo_mal"
-     - title: "OBRAS PRIVADAS Y HABILITACIÓN URBANA"
-       payload: "/animo_mal"
+  utter_formalizacion_promocion_empresarial:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *🟢 Opciones de Trámite:*
+                1. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo _(con ITSE posterior)_
 
+                2. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio _(con ITSE posterior)_
+
+                3. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto _(con ITSE posterior)_
+
+                4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto _(con ITSE posterior)_
+
+                5. Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  6. Licencia de funcionamiento para cambio de giro
+
+                  7. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
+
+                  8. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
+
+                  9. Duplicado del certificado de licencia de funcionamiento
+
+                  10. Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+
+              footer:
+                text: '**Seleccione el trámite abajo**'
+
+            # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge el trámite
+                    rows:
+                      - id: /licencia_funcionamiento_edificacion_riesgo_bajo
+                        title: Trámite 1
+                        description: RIESGO BAJO
+                      - id: /licencia_funcionamiento_edificacion_riesgo_medio
+                        title: Trámite 2
+                        description: RIESGO MEDIO
+                      - id: /licencia_funcionamiento_edificacion_riesgo_alto
+                        title: Trámite 3
+                        description: RIESGO ALTO
+                      - id: /licencia_funcionamiento_edificacion_riesgo_muy_alto
+                        title: Trámite 4
+                        description: RIESGO MUY ALTO
+                      - id: /transferencia_licencia_cambio_denominacion
+                        title: Trámite 5
+                        description: TRANSFERENCIA O CAMBIO
+                      - id: /licencia_funcionamiento_cambio_giro
+                        title: Trámite 6
+                        description: CAMBIO DE GIRO
+                      - id: /autorizacion_publicidad_afiche_privada
+                        title: Trámite 7
+                        description: PUBLICIDAD AFICHE
+                      - id: /autorizacion_publicidad_letras_privada
+                        title: Trámite 8
+                        description: PUBLICIDAD LETRAS
+                      - id: /duplicado_certificado_funcionamiento
+                        title: Trámite 9
+                        description: DUPLICADO
+                      - id: /duplicado_resolucion_autorizacion
+                        title: Trámite 10
+                        description: DUPLICADO RESOLUCIÓN
+                button: Opciones
+  utter_gestion:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *🟢 Opciones de Trámite:*
+
+                1. Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+
+                2. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+
+                3. Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+
+                4. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio
+
+                5. Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  6. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+
+                  7. Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+
+                  8. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+
+                  9. Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
+
+                  10. Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+
+              footer:
+                text: '**Seleccione el trámite abajo**'
+
+            # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge el trámite
+                    rows:
+                      - id: /gestion_item01
+                        title: Trámite 1
+                        description: INSPECCIÓN RIESGO BAJO
+                      - id: /gestion_item02
+                        title: Trámite 2
+                        description: RENOVACIÓN RIESGO BAJO
+                      - id: /gestion_item03
+                        title: Trámite 3
+                        description: INSPECCIÓN RIESGO MEDIO
+                      - id: /gestion_item04
+                        title: Trámite 4
+                        description: RENOVACIÓN RIESGO MEDIO
+                      - id: /gestion_item05
+                        title: Trámite 5
+                        description: INSPECCIÓN RIESGO ALTO
+                      - id: /gestion_item06
+                        title: Trámite 6
+                        description: RENOVACIÓN RIESGO ALTO
+                      - id: /gestion_item07
+                        title: Trámite 7
+                        description: INSPECCIÓN RIESGO MUY ALTO
+                      - id: /gestion_item08
+                        title: Trámite 8
+                        description: RENOVACIÓN RIESGO MUY ALTO
+                      - id: /gestion_item09
+                        title: Trámite 9
+                        description: EVALUACIÓN
+                      - id: /gestion_item10
+                        title: Trámite 10
+                        description: DUPLICADO
+                button: Opciones
   utter_animo:
-  - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: Siento escuchar eso, aquí hay algo que te va dar ánimo
+      image: https://i.imgur.com/nGF1K8f.jpg
 
   utter_sirvio_de_ayuda:
-  - text: "¿Te ha ayudado?"
+    - text: ¿Te ha ayudado?
 
   utter_feliz:
-  - text: "Genial, continua así"
+    - text: Genial, continua así
 
   utter_despedida:
-  - text: "Hasta luego"
+    - text: Hasta luego
 
   utter_soy_bot:
-  - text: "Soy un bot, entrenado por la MSJL."
+    - text: Soy un bot, entrenado por la MSJL.
 
+  # >> INDEX - MENU
+  utter_saludo:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  ¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+                  ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
+                  1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
+                  2. GESTIÓN DEL RIESGO DE DESASTRES
+                  3. ORIENTACIÓN Y REGISTRO
+                  4. REGISTRO CIVIL
+                  5. OBRAS PRIVADAS Y HABILITACIÓN URBANA
+              footer:
+                text: seleccione el trámite abajo
+              action:
+                sections:
+                  - title: Escoge el trámite
+                    rows:
+                      - id: /formalizacion_promocion_empresarial
+                        title: Trámite 1
+                        description: FORMALIZACIÓN
+                      - id: /gestion
+                        title: Trámite 2
+                        description: GESTIÓN
+                      - id: /orientacion
+                        title: Trámite 3
+                        description: ORIENTACIÓN
+                      - id: /registro
+                        title: Trámite 4
+                        description: REGISTRO
+                      - id: /obras
+                        title: Trámite 5
+                        description: OBRAS
+                button: Seleccionar consulta
+
+  utter_obras:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: '🟢 Opciones de Trámite:'
+              body:
+                text: |
+                  1. Certificado de Parámetros Urbanísticos y Edificatorios
+
+                  2. Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+
+                  3. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+
+                  4. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+
+                  5. Inscripción por Compra-Venta
+
+                  6. Inscripción de una Independización o Subdivisión de Lotes
+
+              footer:
+                text: '**Seleccione el trámite abajo**'
+
+            # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge el trámite
+                    rows:
+                      - id: /obras_item01
+                        title: Trámite 1
+                        description: CERTIFICADO
+                      - id: /obras_item02
+                        title: Trámite 2
+                        description: VISACIÓN
+                      - id: /obras_item03
+                        title: Trámite 3
+                        description: LICENCIA CONSTRUCCIÓN
+                      - id: /obras_item04
+                        title: Trámite 4
+                        description: LICENCIA DEMOLICIÓN
+                      - id: /obras_item05
+                        title: Trámite 5
+                        description: COMPRA-VENTA
+                      - id: /obras_item06
+                        title: Trámite 6
+                        description: INDEPENDIZACIÓN
+                button: Opciones
+  utter_orientacion:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: '🟢 Opciones de Trámite:'
+              body:
+                text: |
+                  1. Inscripción por Sucesión Indivisa
+
+                  2. Inscripción por Sucesión Intestada
+
+              footer:
+                text: '**Seleccione el trámite abajo**'
+
+            # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge el trámite
+                    rows:
+                      - id: /orientacion_item01
+                        title: Trámite 1
+                        description: SUCESIÓN INDIVISA
+                      - id: /orientacion_item02
+                        title: Trámite 2
+                        description: SUCESIÓN INTESTADA
+                button: Opciones
+  utter_registro:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: '🟢 Opciones de Trámite:'
+              body:
+                text: |
+                  1. Matrimonio Civil
+
+                  2. Publicación de Edicto Matrimonial tramitado en otros distritos
+
+                  3. Reprogramación de fecha y hora de Ceremonia Matrimonial
+
+                  4. Separación Convencional y Divorcio Ulterior: Separación Convencional
+
+              footer:
+                text: '**Seleccione el trámite abajo**'
+
+            # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge el trámite
+                    rows:
+                      - id: /registro_item01
+                        title: Trámite 1
+                        description: MATROMONIO
+                      - id: /registro_item02
+                        title: Trámite 2
+                        description: PUBLICACIÓN
+                      - id: /registro_item03
+                        title: Trámite 3
+                        description: REPROGRAMACIÓN
+                      - id: /registro_item04
+                        title: Trámite 4
+                        description: SEPARACIÓN
+                button: Opciones
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Licencia de funcionamiento de edificacion de riesgo bajo*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 1.1... CONSULTA
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es un permiso otorgado por la municipalidad para que un negocio inicie su actividad comercial  en un local que ha sido clasificado como de riesgo bajo
+
+  # >> 1.1... NECESIDAD
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Es un permiso otorgado por la municipalidad para que un negocio inicie su actividad comercial  en un local que ha sido clasificado como de riesgo bajo \n https://www.meta.com/quest/quest-3
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación. \n https://www.meta.com/quest/quest-3
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+
+  # >> 1.1... COSTO
+  utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 229.20
+  utter_gestion_item01:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item01_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item01_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item01_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.1... CONSULTA
+  utter_gestion_item01_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo.
+
+  # >> 2.1... NECESIDAD
+  utter_gestion_item01_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.1... COSTO
+  utter_gestion_item01_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 138.50
+  utter_gestion_item02:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item02_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item02_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item02_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.2... CONSULTA
+  utter_gestion_item02_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo bajo.
+
+  # >> 2.2... NECESIDAD
+  utter_gestion_item02_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.2... COSTO
+  utter_gestion_item02_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 132.40
+  utter_gestion_item03:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item03_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item03_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item03_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.3... CONSULTA
+  utter_gestion_item03_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.
+
+  # >> 2.3... NECESIDAD
+  utter_gestion_item03_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.3... COSTO
+  utter_gestion_item03_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 162.70
+  utter_gestion_item04:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item04_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item04_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item04_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.4... CONSULTA
+  utter_gestion_item04_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo medio.
+
+  # >> 2.4... NECESIDAD
+  utter_gestion_item04_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.4... COSTO
+  utter_gestion_item04_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 151.60
+  utter_gestion_item05:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item05_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item05_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item05_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.5... CONSULTA
+  utter_gestion_item05_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Evaluación de seguridad previa al inicio de actividades en establecimientos con alto riesgo.
+
+  # >> 2.5... NECESIDAD
+  utter_gestion_item05_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Documentos técnicos en copia simple:
+
+                1. Croquis de ubicación
+
+                2. Plano de arquitectura y detalle de aforo
+
+                3. Plano de distribución eléctrica y cargas
+
+                4. Certificado vigente de puesta a tierra
+
+                5. Plan de seguridad del establecimiento
+
+                6. Memoria de prueba de mantenimiento de equipos y protección contra incendios
+
+  # >> 2.5... COSTO
+  utter_gestion_item05_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 367.20
+  utter_gestion_item06:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item06_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item06_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item06_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.6... CONSULTA
+  utter_gestion_item06_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo alto.
+
+  # >> 2.6... NECESIDAD
+  utter_gestion_item06_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.6... COSTO
+  utter_gestion_item06_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 361.30
+  utter_gestion_item07:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item07_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item07_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item07_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.7... CONSULTA
+  utter_gestion_item07_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades
+
+  # >> 2.7... NECESIDAD
+  utter_gestion_item07_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Documentos técnicos en copia simple:
+
+                1. Croquis de ubicación
+
+                2. Plano de arquitectura y detalle de aforo
+
+                3. Plano de distribución eléctrica y cargas
+
+                4. Certificado vigente de puesta a tierra
+
+                5. Plan de seguridad del establecimiento
+
+                6. Memoria de prueba de mantenimiento de equipos y protección contra incendios
+
+  # >> 2.7... COSTO
+  utter_gestion_item07_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 699.70
+  utter_gestion_item08:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item08_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item08_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item08_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.8... CONSULTA
+  utter_gestion_item08_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es el proceso de actualización del certificado que verifica la seguridad en edificaciones con nivel de riesgo muy alto.
+
+  # >> 2.8... NECESIDAD
+  utter_gestion_item08_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+  # >> 2.8... COSTO
+  utter_gestion_item08_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 689.10
+  utter_gestion_item09:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item09_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item09_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item09_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.9... CONSULTA
+  utter_gestion_item09_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
+
+  # >> 2.9... NECESIDAD
+  utter_gestion_item09_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                1. Solicitud de renovación ITSE, indicando número y fecha de pago.
+
+                2. Declaración jurada del solicitante, incluyendo datos del representante legal si aplica.
+
+                3. Croquis del lugar donde se realizará el espectáculo
+
+                4. Plano del espacio con distribución del escenario y aforo.
+
+                5. Descripción del evento, montaje, instalaciones eléctricas, y seguridad.
+
+                6. Protocolo de medición del sistema de puesta a tierra (si hay instalaciones eléctricas).
+
+                7. Constancia de mantenimiento de extintores.
+
+                8. Plan de seguridad con señalización, rutas de evacuación, y zonas seguras.
+
+                9. Declaración de instalación segura de gas licuado (si aplica).
+
+                10. Memoria descriptiva de seguridad para juegos mecánicos (si se usan).
+
+                11. Certificado de inspección técnica de seguridad (ITSE) si el recinto no lo ha emitido la Municipalidad.
+
+  # >> 2.9... COSTO
+  utter_gestion_item09_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 356.30
+  utter_gestion_item10:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /gestion_item10_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /gestion_item10_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /gestion_item10_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 2.10... CONSULTA
+  utter_gestion_item10_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
+
+  # >> 2.10... NECESIDAD
+  utter_gestion_item10_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                Solicitud, indicando número y fecha de pago por el derecho de trámite.
+
+  # >> 2.10... COSTO
+  utter_gestion_item10_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 63.60
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

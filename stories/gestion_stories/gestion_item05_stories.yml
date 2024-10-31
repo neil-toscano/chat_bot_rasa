@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+# >> 2.5. STORIES - INSPECCIÓN RIESGO ALTO :
+- story: inspeccion riesgo alto
+  steps:
+  - intent: gestion_item05
+  - action: utter_gestion_item05
+
+# >> 2.5... STORIES - CONSULTA
+- story: inspeccion riesgo alto consulta
+  steps:
+  - intent: gestion_item05_consulta
+  - action: utter_gestion_item05_consulta
+
+# >> 2.5... STORIES - NECESIDAD
+- story: inspeccion riesgo alto necesidad
+  steps:
+  - intent: gestion_item05_necesidad
+  - action: utter_gestion_item05_necesidad
+
+# >> 2.5... STORIES - COSTO
+- story: inspeccion riesgo alto costo
+  steps:
+  - intent: gestion_item05_costo
+  - action: utter_gestion_item05_costo

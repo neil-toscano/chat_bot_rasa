@@ -1,0 +1,77 @@
+version: "3.1"
+
+intents:
+  - gestion_item10_consulta
+  - gestion_item10_necesidad
+  - gestion_item10_costo
+
+responses:
+
+  # >> 2.10. DUPLICADO CERTIFICADO DE INSPECCIÓN TÉCNICA
+  utter_gestion_item10:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "Consulta Trámites"
+            body:
+              text: |
+                Haz seleccionado *Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones*
+
+                *🟢 Opciones de pregunta:*
+
+                1. ¿Qué es?
+
+                2. ¿Qué necesito?
+
+                3. ¿Cuánto cuesta el derecho de trámite?
+            footer:
+              text: "**Seleccione la pregunta abajo**"
+
+            action:
+              sections:
+                - title: "Escoge la pregunta"
+                  rows:
+                    - id: "/gestion_item10_consulta"
+                      title: "Pregunta 1"
+                      description: "¿Qué es?"
+                    - id: "/gestion_item10_necesidad"
+                      title: "Pregunta 2"
+                      description: "¿Qué necesito?"
+                    - id: "/gestion_item10_costo"
+                      title: "Pregunta 3"
+                      description: "¿Cuánto cuesta?"
+              button: "Opciones"
+
+  # >> 2.10... CONSULTA
+  utter_gestion_item10_consulta:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
+
+  # >> 2.10... NECESIDAD
+  utter_gestion_item10_necesidad:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: true
+            body: |
+                Solicitud, indicando número y fecha de pago por el derecho de trámite.
+
+  # >> 2.10... COSTO
+  utter_gestion_item10_costo:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                S/ 63.60

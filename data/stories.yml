@@ -2,6 +2,23 @@ version: "3.1"
 
 stories:
 
+# >> FORMALIZACION Y PROMOCION EMPRESARIAL :
+- story: formalizacion y promocion empresarial
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: formalizacion_promocion_empresarial
+  - action: utter_formalizacion_promocion_empresarial
+
+# >> GESTION DEL RIESGO DE DESASTRES :
+- story: gestion del riesgo de desastres
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: gestion
+  - action: utter_gestion
+
+# >> HAPPY PATH :
 - story: happy path
   steps:
   - intent: saludo
@@ -9,6 +26,7 @@ stories:
   - intent: animo_bien
   - action: utter_feliz
 
+# >> SAD PATH 1 :
 - story: sad path 1
   steps:
   - intent: saludo
@@ -19,6 +37,7 @@ stories:
   - intent: afirmacion
   - action: utter_feliz
 
+# >> SAD PATH 2 :
 - story: sad path 2
   steps:
   - intent: saludo
@@ -28,3 +47,291 @@ stories:
   - action: utter_sirvio_de_ayuda
   - intent: negacion
   - action: utter_despedida
+
+# >> FORMALIZACION Y PROMOCION EMPRESARIAL :
+- story: formalizacion y promocion empresarial
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: obras
+  - action: utter_obras
+
+# >> ORIENTACION Y REGISTRO :
+- story: orientacion y registro
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: orientacion
+  - action: utter_orientacion
+
+# >> REGISTRO CIVIL :
+- story: registro civil
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: registro
+  - action: utter_registro
+
+# >> LICENCIA FUNCIONAMIENTO RIESGO BAJO :
+- story: licencia funcionamiento riesgo bajo
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+
+# >> LICENCIA FUNCIONAMIENTO RIEGO BAJO QUE ES :
+- story: licencia funcionamiento riego bajo que es
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+
+# >> LICENCIA FUNCIONAMIENTO RIESGO BAJO QUE NECESITO :
+- story: licencia funcionamiento riesgo bajo que necesito
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+
+# >> LICENCIA FUNCIONAMIENTO RIESGO BAJO QUE CUANTO CUESTA :
+- story: licencia funcionamiento riesgo bajo que cuanto cuesta
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+
+# >> INSPECCION RIESGO BAJO :
+- story: inspeccion riesgo bajo
+  steps:
+  - intent: gestion_item01
+  - action: utter_gestion_item01
+
+# >> INSPECCION RIESGO BAJO CONSULTA :
+- story: inspeccion riesgo bajo consulta
+  steps:
+  - intent: gestion_item01_consulta
+  - action: utter_gestion_item01_consulta
+
+# >> INSPECCION RIESGO BAJO NECESIDAD :
+- story: inspeccion riesgo bajo necesidad
+  steps:
+  - intent: gestion_item01_necesidad
+  - action: utter_gestion_item01_necesidad
+
+# >> INSPECCION RIESGO BAJO COSTO :
+- story: inspeccion riesgo bajo costo
+  steps:
+  - intent: gestion_item01_costo
+  - action: utter_gestion_item01_costo
+
+# >> RENOVACION RIESGO BAJO :
+- story: renovacion riesgo bajo
+  steps:
+  - intent: gestion_item02
+  - action: utter_gestion_item02
+
+# >> RENOVACION RIESGO BAJO CONSULTA :
+- story: renovacion riesgo bajo consulta
+  steps:
+  - intent: gestion_item02_consulta
+  - action: utter_gestion_item02_consulta
+
+# >> RENOVACION RIESGO BAJO NECESIDAD :
+- story: renovacion riesgo bajo necesidad
+  steps:
+  - intent: gestion_item02_necesidad
+  - action: utter_gestion_item02_necesidad
+
+# >> RENOVACION RIESGO BAJO COSTO :
+- story: renovacion riesgo bajo costo
+  steps:
+  - intent: gestion_item02_costo
+  - action: utter_gestion_item02_costo
+
+# >> INSCRIPCION RIESGO MEDIO :
+- story: inscripcion riesgo medio
+  steps:
+  - intent: gestion_item03
+  - action: utter_gestion_item03
+
+# >> INSCRIPCION RIESGO MEDIO CONSULTA :
+- story: inscripcion riesgo medio consulta
+  steps:
+  - intent: gestion_item03_consulta
+  - action: utter_gestion_item03_consulta
+
+# >> INSCRIPCION RIESGO MEDIO NECESIDAD :
+- story: inscripcion riesgo medio necesidad
+  steps:
+  - intent: gestion_item03_necesidad
+  - action: utter_gestion_item03_necesidad
+
+# >> INSCRIPCION RIESGO MEDIO COSTO :
+- story: inscripcion riesgo medio costo
+  steps:
+  - intent: gestion_item03_costo
+  - action: utter_gestion_item03_costo
+
+# >> RENOVACION RIESGO MEDIO :
+- story: renovacion riesgo medio
+  steps:
+  - intent: gestion_item04
+  - action: utter_gestion_item04
+
+# >> RENOVACION RIESGO MEDIO CONSULTA :
+- story: renovacion riesgo medio consulta
+  steps:
+  - intent: gestion_item04_consulta
+  - action: utter_gestion_item04_consulta
+
+# >> RENOVACION RIESGO MEDIO NECESIDAD :
+- story: renovacion riesgo medio necesidad
+  steps:
+  - intent: gestion_item04_necesidad
+  - action: utter_gestion_item04_necesidad
+
+# >> RENOVACION RIESGO MEDIO COSTO :
+- story: renovacion riesgo medio costo
+  steps:
+  - intent: gestion_item04_costo
+  - action: utter_gestion_item04_costo
+
+# >> INSPECCION RIESGO ALTO :
+- story: inspeccion riesgo alto
+  steps:
+  - intent: gestion_item05
+  - action: utter_gestion_item05
+
+# >> INSPECCION RIESGO ALTO CONSULTA :
+- story: inspeccion riesgo alto consulta
+  steps:
+  - intent: gestion_item05_consulta
+  - action: utter_gestion_item05_consulta
+
+# >> INSPECCION RIESGO ALTO NECESIDAD :
+- story: inspeccion riesgo alto necesidad
+  steps:
+  - intent: gestion_item05_necesidad
+  - action: utter_gestion_item05_necesidad
+
+# >> INSPECCION RIESGO ALTO COSTO :
+- story: inspeccion riesgo alto costo
+  steps:
+  - intent: gestion_item05_costo
+  - action: utter_gestion_item05_costo
+
+# >> RENOVACION RIESGO ALTO :
+- story: renovacion riesgo alto
+  steps:
+  - intent: gestion_item06
+  - action: utter_gestion_item06
+
+# >> RENOVACION RIESGO ALTO CONSULTA :
+- story: renovacion riesgo alto consulta
+  steps:
+  - intent: gestion_item06_consulta
+  - action: utter_gestion_item06_consulta
+
+# >> RENOVACION RIESGO ALTO NECESIDAD :
+- story: renovacion riesgo alto necesidad
+  steps:
+  - intent: gestion_item06_necesidad
+  - action: utter_gestion_item06_necesidad
+
+# >> RENOVACION RIESGO ALTO COSTO :
+- story: renovacion riesgo alto costo
+  steps:
+  - intent: gestion_item06_costo
+  - action: utter_gestion_item06_costo
+
+# >> INSPECCION RIESGO MUY ALTO :
+- story: inspeccion riesgo muy alto
+  steps:
+  - intent: gestion_item07
+  - action: utter_gestion_item07
+
+# >> INSPECCION RIESGO MUY ALTO CONSULTA :
+- story: inspeccion riesgo muy alto consulta
+  steps:
+  - intent: gestion_item07_consulta
+  - action: utter_gestion_item07_consulta
+
+# >> INSPECCION RIESGO MUY ALTO NECESIDAD :
+- story: inspeccion riesgo muy alto necesidad
+  steps:
+  - intent: gestion_item07_necesidad
+  - action: utter_gestion_item07_necesidad
+
+# >> INSPECCION RIESGO MUY ALTO COSTO :
+- story: inspeccion riesgo muy alto costo
+  steps:
+  - intent: gestion_item07_costo
+  - action: utter_gestion_item07_costo
+
+# >> RENOVACION RIESGO MUY ALTO :
+- story: renovacion riesgo muy alto
+  steps:
+  - intent: gestion_item08
+  - action: utter_gestion_item08
+
+# >> RENOVACION RIESGO MUY ALTO CONSULTA :
+- story: renovacion riesgo muy alto consulta
+  steps:
+  - intent: gestion_item08_consulta
+  - action: utter_gestion_item08_consulta
+
+# >> RENOVACION RIESGO MUY ALTO NECESIDAD :
+- story: renovacion riesgo muy alto necesidad
+  steps:
+  - intent: gestion_item08_necesidad
+  - action: utter_gestion_item08_necesidad
+
+# >> RENOVACION RIESGO MUY ALTO COSTO :
+- story: renovacion riesgo muy alto costo
+  steps:
+  - intent: gestion_item08_costo
+  - action: utter_gestion_item08_costo
+
+# >> EVALUACION CONDICIONES DE SEGURIDAD :
+- story: evaluacion condiciones de seguridad
+  steps:
+  - intent: gestion_item09
+  - action: utter_gestion_item09
+
+# >> EVALUACION CONDICIONES DE SEGURIDAD CONSULTA :
+- story: evaluacion condiciones de seguridad consulta
+  steps:
+  - intent: gestion_item09_consulta
+  - action: utter_gestion_item09_consulta
+
+# >> EVALUACION CONDICIONES DE SEGURIDAD NECESIDAD :
+- story: evaluacion condiciones de seguridad necesidad
+  steps:
+  - intent: gestion_item09_necesidad
+  - action: utter_gestion_item09_necesidad
+
+# >> EVALUACION CONDICIONES DE SEGURIDAD COSTO :
+- story: evaluacion condiciones de seguridad costo
+  steps:
+  - intent: gestion_item09_costo
+  - action: utter_gestion_item09_costo
+
+# >> RENOVACION RIESGO MUY ALTO :
+- story: renovacion riesgo muy alto
+  steps:
+  - intent: gestion_item10
+  - action: utter_gestion_item10
+
+# >> RENOVACION RIESGO MUY ALTO CONSULTA :
+- story: renovacion riesgo muy alto consulta
+  steps:
+  - intent: gestion_item10_consulta
+  - action: utter_gestion_item10_consulta
+
+# >> RENOVACION RIESGO MUY ALTO NECESIDAD :
+- story: renovacion riesgo muy alto necesidad
+  steps:
+  - intent: gestion_item10_necesidad
+  - action: utter_gestion_item10_necesidad
+
+# >> RENOVACION RIESGO MUY ALTO COSTO :
+- story: renovacion riesgo muy alto costo
+  steps:
+  - intent: gestion_item10_costo
+  - action: utter_gestion_item10_costo

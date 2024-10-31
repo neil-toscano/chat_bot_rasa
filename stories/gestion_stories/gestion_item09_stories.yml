@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+# >> 2.9. STORIES - EVALUACIÓN CONDICIONES DE SEGURIDAD :
+- story: evaluacion condiciones de seguridad
+  steps:
+  - intent: gestion_item09
+  - action: utter_gestion_item09
+
+# >> 2.9... STORIES - CONSULTA
+- story: evaluacion condiciones de seguridad consulta
+  steps:
+  - intent: gestion_item09_consulta
+  - action: utter_gestion_item09_consulta
+
+# >> 2.9... STORIES - NECESIDAD
+- story: evaluacion condiciones de seguridad necesidad
+  steps:
+  - intent: gestion_item09_necesidad
+  - action: utter_gestion_item09_necesidad
+
+# >> 2.9... STORIES - COSTO
+- story: evaluacion condiciones de seguridad costo
+  steps:
+  - intent: gestion_item09_costo
+  - action: utter_gestion_item09_costo

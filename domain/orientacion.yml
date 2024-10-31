@@ -1,0 +1,38 @@
+version: "3.1"
+
+intents:
+  - orientacion
+
+responses:
+
+  # >> 3. ORIENTACIÓN Y REGISTRO :
+  utter_orientacion:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "🟢 Opciones de Trámite:"
+            body:
+              text: |
+                1. Inscripción por Sucesión Indivisa
+
+                2. Inscripción por Sucesión Intestada
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoge el trámite"
+                  rows:
+                    - id: "/orientacion_item01"
+                      title: "Trámite 1"
+                      description: "SUCESIÓN INDIVISA"
+                    - id: "/orientacion_item02"
+                      title: "Trámite 2"
+                      description: "SUCESIÓN INTESTADA"
+              button: "Opciones"

@@ -1,0 +1,81 @@
+version: "3.1"
+
+intents:
+  - formalizacion_promocion_empresarial
+  - licencia_funcionamiento_edificacion_riesgo_bajo
+
+responses:
+
+  # >> 1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+  utter_formalizacion_promocion_empresarial:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                *🟢 Opciones de Trámite:*
+                1. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo _(con ITSE posterior)_
+
+                2. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio _(con ITSE posterior)_
+
+                3. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto _(con ITSE posterior)_
+                
+                4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto _(con ITSE posterior)_
+
+                5. Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+                
+        - type: interactive
+          interactive:
+            type: list
+            body:
+              text: |
+                6. Licencia de funcionamiento para cambio de giro
+                
+                7. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
+                
+                8. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
+                
+                9. Duplicado del certificado de licencia de funcionamiento
+                
+                10. Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+
+            footer:
+              text: "**Seleccione el trámite abajo**"
+
+            # >> LISTADO DE OPCIONES :
+            action:
+              sections:
+                - title: "Escoge el trámite"
+                  rows:
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
+                      title: "Trámite 1"
+                      description: "RIESGO BAJO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_medio"
+                      title: "Trámite 2"
+                      description: "RIESGO MEDIO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_alto"
+                      title: "Trámite 3"
+                      description: "RIESGO ALTO"
+                    - id: "/licencia_funcionamiento_edificacion_riesgo_muy_alto"
+                      title: "Trámite 4"
+                      description: "RIESGO MUY ALTO"
+                    - id: "/transferencia_licencia_cambio_denominacion"
+                      title: "Trámite 5"
+                      description: "TRANSFERENCIA O CAMBIO"
+                    - id: "/licencia_funcionamiento_cambio_giro"
+                      title: "Trámite 6"
+                      description: "CAMBIO DE GIRO"
+                    - id: "/autorizacion_publicidad_afiche_privada"
+                      title: "Trámite 7"
+                      description: "PUBLICIDAD AFICHE"
+                    - id: "/autorizacion_publicidad_letras_privada"
+                      title: "Trámite 8"
+                      description: "PUBLICIDAD LETRAS"
+                    - id: "/duplicado_certificado_funcionamiento"
+                      title: "Trámite 9"
+                      description: "DUPLICADO"
+                    - id: "/duplicado_resolucion_autorizacion"
+                      title: "Trámite 10"
+                      description: "DUPLICADO RESOLUCIÓN"
+              button: "Opciones"

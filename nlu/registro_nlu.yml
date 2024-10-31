@@ -1,0 +1,11 @@
+version: "3.1"
+
+# >> 4. NLU - REGISTRO CIVIL :
+nlu:
+- intent: registro
+  examples: |
+    - Quiero hablar sobre registro civil
+    - hablemos sobre registro civil
+    - Registro civil
+    - Civil
+    - dime acerca de registro civil

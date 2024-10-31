@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.1. NLU - INSPECCIÓN RIESGO BAJO :
+- intent: gestion_item01
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Inspección Técnica Seguridad Riesgo Bajo
+    - Inspección Técnica Riesgo Bajo
+
+# >> 2.1... NLU - CONSULTA
+- intent: gestion_item01_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué es la Inspección Técnica Seguridad Riesgo Bajo
+    - En que consiste la Inspección Técnica Seguridad Riesgo Bajo
+
+# >> 2.1... NLU - NECESIDAD
+- intent: gestion_item01_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Bajo
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Bajo
+
+# >> 2.1... NLU - COSTO
+- intent: gestion_item01_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Bajo
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Bajo
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Bajo

@@ -1,0 +1,10 @@
+version: "3.1"
+
+# >> 1. NLU - FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+nlu:
+- intent: formalizacion_promocion_empresarial
+  examples: |
+    - Quiero hablar sobre formalización y promoción empresarial
+    - hablemos sobre formalización
+    - Formalización
+    - Promoción empresarial

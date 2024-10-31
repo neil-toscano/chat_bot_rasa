@@ -1,0 +1,32 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.10. NLU - DUPLICADO CERTIFICADO DE INSPECCIÓN TÉCNICA :
+- intent: gestion_item10
+  examples: |
+    - Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Duplicado del Certificado de Inspección en edificaciones
+    - Duplicado del Certificado Edificaciones
+
+# >> 2.10... NLU - CONSULTA
+- intent: gestion_item10_consulta
+  examples: |
+    - Qué es el Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Qué es el Duplicado del Certificado de Inspección en edificaciones
+    - En que consiste el Duplicado del Certificado de Inspección en edificaciones
+
+# >> 2.10... NLU - NECESIDAD
+- intent: gestion_item10_necesidad
+  examples: |
+    - Qué necesito para el Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Qué necesito para el Duplicado del Certificado de Inspección en edificaciones
+    - Qué requisitos piden para el Duplicado del Certificado de Inspección en edificaciones
+
+# >> 2.10... NLU - COSTO
+- intent: gestion_item10_costo
+  examples: |
+    - Cuánto cuesta el Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Cuánto cuesta el Duplicado del Certificado de Inspección en edificaciones
+    - Cuánto debo pagar por el Duplicado del Certificado de Inspección en edificaciones
+    - Cuánto es el monto del Duplicado del Certificado de Inspección en edificaciones

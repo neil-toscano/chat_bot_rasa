@@ -1,0 +1,11 @@
+version: "3.1"
+
+# >> 2. NLU - GESTIÓN DEL RIESGO DE DESASTRES :
+nlu:
+- intent: gestion
+  examples: |
+    - Quiero hablar sobre gestión del riesgo de desastres
+    - hablemos sobre gestión
+    - Gestión
+    - Riesgo de desastres
+    - desastres

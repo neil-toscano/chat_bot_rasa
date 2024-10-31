@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+# >> 2.8. STORIES - RENOVACIÓN RIESGO MUY ALTO :
+- story: renovacion riesgo muy alto
+  steps:
+  - intent: gestion_item08
+  - action: utter_gestion_item08
+
+# >> 2.8... STORIES - CONSULTA
+- story: renovacion riesgo muy alto consulta
+  steps:
+  - intent: gestion_item08_consulta
+  - action: utter_gestion_item08_consulta
+
+# >> 2.8... STORIES - NECESIDAD
+- story: renovacion riesgo muy alto necesidad
+  steps:
+  - intent: gestion_item08_necesidad
+  - action: utter_gestion_item08_necesidad
+
+# >> 2.8... STORIES - COSTO
+- story: renovacion riesgo muy alto costo
+  steps:
+  - intent: gestion_item08_costo
+  - action: utter_gestion_item08_costo

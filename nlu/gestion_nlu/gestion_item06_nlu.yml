@@ -1,0 +1,37 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.1. NLU - RENOVACIÓN RIESGO ALTO :
+- intent: gestion_item06
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Renovación de Inspección Técnica Riesgo Alto
+    - Renovación Riesgo Alto
+
+# >> 2.1... NLU - CONSULTA
+- intent: gestion_item06_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - Qué es la Renovación de Inspección Técnica Riesgo Alto
+    - Qué es la Renovación Riesgo Alto
+
+# >> 2.1... NLU - NECESIDAD
+- intent: gestion_item06_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Alto
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Alto
+
+# >> 2.1... NLU - COSTO
+- intent: gestion_item06_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Alto
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Alto

@@ -1,0 +1,73 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - afirmacion
+  - negacion
+  - animo_bien
+  - animo_mal
+  - bot_challenge
+
+responses:
+  utter_animo:
+  - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_sirvio_de_ayuda:
+  - text: "¿Te ha ayudado?"
+
+  utter_feliz:
+  - text: "Genial, continua así"
+
+  utter_despedida:
+  - text: "Hasta luego"
+
+  utter_soy_bot:
+  - text: "Soy un bot, entrenado por la MSJL."
+  
+  # >> INDEX - MENU
+  utter_saludo:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            header:
+              type: text
+              text: "Consulta Trámites"
+            body:
+                text: |
+                  ¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+                  ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
+                  1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
+                  2. GESTIÓN DEL RIESGO DE DESASTRES
+                  3. ORIENTACIÓN Y REGISTRO
+                  4. REGISTRO CIVIL
+                  5. OBRAS PRIVADAS Y HABILITACIÓN URBANA
+            footer:
+              text: "seleccione el trámite abajo"
+            action:
+              sections:
+                - title: "Escoge el trámite"
+                  rows:
+                    - id: "/formalizacion_promocion_empresarial"
+                      title: "Trámite 1"
+                      description: "FORMALIZACIÓN"
+                    - id: "/gestion"
+                      title: "Trámite 2"
+                      description: "GESTIÓN"
+                    - id: "/orientacion"
+                      title: "Trámite 3"
+                      description: "ORIENTACIÓN"
+                    - id: "/registro"
+                      title: "Trámite 4"
+                      description: "REGISTRO"
+                    - id: "/obras"
+                      title: "Trámite 5"
+                      description: "OBRAS"
+              button: "Seleccionar consulta"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.3. NLU - INSPECCIÓN RIESGO MEDIO :
+- intent: gestion_item03
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Inspección Técnica Seguridad Riesgo Medio
+    - Inspección Técnica Riesgo Medio
+
+# >> 2.3... NLU - CONSULTA
+- intent: gestion_item03_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué es la Inspección Técnica Seguridad Riesgo Medio
+    - En que consiste la Inspección Técnica Seguridad Riesgo Medio
+
+# >> 2.3... NLU - NECESIDAD
+- intent: gestion_item03_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Medio
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Medio
+
+# >> 2.3... NLU - COSTO
+- intent: gestion_item03_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Medio
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Medio
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Medio
