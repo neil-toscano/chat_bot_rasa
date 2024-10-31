@@ -9,7 +9,11 @@ def consolidate_domain_files():
     combined_content = {
         "version": "3.1",
         "intents": [],
-        "responses": {}
+        "responses": {},
+        "session_config": {
+            "session_expiration_time": 60,
+            "carry_over_slots_to_new_session": True
+        }
     }
 
     # Función para leer archivos recursivamente
