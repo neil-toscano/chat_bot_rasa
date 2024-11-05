@@ -62,7 +62,7 @@ responses:
       blocks:
         - type: "text"
           text:
-            preview_url: true
+            preview_url: false
             body: |
                 1. Solicitud de renovación ITSE, indicando número y fecha de pago.
                 

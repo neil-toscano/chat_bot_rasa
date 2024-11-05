@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+
+# >> 5.3. STORIES - LICENCIA CONSTRUCCIÓN :
+- story: licencia construccion
+  steps:
+  - intent: obras_item03
+  - action: utter_obras_item03
+
+# >> 5.3... STORIES - CONSULTA
+- story: licencia construccion consulta
+  steps:
+  - intent: obras_item03_consulta
+  - action: utter_obras_item03_consulta
+
+# >> 5.3... STORIES - NECESIDAD
+- story: licencia construccion necesidad
+  steps:
+  - intent: obras_item03_necesidad
+  - action: utter_obras_item03_necesidad
+
+# >> 5.3... STORIES - COSTO
+- story: licencia construccion costo
+  steps:
+  - intent: obras_item03_costo
+  - action: utter_obras_item03_costo

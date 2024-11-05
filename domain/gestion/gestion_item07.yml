@@ -74,7 +74,7 @@ responses:
 
         - type: "text"
           text:
-            preview_url: true
+            preview_url: false
             body: |
                 Documentos técnicos en copia simple:
 

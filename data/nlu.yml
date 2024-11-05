@@ -263,7 +263,7 @@ nlu:
     - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
     - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
     - Renovación de Inspección Técnica Riesgo Medio
-    - Renovación Riesgo Bajo
+    - Renovación Riesgo Medio
 
 # >> GESTION ITEM04 CONSULTA :
 - intent: gestion_item04_consulta
@@ -272,7 +272,7 @@ nlu:
     - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
     - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
     - Qué es la Renovación de Inspección Técnica Riesgo Medio
-    - Qué es la Renovación Riesgo Bajo
+    - Qué es la Renovación Riesgo Medio
 
 # >> GESTION ITEM04 NECESIDAD :
 - intent: gestion_item04_necesidad
@@ -387,11 +387,11 @@ nlu:
 # >> GESTION ITEM08 :
 - intent: gestion_item08
   examples: |
-    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
-    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
-    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
-    - Renovación de Inspección Técnica Riesgo Alto
-    - Renovación Riesgo Alto
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Renovación de Inspección Técnica Riesgo Muy Alto
+    - Renovación Riesgo Muy Alto
 
 # >> GESTION ITEM08 CONSULTA :
 - intent: gestion_item08_consulta
@@ -476,4 +476,185 @@ nlu:
     - Cuánto cuesta el Duplicado del Certificado de Inspección en edificaciones
     - Cuánto debo pagar por el Duplicado del Certificado de Inspección en edificaciones
     - Cuánto es el monto del Duplicado del Certificado de Inspección en edificaciones
+
+# >> OBRAS ITEM01 :
+- intent: obras_item01
+  examples: |
+    - Certificado de Parámetros Urbanísticos y Edificatorios
+    - Certificado de Parámetros Urbanos y Edificios
+    - Certificado de Parámetros Urbanos
+    - Certificado de Parámetros
+
+# >> OBRAS ITEM01 CONSULTA :
+- intent: obras_item01_consulta
+  examples: |
+    - Qué es el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Qué es el Certificado de Parámetros Urbanos
+    - En que consiste el Certificado de Parámetros Urbanos
+
+# >> OBRAS ITEM01 NECESIDAD :
+- intent: obras_item01_necesidad
+  examples: |
+    - Qué necesito para el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Qué necesito para el Certificado de Parámetros
+    - Qué requisitos piden para el Certificado de Parámetros Urbanísticos y Edificatorios
+
+# >> OBRAS ITEM01 COSTO :
+- intent: obras_item01_costo
+  examples: |
+    - Cuánto cuesta el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Cuánto cuesta el Certificado de Parámetros
+    - Cuánto debo pagar por el Certificado de Parámetros
+    - Cuánto es el monto de el Certificado de Parámetros
+
+# >> OBRAS ITEM02 :
+- intent: obras_item02
+  examples: |
+    - Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+    - Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Visación de Planos
+
+# >> OBRAS ITEM02 CONSULTA :
+- intent: obras_item02_consulta
+  examples: |
+    - Qué es la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Qué es la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - En que consiste la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> OBRAS ITEM02 NECESIDAD :
+- intent: obras_item02_necesidad
+  examples: |
+    - Qué necesito para la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Qué necesito para la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Qué requisitos piden para la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> OBRAS ITEM02 COSTO :
+- intent: obras_item02_costo
+  examples: |
+    - Cuánto cuesta la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Cuánto cuesta la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Cuánto debo pagar por la Visación de Planos para Trámites de Prescripción, Título y Rectificacióno
+    - Cuánto es el monto de la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> OBRAS ITEM03 :
+- intent: obras_item03
+  examples: |
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos
+    - Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Licencia de Edificación Aprobación Construcción
+
+# >> OBRAS ITEM03 CONSULTA :
+- intent: obras_item03_consulta
+  examples: |
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - En que consiste la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> OBRAS ITEM03 NECESIDAD :
+- intent: obras_item03_necesidad
+  examples: |
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Qué requisitos piden para la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> OBRAS ITEM03 COSTO :
+- intent: obras_item03_costo
+  examples: |
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Cuánto debo pagar por la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Cuánto es el monto de la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> OBRAS ITEM04 :
+- intent: obras_item04
+  examples: |
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres pisos que no cuenten con semisótanos y sótanos
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Licencia de Edificación Aprobación Demolición
+
+# >> OBRAS ITEM04 CONSULTA :
+- intent: obras_item04_consulta
+  examples: |
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - En que consiste la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> OBRAS ITEM04 NECESIDAD :
+- intent: obras_item04_necesidad
+  examples: |
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Qué requisitos piden para la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> OBRAS ITEM04 COSTO :
+- intent: obras_item04_costo
+  examples: |
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Cuánto debo pagar por la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Cuánto es el monto de la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> OBRAS ITEM05 :
+- intent: obras_item05
+  examples: |
+    - Inscripción por Compra-Venta
+    - Inscripción por Compra Venta
+    - Compra Venta
+
+# >> OBRAS ITEM05 CONSULTA :
+- intent: obras_item05_consulta
+  examples: |
+    - Qué es la Inscripción por Compra-Venta
+    - Qué es la Compra Venta
+    - En que consiste la Inscripción por Compra-Venta
+
+# >> OBRAS ITEM05 NECESIDAD :
+- intent: obras_item05_necesidad
+  examples: |
+    - Qué necesito para la Inscripción por Compra-Venta
+    - Qué necesito para la Compra Venta
+    - Qué requisitos piden para la Inscripción por Compra-Venta
+
+# >> OBRAS ITEM05 COSTO :
+- intent: obras_item05_costo
+  examples: |
+    - Cuánto cuesta la Inscripción por Compra-Venta
+    - Cuánto cuesta la Compra Venta
+    - Cuánto debo pagar por la Inscripción por Compra-Venta
+    - Cuánto es el monto de la Inscripción por Compra-Venta
+
+# >> OBRAS ITEM06 :
+- intent: obras_item06
+  examples: |
+    - Inscripción de una Independización o Subdivisión de Lotes
+    - Inscripción de una Independización o Subdivisión
+    - Independización o Subdivisión de Lotes
+
+# >> OBRAS ITEM06 CONSULTA :
+- intent: obras_item06_consulta
+  examples: |
+    - Qué es la Inscripción de una Independización o Subdivisión de Lotes
+    - Qué es la Independización o Subdivisión de Lotes
+    - En que consiste la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> OBRAS ITEM06 NECESIDAD :
+- intent: obras_item06_necesidad
+  examples: |
+    - Qué necesito para la Inscripción de una Independización o Subdivisión de Lotes
+    - Qué necesito para la Independización o Subdivisión de Lotes
+    - Qué requisitos piden para la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> OBRAS ITEM06 COSTO :
+- intent: obras_item06_costo
+  examples: |
+    - Cuánto cuesta la Inscripción de una Independización o Subdivisión de Lotes
+    - Cuánto cuesta la Independización o Subdivisión de Lotes
+    - Cuánto debo pagar por la Inscripción de una Independización o Subdivisión de Lotes
+    - Cuánto es el monto de la Inscripción de una Independización o Subdivisión de Lotes
 

@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+
+# >> 5.3. NLU - LICENCIA CONSTRUCCIÓN :
+- intent: obras_item03
+  examples: |
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos
+    - Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Licencia de Edificación Aprobación Construcción
+
+# >> 5.3... NLU - CONSULTA
+- intent: obras_item03_consulta
+  examples: |
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - En que consiste la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> 5.3... NLU - NECESIDAD
+- intent: obras_item03_necesidad
+  examples: |
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Qué requisitos piden para la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> 5.3... NLU - COSTO
+- intent: obras_item03_costo
+  examples: |
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Cuánto debo pagar por la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Cuánto es el monto de la Licencia de Edificación Modalidad a: Aprobación - Construcción

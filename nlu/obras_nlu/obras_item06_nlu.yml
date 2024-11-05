@@ -1,0 +1,32 @@
+version: "3.1"
+
+nlu:
+
+# >> 5.6. NLU - INSCRIPCIÓN INDEPENDIZACIÓN :
+- intent: obras_item06
+  examples: |
+    - Inscripción de una Independización o Subdivisión de Lotes
+    - Inscripción de una Independización o Subdivisión
+    - Independización o Subdivisión de Lotes
+
+# >> 5.6... NLU - CONSULTA
+- intent: obras_item06_consulta
+  examples: |
+    - Qué es la Inscripción de una Independización o Subdivisión de Lotes
+    - Qué es la Independización o Subdivisión de Lotes
+    - En que consiste la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> 5.6... NLU - NECESIDAD
+- intent: obras_item06_necesidad
+  examples: |
+    - Qué necesito para la Inscripción de una Independización o Subdivisión de Lotes
+    - Qué necesito para la Independización o Subdivisión de Lotes
+    - Qué requisitos piden para la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> 5.6... NLU - COSTO
+- intent: obras_item06_costo
+  examples: |
+    - Cuánto cuesta la Inscripción de una Independización o Subdivisión de Lotes
+    - Cuánto cuesta la Independización o Subdivisión de Lotes
+    - Cuánto debo pagar por la Inscripción de una Independización o Subdivisión de Lotes
+    - Cuánto es el monto de la Inscripción de una Independización o Subdivisión de Lotes

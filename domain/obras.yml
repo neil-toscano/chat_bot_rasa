@@ -2,6 +2,12 @@ version: "3.1"
 
 intents:
   - obras
+  - obras_item01
+  - obras_item02
+  - obras_item03
+  - obras_item04
+  - obras_item05
+  - obras_item06
 
 responses:
 

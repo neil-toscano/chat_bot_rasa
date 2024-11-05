@@ -335,3 +335,147 @@ stories:
   steps:
   - intent: gestion_item10_costo
   - action: utter_gestion_item10_costo
+
+# >> CERTIFICADO DE PARAMETROS :
+- story: certificado de parametros
+  steps:
+  - intent: obras_item01
+  - action: utter_obras_item01
+
+# >> CERTIFICADO DE PARAMETROS CONSULTA :
+- story: certificado de parametros consulta
+  steps:
+  - intent: obras_item01_consulta
+  - action: utter_obras_item01_consulta
+
+# >> CERTIFICADO DE PARAMETROS NECESIDAD :
+- story: certificado de parametros necesidad
+  steps:
+  - intent: obras_item01_necesidad
+  - action: utter_obras_item01_necesidad
+
+# >> CERTIFICADO DE PARAMETROS COSTO :
+- story: certificado de parametros costo
+  steps:
+  - intent: obras_item01_costo
+  - action: utter_obras_item01_costo
+
+# >> VISACION DE PLANOS :
+- story: visacion de planos
+  steps:
+  - intent: obras_item02
+  - action: utter_obras_item02
+
+# >> VISACION DE PLANOS CONSULTA :
+- story: visacion de planos consulta
+  steps:
+  - intent: obras_item02_consulta
+  - action: utter_obras_item02_consulta
+
+# >> VISACION DE PLANOS NECESIDAD :
+- story: visacion de planos necesidad
+  steps:
+  - intent: obras_item02_necesidad
+  - action: utter_obras_item02_necesidad
+
+# >> VISACION DE PLANOS COSTO :
+- story: visacion de planos costo
+  steps:
+  - intent: obras_item02_costo
+  - action: utter_obras_item02_costo
+
+# >> LICENCIA CONSTRUCCION :
+- story: licencia construccion
+  steps:
+  - intent: obras_item03
+  - action: utter_obras_item03
+
+# >> LICENCIA CONSTRUCCION CONSULTA :
+- story: licencia construccion consulta
+  steps:
+  - intent: obras_item03_consulta
+  - action: utter_obras_item03_consulta
+
+# >> LICENCIA CONSTRUCCION NECESIDAD :
+- story: licencia construccion necesidad
+  steps:
+  - intent: obras_item03_necesidad
+  - action: utter_obras_item03_necesidad
+
+# >> LICENCIA CONSTRUCCION COSTO :
+- story: licencia construccion costo
+  steps:
+  - intent: obras_item03_costo
+  - action: utter_obras_item03_costo
+
+# >> LICENCIA DEMOLICION :
+- story: licencia demolicion
+  steps:
+  - intent: obras_item04
+  - action: utter_obras_item04
+
+# >> LICENCIA DEMOLICION CONSULTA :
+- story: licencia demolicion consulta
+  steps:
+  - intent: obras_item04_consulta
+  - action: utter_obras_item04_consulta
+
+# >> LICENCIA DEMOLICION NECESIDAD :
+- story: licencia demolicion necesidad
+  steps:
+  - intent: obras_item04_necesidad
+  - action: utter_obras_item04_necesidad
+
+# >> LICENCIA DEMOLICION COSTO :
+- story: licencia demolicion costo
+  steps:
+  - intent: obras_item04_costo
+  - action: utter_obras_item04_costo
+
+# >> COMPRA VENTA :
+- story: compra venta
+  steps:
+  - intent: obras_item05
+  - action: utter_obras_item05
+
+# >> COMPRA VENTA CONSULTA :
+- story: compra venta consulta
+  steps:
+  - intent: obras_item05_consulta
+  - action: utter_obras_item05_consulta
+
+# >> COMPRA VENTA NECESIDAD :
+- story: compra venta necesidad
+  steps:
+  - intent: obras_item05_necesidad
+  - action: utter_obras_item05_necesidad
+
+# >> COMPRA VENTA COSTO :
+- story: compra venta costo
+  steps:
+  - intent: obras_item05_costo
+  - action: utter_obras_item05_costo
+
+# >> INDEPENDIZACION SUBDIVISION :
+- story: independizacion subdivision
+  steps:
+  - intent: obras_item06
+  - action: utter_obras_item06
+
+# >> INDEPENDIZACION SUBDIVISION CONSULTA :
+- story: independizacion subdivision consulta
+  steps:
+  - intent: obras_item06_consulta
+  - action: utter_obras_item06_consulta
+
+# >> INDEPENDIZACION SUBDIVISION NECESIDAD :
+- story: independizacion subdivision necesidad
+  steps:
+  - intent: obras_item06_necesidad
+  - action: utter_obras_item06_necesidad
+
+# >> INDEPENDIZACION SUBDIVISION COSTO :
+- story: independizacion subdivision costo
+  steps:
+  - intent: obras_item06_costo
+  - action: utter_obras_item06_costo
