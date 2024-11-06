@@ -2,6 +2,8 @@ version: "3.1"
 
 intents:
   - orientacion
+  - orientacion_item01
+  - orientacion_item02
 
 responses:
 

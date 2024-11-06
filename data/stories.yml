@@ -479,3 +479,51 @@ stories:
   steps:
   - intent: obras_item06_costo
   - action: utter_obras_item06_costo
+
+# >> SUCESION INDIVISA :
+- story: sucesion indivisa
+  steps:
+  - intent: orientacion_item01
+  - action: utter_orientacion_item01
+
+# >> SUCESION INDIVISA CONSULTA :
+- story: sucesion indivisa consulta
+  steps:
+  - intent: orientacion_item01_consulta
+  - action: utter_orientacion_item01_consulta
+
+# >> SUCESION INDIVISA NECESIDAD :
+- story: sucesion indivisa necesidad
+  steps:
+  - intent: orientacion_item01_necesidad
+  - action: utter_orientacion_item01_necesidad
+
+# >> SUCESION INDIVISA COSTO :
+- story: sucesion indivisa costo
+  steps:
+  - intent: orientacion_item01_costo
+  - action: utter_orientacion_item01_costo
+
+# >> SUCESION INTESTADA :
+- story: sucesion intestada
+  steps:
+  - intent: orientacion_item02
+  - action: utter_orientacion_item02
+
+# >> SUCESION INTESTADA CONSULTA :
+- story: sucesion intestada consulta
+  steps:
+  - intent: orientacion_item02_consulta
+  - action: utter_orientacion_item02_consulta
+
+# >> SUCESION INTESTADA NECESIDAD :
+- story: sucesion intestada necesidad
+  steps:
+  - intent: orientacion_item02_necesidad
+  - action: utter_orientacion_item02_necesidad
+
+# >> SUCESION INTESTADA COSTO :
+- story: sucesion intestada costo
+  steps:
+  - intent: orientacion_item02_costo
+  - action: utter_orientacion_item02_costo
