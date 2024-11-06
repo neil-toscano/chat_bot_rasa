@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+  # >> 4.1. STORIES - MATRIMONIO CIVIL :
+  - story: matrimonio civil
+    steps:
+      - intent: registro_item01
+      - action: utter_registro_item01
+
+  # >> 4.1... STORIES - CONSULTA
+  - story: matrimonio civil consulta
+    steps:
+      - intent: registro_item01_consulta
+      - action: utter_registro_item01_consulta
+
+  # >> 4.1... STORIES - NECESIDAD
+  - story: matrimonio civil necesidad
+    steps:
+      - intent: registro_item01_necesidad
+      - action: utter_registro_item01_necesidad
+
+  # >> 4.1... STORIES - COSTO
+  - story: matrimonio civil costo
+    steps:
+      - intent: registro_item01_costo
+      - action: utter_registro_item01_costo

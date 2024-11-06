@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+
+# >> 4.1. NLU - INSPECCIÓN RIESGO BAJO :
+- intent: registro_item01
+  examples: |
+    - Matrimonio Civil
+    - Matrimonio
+
+# >> 4.1... NLU - CONSULTA
+- intent: registro_item01_consulta
+  examples: |
+    - Qué es el Matrimonio Civil
+    - Qué es el Matrimonio
+    - En que consiste el Matrimonio Civil
+
+# >> 4.1... NLU - NECESIDAD
+- intent: registro_item01_necesidad
+  examples: |
+    - Qué necesito para el Matrimonio Civil
+    - Qué necesito para el Matrimonio
+    - Qué requisitos piden para el Matrimonio Civil
+
+# >> 4.1... NLU - COSTO
+- intent: registro_item01_costo
+  examples: |
+    - Cuánto cuesta el Matrimonio Civil
+    - Cuánto cuesta el Matrimonio
+    - Cuánto debo pagar por el Matrimonio Civil
+    - Cuánto es el monto del Matrimonio Civil

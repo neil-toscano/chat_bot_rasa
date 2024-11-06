@@ -716,3 +716,124 @@ nlu:
     - Cuánto debo pagar por la Inscripción por Sucesión Intestada
     - Cuánto es el monto de la Inscripción por Sucesión Intestada
 
+# >> REGISTRO ITEM01 :
+- intent: registro_item01
+  examples: |
+    - Matrimonio Civil
+    - Matrimonio
+
+# >> REGISTRO ITEM01 CONSULTA :
+- intent: registro_item01_consulta
+  examples: |
+    - Qué es el Matrimonio Civil
+    - Qué es el Matrimonio
+    - En que consiste el Matrimonio Civil
+
+# >> REGISTRO ITEM01 NECESIDAD :
+- intent: registro_item01_necesidad
+  examples: |
+    - Qué necesito para el Matrimonio Civil
+    - Qué necesito para el Matrimonio
+    - Qué requisitos piden para el Matrimonio Civil
+
+# >> REGISTRO ITEM01 COSTO :
+- intent: registro_item01_costo
+  examples: |
+    - Cuánto cuesta el Matrimonio Civil
+    - Cuánto cuesta el Matrimonio
+    - Cuánto debo pagar por el Matrimonio Civil
+    - Cuánto es el monto del Matrimonio Civil
+
+# >> REGISTRO ITEM02 :
+- intent: registro_item02
+  examples: |
+    - Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM02 CONSULTA :
+- intent: registro_item02_consulta
+  examples: |
+    - Qué es la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Qué es la Publicación de Edicto Matrimonial
+    - En que consiste la Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM02 NECESIDAD :
+- intent: registro_item02_necesidad
+  examples: |
+    - Qué necesito para la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Qué necesito para la Publicación de Edicto Matrimonial
+    - Qué requisitos piden para la Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM02 COSTO :
+- intent: registro_item02_costo
+  examples: |
+    - Cuánto cuesta la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Cuánto cuesta la Publicación de Edicto Matrimonial
+    - Cuánto debo pagar por la Publicación de Edicto Matrimonial
+    - Cuánto es el monto de la Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM03 :
+- intent: registro_item03
+  examples: |
+    - Reprogramación de fecha y hora de Ceremonia Matrimonial
+    - Reprogramación de Ceremonia Matrimonial
+    - Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM03 CONSULTA :
+- intent: registro_item03_consulta
+  examples: |
+    - Qué es la Reprogramación de Ceremonia Matrimonial
+    - Qué es la Reprogramación de Matrimonio
+    - En que consiste la Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM03 NECESIDAD :
+- intent: registro_item03_necesidad
+  examples: |
+    - Qué necesito para la Reprogramación de Ceremonia Matrimonial
+    - Qué necesito para la Reprogramación de Matrimonio
+    - Qué requisitos piden para la Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM03 COSTO :
+- intent: registro_item03_costo
+  examples: |
+    - Cuánto cuesta la Reprogramación de Ceremonia Matrimonial
+    - Cuánto cuesta la Reprogramación de Matrimonio
+    - Cuánto debo pagar por la Reprogramación de Matrimonio
+    - Cuánto es el monto de la Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM04 :
+- intent: registro_item04
+  examples: |
+    - Separación Convencional y Divorcio Ulterior: Separación Convencional
+    - Separación Convencional y Divorcio Ulterior
+    - Separación Convencional
+    - Divorcio Ulterior
+    - Separación y Divorcio
+
+# >> REGISTRO ITEM04 CONSULTA :
+- intent: registro_item04_consulta
+  examples: |
+    - Qué es la Separación Convencional y Divorcio Ulterior
+    - Qué es la Separación Convencional
+    - Qué es el Divorcio Ulterior
+    - En que consiste la Separación Convencional y Divorcio Ulterior
+
+# >> REGISTRO ITEM04 NECESIDAD :
+- intent: registro_item04_necesidad
+  examples: |
+    - Qué necesito para la Separación Convencional y Divorcio Ulterior
+    - Qué necesito para la Separación y Divorcio
+    - Qué necesito para la Separación Convencional
+    - Qué necesito para el Divorcio Ulterior
+    - Qué requisitos piden para la Separación Convencional y Divorcio Ulterior
+
+# >> REGISTRO ITEM04 COSTO :
+- intent: registro_item04_costo
+  examples: |
+    - Cuánto cuesta la Separación Convencional y Divorcio Ulterior
+    - Cuánto cuesta la Separación y Divorcio
+    - Cuánto cuesta la Separación Convencional
+    - Cuánto cuesta el Divorcio Ulterior
+    - Cuánto debo pagar por la Separación Convencional y Divorcio Ulterior
+    - Cuánto es el monto de la Separación Convencional y Divorcio Ulterior
+

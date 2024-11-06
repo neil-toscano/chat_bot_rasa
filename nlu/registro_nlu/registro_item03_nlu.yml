@@ -1,0 +1,32 @@
+version: "3.1"
+
+nlu:
+
+# >> 4.3. NLU - INSPECCIÓN RIESGO BAJO :
+- intent: registro_item03
+  examples: |
+    - Reprogramación de fecha y hora de Ceremonia Matrimonial
+    - Reprogramación de Ceremonia Matrimonial
+    - Reprogramación de Matrimonio
+
+# >> 4.3... NLU - CONSULTA
+- intent: registro_item03_consulta
+  examples: |
+    - Qué es la Reprogramación de Ceremonia Matrimonial
+    - Qué es la Reprogramación de Matrimonio
+    - En que consiste la Reprogramación de Matrimonio
+
+# >> 4.3... NLU - NECESIDAD
+- intent: registro_item03_necesidad
+  examples: |
+    - Qué necesito para la Reprogramación de Ceremonia Matrimonial
+    - Qué necesito para la Reprogramación de Matrimonio
+    - Qué requisitos piden para la Reprogramación de Matrimonio
+
+# >> 4.3... NLU - COSTO
+- intent: registro_item03_costo
+  examples: |
+    - Cuánto cuesta la Reprogramación de Ceremonia Matrimonial
+    - Cuánto cuesta la Reprogramación de Matrimonio
+    - Cuánto debo pagar por la Reprogramación de Matrimonio
+    - Cuánto es el monto de la Reprogramación de Matrimonio

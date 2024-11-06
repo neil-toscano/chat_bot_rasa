@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+  # >> 4.4. STORIES - SEPARACIÓN DIVORCIO :
+  - story: separacion divorcio
+    steps:
+      - intent: registro_item04
+      - action: utter_registro_item04
+
+  # >> 4.4... STORIES - CONSULTA
+  - story: separacion divorcio consulta
+    steps:
+      - intent: registro_item04_consulta
+      - action: utter_registro_item04_consulta
+
+  # >> 4.4... STORIES - NECESIDAD
+  - story: separacion divorcio necesidad
+    steps:
+      - intent: registro_item04_necesidad
+      - action: utter_registro_item04_necesidad
+
+  # >> 4.4... STORIES - COSTO
+  - story: separacion divorcio costo
+    steps:
+      - intent: registro_item04_costo
+      - action: utter_registro_item04_costo

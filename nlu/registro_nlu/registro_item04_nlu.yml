@@ -1,0 +1,39 @@
+version: "3.1"
+
+nlu:
+
+# >> 4.4. NLU - SEPARACIÓN DIVORCIO :
+- intent: registro_item04
+  examples: |
+    - Separación Convencional y Divorcio Ulterior: Separación Convencional
+    - Separación Convencional y Divorcio Ulterior
+    - Separación Convencional
+    - Divorcio Ulterior
+    - Separación y Divorcio
+
+# >> 4.4... NLU - CONSULTA
+- intent: registro_item04_consulta
+  examples: |
+    - Qué es la Separación Convencional y Divorcio Ulterior
+    - Qué es la Separación Convencional
+    - Qué es el Divorcio Ulterior
+    - En que consiste la Separación Convencional y Divorcio Ulterior
+
+# >> 4.4... NLU - NECESIDAD
+- intent: registro_item04_necesidad
+  examples: |
+    - Qué necesito para la Separación Convencional y Divorcio Ulterior
+    - Qué necesito para la Separación y Divorcio
+    - Qué necesito para la Separación Convencional
+    - Qué necesito para el Divorcio Ulterior
+    - Qué requisitos piden para la Separación Convencional y Divorcio Ulterior
+
+# >> 4.4... NLU - COSTO
+- intent: registro_item04_costo
+  examples: |
+    - Cuánto cuesta la Separación Convencional y Divorcio Ulterior
+    - Cuánto cuesta la Separación y Divorcio
+    - Cuánto cuesta la Separación Convencional
+    - Cuánto cuesta el Divorcio Ulterior
+    - Cuánto debo pagar por la Separación Convencional y Divorcio Ulterior
+    - Cuánto es el monto de la Separación Convencional y Divorcio Ulterior
