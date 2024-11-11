@@ -50,17 +50,21 @@ responses:
   utter_gestion_item09_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
 
+                *¿Para qué es necesario*
+
+                Asegura que el evento cumpla con las normativas de seguridad necesarias para proteger a los asistentes y gestionar riesgos durante la realización del evento.
+
   # >> 2.9... NECESIDAD
   utter_gestion_item09_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
@@ -90,7 +94,7 @@ responses:
   utter_gestion_item09_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

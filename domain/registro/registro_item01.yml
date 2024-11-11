@@ -4,6 +4,13 @@ intents:
   - registro_item01_consulta
   - registro_item01_necesidad
   - registro_item01_costo
+  - registro_item01_requisitos
+  - registro_item01_subnecesidad_01
+  - registro_item01_subnecesidad_02
+  - registro_item01_subnecesidad_03
+  - registro_item01_subnecesidad_04
+  - registro_item01_subnecesidad_05
+  - registro_item01_subnecesidad_06
 
 responses:
   # >> 4.1. MATRIMONIO CIVIL
@@ -49,7 +56,7 @@ responses:
   utter_registro_item01_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -63,7 +70,7 @@ responses:
   utter_registro_item01_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -83,11 +90,28 @@ responses:
 
                 8. Indicar la fecha y número de constancia de pago.
 
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  ¿Deseas saber los requisitos adicionales?
+
+              action:
+                sections:
+                  - title: "Escoge la opción..."
+                    rows:
+                      - id: "/registro_item01_requisitos"
+                        title: "Sí, deseo"
+                      - id: "/registro_item01"
+                        title: "No, gracias"
+                button: "Opciones"
+
   # >> 4.1... COSTO
   utter_registro_item01_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -96,3 +120,149 @@ responses:
                 2. Fuera del local municipal (dentro del distrito) - S/ 332.10
 
                 3. Fuera del local municipal (fuera del distrito) - S/ 432.10
+  
+  # >> 4.1... REQUISITOS
+  utter_registro_item01_requisitos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Se presenta una serie de requisitos dependiendo de la opción que usted elija...
+
+                  1. Para divorciados(as)
+
+                  2. Para viudos(as)
+
+                  3. Para extranjeros(as)
+
+                  4. Para matrimonios por poder
+
+                  5. Para matrimonios por parentesco entre sí
+
+                  6. Para matrimonios con personas con discapacidad
+
+              action:
+                sections:
+                  - title: "Selecciona la opción"
+                    rows:
+                      - id: "/registro_item01_subnecesidad_01"
+                        title: "Opción 1"
+                        description: "Divorciados"
+                      - id: "/registro_item01_subnecesidad_02"
+                        title: "Opción 2"
+                        description: "Viudos"
+                      - id: "/registro_item01_subnecesidad_03"
+                        title: "Opción 3"
+                        description: "Extranjeros"
+                      - id: "/registro_item01_subnecesidad_04"
+                        title: "Opción 4"
+                        description: "Poder"
+                      - id: "/registro_item01_subnecesidad_05"
+                        title: "Opción 5"
+                        description: "Parentesco"
+                      - id: "/registro_item01_subnecesidad_06"
+                        title: "Opción 6"
+                        description: "Discapacitados"
+                      - id: "/registro_item01_necesidad"
+                        title: "Volver"
+                        description: "Volver a lo anterior"
+                button: "Opciones"
+
+  # >> 4.4.1... SUBNECESIDAD 01
+  utter_registro_item01_subnecesidad_01:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Copia certificada de anterior matrimonio con insripción de divorcio.
+
+                2. DNI actualizado.
+
+                3. Declaración jurada de no administrar bienes de hijos menores.
+
+                4. En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+
+  # >> 4.4.2... SUBNECESIDAD 02
+  utter_registro_item01_subnecesidad_02:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Copia certificada de acta de defunción de cónyuge fallecido.
+
+                2. DNI actualizado.
+
+                3. Declaración jurada de no administrar bienes de hijos menores.
+
+                4. En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+
+  # >> 4.4.3... SUBNECESIDAD 03
+  utter_registro_item01_subnecesidad_03:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Acta de nacimiento visado por el consulado y legalizado por el MRE.
+
+                2. Copia y original del pasaporte y/o carné de extranjería.
+
+                3. Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
+
+                4. Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
+
+  # >> 4.4.4... SUBNECESIDAD 04
+  utter_registro_item01_subnecesidad_04:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Poder por escritura pública con facultades específicas inscrito en registros públicos.
+
+                2. Para poder ortorgado en el Extranjero, presentar copia visada por el Cónsul Peruano, legalizado por el MRE.
+
+                3. Realizarse dentro de los seis (6) meses de otorgado el poder.
+
+                4. Exhibición del Documento Nacional de Identidad del apoderado.
+
+  # >> 4.1.5... SUBNECESIDAD 05
+  utter_registro_item01_subnecesidad_05:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
+
+  # >> 4.1.6... SUBNECESIDAD 06
+  utter_registro_item01_subnecesidad_06:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                Copia del Certificado de Discapacidad, expedido conforme a Ley.

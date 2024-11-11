@@ -552,6 +552,48 @@ stories:
   - intent: registro_item01_costo
   - action: utter_registro_item01_costo
 
+# >> MATRIMONIO CIVIL REQUISITOS :
+- story: matrimonio civil requisitos
+  steps:
+  - intent: registro_item01_requisitos
+  - action: utter_registro_item01_requisitos
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD UNO :
+- story: matrimonio civil subnecesidad uno
+  steps:
+  - intent: registro_item01_subnecesidad_01
+  - action: utter_registro_item01_subnecesidad_01
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD DOS :
+- story: matrimonio civil subnecesidad dos
+  steps:
+  - intent: registro_item01_subnecesidad_02
+  - action: utter_registro_item01_subnecesidad_02
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD TRES :
+- story: matrimonio civil subnecesidad tres
+  steps:
+  - intent: registro_item01_subnecesidad_03
+  - action: utter_registro_item01_subnecesidad_03
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD CUATRO :
+- story: matrimonio civil subnecesidad cuatro
+  steps:
+  - intent: registro_item01_subnecesidad_04
+  - action: utter_registro_item01_subnecesidad_04
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD CINCO :
+- story: matrimonio civil subnecesidad cinco
+  steps:
+  - intent: registro_item01_subnecesidad_05
+  - action: utter_registro_item01_subnecesidad_05
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD SEIS :
+- story: matrimonio civil subnecesidad seis
+  steps:
+  - intent: registro_item01_subnecesidad_06
+  - action: utter_registro_item01_subnecesidad_06
+
 # >> PUBLICACION EDICTO MATRIMONIAL :
 - story: publicacion edicto matrimonial
   steps:
@@ -623,3 +665,33 @@ stories:
   steps:
   - intent: registro_item04_costo
   - action: utter_registro_item04_costo
+
+# >> SEPARACION DIVORCIO DOCUMENTOS :
+- story: separacion divorcio documentos
+  steps:
+  - intent: registro_item04_documentos
+  - action: utter_registro_item04_documentos
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD UNO :
+- story: separacion divorcio subnecesidad uno
+  steps:
+  - intent: registro_item04_subnecesidad_01
+  - action: utter_registro_item04_subnecesidad_01
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD DOS :
+- story: separacion divorcio subnecesidad dos
+  steps:
+  - intent: registro_item04_subnecesidad_02
+  - action: utter_registro_item04_subnecesidad_02
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD TRES :
+- story: separacion divorcio subnecesidad tres
+  steps:
+  - intent: registro_item04_subnecesidad_03
+  - action: utter_registro_item04_subnecesidad_03
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD CUATRO :
+- story: separacion divorcio subnecesidad cuatro
+  steps:
+  - intent: registro_item04_subnecesidad_04
+  - action: utter_registro_item04_subnecesidad_04

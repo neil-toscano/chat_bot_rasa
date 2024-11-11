@@ -734,7 +734,7 @@ nlu:
   examples: |
     - Qué necesito para el Matrimonio Civil
     - Qué necesito para el Matrimonio
-    - Qué requisitos piden para el Matrimonio Civil
+    - Qué necesidades piden para el Matrimonio Civil
 
 # >> REGISTRO ITEM01 COSTO :
 - intent: registro_item01_costo
@@ -743,6 +743,62 @@ nlu:
     - Cuánto cuesta el Matrimonio
     - Cuánto debo pagar por el Matrimonio Civil
     - Cuánto es el monto del Matrimonio Civil
+
+# >> REGISTRO ITEM01 REQUISITOS :
+- intent: registro_item01_requisitos
+  examples: |
+    - Qué requisitos adicionales piden para el Matrimonio Civil
+    - Qué requisitos adicionales para el Matrimonio Civil
+    - Qué requisitos adicionales piden para el matrimonio
+    - Piden algo adicional para el matrimonio
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 01 :
+- intent: registro_item01_subnecesidad_01
+  examples: |
+    - Qué requisitos adicionales piden para los divorciados
+    - Que requisitos piden para los divorciados
+    - Que más piden para los divorciados
+    - Que requisitos necesitan los divorciados
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 02 :
+- intent: registro_item01_subnecesidad_02
+  examples: |
+    - Qué requisitos adicionales piden para los viudos
+    - Que requisitos piden para los viudos
+    - Que más piden para los viudos
+    - Que requisitos necesitan los viudos
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 03 :
+- intent: registro_item01_subnecesidad_03
+  examples: |
+    - Qué requisitos adicionales piden para los extranjeros
+    - Que requisitos piden para los extranjeros
+    - Que más piden para los extranjeros
+    - Que requisitos necesitan los extranjeros
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 04 :
+- intent: registro_item01_subnecesidad_04
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios por poder
+    - Que requisitos piden para matrimonios por poder
+    - Que más piden para matrimonios por poder
+    - Que requisitos necesitan los matrimonios por poder
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 05 :
+- intent: registro_item01_subnecesidad_05
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios por parentescos entre si
+    - Que requisitos piden para matrimonios por parentescos
+    - Que más piden para matrimonios por parantescos
+    - Que requisitos necesitan los matrimonios por parantescos
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 06 :
+- intent: registro_item01_subnecesidad_06
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios con personas con discapacidad
+    - Que requisitos piden para matrimonios para discapacitados
+    - Que más piden para matrimonios para discapacitados
+    - Que requisitos necesitan los matrimonios para discapacitados
 
 # >> REGISTRO ITEM02 :
 - intent: registro_item02
@@ -836,4 +892,42 @@ nlu:
     - Cuánto cuesta el Divorcio Ulterior
     - Cuánto debo pagar por la Separación Convencional y Divorcio Ulterior
     - Cuánto es el monto de la Separación Convencional y Divorcio Ulterior
+
+# >> REGISTRO ITEM04 DOCUMENTOS :
+- intent: registro_item04_documentos
+  examples: |
+    - Qué documentos necesarios para casos especiales tiene la Separación Convencional y Divorcio Ulterior
+    - Qué documentos necesito para casos especiales de Separación y Divorcio
+    - Para casos especiales de Separación y Divorcio que necesito
+    - Que necesito en separación para casos especiales
+    - Que necesito en divorcio para casos especiales
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 01 :
+- intent: registro_item04_subnecesidad_01
+  examples: |
+    - Qué documentos necesarios necesito en caso de no tener hijos
+    - Que documentos son necesarios en caso de no tener hijos
+    - Que documentos necesito si no tengo hijos
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 02 :
+- intent: registro_item04_subnecesidad_02
+  examples: |
+    - Qué documentos necesarios necesito en caso de tener hijos menores
+    - Que documentos son necesarios en caso de tener hijos menores
+    - Que documentos necesito si tengo hijos menores
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 03 :
+- intent: registro_item04_subnecesidad_03
+  examples: |
+    - Qué documentos necesarios necesito en caso de tener hijos mayores discapacitados
+    - Que documentos son necesarios en caso de tener hijos mayores discapacitados
+    - Que documentos necesito si no tengo hijos mayores discapacitados
+    - Que documentos necesito si no tengo hijos mayores con discapacidad
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 04 :
+- intent: registro_item04_subnecesidad_04
+  examples: |
+    - Qué documentos necesarios necesito en caso el requisito sea relacionado con el patrimonio
+    - Que documentos son necesarios en caso sea relacionado con el patrimonio
+    - Que documentos necesito si es relacionado con el patrimonio
 

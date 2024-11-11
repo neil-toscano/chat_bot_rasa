@@ -49,17 +49,21 @@ responses:
   utter_obras_item05_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
                 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
 
+                *¿Para qué es necesario?*
+
+                Para legalizar y actualizar el cambio de propietario ante los registros municipales.
+
   # >> 5.5... NECESIDAD
   utter_obras_item05_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -71,7 +75,7 @@ responses:
   utter_obras_item05_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |

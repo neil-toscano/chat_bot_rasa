@@ -49,7 +49,7 @@ responses:
   utter_registro_item03_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -59,7 +59,7 @@ responses:
   utter_registro_item03_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -73,7 +73,7 @@ responses:
   utter_registro_item03_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |

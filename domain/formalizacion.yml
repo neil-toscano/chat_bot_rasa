@@ -10,7 +10,7 @@ responses:
   utter_formalizacion_promocion_empresarial:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

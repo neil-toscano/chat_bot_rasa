@@ -20,7 +20,7 @@ nlu:
   examples: |
     - Qué necesito para el Matrimonio Civil
     - Qué necesito para el Matrimonio
-    - Qué requisitos piden para el Matrimonio Civil
+    - Qué necesidades piden para el Matrimonio Civil
 
 # >> 4.1... NLU - COSTO
 - intent: registro_item01_costo
@@ -29,3 +29,59 @@ nlu:
     - Cuánto cuesta el Matrimonio
     - Cuánto debo pagar por el Matrimonio Civil
     - Cuánto es el monto del Matrimonio Civil
+
+# >> 4.1... NLU - REQUISITOS
+- intent: registro_item01_requisitos
+  examples: |
+    - Qué requisitos adicionales piden para el Matrimonio Civil
+    - Qué requisitos adicionales para el Matrimonio Civil
+    - Qué requisitos adicionales piden para el matrimonio
+    - Piden algo adicional para el matrimonio
+
+# >> 4.1.1... NLU - SUBNECESIDAD 01
+- intent: registro_item01_subnecesidad_01
+  examples: |
+    - Qué requisitos adicionales piden para los divorciados
+    - Que requisitos piden para los divorciados
+    - Que más piden para los divorciados
+    - Que requisitos necesitan los divorciados
+
+# >> 4.1.2... NLU - SUBNECESIDAD 02
+- intent: registro_item01_subnecesidad_02
+  examples: |
+    - Qué requisitos adicionales piden para los viudos
+    - Que requisitos piden para los viudos
+    - Que más piden para los viudos
+    - Que requisitos necesitan los viudos
+
+# >> 4.1.3... NLU - SUBNECESIDAD 03
+- intent: registro_item01_subnecesidad_03
+  examples: |
+    - Qué requisitos adicionales piden para los extranjeros
+    - Que requisitos piden para los extranjeros
+    - Que más piden para los extranjeros
+    - Que requisitos necesitan los extranjeros
+
+# >> 4.1.4... NLU - SUBNECESIDAD 04
+- intent: registro_item01_subnecesidad_04
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios por poder
+    - Que requisitos piden para matrimonios por poder
+    - Que más piden para matrimonios por poder
+    - Que requisitos necesitan los matrimonios por poder
+
+# >> 4.1.5... NLU - SUBNECESIDAD 05
+- intent: registro_item01_subnecesidad_05
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios por parentescos entre si
+    - Que requisitos piden para matrimonios por parentescos
+    - Que más piden para matrimonios por parantescos
+    - Que requisitos necesitan los matrimonios por parantescos
+
+# >> 4.1.6... NLU - SUBNECESIDAD 06
+- intent: registro_item01_subnecesidad_06
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios con personas con discapacidad
+    - Que requisitos piden para matrimonios para discapacitados
+    - Que más piden para matrimonios para discapacitados
+    - Que requisitos necesitan los matrimonios para discapacitados

@@ -4,6 +4,11 @@ intents:
   - registro_item04_consulta
   - registro_item04_necesidad
   - registro_item04_costo
+  - registro_item04_documentos
+  - registro_item04_subnecesidad_01
+  - registro_item04_subnecesidad_02
+  - registro_item04_subnecesidad_03
+  - registro_item04_subnecesidad_04
 
 responses:
   # >> 4.4. SEPARACIÓN Y DIVORCIO
@@ -49,7 +54,7 @@ responses:
   utter_registro_item04_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -63,7 +68,7 @@ responses:
   utter_registro_item04_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -79,12 +84,127 @@ responses:
 
                 6. Indicar fecha y número de constancia de pago.
 
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  ¿Deseas saber los documentos necesarios en casos especiales?
+
+              action:
+                sections:
+                  - title: "Escoge la opción..."
+                    rows:
+                      - id: "/registro_item04_documentos"
+                        title: "Sí, deseo"
+                      - id: "/registro_item04"
+                        title: "No, gracias"
+                button: "Opciones"
+
   # >> 4.4... COSTO
   utter_registro_item04_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
                 S/ 372.30
+
+  # >> 4.4... DOCUMENTOS
+  utter_registro_item04_documentos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Se presenta una serie de documentos necesarios en casos especiales dependiendo de la opción que usted elija...
+
+                  1. En caso de no tener hijos
+
+                  2. En caso de tener hijos menores
+
+                  3. En caso de tener hijos mayores discapacitados
+
+                  4. Requisitos relacionados con el patrimonio
+
+              action:
+                sections:
+                  - title: "Selecciona la opción"
+                    rows:
+                      - id: "/registro_item04_subnecesidad_01"
+                        title: "Opción 1"
+                        description: "No hijos"
+                      - id: "/registro_item04_subnecesidad_02"
+                        title: "Opción 2"
+                        description: "Hijos menores"
+                      - id: "/registro_item04_subnecesidad_03"
+                        title: "Opción 3"
+                        description: "Mayores discapacitados"
+                      - id: "/registro_item04_subnecesidad_04"
+                        title: "Opción 4"
+                        description: "Patrimonio"
+                      - id: "/registro_item04_necesidad"
+                        title: "Volver"
+                        description: "Volver a lo anterior"
+                button: "Opciones"
+
+  # >> 4.4.1... SUBNECESIDAD 01
+  utter_registro_item04_subnecesidad_01:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
+
+  # >> 4.4.2... SUBNECESIDAD 02
+  utter_registro_item04_subnecesidad_02:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Adjuntar copia certificada de acta de nacimiento.
+
+                2. Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+
+  # >> 4.4.3... SUBNECESIDAD 03
+  utter_registro_item04_subnecesidad_03:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Adjuntar copia certificada de acta de nacimiento.
+
+                2. Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+
+                3. Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
+
+  # >> 4.4.4... SUBNECESIDAD 04
+  utter_registro_item04_subnecesidad_04:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+                
+                1. Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
+
+                2. Separación de patrimonios: Escritura pública registrada.
+
+                3. Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.

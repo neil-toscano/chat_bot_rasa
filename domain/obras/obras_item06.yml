@@ -49,17 +49,21 @@ responses:
   utter_obras_item06_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
                 Es el registro de la división de un terreno o propiedad en lotes individuales.
 
+                *¿Para qué es necesario?*
+
+                Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
+
   # >> 5.6... NECESIDAD
   utter_obras_item06_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -73,7 +77,7 @@ responses:
   utter_obras_item06_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |

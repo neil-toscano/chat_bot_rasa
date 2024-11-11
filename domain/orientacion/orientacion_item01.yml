@@ -49,7 +49,7 @@ responses:
   utter_orientacion_item01_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -63,7 +63,7 @@ responses:
   utter_orientacion_item01_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -79,7 +79,7 @@ responses:
   utter_orientacion_item01_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |

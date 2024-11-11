@@ -49,17 +49,21 @@ responses:
   utter_obras_item03_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
                 Es el permiso que entrega la municipalidad antes de construir.
 
+                *¿Para qué es necesario?*
+
+                Para construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+
   # >> 5.3... NECESIDAD
   utter_obras_item03_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -83,7 +87,7 @@ responses:
   utter_obras_item03_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |

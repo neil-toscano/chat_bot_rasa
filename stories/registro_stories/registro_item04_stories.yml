@@ -24,3 +24,33 @@ stories:
     steps:
       - intent: registro_item04_costo
       - action: utter_registro_item04_costo
+
+  # >> 4.4... STORIES - DOCUMENTOS
+  - story: separacion divorcio documentos
+    steps:
+      - intent: registro_item04_documentos
+      - action: utter_registro_item04_documentos
+  
+  # >> 4.4.1... STORIES - SUBNECESIDAD 01
+  - story: separacion divorcio subnecesidad uno
+    steps:
+      - intent: registro_item04_subnecesidad_01
+      - action: utter_registro_item04_subnecesidad_01
+
+  # >> 4.4.2... STORIES - SUBNECESIDAD 02
+  - story: separacion divorcio subnecesidad dos
+    steps:
+      - intent: registro_item04_subnecesidad_02
+      - action: utter_registro_item04_subnecesidad_02
+
+  # >> 4.4.3... STORIES - SUBNECESIDAD 03
+  - story: separacion divorcio subnecesidad tres
+    steps:
+      - intent: registro_item04_subnecesidad_03
+      - action: utter_registro_item04_subnecesidad_03
+
+  # >> 4.4.4... STORIES - SUBNECESIDAD 04
+  - story: separacion divorcio subnecesidad cuatro
+    steps:
+      - intent: registro_item04_subnecesidad_04
+      - action: utter_registro_item04_subnecesidad_04

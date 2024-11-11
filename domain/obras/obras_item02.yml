@@ -49,17 +49,21 @@ responses:
   utter_obras_item02_consulta:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
                 Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
 
+                *¿Para qué es necesario?*
+
+                Para prescripción adquisitiva de dominio, titulo supletorio, rectificación de linderos y medidas perimétricas.
+
   # >> 5.2... NECESIDAD
   utter_obras_item02_necesidad:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |
@@ -75,7 +79,7 @@ responses:
   utter_obras_item02_costo:
     - custom:
         blocks:
-          - type: "text"
+          - type: text
             text:
               preview_url: false
               body: |

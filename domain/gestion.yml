@@ -19,7 +19,7 @@ responses:
   utter_gestion:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

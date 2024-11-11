@@ -50,23 +50,27 @@ responses:
   utter_gestion_item02_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo bajo.
 
+                *¿Para qué es necesario?*
+
+                Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
+
   # >> 2.2... NECESIDAD
   utter_gestion_item02_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
                 Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
   
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
@@ -76,7 +80,7 @@ responses:
   utter_gestion_item02_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
