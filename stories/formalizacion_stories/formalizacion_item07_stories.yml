@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO MEDIO:
+- story: autorizacion publicidad exterior afiche
+  steps:
+  - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche
+
+# >> 1.1... STORIES - CONSULTA
+- story: autorizacion publicidad exterior afiche que es
+  steps:
+  - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+
+# >> 1.1... STORIES - NECESIDAD
+- story: autorizacion publicidad exterior afiche que necesito
+  steps:
+  - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+
+
+
+
+# >> 1.1... STORIES - CUANTO CUESTA
+- story: autorizacion publicidad exterior afiche cuanto cuesta
+  steps:
+  - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta

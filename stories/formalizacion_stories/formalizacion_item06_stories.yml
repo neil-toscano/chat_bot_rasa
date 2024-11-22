@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO MEDIO:
+- story: licencia de funcionamiento cambio de giro
+  steps:
+  - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro
+  - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro
+
+# >> 1.1... STORIES - CONSULTA
+- story: licencia de funcionamiento cambio de giro que es
+  steps:
+  - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+
+# >> 1.1... STORIES - NECESIDAD
+- story: licencia de funcionamiento cambio de giro que necesito
+  steps:
+  - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+
+
+# >> 1.1... STORIES - CUANTO CUESTA
+- story: licencia de funcionamiento cambio de giro cuanto cuesta
+  steps:
+  - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta

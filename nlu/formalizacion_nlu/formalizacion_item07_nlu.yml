@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - AUTORIZACIÓN PARA PUBLICIDAD EXTERIOR (AFICHE Y PLANCHETA):
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  examples: |
+    - Autorización para ubicación de afiches publicitarios en bienes privados
+    - Permiso para colocar publicidad exterior en planchetas en propiedad privada
+    - Solicitud de autorización para afiches de publicidad exterior
+    - Autorización de afiches publicitarios en dominio privado
+    - Colocación de planchetas publicitarias en bienes de dominio privado
+
+# >> 2.1. NLU - CONSULTA
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  examples: |
+    - Qué es la autorización para publicidad exterior en bienes privados
+    - En qué consiste la autorización de publicidad exterior en afiches
+    - Explicación sobre permiso para planchetas publicitarias en dominio privado
+    - Cómo funciona la autorización de afiches publicitarios en propiedad privada
+    - Qué cubre la autorización de publicidad exterior en bienes privados
+
+# >> 2.1. NLU - NECESIDAD
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  examples: |
+    - Qué necesito para la autorización de publicidad exterior en bienes privados
+    - Requisitos para colocar afiches publicitarios en dominio privado
+    - Documentación para autorización de planchetas publicitarias en propiedad privada
+    - Qué se necesita para permiso de afiches publicitarios en bienes de dominio privado
+    - Requisitos para autorización de publicidad exterior tipo afiche en bienes privados
+
+# >> 2.1. NLU - COSTO
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la autorización para publicidad exterior en bienes privados
+    - Precio de permiso para colocar afiches en dominio privado
+    - Tarifa para autorización de planchetas publicitarias en propiedad privada
+    - Cuál es el costo de una autorización para afiches publicitarios en bienes privados
+    - Precio para permiso de publicidad exterior tipo afiche en bienes de dominio privado

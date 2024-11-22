@@ -1,0 +1,66 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES DE RIESGO MEDIO:
+- intent: formalizacion_item02_edificacion_riesgo_medio
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo medio
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo medio
+    - Solicitud de licencia para edificios de riesgo medio
+    - Autorización de funcionamiento en edificaciones de riesgo medio
+    - Edificaciones calificadas con nivel de riesgo medio
+
+# >> 2.1. NLU - CONSULTA
+- intent: formalizacion_item02_riesgo_medio_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo medio
+    - En qué consiste la licencia para edificaciones de riesgo medio
+    - Explicación sobre licencia de edificaciones de riesgo medio
+    - Cómo funciona la licencia para edificios de riesgo medio
+    - Qué cubre la licencia de riesgo medio en edificaciones
+
+# >> 2.1. NLU - NECESIDAD
+- intent: formalizacion_item02_riesgo_medio_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo medio
+    - Requisitos para licencia de riesgo medio en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo medio
+    - Qué se necesita para permiso de riesgo medio en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo medio
+
+# >> 2.1. NLU - SERVICIO SALUD
+- intent: formalizacion_item02_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo medio
+    - Autorización para funcionamiento en edificaciones de salud de riesgo medio
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo medio
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo medio
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo medio
+
+# >> 2.1. NLU - REQUIERE AUTORIZACIÓN
+- intent: formalizacion_item02_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo medio
+    - Permiso para actividad comercial en riesgo medio
+    - Autorización requerida para eventos en edificios de riesgo medio
+    - Actividades que requieren licencia de riesgo medio
+    - Se necesita autorización para eventos en riesgo medio
+
+# >> 2.1. NLU - PATRIMONIO CULTURAL
+- intent: formalizacion_item02_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo medio
+    - Autorización para uso de monumento histórico de riesgo medio
+    - Permiso para actividades en monumentos históricos de riesgo medio
+    - Actividad en patrimonio cultural de riesgo medio
+    - Uso de monumento en edificaciones de riesgo medio
+
+# >> 2.1. NLU - COSTO
+- intent: formalizacion_item02_riesgo_medio_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo medio
+    - Precio de licencia de funcionamiento en edificios de riesgo medio
+    - Tarifa para licencia de edificaciones de riesgo medio
+    - Cuál es el costo de una licencia para edificios de riesgo medio
+    - Precio de permiso para edificaciones calificadas en riesgo medio
+

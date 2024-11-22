@@ -1,0 +1,78 @@
+version: "3.1"
+
+intents:
+  - formalizacion_item09_duplicado_certificado
+  - formalizacion_item09_duplicado_certificado_que_es
+  - formalizacion_item09_duplicado_certificado_que_necesito
+  - formalizacion_item09_duplicado_certificado_cuanto_cuesta
+
+responses:
+# ===========2.1====================
+  utter_formalizacion_item09_duplicado_certificado:
+  - custom:
+      blocks:
+        - type: interactive
+          interactive:
+            type: list
+            body:
+              text: |
+                *🎉 Has seleccionado duplicación del certificado de licencia de funcionamiento.*
+
+                *❓ Opciones de pregunta:*
+
+                1️. 📘¿Qué es?
+
+                2️. 📝¿Qué necesito?
+
+                3️. 💰¿Cuánto cuesta el derecho de trámite?
+            footer:
+              text: "*Seleccione la pregunta abajo 👇*"
+
+            action:
+              sections:
+                - title: "Escoja la pregunta"
+                  rows:
+                    - id: "/formalizacion_item09_duplicado_certificado_que_es"
+                      title: "Trámite 1"
+                      description: "¿Qué es? 📘"
+                    - id: "/formalizacion_item09_duplicado_certificado_que_necesito"
+                      title: "Trámite 2"
+                      description: "¿Qué necesito? 📝"
+                    - id: "/formalizacion_item09_duplicado_certificado_cuanto_cuesta"
+                      title: "Trámite 3"
+                      description: "¿Cuánto cuesta? 💰"
+              button: "Opciones"
+
+# ==========***=======================
+
+  utter_formalizacion_item09_duplicado_certificado_que_es:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+              📄Un servicio exclusivo a través del cual, el titular de una Licencia de Funcionamiento puede acceder a un duplicado del Certificado de Licencia de Funcionamiento, en casos de pérdida o deterioro.
+
+  
+  utter_formalizacion_item09_duplicado_certificado_que_necesito:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: true
+            body: |
+                a. 🗂️ Solicitud simple con el número de certificado de licencia de funciónamiento
+                b. 📅  Indicar fecha y número de constancia de pago
+
+  utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+                💵 S/ 78.10
+
+
+# =============================================
