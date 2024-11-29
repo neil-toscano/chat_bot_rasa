@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+# >> 5.2. NLU - VISACIÓN DE PLANOS  :
+- intent: obras_item02
+  examples: |
+    - Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+    - Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Visación de Planos
+
+# >> 5.2... NLU - CONSULTA
+- intent: obras_item02_consulta
+  examples: |
+    - Qué es la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Qué es la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - En que consiste la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> 5.2... NLU - NECESIDAD
+- intent: obras_item02_necesidad
+  examples: |
+    - Qué necesito para la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Qué necesito para la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Qué requisitos piden para la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> 5.2... NLU - COSTO
+- intent: obras_item02_costo
+  examples: |
+    - Cuánto cuesta la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Cuánto cuesta la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Cuánto debo pagar por la Visación de Planos para Trámites de Prescripción, Título y Rectificacióno
+    - Cuánto es el monto de la Visación de Planos para Trámites de Prescripción, Título y Rectificación

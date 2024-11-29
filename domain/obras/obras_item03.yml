@@ -1,0 +1,96 @@
+version: "3.1"
+
+intents:
+  - obras_item03_consulta
+  - obras_item03_necesidad
+  - obras_item03_costo
+
+responses:
+  # >> 5.3. LICENCIA CONSTRUCCIÓN
+  utter_obras_item03:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🏠 Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Qué necesito?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/obras_item03_consulta"
+                        title: "Pregunta 1"
+                        description: "¿Qué es? 📄"
+                      - id: "/obras_item03_necesidad"
+                        title: "Pregunta 2"
+                        description: "¿Qué necesito? 📋"
+                      - id: "/obras_item03_costo"
+                        title: "Pregunta 3"
+                        description: "¿Cuánto cuesta? 💵"
+                button: "✅ Opciones"
+
+  # >> 5.3... CONSULTA
+  utter_obras_item03_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el permiso que entrega la municipalidad antes de construir.
+
+                *🏗️ ¿Para qué es necesario?*
+
+                Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+
+  # >> 5.3... NECESIDAD
+  utter_obras_item03_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
+
+                2. 📄 Documento que acredite el derecho a edificar.
+
+                3. 💿 CD con documentos en original.
+
+                4. 📍 Plano de ubicación y localización.
+
+                5. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
+
+                6. 🏗️ Planos de estructuras.
+
+                7. 🚰 Planos de instalaciones sanitarias.
+
+                8. 💡 Plano de instalaciones eléctricas.
+
+  # >> 5.3... COSTO
+  utter_obras_item03_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 180.20

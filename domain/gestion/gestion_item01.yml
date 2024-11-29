@@ -50,23 +50,27 @@ responses:
   utter_gestion_item01_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo.
+
+                *¿Para qué sirve?*
+
+                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
   
   # >> 2.1... NECESIDAD
   utter_gestion_item01_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
                 Solicitud de ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
   
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
@@ -76,7 +80,7 @@ responses:
   utter_gestion_item01_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

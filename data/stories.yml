@@ -599,3 +599,363 @@ stories:
   steps:
   - intent: gestion_item10_costo
   - action: utter_gestion_item10_costo
+
+# >> CERTIFICADO DE PARAMETROS :
+- story: certificado de parametros
+  steps:
+  - intent: obras_item01
+  - action: utter_obras_item01
+
+# >> CERTIFICADO DE PARAMETROS CONSULTA :
+- story: certificado de parametros consulta
+  steps:
+  - intent: obras_item01_consulta
+  - action: utter_obras_item01_consulta
+
+# >> CERTIFICADO DE PARAMETROS NECESIDAD :
+- story: certificado de parametros necesidad
+  steps:
+  - intent: obras_item01_necesidad
+  - action: utter_obras_item01_necesidad
+
+# >> CERTIFICADO DE PARAMETROS COSTO :
+- story: certificado de parametros costo
+  steps:
+  - intent: obras_item01_costo
+  - action: utter_obras_item01_costo
+
+# >> VISACION DE PLANOS :
+- story: visacion de planos
+  steps:
+  - intent: obras_item02
+  - action: utter_obras_item02
+
+# >> VISACION DE PLANOS CONSULTA :
+- story: visacion de planos consulta
+  steps:
+  - intent: obras_item02_consulta
+  - action: utter_obras_item02_consulta
+
+# >> VISACION DE PLANOS NECESIDAD :
+- story: visacion de planos necesidad
+  steps:
+  - intent: obras_item02_necesidad
+  - action: utter_obras_item02_necesidad
+
+# >> VISACION DE PLANOS COSTO :
+- story: visacion de planos costo
+  steps:
+  - intent: obras_item02_costo
+  - action: utter_obras_item02_costo
+
+# >> LICENCIA CONSTRUCCION :
+- story: licencia construccion
+  steps:
+  - intent: obras_item03
+  - action: utter_obras_item03
+
+# >> LICENCIA CONSTRUCCION CONSULTA :
+- story: licencia construccion consulta
+  steps:
+  - intent: obras_item03_consulta
+  - action: utter_obras_item03_consulta
+
+# >> LICENCIA CONSTRUCCION NECESIDAD :
+- story: licencia construccion necesidad
+  steps:
+  - intent: obras_item03_necesidad
+  - action: utter_obras_item03_necesidad
+
+# >> LICENCIA CONSTRUCCION COSTO :
+- story: licencia construccion costo
+  steps:
+  - intent: obras_item03_costo
+  - action: utter_obras_item03_costo
+
+# >> LICENCIA DEMOLICION :
+- story: licencia demolicion
+  steps:
+  - intent: obras_item04
+  - action: utter_obras_item04
+
+# >> LICENCIA DEMOLICION CONSULTA :
+- story: licencia demolicion consulta
+  steps:
+  - intent: obras_item04_consulta
+  - action: utter_obras_item04_consulta
+
+# >> LICENCIA DEMOLICION NECESIDAD :
+- story: licencia demolicion necesidad
+  steps:
+  - intent: obras_item04_necesidad
+  - action: utter_obras_item04_necesidad
+
+# >> LICENCIA DEMOLICION COSTO :
+- story: licencia demolicion costo
+  steps:
+  - intent: obras_item04_costo
+  - action: utter_obras_item04_costo
+
+# >> COMPRA VENTA :
+- story: compra venta
+  steps:
+  - intent: obras_item05
+  - action: utter_obras_item05
+
+# >> COMPRA VENTA CONSULTA :
+- story: compra venta consulta
+  steps:
+  - intent: obras_item05_consulta
+  - action: utter_obras_item05_consulta
+
+# >> COMPRA VENTA NECESIDAD :
+- story: compra venta necesidad
+  steps:
+  - intent: obras_item05_necesidad
+  - action: utter_obras_item05_necesidad
+
+# >> COMPRA VENTA COSTO :
+- story: compra venta costo
+  steps:
+  - intent: obras_item05_costo
+  - action: utter_obras_item05_costo
+
+# >> INDEPENDIZACION SUBDIVISION :
+- story: independizacion subdivision
+  steps:
+  - intent: obras_item06
+  - action: utter_obras_item06
+
+# >> INDEPENDIZACION SUBDIVISION CONSULTA :
+- story: independizacion subdivision consulta
+  steps:
+  - intent: obras_item06_consulta
+  - action: utter_obras_item06_consulta
+
+# >> INDEPENDIZACION SUBDIVISION NECESIDAD :
+- story: independizacion subdivision necesidad
+  steps:
+  - intent: obras_item06_necesidad
+  - action: utter_obras_item06_necesidad
+
+# >> INDEPENDIZACION SUBDIVISION COSTO :
+- story: independizacion subdivision costo
+  steps:
+  - intent: obras_item06_costo
+  - action: utter_obras_item06_costo
+
+# >> SUCESION INDIVISA :
+- story: sucesion indivisa
+  steps:
+  - intent: orientacion_item01
+  - action: utter_orientacion_item01
+
+# >> SUCESION INDIVISA CONSULTA :
+- story: sucesion indivisa consulta
+  steps:
+  - intent: orientacion_item01_consulta
+  - action: utter_orientacion_item01_consulta
+
+# >> SUCESION INDIVISA NECESIDAD :
+- story: sucesion indivisa necesidad
+  steps:
+  - intent: orientacion_item01_necesidad
+  - action: utter_orientacion_item01_necesidad
+
+# >> SUCESION INDIVISA COSTO :
+- story: sucesion indivisa costo
+  steps:
+  - intent: orientacion_item01_costo
+  - action: utter_orientacion_item01_costo
+
+# >> SUCESION INTESTADA :
+- story: sucesion intestada
+  steps:
+  - intent: orientacion_item02
+  - action: utter_orientacion_item02
+
+# >> SUCESION INTESTADA CONSULTA :
+- story: sucesion intestada consulta
+  steps:
+  - intent: orientacion_item02_consulta
+  - action: utter_orientacion_item02_consulta
+
+# >> SUCESION INTESTADA NECESIDAD :
+- story: sucesion intestada necesidad
+  steps:
+  - intent: orientacion_item02_necesidad
+  - action: utter_orientacion_item02_necesidad
+
+# >> SUCESION INTESTADA COSTO :
+- story: sucesion intestada costo
+  steps:
+  - intent: orientacion_item02_costo
+  - action: utter_orientacion_item02_costo
+
+# >> MATRIMONIO CIVIL :
+- story: matrimonio civil
+  steps:
+  - intent: registro_item01
+  - action: utter_registro_item01
+
+# >> MATRIMONIO CIVIL CONSULTA :
+- story: matrimonio civil consulta
+  steps:
+  - intent: registro_item01_consulta
+  - action: utter_registro_item01_consulta
+
+# >> MATRIMONIO CIVIL NECESIDAD :
+- story: matrimonio civil necesidad
+  steps:
+  - intent: registro_item01_necesidad
+  - action: utter_registro_item01_necesidad
+
+# >> MATRIMONIO CIVIL COSTO :
+- story: matrimonio civil costo
+  steps:
+  - intent: registro_item01_costo
+  - action: utter_registro_item01_costo
+
+# >> MATRIMONIO CIVIL REQUISITOS :
+- story: matrimonio civil requisitos
+  steps:
+  - intent: registro_item01_requisitos
+  - action: utter_registro_item01_requisitos
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD UNO :
+- story: matrimonio civil subnecesidad uno
+  steps:
+  - intent: registro_item01_subnecesidad_01
+  - action: utter_registro_item01_subnecesidad_01
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD DOS :
+- story: matrimonio civil subnecesidad dos
+  steps:
+  - intent: registro_item01_subnecesidad_02
+  - action: utter_registro_item01_subnecesidad_02
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD TRES :
+- story: matrimonio civil subnecesidad tres
+  steps:
+  - intent: registro_item01_subnecesidad_03
+  - action: utter_registro_item01_subnecesidad_03
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD CUATRO :
+- story: matrimonio civil subnecesidad cuatro
+  steps:
+  - intent: registro_item01_subnecesidad_04
+  - action: utter_registro_item01_subnecesidad_04
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD CINCO :
+- story: matrimonio civil subnecesidad cinco
+  steps:
+  - intent: registro_item01_subnecesidad_05
+  - action: utter_registro_item01_subnecesidad_05
+
+# >> MATRIMONIO CIVIL SUBNECESIDAD SEIS :
+- story: matrimonio civil subnecesidad seis
+  steps:
+  - intent: registro_item01_subnecesidad_06
+  - action: utter_registro_item01_subnecesidad_06
+
+# >> PUBLICACION EDICTO MATRIMONIAL :
+- story: publicacion edicto matrimonial
+  steps:
+  - intent: registro_item02
+  - action: utter_registro_item02
+
+# >> PUBLICACION EDICTO MATRIMONIAL CONSULTA :
+- story: publicacion edicto matrimonial consulta
+  steps:
+  - intent: registro_item02_consulta
+  - action: utter_registro_item02_consulta
+
+# >> PUBLICACION EDICTO MATRIMONIAL NECESIDAD :
+- story: publicacion edicto matrimonial necesidad
+  steps:
+  - intent: registro_item02_necesidad
+  - action: utter_registro_item02_necesidad
+
+# >> PUBLICACION EDICTO MATRIMONIAL COSTO :
+- story: publicacion edicto matrimonial costo
+  steps:
+  - intent: registro_item02_costo
+  - action: utter_registro_item02_costo
+
+# >> REPROGRAMACION FECHA HORA :
+- story: reprogramacion fecha hora
+  steps:
+  - intent: registro_item03
+  - action: utter_registro_item03
+
+# >> REPROGRAMACION FECHA HORA CONSULTA :
+- story: reprogramacion fecha hora consulta
+  steps:
+  - intent: registro_item03_consulta
+  - action: utter_registro_item03_consulta
+
+# >> REPROGRAMACION FECHA HORA NECESIDAD :
+- story: reprogramacion fecha hora necesidad
+  steps:
+  - intent: registro_item03_necesidad
+  - action: utter_registro_item03_necesidad
+
+# >> REPROGRAMACION FECHA HORA COSTO :
+- story: reprogramacion fecha hora costo
+  steps:
+  - intent: registro_item03_costo
+  - action: utter_registro_item03_costo
+
+# >> SEPARACION DIVORCIO :
+- story: separacion divorcio
+  steps:
+  - intent: registro_item04
+  - action: utter_registro_item04
+
+# >> SEPARACION DIVORCIO CONSULTA :
+- story: separacion divorcio consulta
+  steps:
+  - intent: registro_item04_consulta
+  - action: utter_registro_item04_consulta
+
+# >> SEPARACION DIVORCIO NECESIDAD :
+- story: separacion divorcio necesidad
+  steps:
+  - intent: registro_item04_necesidad
+  - action: utter_registro_item04_necesidad
+
+# >> SEPARACION DIVORCIO COSTO :
+- story: separacion divorcio costo
+  steps:
+  - intent: registro_item04_costo
+  - action: utter_registro_item04_costo
+
+# >> SEPARACION DIVORCIO DOCUMENTOS :
+- story: separacion divorcio documentos
+  steps:
+  - intent: registro_item04_documentos
+  - action: utter_registro_item04_documentos
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD UNO :
+- story: separacion divorcio subnecesidad uno
+  steps:
+  - intent: registro_item04_subnecesidad_01
+  - action: utter_registro_item04_subnecesidad_01
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD DOS :
+- story: separacion divorcio subnecesidad dos
+  steps:
+  - intent: registro_item04_subnecesidad_02
+  - action: utter_registro_item04_subnecesidad_02
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD TRES :
+- story: separacion divorcio subnecesidad tres
+  steps:
+  - intent: registro_item04_subnecesidad_03
+  - action: utter_registro_item04_subnecesidad_03
+
+# >> SEPARACION DIVORCIO SUBNECESIDAD CUATRO :
+- story: separacion divorcio subnecesidad cuatro
+  steps:
+  - intent: registro_item04_subnecesidad_04
+  - action: utter_registro_item04_subnecesidad_04

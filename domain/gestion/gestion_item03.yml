@@ -50,23 +50,27 @@ responses:
   utter_gestion_item03_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.
 
+                *¿Para qué es necesario*
+
+                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
+
   # >> 2.3... NECESIDAD
   utter_gestion_item03_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
                 Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
   
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
@@ -76,7 +80,7 @@ responses:
   utter_gestion_item03_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

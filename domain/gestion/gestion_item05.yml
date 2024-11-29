@@ -50,25 +50,29 @@ responses:
   utter_gestion_item05_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Evaluación de seguridad previa al inicio de actividades en establecimientos con alto riesgo.
 
+                *¿Para qué sirve?*
+
+                Asegura que el establecimiento cumpla con las normativas de seguridad antes de comenzar operaciones.
+
   # >> 2.5... NECESIDAD
   utter_gestion_item05_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
                 Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
   
-        - type: "text"
+        - type: text
           text:
-            preview_url: true
+            preview_url: false
             body: |
                 Documentos técnicos en copia simple:
 
@@ -88,7 +92,7 @@ responses:
   utter_gestion_item05_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

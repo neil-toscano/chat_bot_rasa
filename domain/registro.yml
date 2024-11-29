@@ -2,6 +2,10 @@ version: "3.1"
 
 intents:
   - registro
+  - registro_item01
+  - registro_item02
+  - registro_item03
+  - registro_item04
 
 responses:
 

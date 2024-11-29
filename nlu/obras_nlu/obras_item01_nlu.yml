@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+# >> 5.1. NLU - CERTIFICADO DE PARÁMETROS :
+- intent: obras_item01
+  examples: |
+    - Certificado de Parámetros Urbanísticos y Edificatorios
+    - Certificado de Parámetros Urbanos y Edificios
+    - Certificado de Parámetros Urbanos
+    - Certificado de Parámetros
+
+# >> 5.1... NLU - CONSULTA
+- intent: obras_item01_consulta
+  examples: |
+    - Qué es el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Qué es el Certificado de Parámetros Urbanos
+    - En que consiste el Certificado de Parámetros Urbanos
+
+# >> 5.1... NLU - NECESIDAD
+- intent: obras_item01_necesidad
+  examples: |
+    - Qué necesito para el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Qué necesito para el Certificado de Parámetros
+    - Qué requisitos piden para el Certificado de Parámetros Urbanísticos y Edificatorios
+
+# >> 5.1... NLU - COSTO
+- intent: obras_item01_costo
+  examples: |
+    - Cuánto cuesta el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Cuánto cuesta el Certificado de Parámetros
+    - Cuánto debo pagar por el Certificado de Parámetros
+    - Cuánto es el monto de el Certificado de Parámetros

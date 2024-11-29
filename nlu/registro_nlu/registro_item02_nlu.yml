@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+
+# >> 4.2. NLU - PUBLICACIÓN DE EDICTO MATRIMONIAL :
+- intent: registro_item02
+  examples: |
+    - Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Publicación de Edicto Matrimonial
+
+# >> 4.2... NLU - CONSULTA
+- intent: registro_item02_consulta
+  examples: |
+    - Qué es la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Qué es la Publicación de Edicto Matrimonial
+    - En que consiste la Publicación de Edicto Matrimonial
+
+# >> 4.2... NLU - NECESIDAD
+- intent: registro_item02_necesidad
+  examples: |
+    - Qué necesito para la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Qué necesito para la Publicación de Edicto Matrimonial
+    - Qué requisitos piden para la Publicación de Edicto Matrimonial
+
+# >> 4.2... NLU - COSTO
+- intent: registro_item02_costo
+  examples: |
+    - Cuánto cuesta la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Cuánto cuesta la Publicación de Edicto Matrimonial
+    - Cuánto debo pagar por la Publicación de Edicto Matrimonial
+    - Cuánto es el monto de la Publicación de Edicto Matrimonial

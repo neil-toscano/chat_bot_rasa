@@ -9,7 +9,7 @@ nlu:
     - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
     - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
     - Renovación de Inspección Técnica Riesgo Medio
-    - Renovación Riesgo Bajo
+    - Renovación Riesgo Medio
 
 # >> 2.4... NLU - CONSULTA
 - intent: gestion_item04_consulta
@@ -18,7 +18,7 @@ nlu:
     - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
     - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
     - Qué es la Renovación de Inspección Técnica Riesgo Medio
-    - Qué es la Renovación Riesgo Bajo
+    - Qué es la Renovación Riesgo Medio
 
 # >> 2.4... NLU - NECESIDAD
 - intent: gestion_item04_necesidad

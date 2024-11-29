@@ -1,0 +1,77 @@
+version: "3.1"
+
+nlu:
+
+# >> 4.4. NLU - SEPARACIÓN DIVORCIO :
+- intent: registro_item04
+  examples: |
+    - Separación Convencional y Divorcio Ulterior: Separación Convencional
+    - Separación Convencional y Divorcio Ulterior
+    - Separación Convencional
+    - Divorcio Ulterior
+    - Separación y Divorcio
+
+# >> 4.4... NLU - CONSULTA
+- intent: registro_item04_consulta
+  examples: |
+    - Qué es la Separación Convencional y Divorcio Ulterior
+    - Qué es la Separación Convencional
+    - Qué es el Divorcio Ulterior
+    - En que consiste la Separación Convencional y Divorcio Ulterior
+
+# >> 4.4... NLU - NECESIDAD
+- intent: registro_item04_necesidad
+  examples: |
+    - Qué necesito para la Separación Convencional y Divorcio Ulterior
+    - Qué necesito para la Separación y Divorcio
+    - Qué necesito para la Separación Convencional
+    - Qué necesito para el Divorcio Ulterior
+    - Qué requisitos piden para la Separación Convencional y Divorcio Ulterior
+
+# >> 4.4... NLU - COSTO
+- intent: registro_item04_costo
+  examples: |
+    - Cuánto cuesta la Separación Convencional y Divorcio Ulterior
+    - Cuánto cuesta la Separación y Divorcio
+    - Cuánto cuesta la Separación Convencional
+    - Cuánto cuesta el Divorcio Ulterior
+    - Cuánto debo pagar por la Separación Convencional y Divorcio Ulterior
+    - Cuánto es el monto de la Separación Convencional y Divorcio Ulterior
+
+# >> 4.4... NLU - DOCUMENTOS
+- intent: registro_item04_documentos
+  examples: |
+    - Qué documentos necesarios para casos especiales tiene la Separación Convencional y Divorcio Ulterior
+    - Qué documentos necesito para casos especiales de Separación y Divorcio
+    - Para casos especiales de Separación y Divorcio que necesito
+    - Que necesito en separación para casos especiales
+    - Que necesito en divorcio para casos especiales
+
+# >> 4.4.1... NLU - SUBNECESIDAD 01
+- intent: registro_item04_subnecesidad_01
+  examples: |
+    - Qué documentos necesarios necesito en caso de no tener hijos
+    - Que documentos son necesarios en caso de no tener hijos
+    - Que documentos necesito si no tengo hijos
+
+# >> 4.4.2... NLU - SUBNECESIDAD 02
+- intent: registro_item04_subnecesidad_02
+  examples: |
+    - Qué documentos necesarios necesito en caso de tener hijos menores
+    - Que documentos son necesarios en caso de tener hijos menores
+    - Que documentos necesito si tengo hijos menores
+
+# >> 4.4.3... NLU - SUBNECESIDAD 03
+- intent: registro_item04_subnecesidad_03
+  examples: |
+    - Qué documentos necesarios necesito en caso de tener hijos mayores discapacitados
+    - Que documentos son necesarios en caso de tener hijos mayores discapacitados
+    - Que documentos necesito si no tengo hijos mayores discapacitados
+    - Que documentos necesito si no tengo hijos mayores con discapacidad
+
+# >> 4.4.4... NLU - SUBNECESIDAD 04
+- intent: registro_item04_subnecesidad_04
+  examples: |
+    - Qué documentos necesarios necesito en caso el requisito sea relacionado con el patrimonio
+    - Que documentos son necesarios en caso sea relacionado con el patrimonio
+    - Que documentos necesito si es relacionado con el patrimonio

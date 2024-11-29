@@ -50,19 +50,23 @@ responses:
   utter_gestion_item10_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
 
+                *¿Para qué es?*
+
+                Para proporcionar una prueba adicional del cumplimiento de las normativas de seguridad, en caso de pérdida o necesidad de presentar el documento en diferentes lugares.
+
   # >> 2.10... NECESIDAD
   utter_gestion_item10_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
-            preview_url: true
+            preview_url: false
             body: |
                 Solicitud, indicando número y fecha de pago por el derecho de trámite.
 
@@ -70,7 +74,7 @@ responses:
   utter_gestion_item10_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

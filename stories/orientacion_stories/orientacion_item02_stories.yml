@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+  # >> 3.2. STORIES - SUCESIÓN INTESTADA :
+  - story: sucesion intestada
+    steps:
+      - intent: orientacion_item02
+      - action: utter_orientacion_item02
+
+  # >> 3.2... STORIES - CONSULTA
+  - story: sucesion intestada consulta
+    steps:
+      - intent: orientacion_item02_consulta
+      - action: utter_orientacion_item02_consulta
+
+  # >> 3.2... STORIES - NECESIDAD
+  - story: sucesion intestada necesidad
+    steps:
+      - intent: orientacion_item02_necesidad
+      - action: utter_orientacion_item02_necesidad
+
+  # >> 3.2... STORIES - COSTO
+  - story: sucesion intestada costo
+    steps:
+      - intent: orientacion_item02_costo
+      - action: utter_orientacion_item02_costo

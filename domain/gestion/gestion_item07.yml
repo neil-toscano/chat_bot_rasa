@@ -50,31 +50,35 @@ responses:
   utter_gestion_item07_consulta:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |
                 Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades
 
+                *¿Para qué es necesario*
+
+                Garantiza que el establecimiento cumpla con todas las normativas de seguridad críticas para minimizar riesgos y proteger a los ocupantes y visitantes.
+
   # >> 2.7... NECESIDAD
   utter_gestion_item07_necesidad:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
                 Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
   
-        - type: "text"
+        - type: text
           text:
             preview_url: true
             body: |
                 Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
-        - type: "text"
+        - type: text
           text:
-            preview_url: true
+            preview_url: false
             body: |
                 Documentos técnicos en copia simple:
 
@@ -94,7 +98,7 @@ responses:
   utter_gestion_item07_costo:
   - custom:
       blocks:
-        - type: "text"
+        - type: text
           text:
             preview_url: false
             body: |

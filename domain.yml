@@ -21,8 +21,20 @@ intents:
   - animo_mal
   - bot_challenge
   - obras
+  - obras_item01
+  - obras_item02
+  - obras_item03
+  - obras_item04
+  - obras_item05
+  - obras_item06
   - orientacion
+  - orientacion_item01
+  - orientacion_item02
   - registro
+  - registro_item01
+  - registro_item02
+  - registro_item03
+  - registro_item04
   - licencia_funcionamiento_edificacion_riesgo_bajo_que_es
   - licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
   - servicio_de_salud
@@ -100,6 +112,54 @@ intents:
   - gestion_item10_consulta
   - gestion_item10_necesidad
   - gestion_item10_costo
+  - obras_item01_consulta
+  - obras_item01_necesidad
+  - obras_item01_costo
+  - obras_item02_consulta
+  - obras_item02_necesidad
+  - obras_item02_costo
+  - obras_item03_consulta
+  - obras_item03_necesidad
+  - obras_item03_costo
+  - obras_item04_consulta
+  - obras_item04_necesidad
+  - obras_item04_costo
+  - obras_item05_consulta
+  - obras_item05_necesidad
+  - obras_item05_costo
+  - obras_item06_consulta
+  - obras_item06_necesidad
+  - obras_item06_costo
+  - orientacion_item01_consulta
+  - orientacion_item01_necesidad
+  - orientacion_item01_costo
+  - orientacion_item02_consulta
+  - orientacion_item02_necesidad
+  - orientacion_item02_costo
+  - registro_item01_consulta
+  - registro_item01_necesidad
+  - registro_item01_costo
+  - registro_item01_requisitos
+  - registro_item01_subnecesidad_01
+  - registro_item01_subnecesidad_02
+  - registro_item01_subnecesidad_03
+  - registro_item01_subnecesidad_04
+  - registro_item01_subnecesidad_05
+  - registro_item01_subnecesidad_06
+  - registro_item02_consulta
+  - registro_item02_necesidad
+  - registro_item02_costo
+  - registro_item03_consulta
+  - registro_item03_necesidad
+  - registro_item03_costo
+  - registro_item04_consulta
+  - registro_item04_necesidad
+  - registro_item04_costo
+  - registro_item04_documentos
+  - registro_item04_subnecesidad_01
+  - registro_item04_subnecesidad_02
+  - registro_item04_subnecesidad_03
+  - registro_item04_subnecesidad_04
 responses:
   utter_formalizacion_promocion_empresarial:
     - custom:
@@ -116,19 +176,19 @@ responses:
                       _(con ITSE posterior)_
 
                 3. 🔴Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
-                      _(con ITSE posterior)_
+                      _(con ITSE previa)_
 
                 4. ⚠️Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto
-                      _(con ITSE posterior)_
+                      _(con ITSE previa)_
 
                 5. 🔄Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
 
           - type: interactive
             interactive:
               type: list
-            # header:
-            #   type: text
-            #   text: "Consulta Trámites"
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
                   6. 🔃Licencia de funcionamiento para cambio de giro
@@ -179,7 +239,6 @@ responses:
                         title: Trámite 10
                         description: DUPLICADO RESOLUCIÓN 📜
                 button: Seleccionar licencia
-
   utter_gestion:
     - custom:
         blocks:
@@ -275,9 +334,9 @@ responses:
         blocks:
           - type: image
             image:
-              id: '1271986810626759'
-            # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-            # caption: MSJL
+              id: '1551300402169056'
+              # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+              # caption: MSJL
           - type: audio
             audio:
               id: '907450834672489'
@@ -336,45 +395,45 @@ responses:
                 text: '🟢 Opciones de Trámite:'
               body:
                 text: |
-                  1. Certificado de Parámetros Urbanísticos y Edificatorios
+                  1. 🏢Certificado de Parámetros Urbanísticos y Edificatorios
 
-                  2. Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+                  2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                  3. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
-                  4. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
 
-                  5. Inscripción por Compra-Venta
+                  5. 📝Inscripción por Compra-Venta
 
-                  6. Inscripción de una Independización o Subdivisión de Lotes
+                  6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
 
               footer:
-                text: '**Seleccione el trámite abajo**'
+                text: '*Seleccione el trámite abajo 👇*'
 
-            # >> LISTADO DE OPCIONES :
+              # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: 🏗️Escoge el trámite
                     rows:
                       - id: /obras_item01
                         title: Trámite 1
-                        description: CERTIFICADO
+                        description: 📝 CERTIFICADO
                       - id: /obras_item02
                         title: Trámite 2
-                        description: VISACIÓN
+                        description: ✏️ VISACIÓN
                       - id: /obras_item03
                         title: Trámite 3
-                        description: LICENCIA CONSTRUCCIÓN
+                        description: 🛠️ LICENCIA CONSTRUCCIÓN
                       - id: /obras_item04
                         title: Trámite 4
-                        description: LICENCIA DEMOLICIÓN
+                        description: 🏚️ LICENCIA DEMOLICIÓN
                       - id: /obras_item05
                         title: Trámite 5
-                        description: COMPRA-VENTA
+                        description: 🤝 COMPRA-VENTA
                       - id: /obras_item06
                         title: Trámite 6
-                        description: INDEPENDIZACIÓN
-                button: Opciones
+                        description: 📂 INDEPENDIZACIÓN
+                button: Seleccionar trámite
   utter_orientacion:
     - custom:
         blocks:
@@ -451,9 +510,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            # header:
-            #   type: text
-            #   text: "Consulta Trámites"
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
                   *🎉 Haz seleccionado licencia de funcionamiento de edificación de riesgo bajo*
@@ -483,7 +542,7 @@ responses:
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========***=======================
+  # ==========***=======================
 
   utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es:
     - custom:
@@ -518,9 +577,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            # header:
-            #   type: text
-            #   text: "Consulta Trámites"
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
                   *Requisitos especiales* solo para ciertas actividades
@@ -584,7 +643,8 @@ responses:
             text:
               preview_url: false
               body: |
-                💵 S/ 229.20
+                💵 S/ 236.60
+
 # =============================================
   utter_formalizacion_item02_edificacion_riesgo_medio:
     - custom:
@@ -757,7 +817,7 @@ responses:
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========***=======================
+  # ==========***=======================
 
   utter_formalizacion_item03_riesgo_alto_que_es:
     - custom:
@@ -794,8 +854,6 @@ responses:
                 g. 📜 Certificado del sistema puesto a tierra
                 h. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
                 i. 🛡️ Plan de seguridad del establecimiento
-
-
 
           - type: interactive
             interactive:
@@ -864,7 +922,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💵 S/ 444.20
+                💵 S/ 448.00
 
 # =============================================
   utter_formalizacion_item04_edificacion_riesgo_muy_alto:
@@ -902,7 +960,7 @@ responses:
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========4.2=======================
+  # ==========4.2=======================
 
   utter_formalizacion_item04_riesgo_muy_alto_que_es:
     - custom:
@@ -939,8 +997,6 @@ responses:
                 g. 📜 Certificado del sistema puesto a tierra
                 h. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
                 i. 🛡️ Plan de seguridad del establecimiento
-
-
 
           - type: interactive
             interactive:
@@ -1009,7 +1065,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💵 S/ 776.80
+                💵 S/ 780.40
 
 # =============================================
   utter_formalizacion_item05_transferencia_licencia_funcionamiento:
@@ -1047,7 +1103,7 @@ responses:
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========4.2=======================
+  # ==========4.2=======================
 
   utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_es:
     - custom:
@@ -1081,7 +1137,6 @@ responses:
               body: |
                 c. 📄 Copia simple de contrato de transferencia
 
-
   utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta:
     - custom:
         blocks:
@@ -1089,7 +1144,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💵 S/ 85.50
+                💵 S/ 88.70
 
 # =============================================
   utter_formalizacion_item06_licencia_funcionamiento_cambio_giro:
@@ -1127,7 +1182,7 @@ responses:
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========4.2=======================
+  # ==========4.2=======================
 
   utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es:
     - custom:
@@ -1155,7 +1210,6 @@ responses:
               body: |
                 b. 📄En el caso de personas jurídicas, Declaración jurada de representante legal y N° de partida electrónico y asiento de inscripción SUNARP (vigente)
 
-
   utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta:
     - custom:
         blocks:
@@ -1163,7 +1217,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💵 S/ 87.80
+                💵 S/ 91.00
 
 # =============================================
   utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche:
@@ -1447,6 +1501,10 @@ responses:
               body: |
                 Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo.
 
+                *¿Para qué sirve?*
+
+                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
+
   # >> 2.1... NECESIDAD
   utter_gestion_item01_necesidad:
     - custom:
@@ -1519,6 +1577,10 @@ responses:
               preview_url: false
               body: |
                 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo bajo.
+
+                *¿Para qué es necesario?*
+
+                Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
 
   # >> 2.2... NECESIDAD
   utter_gestion_item02_necesidad:
@@ -1593,6 +1655,10 @@ responses:
               body: |
                 Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.
 
+                *¿Para qué es necesario*
+
+                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
+
   # >> 2.3... NECESIDAD
   utter_gestion_item03_necesidad:
     - custom:
@@ -1665,6 +1731,10 @@ responses:
               preview_url: false
               body: |
                 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo medio.
+
+                *¿Para qué es necesario*
+
+                Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
 
   # >> 2.4... NECESIDAD
   utter_gestion_item04_necesidad:
@@ -1739,6 +1809,10 @@ responses:
               body: |
                 Evaluación de seguridad previa al inicio de actividades en establecimientos con alto riesgo.
 
+                *¿Para qué sirve?*
+
+                Asegura que el establecimiento cumpla con las normativas de seguridad antes de comenzar operaciones.
+
   # >> 2.5... NECESIDAD
   utter_gestion_item05_necesidad:
     - custom:
@@ -1751,7 +1825,7 @@ responses:
 
           - type: text
             text:
-              preview_url: true
+              preview_url: false
               body: |
                 Documentos técnicos en copia simple:
 
@@ -1823,6 +1897,10 @@ responses:
               preview_url: false
               body: |
                 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo alto.
+
+                *¿Para qué sirve*
+
+                Asegura que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
 
   # >> 2.6... NECESIDAD
   utter_gestion_item06_necesidad:
@@ -1897,6 +1975,10 @@ responses:
               body: |
                 Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades
 
+                *¿Para qué es necesario*
+
+                Garantiza que el establecimiento cumpla con todas las normativas de seguridad críticas para minimizar riesgos y proteger a los ocupantes y visitantes.
+
   # >> 2.7... NECESIDAD
   utter_gestion_item07_necesidad:
     - custom:
@@ -1915,7 +1997,7 @@ responses:
 
           - type: text
             text:
-              preview_url: true
+              preview_url: false
               body: |
                 Documentos técnicos en copia simple:
 
@@ -1987,6 +2069,10 @@ responses:
               preview_url: false
               body: |
                 Es el proceso de actualización del certificado que verifica la seguridad en edificaciones con nivel de riesgo muy alto.
+
+                *¿Para qué es necesario*
+
+                Asegura que el establecimiento sigue cumpliendo con las normativas de seguridad y mantiene un entorno seguro, renovando la validez del certificado previamente emitido.
 
   # >> 2.8... NECESIDAD
   utter_gestion_item08_necesidad:
@@ -2061,13 +2147,17 @@ responses:
               body: |
                 Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
 
+                *¿Para qué es necesario*
+
+                Asegura que el evento cumpla con las normativas de seguridad necesarias para proteger a los asistentes y gestionar riesgos durante la realización del evento.
+
   # >> 2.9... NECESIDAD
   utter_gestion_item09_necesidad:
     - custom:
         blocks:
           - type: text
             text:
-              preview_url: true
+              preview_url: false
               body: |
                 1. Solicitud de renovación ITSE, indicando número y fecha de pago.
 
@@ -2148,13 +2238,17 @@ responses:
               body: |
                 Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
 
+                *¿Para qué es?*
+
+                Para proporcionar una prueba adicional del cumplimiento de las normativas de seguridad, en caso de pérdida o necesidad de presentar el documento en diferentes lugares.
+
   # >> 2.10... NECESIDAD
   utter_gestion_item10_necesidad:
     - custom:
         blocks:
           - type: text
             text:
-              preview_url: true
+              preview_url: false
               body: |
                 Solicitud, indicando número y fecha de pago por el derecho de trámite.
 
@@ -2167,6 +2261,1234 @@ responses:
               preview_url: false
               body: |
                 S/ 63.60
+  utter_obras_item01:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🎉 Haz seleccionado Certificado de Parámetros Urbanísticos y Edificatorios*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Qué necesito?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /obras_item01_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es? 📄
+                      - id: /obras_item01_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito? 📋
+                      - id: /obras_item01_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.1... CONSULTA
+  utter_obras_item01_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el documento que te permite saber los requisitos técnicos de diseño de una edificación, por ejemplo alturas máximas, retiros municipales, porcentaje de área libre, cantidad de estacionamientos, etc.
+
+                *🏗️ ¿Para qué es necesario?*
+
+                Para construir, para vender, alquilar, trámites en el banco y temas académicos.
+
+  # >> 5.1... NECESIDAD
+  utter_obras_item01_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Requisitos para el trámite:*
+
+                1. 🖊️Solicitud dirigida al alcalde.
+
+                2. 📍Indicar la dirección exacta del predio.
+
+                3. 📂Escribir el numero de partida registral.
+
+  # >> 5.1... COSTO
+  utter_obras_item01_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 57.10
+  utter_obras_item02:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🏢 Haz seleccionado Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Qué necesito?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /obras_item02_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es? 📄
+                      - id: /obras_item02_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito? 📋
+                      - id: /obras_item02_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.2... CONSULTA
+  utter_obras_item02_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
+
+                *🏗️ ¿Para qué es necesario?*
+
+                Para prescripción adquisitiva de dominio, título supletorio, rectificación de linderos y medidas perimétricas.
+
+  # >> 5.2... NECESIDAD
+  utter_obras_item02_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 🖊️Solicitud dirigida al alcalde.
+
+                2. 📍Plano de ubicación y localización (2 juegos originales).
+
+                3. 📐Planos perimétricos (2 juegos originales).
+
+                4. 📝Memoria descriptiva (2 juegos originales).
+
+  # >> 5.2... COSTO
+  utter_obras_item02_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 153.20
+  utter_obras_item03:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🏠 Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Qué necesito?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /obras_item03_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es? 📄
+                      - id: /obras_item03_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito? 📋
+                      - id: /obras_item03_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.3... CONSULTA
+  utter_obras_item03_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el permiso que entrega la municipalidad antes de construir.
+
+                *🏗️ ¿Para qué es necesario?*
+
+                Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+
+  # >> 5.3... NECESIDAD
+  utter_obras_item03_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
+
+                2. 📄 Documento que acredite el derecho a edificar.
+
+                3. 💿 CD con documentos en original.
+
+                4. 📍 Plano de ubicación y localización.
+
+                5. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
+
+                6. 🏗️ Planos de estructuras.
+
+                7. 🚰 Planos de instalaciones sanitarias.
+
+                8. 💡 Plano de instalaciones eléctricas.
+
+  # >> 5.3... COSTO
+  utter_obras_item03_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 180.20
+  utter_obras_item04:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Qué necesito?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /obras_item04_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es? 📄
+                      - id: /obras_item04_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito? 📋
+                      - id: /obras_item04_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.4... CONSULTA
+  utter_obras_item04_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el permiso que entrega la municipalidad antes de eliminar una construcción de hasta 3 pisos de altura.
+
+                *🏗️ ¿Para qué es necesario?*
+
+                Para facilitar la construcción de una edificación nueva.
+
+  # >> 5.4... NECESIDAD
+  utter_obras_item04_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
+
+                2. 📄 Documento que acredite el derecho a edificar.
+
+                3. 🏢 Declaratoria de fábrica con respectivos planos.
+
+                4. 💿 CD con información en digital.
+
+                5. 📍 Plano de ubicación y localización.
+
+                6. 📑 Carta de seguridad de obra.
+
+                7. ✍️ Memoria descriptiva del proceso de demolición (Firmada por Ingeniero Civil).
+
+                8. 🚧 Plano cerramiento del predio.
+
+  # >> 5.4... COSTO
+  utter_obras_item04_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 135.20
+  utter_obras_item05:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🏘️ Haz seleccionado Inscripción por Compra-Venta*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄 ¿Qué es?
+
+                  2. 📋 ¿Qué necesito?
+
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /obras_item05_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es? 📄
+                      - id: /obras_item05_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito? 📋
+                      - id: /obras_item05_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.5... CONSULTA
+  utter_obras_item05_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
+
+                *🏘️ ¿Para qué es necesario?*
+
+                Para legalizar y actualizar el cambio de propietario ante los registros municipales.
+
+  # >> 5.5... NECESIDAD
+  utter_obras_item05_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 🖊️ Minuta con número de KARDEX o escritura pública.
+
+                2. 📄 Copia literal.
+
+  # >> 5.5... COSTO
+  utter_obras_item05_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* GRATUITO
+  utter_obras_item06:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🏗️ Haz seleccionado Inscripción de una Independización o Subdivisión de Lotes*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄 ¿Qué es?
+
+                  2. 📋 ¿Qué necesito?
+
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /obras_item06_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es? 📄
+                      - id: /obras_item06_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito? 📋
+                      - id: /obras_item06_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.6... CONSULTA
+  utter_obras_item06_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el registro de la división de un terreno o propiedad en lotes individuales.
+
+                *🏘️ ¿Para qué es necesario?*
+
+                Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
+
+  # >> 5.6... NECESIDAD
+  utter_obras_item06_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 📄 Copia literal o partida electrónica con todos los asientos.
+
+                2. 📜 Certificados literales o partidas electrónicas de las unidades inmobiliarias, secciones, sublotes y otros.
+
+                3. 🆔 Exhibición del DNI.
+
+  # >> 5.6... COSTO
+  utter_obras_item06_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* GRATUITO
+  utter_orientacion_item01:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Inscripción por Sucesión Indivisa*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /orientacion_item01_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /orientacion_item01_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /orientacion_item01_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 3.1... CONSULTA
+  utter_orientacion_item01_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es el registro en la municipalidad de un bien inmueble, cuando varios herederos comparten la propiedad sin dividirla formalmente.
+
+                *¿Para qué es necesario?*
+
+                Para reconocer legalmente a los herederos como propietarios conjuntos del inmueble.
+
+  # >> 3.1... NECESIDAD
+  utter_orientacion_item01_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. Acta de defunción
+
+                2. Partida de nacimiento o partida de matrimonio; según corresponda.
+
+                3. Exhibición del DNI de quienes correspondan.
+
+                4. Documento que acredite la propiedad del bien del fallecido.
+
+  # >> 3.1... COSTO
+  utter_orientacion_item01_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                GRATUITO
+  utter_orientacion_item02:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Inscripción por Sucesión Intestada*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /orientacion_item02_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /orientacion_item02_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /orientacion_item02_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 3.2... CONSULTA
+  utter_orientacion_item02_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es el registro de la transferencia de bienes de una persona fallecida sin testamento.
+
+                *¿Para qué es necesario?*
+
+                Para reconocer legalmente a los herederos y actualizar los registros con los nuevos propietarios según las leyes de sucesión.
+
+  # >> 3.2... NECESIDAD
+  utter_orientacion_item02_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. Copia literal de la sucesión intestada.
+
+                2. Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
+
+                3. Exhibición del DNI de los herederos.
+
+  # >> 3.2... COSTO
+  utter_orientacion_item02_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                GRATUITO
+  utter_registro_item01:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Matrimonio Civil*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /registro_item01_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /registro_item01_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /registro_item01_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 4.1... CONSULTA
+  utter_registro_item01_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Este es el proceso administrativo mediante el cual una pareja solicita casarse en la Municipalidad, de acuerdo con lo que establece el Código Civil.
+
+                *¿Para qué es necesario?*
+
+                Esta unión otorga derechos y deberes legales a los cónyuges, como en temas de herencia, propiedad y protección legal, además de oficializar la relación ante el Estado y la sociedad.
+
+  # >> 4.1... NECESIDAD
+  utter_registro_item01_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. Solicitud simple o Formato de solicitud.
+
+                2. Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
+
+                3. Copia certificada de Partida de nacimiento de los contrayentes.
+
+                4. Declaración jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
+
+                5. Certificado médico pre-nupcial y constancia de charlas de Consejería, antiguedad no mayor a 30 días.
+
+                6. Declaración Jurada de no tener impedimento para contraer matrimonio, de los contrayentes.
+
+                7. Declaración jurada de domicilio (uno debe residir en el distrito).
+
+                8. Indicar la fecha y número de constancia de pago.
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  ¿Deseas saber los requisitos adicionales?
+
+              action:
+                sections:
+                  - title: Escoge la opción...
+                    rows:
+                      - id: /registro_item01_requisitos
+                        title: Sí, deseo
+                      - id: /registro_item01
+                        title: No, gracias
+                button: Opciones
+
+  # >> 4.1... COSTO
+  utter_registro_item01_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. En el local municipal - S/ 256.10
+
+                2. Fuera del local municipal (dentro del distrito) - S/ 332.10
+
+                3. Fuera del local municipal (fuera del distrito) - S/ 432.10
+
+  # >> 4.1... REQUISITOS
+  utter_registro_item01_requisitos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Se presenta una serie de requisitos dependiendo de la opción que usted elija...
+
+                  1. Para divorciados(as)
+
+                  2. Para viudos(as)
+
+                  3. Para extranjeros(as)
+
+                  4. Para matrimonios por poder
+
+                  5. Para matrimonios por parentesco entre sí
+
+                  6. Para matrimonios con personas con discapacidad
+
+              action:
+                sections:
+                  - title: Selecciona la opción
+                    rows:
+                      - id: /registro_item01_subnecesidad_01
+                        title: Opción 1
+                        description: Divorciados
+                      - id: /registro_item01_subnecesidad_02
+                        title: Opción 2
+                        description: Viudos
+                      - id: /registro_item01_subnecesidad_03
+                        title: Opción 3
+                        description: Extranjeros
+                      - id: /registro_item01_subnecesidad_04
+                        title: Opción 4
+                        description: Poder
+                      - id: /registro_item01_subnecesidad_05
+                        title: Opción 5
+                        description: Parentesco
+                      - id: /registro_item01_subnecesidad_06
+                        title: Opción 6
+                        description: Discapacitados
+                      - id: /registro_item01_necesidad
+                        title: Volver
+                        description: Volver a lo anterior
+                button: Opciones
+
+  # >> 4.4.1... SUBNECESIDAD 01
+  utter_registro_item01_subnecesidad_01:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Copia certificada de anterior matrimonio con insripción de divorcio.
+
+                2. DNI actualizado.
+
+                3. Declaración jurada de no administrar bienes de hijos menores.
+
+                4. En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+
+  # >> 4.4.2... SUBNECESIDAD 02
+  utter_registro_item01_subnecesidad_02:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Copia certificada de acta de defunción de cónyuge fallecido.
+
+                2. DNI actualizado.
+
+                3. Declaración jurada de no administrar bienes de hijos menores.
+
+                4. En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+
+  # >> 4.4.3... SUBNECESIDAD 03
+  utter_registro_item01_subnecesidad_03:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Acta de nacimiento visado por el consulado y legalizado por el MRE.
+
+                2. Copia y original del pasaporte y/o carné de extranjería.
+
+                3. Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
+
+                4. Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
+
+  # >> 4.4.4... SUBNECESIDAD 04
+  utter_registro_item01_subnecesidad_04:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Poder por escritura pública con facultades específicas inscrito en registros públicos.
+
+                2. Para poder ortorgado en el Extranjero, presentar copia visada por el Cónsul Peruano, legalizado por el MRE.
+
+                3. Realizarse dentro de los seis (6) meses de otorgado el poder.
+
+                4. Exhibición del Documento Nacional de Identidad del apoderado.
+
+  # >> 4.1.5... SUBNECESIDAD 05
+  utter_registro_item01_subnecesidad_05:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
+
+  # >> 4.1.6... SUBNECESIDAD 06
+  utter_registro_item01_subnecesidad_06:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                Copia del Certificado de Discapacidad, expedido conforme a Ley.
+  utter_registro_item02:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Publicación de Edicto Matrimonial tramitado en otros distritos*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /registro_item02_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /registro_item02_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /registro_item02_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 4.2... CONSULTA
+  utter_registro_item02_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Es la publicación de la celebración del matrimonio en un determinado distrito, cuando el domicilio de uno de los contrayentes es distinto al distrito en el cual se consigna el domicilio del DNI.
+
+                *¿Para qué es necesario?*
+
+                Permite que cualquier ciudadano que conozca de la existencia de algún impedimento pueda denunciarlo.
+
+  # >> 4.2... NECESIDAD
+  utter_registro_item02_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. Solicitud con carácter de Declaración Jurada.
+
+                2. Copia simple del Edicto Matrimonial.
+
+                3. Indicar fecha y número de constancia de pago.
+
+  # >> 4.2... COSTO
+  utter_registro_item02_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 44.80
+  utter_registro_item03:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Reprogramación de fecha y hora de Ceremonia Matrimonial*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /registro_item03_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /registro_item03_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /registro_item03_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 4.3... CONSULTA
+  utter_registro_item03_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Servicio exclusivo mediante el cual los contrayentes pueden solicitar la postergación y/o reprogramación de la fecha de celebración del matrimonio.
+
+  # >> 4.3... NECESIDAD
+  utter_registro_item03_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. Solicitud con carácter de Declaración Jurada.
+
+                2. Indicar fecha y número de constancia de pago.
+
+                3. El pedido se debe hacer con 5 días hábiles de anticipación.
+
+  # >> 4.3... COSTO
+  utter_registro_item03_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 37.80
+  utter_registro_item04:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  Haz seleccionado *Separación Convencional y Divorcio Ulterior: Separación Convencional*
+
+                  *🟢 Opciones de pregunta:*
+
+                  1. ¿Qué es?
+
+                  2. ¿Qué necesito?
+
+                  3. ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '**Seleccione la pregunta abajo**'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /registro_item04_consulta
+                        title: Pregunta 1
+                        description: ¿Qué es?
+                      - id: /registro_item04_necesidad
+                        title: Pregunta 2
+                        description: ¿Qué necesito?
+                      - id: /registro_item04_costo
+                        title: Pregunta 3
+                        description: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 4.4... CONSULTA
+  utter_registro_item04_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Procedimiento mediante el cual ambos cónyuges manifiestan ante la autoridad municipal su voluntad de separarse.
+
+                *¿Para qué es necesario?*
+
+                La separación convencional sirve para que los cónyuges formalicen su decisión de vivir separados sin disolver inmediatamente el matrimonio.
+
+  # >> 4.4... NECESIDAD
+  utter_registro_item04_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. Solicitud al alcalde manifestando su voluntad de separación, con DNI, dirección, firma y huella de los cónyugues.
+
+                2. Copia certificada del acta o de la partida de matrimonio.
+
+                3. Declaración jurada del último domicilio conyugal.
+
+                4. En caso de haber representantes, adjuntar un poder notarial específico registrado.
+
+                5. Exhibición de los DNI de ambos cónyuges y de los representantes legales, si los hay.
+
+                6. Indicar fecha y número de constancia de pago.
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  ¿Deseas saber los documentos necesarios en casos especiales?
+
+              action:
+                sections:
+                  - title: Escoge la opción...
+                    rows:
+                      - id: /registro_item04_documentos
+                        title: Sí, deseo
+                      - id: /registro_item04
+                        title: No, gracias
+                button: Opciones
+
+  # >> 4.4... COSTO
+  utter_registro_item04_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                S/ 372.30
+
+  # >> 4.4... DOCUMENTOS
+  utter_registro_item04_documentos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Se presenta una serie de documentos necesarios en casos especiales dependiendo de la opción que usted elija...
+
+                  1. En caso de no tener hijos
+
+                  2. En caso de tener hijos menores
+
+                  3. En caso de tener hijos mayores discapacitados
+
+                  4. Requisitos relacionados con el patrimonio
+
+              action:
+                sections:
+                  - title: Selecciona la opción
+                    rows:
+                      - id: /registro_item04_subnecesidad_01
+                        title: Opción 1
+                        description: No hijos
+                      - id: /registro_item04_subnecesidad_02
+                        title: Opción 2
+                        description: Hijos menores
+                      - id: /registro_item04_subnecesidad_03
+                        title: Opción 3
+                        description: Mayores discapacitados
+                      - id: /registro_item04_subnecesidad_04
+                        title: Opción 4
+                        description: Patrimonio
+                      - id: /registro_item04_necesidad
+                        title: Volver
+                        description: Volver a lo anterior
+                button: Opciones
+
+  # >> 4.4.1... SUBNECESIDAD 01
+  utter_registro_item04_subnecesidad_01:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
+
+  # >> 4.4.2... SUBNECESIDAD 02
+  utter_registro_item04_subnecesidad_02:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Adjuntar copia certificada de acta de nacimiento.
+
+                2. Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+
+  # >> 4.4.3... SUBNECESIDAD 03
+  utter_registro_item04_subnecesidad_03:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Adjuntar copia certificada de acta de nacimiento.
+
+                2. Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+
+                3. Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
+
+  # >> 4.4.4... SUBNECESIDAD 04
+  utter_registro_item04_subnecesidad_04:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *¿Qué necesito?*
+
+                1. Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
+
+                2. Separación de patrimonios: Escritura pública registrada.
+
+                3. Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

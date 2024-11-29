@@ -2,57 +2,62 @@ version: "3.1"
 
 intents:
   - obras
+  - obras_item01
+  - obras_item02
+  - obras_item03
+  - obras_item04
+  - obras_item05
+  - obras_item06
 
 responses:
-
   # >> 5. OBRAS PRIVADAS Y HABILITACIÓN URBANA :
   utter_obras:
-  - custom:
-      blocks:
-        - type: interactive
-          interactive:
-            type: list
-            header:
-              type: text
-              text: "🟢 Opciones de Trámite:"
-            body:
-              text: |
-                1. Certificado de Parámetros Urbanísticos y Edificatorios
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "🟢 Opciones de Trámite:"
+              body:
+                text: |
+                  1. 🏢Certificado de Parámetros Urbanísticos y Edificatorios
 
-                2. Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+                  2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                3. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
-                4. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
 
-                5. Inscripción por Compra-Venta
+                  5. 📝Inscripción por Compra-Venta
 
-                6. Inscripción de una Independización o Subdivisión de Lotes
+                  6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
 
-            footer:
-              text: "**Seleccione el trámite abajo**"
+              footer:
+                text: "*Seleccione el trámite abajo 👇*"
 
-            # >> LISTADO DE OPCIONES :
-            action:
-              sections:
-                - title: "Escoge el trámite"
-                  rows:
-                    - id: "/obras_item01"
-                      title: "Trámite 1"
-                      description: "CERTIFICADO"
-                    - id: "/obras_item02"
-                      title: "Trámite 2"
-                      description: "VISACIÓN"
-                    - id: "/obras_item03"
-                      title: "Trámite 3"
-                      description: "LICENCIA CONSTRUCCIÓN"
-                    - id: "/obras_item04"
-                      title: "Trámite 4"
-                      description: "LICENCIA DEMOLICIÓN"
-                    - id: "/obras_item05"
-                      title: "Trámite 5"
-                      description: "COMPRA-VENTA"
-                    - id: "/obras_item06"
-                      title: "Trámite 6"
-                      description: "INDEPENDIZACIÓN"
-              button: "Opciones"
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "🏗️Escoge el trámite"
+                    rows:
+                      - id: "/obras_item01"
+                        title: "Trámite 1"
+                        description: "📝 CERTIFICADO"
+                      - id: "/obras_item02"
+                        title: "Trámite 2"
+                        description: "✏️ VISACIÓN"
+                      - id: "/obras_item03"
+                        title: "Trámite 3"
+                        description: "🛠️ LICENCIA CONSTRUCCIÓN"
+                      - id: "/obras_item04"
+                        title: "Trámite 4"
+                        description: "🏚️ LICENCIA DEMOLICIÓN"
+                      - id: "/obras_item05"
+                        title: "Trámite 5"
+                        description: "🤝 COMPRA-VENTA"
+                      - id: "/obras_item06"
+                        title: "Trámite 6"
+                        description: "📂 INDEPENDIZACIÓN"
+                button: "Seleccionar trámite"
