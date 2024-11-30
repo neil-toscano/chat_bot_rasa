@@ -13,22 +13,22 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: "Consulta Trámites"
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)*
+                  *🏢 Haz seleccionado Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: "**Seleccione la pregunta abajo**"
+                text: "*Seleccione la pregunta abajo 👇*"
 
               action:
                 sections:
@@ -36,14 +36,14 @@ responses:
                     rows:
                       - id: "/obras_item02_consulta"
                         title: "Pregunta 1"
-                        description: "¿Qué es?"
+                        description: "¿Qué es? 📄"
                       - id: "/obras_item02_necesidad"
                         title: "Pregunta 2"
-                        description: "¿Qué necesito?"
+                        description: "¿Qué necesito? 📋"
                       - id: "/obras_item02_costo"
                         title: "Pregunta 3"
-                        description: "¿Cuánto cuesta?"
-                button: "Opciones"
+                        description: "¿Cuánto cuesta? 💵"
+                button: "✅ Opciones"
 
   # >> 5.2... CONSULTA
   utter_obras_item02_consulta:
@@ -53,11 +53,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
+                📜 Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
 
-                *¿Para qué es necesario?*
+                *🏗️ ¿Para qué es necesario?*
 
-                Para prescripción adquisitiva de dominio, titulo supletorio, rectificación de linderos y medidas perimétricas.
+                Para prescripción adquisitiva de dominio, título supletorio, rectificación de linderos y medidas perimétricas.
 
   # >> 5.2... NECESIDAD
   utter_obras_item02_necesidad:
@@ -67,13 +67,15 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud dirigida al alcalde.
+                *📋 Requisitos para el trámite:*
 
-                2. Plano de ubicación y localización (2 juegos originales).
+                1. 🖊️Solicitud dirigida al alcalde.
 
-                3. Planos perimétricos (2 juegos originales).
+                2. 📍Plano de ubicación y localización (2 juegos originales).
 
-                4. Memoria descriptiva (2 juegos originales).
+                3. 📐Planos perimétricos (2 juegos originales).
+
+                4. 📝Memoria descriptiva (2 juegos originales).
 
   # >> 5.2... COSTO
   utter_obras_item02_costo:
@@ -83,4 +85,4 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 153.20
+                💰 *Costo del trámite:* S/ 153.20

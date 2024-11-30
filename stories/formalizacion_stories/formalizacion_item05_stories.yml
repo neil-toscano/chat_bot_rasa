@@ -1,0 +1,27 @@
+version: "3.1"
+
+stories:
+# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO MEDIO:
+- story: transferencia de licencia de funcionamiento
+  steps:
+  - intent: formalizacion_item05_transferencia_licencia_funcionamiento
+  - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento
+
+# >> 1.1... STORIES - CONSULTA
+- story: transferencia licencia funcionamiento que es
+  steps:
+  - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+
+# >> 1.1... STORIES - NECESIDAD
+- story: transferencia licencia funcionamiento que necesito
+  steps:
+  - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+
+
+# >> 1.1... STORIES - CUANTO CUESTA
+- story: transferencia licencia funcionamiento cuanto cuesta
+  steps:
+  - intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta

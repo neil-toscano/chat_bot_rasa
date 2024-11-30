@@ -37,7 +37,51 @@ intents:
   - registro_item04
   - licencia_funcionamiento_edificacion_riesgo_bajo_que_es
   - licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - servicio_de_salud
+  - actividad_requiere_autorizacion
+  - monumento_del_patrimonio_cultural
   - licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - formalizacion_item02_edificacion_riesgo_medio
+  - formalizacion_item02_riesgo_medio_que_es
+  - formalizacion_item02_riesgo_medio_que_necesito
+  - formalizacion_item02_servicio_de_salud
+  - formalizacion_item02_actividad_requiere_autorizacion
+  - formalizacion_item02_monumento_del_patrimonio_cultural
+  - formalizacion_item02_riesgo_medio_cuanto_cuesta
+  - formalizacion_item03_edificacion_riesgo_alto
+  - formalizacion_item03_riesgo_alto_que_es
+  - formalizacion_item03_riesgo_alto_que_necesito
+  - formalizacion_item03_servicio_de_salud
+  - formalizacion_item03_actividad_requiere_autorizacion
+  - formalizacion_item03_monumento_del_patrimonio_cultural
+  - formalizacion_item03_riesgo_alto_cuanto_cuesta
+  - formalizacion_item04_edificacion_riesgo_muy_alto
+  - formalizacion_item04_riesgo_muy_alto_que_es
+  - formalizacion_item04_riesgo_muy_alto_que_necesito
+  - formalizacion_item04_servicio_de_salud
+  - formalizacion_item04_actividad_requiere_autorizacion
+  - formalizacion_item04_monumento_del_patrimonio_cultural
+  - formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  - formalizacion_item05_transferencia_licencia_funcionamiento
+  - formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  - formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  - formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  - formalizacion_item06_licencia_funcionamiento_cambio_giro
+  - formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  - formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  - formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  - formalizacion_item08_autorizacion_publicidad_exterior_letras
+  - formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+  - formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+  - formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+  - formalizacion_item09_duplicado_certificado
+  - formalizacion_item09_duplicado_certificado_que_es
+  - formalizacion_item09_duplicado_certificado_que_necesito
+  - formalizacion_item09_duplicado_certificado_cuanto_cuesta
   - gestion_item01_consulta
   - gestion_item01_necesidad
   - gestion_item01_costo
@@ -124,71 +168,77 @@ responses:
             text:
               preview_url: false
               body: |
-                *🟢 Opciones de Trámite:*
-                1. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo _(con ITSE posterior)_
+                *Formalización y promoción empresarial*
+                1. 🟢Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
+                      _(con ITSE posterior)_
 
-                2. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio _(con ITSE posterior)_
+                2. 🟡Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio
+                      _(con ITSE posterior)_
 
-                3. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto _(con ITSE posterior)_
+                3. 🔴Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
+                      _(con ITSE previa)_
 
-                4. Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto _(con ITSE posterior)_
+                4. ⚠️Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto
+                      _(con ITSE previa)_
 
-                5. Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+                5. 🔄Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
 
           - type: interactive
             interactive:
               type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  6. Licencia de funcionamiento para cambio de giro
+                  6. 🔃Licencia de funcionamiento para cambio de giro
 
-                  7. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
+                  7. 🖼️Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
 
-                  8. Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
+                  8. 🔤Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
 
-                  9. Duplicado del certificado de licencia de funcionamiento
+                  9. 📄Duplicado del certificado de licencia de funcionamiento
 
-                  10. Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+                  10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
 
               footer:
-                text: '**Seleccione el trámite abajo**'
+                text: '*Seleccione la licencia abajo 👇*'
 
-            # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: Escoja trámite
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo
                         title: Trámite 1
-                        description: RIESGO BAJO
-                      - id: /licencia_funcionamiento_edificacion_riesgo_medio
+                        description: RIESGO BAJO 🟢
+                      - id: /formalizacion_item02_edificacion_riesgo_medio
                         title: Trámite 2
-                        description: RIESGO MEDIO
-                      - id: /licencia_funcionamiento_edificacion_riesgo_alto
+                        description: RIESGO MEDIO 🟡
+                      - id: /formalizacion_item03_edificacion_riesgo_alto
                         title: Trámite 3
-                        description: RIESGO ALTO
-                      - id: /licencia_funcionamiento_edificacion_riesgo_muy_alto
+                        description: RIESGO ALTO 🔴
+                      - id: /formalizacion_item04_edificacion_riesgo_muy_alto
                         title: Trámite 4
-                        description: RIESGO MUY ALTO
-                      - id: /transferencia_licencia_cambio_denominacion
+                        description: RIESGO MUY ALTO ⚠️
+                      - id: /formalizacion_item05_transferencia_licencia_funcionamiento
                         title: Trámite 5
-                        description: TRANSFERENCIA O CAMBIO
-                      - id: /licencia_funcionamiento_cambio_giro
+                        description: TRANSFERENCIA O CAMBIO 🔄
+                      - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro
                         title: Trámite 6
-                        description: CAMBIO DE GIRO
-                      - id: /autorizacion_publicidad_afiche_privada
+                        description: CAMBIO DE GIRO 🔃
+                      - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche
                         title: Trámite 7
-                        description: PUBLICIDAD AFICHE
-                      - id: /autorizacion_publicidad_letras_privada
+                        description: PUBLICIDAD AFICHE 🖼️
+                      - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras
                         title: Trámite 8
-                        description: PUBLICIDAD LETRAS
+                        description: PUBLICIDAD LETRAS 🔤
                       - id: /duplicado_certificado_funcionamiento
                         title: Trámite 9
-                        description: DUPLICADO
+                        description: DUPLICADO 📄
                       - id: /duplicado_resolucion_autorizacion
                         title: Trámite 10
-                        description: DUPLICADO RESOLUCIÓN
-                button: Opciones
+                        description: DUPLICADO RESOLUCIÓN 📜
+                button: Seleccionar licencia
   utter_gestion:
     - custom:
         blocks:
@@ -282,6 +332,14 @@ responses:
   utter_saludo:
     - custom:
         blocks:
+          - type: image
+            image:
+              id: '1551300402169056'
+              # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+              # caption: MSJL
+          - type: audio
+            audio:
+              id: '907450834672489'
           - type: interactive
             interactive:
               type: list
@@ -290,35 +348,41 @@ responses:
                 text: Consulta Trámites
               body:
                 text: |
-                  ¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+                  ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+
                   ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
-                  1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
-                  2. GESTIÓN DEL RIESGO DE DESASTRES
-                  3. ORIENTACIÓN Y REGISTRO
-                  4. REGISTRO CIVIL
-                  5. OBRAS PRIVADAS Y HABILITACIÓN URBANA
+
+                  *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
+
+                  *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
+
+                  *3. 📋 ORIENTACIÓN Y REGISTRO*
+
+                  *4. 🧾 REGISTRO CIVIL*
+
+                  *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
               footer:
-                text: seleccione el trámite abajo
+                text: seleccione el trámite abajo 👇
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: Escoja trámite
                     rows:
                       - id: /formalizacion_promocion_empresarial
                         title: Trámite 1
-                        description: FORMALIZACIÓN
-                      - id: /gestion
+                        description: Formalización 💼
+                      - id: /gestion_riesgo_desastre
                         title: Trámite 2
-                        description: GESTIÓN
-                      - id: /orientacion
+                        description: Gestión 🚨
+                      - id: /orientacion_registro
                         title: Trámite 3
-                        description: ORIENTACIÓN
-                      - id: /registro
+                        description: Orientación 📋
+                      - id: /registro_civil
                         title: Trámite 4
-                        description: REGISTRO
-                      - id: /obras
+                        description: Registro
+                      - id: /obras_privadas_habilitacion_urbana
                         title: Trámite 5
-                        description: OBRAS
-                button: Seleccionar consulta
+                        description: Obras 🏗️
+                button: Seleccionar trámite
 
   utter_obras:
     - custom:
@@ -331,45 +395,45 @@ responses:
                 text: '🟢 Opciones de Trámite:'
               body:
                 text: |
-                  1. Certificado de Parámetros Urbanísticos y Edificatorios
+                  1. 🏢Certificado de Parámetros Urbanísticos y Edificatorios
 
-                  2. Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+                  2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                  3. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
-                  4. Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
 
-                  5. Inscripción por Compra-Venta
+                  5. 📝Inscripción por Compra-Venta
 
-                  6. Inscripción de una Independización o Subdivisión de Lotes
+                  6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
 
               footer:
-                text: '**Seleccione el trámite abajo**'
+                text: '*Seleccione el trámite abajo 👇*'
 
-            # >> LISTADO DE OPCIONES :
+              # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: 🏗️Escoge el trámite
                     rows:
                       - id: /obras_item01
                         title: Trámite 1
-                        description: CERTIFICADO
+                        description: 📝 CERTIFICADO
                       - id: /obras_item02
                         title: Trámite 2
-                        description: VISACIÓN
+                        description: ✏️ VISACIÓN
                       - id: /obras_item03
                         title: Trámite 3
-                        description: LICENCIA CONSTRUCCIÓN
+                        description: 🛠️ LICENCIA CONSTRUCCIÓN
                       - id: /obras_item04
                         title: Trámite 4
-                        description: LICENCIA DEMOLICIÓN
+                        description: 🏚️ LICENCIA DEMOLICIÓN
                       - id: /obras_item05
                         title: Trámite 5
-                        description: COMPRA-VENTA
+                        description: 🤝 COMPRA-VENTA
                       - id: /obras_item06
                         title: Trámite 6
-                        description: INDEPENDIZACIÓN
-                button: Opciones
+                        description: 📂 INDEPENDIZACIÓN
+                button: Seleccionar trámite
   utter_orientacion:
     - custom:
         blocks:
@@ -446,39 +510,40 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Licencia de funcionamiento de edificacion de riesgo bajo*
+                  *🎉 Haz seleccionado licencia de funcionamiento de edificación de riesgo bajo*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
-                  - title: Escoge la pregunta
+                  - title: Escoja la pregunta
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_es
-                        title: Pregunta 1
-                        description: ¿Qué es?
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
-                        title: Pregunta 2
-                        description: ¿Qué necesito?
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
-                        title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-  # >> 1.1... CONSULTA
+  # ==========***=======================
+
   utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es:
     - custom:
         blocks:
@@ -486,9 +551,8 @@ responses:
             text:
               preview_url: false
               body: |
-                Es un permiso otorgado por la municipalidad para que un negocio inicie su actividad comercial  en un local que ha sido clasificado como de riesgo bajo
+                📄Es un permiso otorgado por la municipalidad para que un negocio inicie su actividad comercial  en un local que ha sido clasificado como de riesgo bajo
 
-  # >> 1.1... NECESIDAD
   utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito:
     - custom:
         blocks:
@@ -496,21 +560,82 @@ responses:
             text:
               preview_url: true
               body: |
-                Es un permiso otorgado por la municipalidad para que un negocio inicie su actividad comercial  en un local que ha sido clasificado como de riesgo bajo \n https://www.meta.com/quest/quest-3
+                a. 📄Formato de declaración jurada para licencia de funcionamiento. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación. \n https://www.meta.com/quest/quest-3
+                b. 📄Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+                c. 📄Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
 
-  # >> 1.1... COSTO
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *Requisitos especiales* solo para ciertas actividades
+
+                  *❓ ¿Para qué actividades son estos requisitos?*
+
+                  1️. 🏥Servicios de salud
+
+                  2️. 📜Actividades que requieren autorización
+
+                  3️. 🏛️Monumento del Patrimonio Cultural
+
+              footer:
+                text: '*Seleccione la actividad abajo 👇*'
+
+              action:
+                sections:
+                  - title: Seleccione actividad
+                    rows:
+                      - id: /servicio_de_salud
+                        title: Trámite 1
+                        description: Salud
+                      - id: /actividad_requiere_autorizacion
+                        title: Trámite 2
+                        description: Autorización
+                      - id: /monumento_del_patrimonio_cultural
+                        title: Trámite 3
+                        description: Patrimonio cultural
+                button: Seleccione actividad
+  utter_servicio_de_salud:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener título y colegiatura vigente
+
+  utter_actividad_requiere_autorizacion:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener declaración jurada de la autorización
+
+  utter_monumento_del_patrimonio_cultural:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener copia de autorización del Ministerio de Cultura
+
   utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta:
     - custom:
         blocks:
@@ -518,7 +643,816 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 229.20
+                💵 S/ 236.60
+
+# =============================================
+  utter_formalizacion_item02_edificacion_riesgo_medio:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado licencia de funcionamiento de edificación de riesgo medio*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item02_riesgo_medio_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item02_riesgo_medio_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item02_riesgo_medio_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+# ==========***=======================
+
+  utter_formalizacion_item02_riesgo_medio_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es un permiso otorgado por la municipalidad para que un negocio inicie su actividad comercial  en un local que ha sido clasificado como de riesgo medio
+
+  utter_formalizacion_item02_riesgo_medio_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄Formato de declaración jurada para licencia de funcionamiento https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                b. 📄Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                c. 📄Declaración jurada del representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *Requisitos especiales* solo para ciertas actividades
+
+                  *❓ ¿Para qué actividades son estos requisitos?*
+
+                  1️. 🏥Servicios de salud
+
+                  2️. 📜Actividades que requieren autorización
+
+                  3️. 🏛️Monumento del Patrimonio Cultural
+
+              footer:
+                text: '*Seleccione la actividad abajo 👇*'
+
+              action:
+                sections:
+                  - title: Seleccione actividad
+                    rows:
+                      - id: /formalizacion_item02_servicio_de_salud
+                        title: Trámite 1
+                        description: Salud
+                      - id: /formalizacion_item02_actividad_requiere_autorizacion
+                        title: Trámite 2
+                        description: Autorización
+                      - id: /formalizacion_item02_monumento_del_patrimonio_cultural
+                        title: Trámite 3
+                        description: Patrimonio cultural
+                button: Seleccione actividad
+
+  utter_formalizacion_item02_servicio_de_salud:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener título y colegiatura vigente
+
+  utter_formalizacion_item02_actividad_requiere_autorizacion:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener declaración jurada de la autorización
+
+  utter_formalizacion_item02_monumento_del_patrimonio_cultural:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener copia de autorización del Ministerio de Cultura
+
+  utter_formalizacion_item02_riesgo_medio_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 253.40
+# =============================================
+  utter_formalizacion_item03_edificacion_riesgo_alto:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado licencia de funcionamiento de edificación de riesgo alto*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item03_riesgo_alto_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item03_riesgo_alto_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item03_riesgo_alto_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========***=======================
+
+  utter_formalizacion_item03_riesgo_alto_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es un permiso otorgado por la municipalidad para que un negocio opere en un local que ha sido clasificado como de riesgo alto
+
+  utter_formalizacion_item03_riesgo_alto_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄Formato de declaración jurada para licencia de funcionamiento. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                b. 📄Declaración jurada de seguridad. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                c. 📄 Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+                d. 🗺️ Croquis de ubicación	
+                e. 🏛️ Plano de arquitectura y cálculo de aforo
+                f. ⚡ Planos eléctricos, unifilares y cargas
+                g. 📜 Certificado del sistema puesto a tierra
+                h. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
+                i. 🛡️ Plan de seguridad del establecimiento
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *Requisitos especiales* solo para ciertas actividades
+
+                  *❓ ¿Para qué actividades son estos requisitos?*
+
+                  1️. 🏥Servicios de salud
+
+                  2️. 📜Actividades que requieren autorización
+
+                  3️. 🏛️Monumento del Patrimonio Cultural
+
+              footer:
+                text: '*Seleccione la actividad abajo 👇*'
+
+              action:
+                sections:
+                  - title: Seleccione actividad
+                    rows:
+                      - id: /formalizacion_item03_servicio_de_salud
+                        title: Trámite 1
+                        description: Salud
+                      - id: /formalizacion_item03_actividad_requiere_autorizacion
+                        title: Trámite 2
+                        description: Autorización
+                      - id: /formalizacion_item03_monumento_del_patrimonio_cultural
+                        title: Trámite 3
+                        description: Patrimonio cultural
+                button: Seleccione actividad
+
+  utter_formalizacion_item03_servicio_de_salud:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener título y colegiatura vigente
+
+  utter_formalizacion_item03_actividad_requiere_autorizacion:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener declaración jurada de la autorización
+
+  utter_formalizacion_item03_monumento_del_patrimonio_cultural:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener copia de autorización del Ministerio de Cultura
+
+  utter_formalizacion_item03_riesgo_medio_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 448.00
+
+# =============================================
+  utter_formalizacion_item04_edificacion_riesgo_muy_alto:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado licencia de funcionamiento de edificación de riesgo muy alto*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item04_riesgo_muy_alto_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item04_riesgo_muy_alto_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========4.2=======================
+
+  utter_formalizacion_item04_riesgo_muy_alto_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es un permiso otorgado por la municipalidad para que un negocio opere en un local que ha sido clasificado como de riesgo muy alto
+
+  utter_formalizacion_item04_riesgo_muy_alto_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄Formato de declaración jurada para licencia de funcionamiento. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                b. 📄Declaración jurada de representante legal, en el caso de personas jurídicas, copia literal de la vigencia de poder actualizada
+
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                c. 📄 Declaración jurada de seguridad
+                d. 🗺️ Croquis de ubicación	
+                e. 🏛️ Plano de arquitectura y cálculo de aforo
+                f. ⚡ Planos eléctricos, unifilares y cargas
+                g. 📜 Certificado del sistema puesto a tierra
+                h. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
+                i. 🛡️ Plan de seguridad del establecimiento
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *Requisitos especiales* solo para ciertas actividades
+
+                  *❓ ¿Para qué actividades son estos requisitos?*
+
+                  1️. 🏥Servicios de salud
+
+                  2️. 📜Actividades que requieren autorización
+
+                  3️. 🏛️Monumento del Patrimonio Cultural
+
+              footer:
+                text: '*Seleccione la actividad abajo 👇*'
+
+              action:
+                sections:
+                  - title: Seleccione actividad
+                    rows:
+                      - id: /formalizacion_item04_servicio_de_salud
+                        title: Trámite 1
+                        description: Salud
+                      - id: /formalizacion_item04_actividad_requiere_autorizacion
+                        title: Trámite 2
+                        description: Autorización
+                      - id: /formalizacion_item04_monumento_del_patrimonio_cultural
+                        title: Trámite 3
+                        description: Patrimonio cultural
+                button: Seleccione actividad
+
+  utter_formalizacion_item04_servicio_de_salud:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener título y colegiatura vigente
+
+  utter_formalizacion_item04_actividad_requiere_autorizacion:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener declaración jurada de la autorización
+
+  utter_formalizacion_item04_monumento_del_patrimonio_cultural:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Se necesita tener copia de autorización del Ministerio de Cultura
+
+  utter_formalizacion_item04_riesgo_muy_alto_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 780.40
+
+# =============================================
+  utter_formalizacion_item05_transferencia_licencia_funcionamiento:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado transferencia de licencia de funcionamiento*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========4.2=======================
+
+  utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es un procedimiento que te permite transferir una licencia de funcionamiento a otra entidad o cambiar el nombre comercial de una empresa.
+                *¿Para qué es necesario?*
+                a. Permitir que una empresa continúe operando bajo un nuevo propietario o con un nuevo nombre.
+
+  utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄Formato de delaración jurada para licencia de funcionamiento. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                b. 📄En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                c. 📄 Copia simple de contrato de transferencia
+
+  utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 88.70
+
+# =============================================
+  utter_formalizacion_item06_licencia_funcionamiento_cambio_giro:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado licencia de funcionamiento para cambio de giro*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========4.2=======================
+
+  utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es un trámite para cambiar la actividad comercial de una empresa sin obtener una nueva licencia.
+                *¿Para qué es necesario?*
+                a.Permite a la empresa adaptar su giro de negocio manteniendo la misma licencia.
+
+  utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄Declaración jurada para informar el cambio de giro. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                b. 📄En el caso de personas jurídicas, Declaración jurada de representante legal y N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+
+  utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 91.00
+
+# =============================================
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado autorización para pubicidad exterior tipo afiches..etc.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+# ==========***=======================
+
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Permiso para colocar elementos publicitarios simples, como afiches y planchetas, en propiedades privadas.
+
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄 Presentar una declaración jurada con tus datos personales y el número de recibo de pago
+                b. 📝 Carta de responsabilidad de instalación suscrita por el responsable competente (Arq. o Ing. Civil)
+                c. 📁 *Documentos necesarios*
+                    1. 🎨 Un diseño o arte del elemento publicitario con detalles y medidas.
+                    2. 📸 Una foto actual del lugar donde se instalará el elemento, mostrando su entorno.
+                    3. 🖼️ Un fotomontaje o imagen virtual mostrando cómo se verá el elemento en su ubicación.
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                d. 📄 En caso de que otra persona realice el trámite, incluir carta poder
+                e. 📜 Declaración jurada de mantenimiento y compromiso de retiro si es necesario
+                f. 🛠️ Descripción del elemento, procedimiento de instalación y mantenimiento
+                g. 🏛️ Aprobación del Ministerio de Cultura si el elemento está en una zona protegida
+                h. 📑 En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+
+
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 119.00
+
+
+# =============================================
+  utter_formalizacion_item08_autorizacion_publicidad_exterior_letras:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado autorización para pubicidad exterior tipo letras..etc.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+# ==========***=======================
+
+  utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es una autorización para instalar elementos de publicidad exterior sencillos (letras recortadas, letreros, placas y toldos) en bienes de dominio privado.
+                *¿Para qué es necesario?*
+                a.Cumplir con las normativas municipales y permite a los establecimientos colocar publicidad visible en sus fachadas, vinculada a su licencia de funcionamiento.
+
+
+  utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 📄 Presentar una declaración jurada con tus datos personales y el número de recibo de pago
+                b. 📝 Carta de responsabilidad de instalación suscrita por el responsable competente (Arq. o Ing. Civil)
+                c. 📁 *Documentos necesarios*
+                    1. 🎨Un diseño o arte del elemento publicitario con detalles y medidas.
+                    2. 📸 Una foto actual del lugar donde se instalará el elemento, mostrando su entorno.
+                    3. 🖼️ Un fotomontaje o imagen virtual mostrando cómo se verá el elemento en su ubicación.
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                d. 📄 En caso de que otra persona realice el tramite, incluir carta poder
+                e. 📜Declaración jurada de mantenimiento y compromiso de retiro si es necesario
+                f. 🛠️ Descripción del elemento, procedimiento de instalación y mantenimiento
+                g. 🏛️ Aprobación del Ministerio de Cultura si el elemento está en una zona protegida
+                h. 📑 En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+
+
+  utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 119.00
+
+
+# =============================================
+  utter_formalizacion_item09_duplicado_certificado:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado duplicación del certificado de licencia de funcionamiento.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item09_duplicado_certificado_que_es
+                        title: Trámite 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item09_duplicado_certificado_que_necesito
+                        title: Trámite 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item09_duplicado_certificado_cuanto_cuesta
+                        title: Trámite 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+# ==========***=======================
+
+  utter_formalizacion_item09_duplicado_certificado_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Un servicio exclusivo a través del cual, el titular de una Licencia de Funcionamiento puede acceder a un duplicado del Certificado de Licencia de Funcionamiento, en casos de pérdida o deterioro.
+
+
+  utter_formalizacion_item09_duplicado_certificado_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 🗂️ Solicitud simple con el número de certificado de licencia de funciónamiento
+                b. 📅  Indicar fecha y número de constancia de pago
+
+  utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 78.10
+
+
+# =============================================
   utter_gestion_item01:
     - custom:
         blocks:
@@ -1333,22 +2267,22 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Certificado de Parámetros Urbanísticos y Edificatorios*
+                  *🎉 Haz seleccionado Certificado de Parámetros Urbanísticos y Edificatorios*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1356,14 +2290,14 @@ responses:
                     rows:
                       - id: /obras_item01_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: ¿Qué es? 📄
                       - id: /obras_item01_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: ¿Qué necesito? 📋
                       - id: /obras_item01_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
 
   # >> 5.1... CONSULTA
   utter_obras_item01_consulta:
@@ -1373,9 +2307,9 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el documento que te permite saber los requisitos técnicos de diseño de una edificación, por ejemplo alturas máximas, retiros municipales, porcentaje de área libre, cantidad de estacionamientos, etc.
+                📜 Es el documento que te permite saber los requisitos técnicos de diseño de una edificación, por ejemplo alturas máximas, retiros municipales, porcentaje de área libre, cantidad de estacionamientos, etc.
 
-                *¿Para qué es necesario?*
+                *🏗️ ¿Para qué es necesario?*
 
                 Para construir, para vender, alquilar, trámites en el banco y temas académicos.
 
@@ -1387,11 +2321,13 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud dirigida al alcalde.
+                *Requisitos para el trámite:*
 
-                2. Indicar la dirección exacta del predio.
+                1. 🖊️Solicitud dirigida al alcalde.
 
-                3. Escribir el numero de partida registral.
+                2. 📍Indicar la dirección exacta del predio.
+
+                3. 📂Escribir el numero de partida registral.
 
   # >> 5.1... COSTO
   utter_obras_item01_costo:
@@ -1401,29 +2337,29 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 57.10
+                💰 *Costo del trámite:* S/ 57.10
   utter_obras_item02:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)*
+                  *🏢 Haz seleccionado Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1431,14 +2367,14 @@ responses:
                     rows:
                       - id: /obras_item02_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: ¿Qué es? 📄
                       - id: /obras_item02_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: ¿Qué necesito? 📋
                       - id: /obras_item02_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
 
   # >> 5.2... CONSULTA
   utter_obras_item02_consulta:
@@ -1448,11 +2384,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
+                📜 Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
 
-                *¿Para qué es necesario?*
+                *🏗️ ¿Para qué es necesario?*
 
-                Para prescripción adquisitiva de dominio, titulo supletorio, rectificación de linderos y medidas perimétricas.
+                Para prescripción adquisitiva de dominio, título supletorio, rectificación de linderos y medidas perimétricas.
 
   # >> 5.2... NECESIDAD
   utter_obras_item02_necesidad:
@@ -1462,13 +2398,15 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud dirigida al alcalde.
+                *📋 Requisitos para el trámite:*
 
-                2. Plano de ubicación y localización (2 juegos originales).
+                1. 🖊️Solicitud dirigida al alcalde.
 
-                3. Planos perimétricos (2 juegos originales).
+                2. 📍Plano de ubicación y localización (2 juegos originales).
 
-                4. Memoria descriptiva (2 juegos originales).
+                3. 📐Planos perimétricos (2 juegos originales).
+
+                4. 📝Memoria descriptiva (2 juegos originales).
 
   # >> 5.2... COSTO
   utter_obras_item02_costo:
@@ -1478,29 +2416,29 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 153.20
+                💰 *Costo del trámite:* S/ 153.20
   utter_obras_item03:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote*
+                  *🏠 Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1508,14 +2446,14 @@ responses:
                     rows:
                       - id: /obras_item03_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: ¿Qué es? 📄
                       - id: /obras_item03_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: ¿Qué necesito? 📋
                       - id: /obras_item03_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
 
   # >> 5.3... CONSULTA
   utter_obras_item03_consulta:
@@ -1525,11 +2463,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el permiso que entrega la municipalidad antes de construir.
+                📜 Es el permiso que entrega la municipalidad antes de construir.
 
-                *¿Para qué es necesario?*
+                *🏗️ ¿Para qué es necesario?*
 
-                Para construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+                Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
 
   # >> 5.3... NECESIDAD
   utter_obras_item03_necesidad:
@@ -1539,21 +2477,23 @@ responses:
             text:
               preview_url: false
               body: |
-                1. FUE - Licencia de edificación FUE - ANEXO A o B.
+                *📋 Requisitos para el trámite:*
 
-                2. Documento que acredite el derecho a edificar.
+                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
 
-                3. CD - Documentos en original.
+                2. 📄 Documento que acredite el derecho a edificar.
 
-                4. Plano de ubicación y localización.
+                3. 💿 CD con documentos en original.
 
-                5. Plano de arquitectura (Plano de techos, cortes y elevaciones).
+                4. 📍 Plano de ubicación y localización.
 
-                6. Planos de estructuras.
+                5. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
 
-                7. Planos de instalaciones sanitarias.
+                6. 🏗️ Planos de estructuras.
 
-                8. Plano de instalaciones eléctricas.
+                7. 🚰 Planos de instalaciones sanitarias.
+
+                8. 💡 Plano de instalaciones eléctricas.
 
   # >> 5.3... COSTO
   utter_obras_item03_costo:
@@ -1563,29 +2503,29 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 180.20
+                💰 *Costo del trámite:* S/ 180.20
   utter_obras_item04:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos*
+                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1593,14 +2533,14 @@ responses:
                     rows:
                       - id: /obras_item04_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: ¿Qué es? 📄
                       - id: /obras_item04_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: ¿Qué necesito? 📋
                       - id: /obras_item04_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
 
   # >> 5.4... CONSULTA
   utter_obras_item04_consulta:
@@ -1610,9 +2550,9 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el permiso que entrega la municipalidad antes de eliminar la construcción de hasta 3 pisos de altura.
+                📜 Es el permiso que entrega la municipalidad antes de eliminar una construcción de hasta 3 pisos de altura.
 
-                *¿Para qué es necesario?*
+                *🏗️ ¿Para qué es necesario?*
 
                 Para facilitar la construcción de una edificación nueva.
 
@@ -1624,21 +2564,23 @@ responses:
             text:
               preview_url: false
               body: |
-                1. FUE - Licencia de edificación FUE - ANEXO A o B.
+                *📋 Requisitos para el trámite:*
 
-                2. Documento que acredite el derecho a edificar.
+                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
 
-                3. Declaratoria de fábrica con respectivos planos.
+                2. 📄 Documento que acredite el derecho a edificar.
 
-                4. CD con información en digital.
+                3. 🏢 Declaratoria de fábrica con respectivos planos.
 
-                5. Plano de ubicación y localización.
+                4. 💿 CD con información en digital.
 
-                6. Carta de seguridad de obra.
+                5. 📍 Plano de ubicación y localización.
 
-                7. Memoria descriptiva del proceso de demolición (Firmada por ingeniero Civil).
+                6. 📑 Carta de seguridad de obra.
 
-                8. Plano cerramiento del predio.
+                7. ✍️ Memoria descriptiva del proceso de demolición (Firmada por Ingeniero Civil).
+
+                8. 🚧 Plano cerramiento del predio.
 
   # >> 5.4... COSTO
   utter_obras_item04_costo:
@@ -1648,29 +2590,29 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 135.20
+                💰 *Costo del trámite:* S/ 135.20
   utter_obras_item05:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Inscripción por Compra-Venta*
+                  *🏘️ Haz seleccionado Inscripción por Compra-Venta*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1678,14 +2620,14 @@ responses:
                     rows:
                       - id: /obras_item05_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: ¿Qué es? 📄
                       - id: /obras_item05_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: ¿Qué necesito? 📋
                       - id: /obras_item05_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
 
   # >> 5.5... CONSULTA
   utter_obras_item05_consulta:
@@ -1695,9 +2637,9 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
+                📜 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
 
-                *¿Para qué es necesario?*
+                *🏘️ ¿Para qué es necesario?*
 
                 Para legalizar y actualizar el cambio de propietario ante los registros municipales.
 
@@ -1709,9 +2651,11 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Minuta con número de KARDEX o escritura pública.
+                *📋 Requisitos para el trámite:*
 
-                2. Copia literal.
+                1. 🖊️ Minuta con número de KARDEX o escritura pública.
+
+                2. 📄 Copia literal.
 
   # >> 5.5... COSTO
   utter_obras_item05_costo:
@@ -1721,29 +2665,29 @@ responses:
             text:
               preview_url: false
               body: |
-                GRATUITO
+                💰 *Costo del trámite:* GRATUITO
   utter_obras_item06:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Inscripción de una Independización o Subdivisión de Lotes*
+                  *🏗️ Haz seleccionado Inscripción de una Independización o Subdivisión de Lotes*
 
-                  *🟢 Opciones de pregunta:*
+                  *❓ Opciones de pregunta:*
 
-                  1. ¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1751,14 +2695,14 @@ responses:
                     rows:
                       - id: /obras_item06_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: ¿Qué es? 📄
                       - id: /obras_item06_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: ¿Qué necesito? 📋
                       - id: /obras_item06_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
 
   # >> 5.6... CONSULTA
   utter_obras_item06_consulta:
@@ -1768,9 +2712,9 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el registro de la división de un terreno o propiedad en lotes individuales.
+                📜 Es el registro de la división de un terreno o propiedad en lotes individuales.
 
-                *¿Para qué es necesario?*
+                *🏘️ ¿Para qué es necesario?*
 
                 Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
 
@@ -1782,11 +2726,13 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Copia literal o partida electronica todos los asientos
+                *📋 Requisitos para el trámite:*
 
-                2. Certificados literales o partidas electrónicas de las unidades inmobiliarias, secciones, sublotes y otros.
+                1. 📄 Copia literal o partida electrónica con todos los asientos.
 
-                3. Exhibición del DNI.
+                2. 📜 Certificados literales o partidas electrónicas de las unidades inmobiliarias, secciones, sublotes y otros.
+
+                3. 🆔 Exhibición del DNI.
 
   # >> 5.6... COSTO
   utter_obras_item06_costo:
@@ -1796,7 +2742,7 @@ responses:
             text:
               preview_url: false
               body: |
-                GRATUITO
+                💰 *Costo del trámite:* GRATUITO
   utter_orientacion_item01:
     - custom:
         blocks:

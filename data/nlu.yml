@@ -44,7 +44,7 @@ nlu:
     - nos vemos
     - hasta luego
     - que tengas un buen día
-    - buenas noches
+    - buenas noches hasta luego
     - chau
     - hasta la próxima
     - cuídate
@@ -156,11 +156,434 @@ nlu:
     - Qué necesito para la licencia de funcionamiento para edificaciones
     - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo bajo
 
+# >> SERVICIO DE SALUD :
+- intent: servicio_de_salud
+  examples: |
+    - Licencia para servicio de salud
+    - Licencia de funcionamiento para edificaciones de servicio de salud
+
+# >> ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento
+    - Permiso para actividad comercial
+
+# >> MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural
+    - Autorización para uso de monumento histórico
+
 # >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO CUANTO CUESTA :
 - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
   examples: |
     - Cuánto cuesta la licencia de funcionamiento para edificaciones
     - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> FORMALIZACION ITEM02 EDIFICACION RIESGO MEDIO :
+- intent: formalizacion_item02_edificacion_riesgo_medio
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo medio
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo medio
+    - Solicitud de licencia para edificios de riesgo medio
+    - Autorización de funcionamiento en edificaciones de riesgo medio
+    - Edificaciones calificadas con nivel de riesgo medio
+
+# >> FORMALIZACION ITEM02 RIESGO MEDIO QUE ES :
+- intent: formalizacion_item02_riesgo_medio_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo medio
+    - En qué consiste la licencia para edificaciones de riesgo medio
+    - Explicación sobre licencia de edificaciones de riesgo medio
+    - Cómo funciona la licencia para edificios de riesgo medio
+    - Qué cubre la licencia de riesgo medio en edificaciones
+
+# >> FORMALIZACION ITEM02 RIESGO MEDIO QUE NECESITO :
+- intent: formalizacion_item02_riesgo_medio_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo medio
+    - Requisitos para licencia de riesgo medio en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo medio
+    - Qué se necesita para permiso de riesgo medio en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo medio
+
+# >> FORMALIZACION ITEM02 SERVICIO DE SALUD :
+- intent: formalizacion_item02_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo medio
+    - Autorización para funcionamiento en edificaciones de salud de riesgo medio
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo medio
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo medio
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo medio
+
+# >> FORMALIZACION ITEM02 ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: formalizacion_item02_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo medio
+    - Permiso para actividad comercial en riesgo medio
+    - Autorización requerida para eventos en edificios de riesgo medio
+    - Actividades que requieren licencia de riesgo medio
+    - Se necesita autorización para eventos en riesgo medio
+
+# >> FORMALIZACION ITEM02 MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: formalizacion_item02_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo medio
+    - Autorización para uso de monumento histórico de riesgo medio
+    - Permiso para actividades en monumentos históricos de riesgo medio
+    - Actividad en patrimonio cultural de riesgo medio
+    - Uso de monumento en edificaciones de riesgo medio
+
+# >> FORMALIZACION ITEM02 RIESGO MEDIO CUANTO CUESTA :
+- intent: formalizacion_item02_riesgo_medio_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo medio
+    - Precio de licencia de funcionamiento en edificios de riesgo medio
+    - Tarifa para licencia de edificaciones de riesgo medio
+    - Cuál es el costo de una licencia para edificios de riesgo medio
+    - Precio de permiso para edificaciones calificadas en riesgo medio
+
+# >> FORMALIZACION ITEM03 EDIFICACION RIESGO ALTO :
+- intent: formalizacion_item03_edificacion_riesgo_alto
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo alto
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo alto
+    - Solicitud de licencia para edificios de riesgo alto
+    - Autorización de funcionamiento en edificaciones de riesgo alto
+    - Edificaciones calificadas con nivel de riesgo alto
+
+# >> FORMALIZACION ITEM03 RIESGO ALTO QUE ES :
+- intent: formalizacion_item03_riesgo_alto_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo alto
+    - En qué consiste la licencia para edificaciones de riesgo alto
+    - Explicación sobre licencia de edificaciones de riesgo alto
+    - Cómo funciona la licencia para edificios de riesgo alto
+    - Qué cubre la licencia de riesgo alto en edificaciones
+
+# >> FORMALIZACION ITEM03 RIESGO ALTO QUE NECESITO :
+- intent: formalizacion_item03_riesgo_alto_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo alto
+    - Requisitos para licencia de riesgo alto en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo alto
+    - Qué se necesita para permiso de riesgo alto en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo alto
+
+# >> FORMALIZACION ITEM03 SERVICIO DE SALUD :
+- intent: formalizacion_item03_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo alto
+    - Autorización para funcionamiento en edificaciones de salud de riesgo alto
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo alto
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo alto
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo alto
+
+# >> FORMALIZACION ITEM03 ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: formalizacion_item03_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo alto
+    - Permiso para actividad comercial en riesgo alto
+    - Autorización requerida para eventos en edificios de riesgo alto
+    - Actividades que requieren licencia de riesgo alto
+    - Se necesita autorización para eventos en riesgo alto
+
+# >> FORMALIZACION ITEM03 MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: formalizacion_item03_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo alto
+    - Autorización para uso de monumento histórico de riesgo alto
+    - Permiso para actividades en monumentos históricos de riesgo alto
+    - Actividad en patrimonio cultural de riesgo alto
+    - Uso de monumento en edificaciones de riesgo alto
+
+# >> FORMALIZACION ITEM03 RIESGO ALTO CUANTO CUESTA :
+- intent: formalizacion_item03_riesgo_alto_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo alto
+    - Precio de licencia de funcionamiento en edificios de riesgo alto
+    - Tarifa para licencia de edificaciones de riesgo alto
+    - Cuál es el costo de una licencia para edificios de riesgo alto
+    - Precio de permiso para edificaciones calificadas en riesgo alto
+
+# >> FORMALIZACION ITEM04 EDIFICACION RIESGO MUY ALTO :
+- intent: formalizacion_item04_edificacion_riesgo_muy_alto
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo muy alto
+    - Solicitud de licencia para edificios de riesgo muy alto
+    - Autorización de funcionamiento en edificaciones de riesgo muy alto
+    - Edificaciones calificadas con nivel de riesgo muy alto
+
+# >> FORMALIZACION ITEM04 RIESGO MUY ALTO QUE ES :
+- intent: formalizacion_item04_riesgo_muy_alto_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - En qué consiste la licencia para edificaciones de riesgo muy alto
+    - Explicación sobre licencia de edificaciones de riesgo muy alto
+    - Cómo funciona la licencia para edificios de riesgo muy alto
+    - Qué cubre la licencia de riesgo muy alto en edificaciones
+
+# >> FORMALIZACION ITEM04 RIESGO MUY ALTO QUE NECESITO :
+- intent: formalizacion_item04_riesgo_muy_alto_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para licencia de riesgo muy alto en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo muy alto
+    - Qué se necesita para permiso de riesgo muy alto en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM04 SERVICIO DE SALUD :
+- intent: formalizacion_item04_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo muy alto
+    - Autorización para funcionamiento en edificaciones de salud de riesgo muy alto
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo muy alto
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo muy alto
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo muy alto
+
+# >> FORMALIZACION ITEM04 ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: formalizacion_item04_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo muy alto
+    - Permiso para actividad comercial en riesgo muy alto
+    - Autorización requerida para eventos en edificios de riesgo muy alto
+    - Actividades que requieren licencia de riesgo muy alto
+    - Se necesita autorización para eventos en riesgo muy alto
+
+# >> FORMALIZACION ITEM04 MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: formalizacion_item04_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo muy alto
+    - Autorización para uso de monumento histórico de riesgo muy alto
+    - Permiso para actividades en monumentos históricos de riesgo muy alto
+    - Actividad en patrimonio cultural de riesgo muy alto
+    - Uso de monumento en edificaciones de riesgo muy alto
+
+# >> FORMALIZACION ITEM04 RIESGO MUY ALTO CUANTO CUESTA :
+- intent: formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio de licencia de funcionamiento en edificios de riesgo muy alto
+    - Tarifa para licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de una licencia para edificios de riesgo muy alto
+    - Precio de permiso para edificaciones calificadas en riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento
+  examples: |
+    - Transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Cambio de nombre comercial en licencia de edificaciones de riesgo muy alto
+    - Solicitud de transferencia de licencia para edificios de riesgo muy alto
+    - Autorización de cambio de denominación en licencia de funcionamiento
+    - Proceso de transferencia de licencia en edificaciones de riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE ES :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  examples: |
+    - Qué es la transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - En qué consiste el cambio de nombre comercial en la licencia de funcionamiento
+    - Explicación sobre transferencia de licencia para edificaciones de riesgo muy alto
+    - Cómo funciona la transferencia de licencia para edificios de riesgo muy alto
+    - Qué implica cambiar la denominación comercial en la licencia de riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE NECESITO :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  examples: |
+    - Qué necesito para transferir la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para cambiar el nombre comercial en licencia de edificaciones de riesgo muy alto
+    - Documentación para transferencia de licencia de funcionamiento
+    - Qué se necesita para cambio de denominación en licencia de riesgo muy alto
+    - Requisitos para transferencia de licencia en edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO CUANTO CUESTA :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio de cambio de nombre comercial en licencia para edificios de riesgo muy alto
+    - Tarifa para transferencia de licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de cambiar la denominación comercial en la licencia
+    - Precio de transferencia de permiso para edificaciones calificadas en riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro
+  examples: |
+    - Licencia de funcionamiento para cambio de giro en edificaciones de riesgo muy alto
+    - Solicitud de licencia para cambio de giro en edificios de riesgo muy alto
+    - Autorización para cambio de giro en edificaciones de riesgo muy alto
+    - Cambio de giro en licencia de funcionamiento para edificaciones de alto riesgo
+    - Cómo gestionar el cambio de giro en licencia de edificaciones de riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO QUE ES :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para cambio de giro en edificaciones de riesgo muy alto
+    - En qué consiste el cambio de giro en la licencia de funcionamiento
+    - Explicación sobre cambio de giro en licencia de edificaciones de riesgo muy alto
+    - Cómo se realiza el cambio de giro en una licencia para edificios de riesgo muy alto
+    - Qué implica el cambio de giro en la licencia de riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO QUE NECESITO :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  examples: |
+    - Qué necesito para cambiar el giro en la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para cambiar el giro en la licencia de edificaciones de riesgo muy alto
+    - Documentación necesaria para cambio de giro en licencia de funcionamiento
+    - Qué se requiere para cambio de giro en licencia de riesgo muy alto
+    - Requisitos para modificar el giro en licencia de edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO CUANTO CUESTA :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el cambio de giro en la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio del cambio de giro en licencia para edificios de riesgo muy alto
+    - Tarifa para modificar el giro en la licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de cambiar el giro en la licencia
+    - Precio por cambio de giro en edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  examples: |
+    - Autorización para ubicación de afiches publicitarios en bienes privados
+    - Permiso para colocar publicidad exterior en planchetas en propiedad privada
+    - Solicitud de autorización para afiches de publicidad exterior
+    - Autorización de afiches publicitarios en dominio privado
+    - Colocación de planchetas publicitarias en bienes de dominio privado
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE ES :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  examples: |
+    - Qué es la autorización para publicidad exterior en bienes privados
+    - En qué consiste la autorización de publicidad exterior en afiches
+    - Explicación sobre permiso para planchetas publicitarias en dominio privado
+    - Cómo funciona la autorización de afiches publicitarios en propiedad privada
+    - Qué cubre la autorización de publicidad exterior en bienes privados
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE NECESITO :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  examples: |
+    - Qué necesito para la autorización de publicidad exterior en bienes privados
+    - Requisitos para colocar afiches publicitarios en dominio privado
+    - Documentación para autorización de planchetas publicitarias en propiedad privada
+    - Qué se necesita para permiso de afiches publicitarios en bienes de dominio privado
+    - Requisitos para autorización de publicidad exterior tipo afiche en bienes privados
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE CUANTO CUESTA :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la autorización para publicidad exterior en bienes privados
+    - Precio de permiso para colocar afiches en dominio privado
+    - Tarifa para autorización de planchetas publicitarias en propiedad privada
+    - Cuál es el costo de una autorización para afiches publicitarios en bienes privados
+    - Precio para permiso de publicidad exterior tipo afiche en bienes de dominio privado
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras
+  examples: |
+    - Autorización para ubicar letras recortadas en bienes privados
+    - Permiso para colocar letreros en propiedades privadas
+    - Solicitud de autorización para toldos publicitarios en bienes privados
+    - Autorización de placas publicitarias en dominio privado
+    - Colocación de elementos publicitarios (letrero, placa, toldo) en bienes de dominio privado
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE ES :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+  examples: |
+    - Qué es la autorización para letras recortadas en bienes privados
+    - En qué consiste la autorización de letreros publicitarios en propiedades privadas
+    - Explicación sobre permiso para toldos en dominio privado
+    - Cómo funciona la autorización de placas publicitarias en propiedad privada
+    - Qué cubre la autorización de elementos publicitarios en bienes de dominio privado
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE NECESITO :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+  examples: |
+    - Qué necesito para la autorización de letreros en bienes privados
+    - Requisitos para colocar letras recortadas en dominio privado
+    - Documentación para autorización de toldos publicitarios en propiedad privada
+    - Qué se necesita para permiso de placas publicitarias en bienes de dominio privado
+    - Requisitos para autorización de elementos de publicidad exterior en bienes privados
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS CUANTO CUESTA :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la autorización para letras recortadas en bienes privados
+    - Precio de permiso para colocar letreros en dominio privado
+    - Tarifa para autorización de toldos publicitarios en propiedad privada
+    - Cuál es el costo de una autorización para placas publicitarias en bienes privados
+    - Precio para permiso de publicidad exterior tipo letrero en bienes de dominio privado
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO :
+- intent: formalizacion_item09_duplicado_certificado
+  examples: |
+    - Solicitud de duplicado del certificado de licencia de funcionamiento
+    - Obtener duplicado de licencia de funcionamiento
+    - Reposición de certificado de licencia de funcionamiento
+    - Duplicado de mi licencia de funcionamiento
+    - Cómo pedir un duplicado del certificado de funcionamiento
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO QUE ES :
+- intent: formalizacion_item09_duplicado_certificado_que_es
+  examples: |
+    - Qué es el duplicado del certificado de licencia de funcionamiento
+    - Para qué sirve un duplicado de licencia de funcionamiento
+    - Explicación sobre duplicado de certificado de funcionamiento
+    - En qué consiste la reposición de licencia de funcionamiento
+    - Qué cubre el duplicado de certificado de funcionamiento
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO QUE NECESITO :
+- intent: formalizacion_item09_duplicado_certificado_que_necesito
+  examples: |
+    - Qué necesito para solicitar un duplicado de la licencia de funcionamiento
+    - Requisitos para duplicado del certificado de funcionamiento
+    - Documentación para obtener duplicado de licencia de funcionamiento
+    - Qué se necesita para la reposición de la licencia de funcionamiento
+    - Requisitos para pedir un duplicado del certificado de funcionamiento
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO CUANTO CUESTA :
+- intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el duplicado del certificado de licencia de funcionamiento
+    - Precio para obtener duplicado de licencia de funcionamiento
+    - Tarifa para reposición de licencia de funcionamiento
+    - Cuál es el costo de un duplicado de certificado de funcionamiento
+    - Precio para duplicado de licencia de funcionamiento
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION :
+- intent: formalizacion_item10_duplicado_resolucion_autorizacion
+  examples: |
+    - Solicitud de duplicado de la resolución de autorización para publicidad exterior
+    - Obtener duplicado de la resolución de autorización para ubicación de elemento publicitario
+    - Reposición de resolución de autorización para publicidad exterior
+    - Duplicado de mi resolución de autorización para publicidad exterior
+    - Cómo solicitar un duplicado de la resolución de autorización para publicidad exterior
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION :
+- intent: formalizacion_item10_duplicado_resolucion_autorizacion
+  examples: |
+    - Qué es el duplicado de la resolución de autorización para publicidad exterior
+    - Para qué sirve un duplicado de la resolución de autorización para publicidad exterior
+    - Explicación sobre duplicado de resolución de autorización para publicidad exterior
+    - En qué consiste la reposición de la resolución de autorización para publicidad exterior
+    - Qué cubre el duplicado de la resolución de autorización para publicidad exterior
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION QUE NECESITO :
+- intent: formalizacion_item10_duplicado_resolucion_autorizacion_que_necesito
+  examples: |
+    - Qué necesito para solicitar un duplicado de la resolución de autorización para publicidad exterior
+    - Requisitos para duplicado de la resolución de autorización de publicidad exterior
+    - Documentación para obtener duplicado de resolución de autorización de publicidad exterior
+    - Qué se requiere para la reposición de resolución de autorización para publicidad exterior
+    - Requisitos para pedir un duplicado de la resolución de autorización para publicidad exterior
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION CUANTO CUESTA :
+- intent: formalizacion_item10_duplicado_resolucion_autorizacion_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el duplicado de la resolución de autorización para publicidad exterior
+    - Precio para obtener duplicado de resolución de autorización para publicidad exterior
+    - Tarifa para reposición de la resolución de autorización para publicidad exterior
+    - Cuál es el costo de un duplicado de resolución de autorización para publicidad exterior
+    - Precio para duplicado de resolución de autorización para publicidad exterior
 
 # >> GESTION ITEM01 :
 - intent: gestion_item01

@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - LICENCIA DE FUNCIONAMIENTO PARA CAMBIO DE GIRO:
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro
+  examples: |
+    - Licencia de funcionamiento para cambio de giro en edificaciones de riesgo muy alto
+    - Solicitud de licencia para cambio de giro en edificios de riesgo muy alto
+    - Autorización para cambio de giro en edificaciones de riesgo muy alto
+    - Cambio de giro en licencia de funcionamiento para edificaciones de alto riesgo
+    - Cómo gestionar el cambio de giro en licencia de edificaciones de riesgo muy alto
+
+# >> 2.1. NLU - CONSULTA
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para cambio de giro en edificaciones de riesgo muy alto
+    - En qué consiste el cambio de giro en la licencia de funcionamiento
+    - Explicación sobre cambio de giro en licencia de edificaciones de riesgo muy alto
+    - Cómo se realiza el cambio de giro en una licencia para edificios de riesgo muy alto
+    - Qué implica el cambio de giro en la licencia de riesgo muy alto
+
+# >> 2.1. NLU - NECESIDAD
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  examples: |
+    - Qué necesito para cambiar el giro en la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para cambiar el giro en la licencia de edificaciones de riesgo muy alto
+    - Documentación necesaria para cambio de giro en licencia de funcionamiento
+    - Qué se requiere para cambio de giro en licencia de riesgo muy alto
+    - Requisitos para modificar el giro en licencia de edificaciones calificadas como riesgo muy alto
+
+# >> 2.1. NLU - COSTO
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el cambio de giro en la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio del cambio de giro en licencia para edificios de riesgo muy alto
+    - Tarifa para modificar el giro en la licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de cambiar el giro en la licencia
+    - Precio por cambio de giro en edificaciones calificadas como riesgo muy alto

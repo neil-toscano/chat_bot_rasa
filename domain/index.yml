@@ -11,62 +11,76 @@ intents:
 
 responses:
   utter_animo:
-  - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_sirvio_de_ayuda:
-  - text: "¿Te ha ayudado?"
+    - text: "¿Te ha ayudado?"
 
   utter_feliz:
-  - text: "Genial, continua así"
+    - text: "Genial, continua así"
 
   utter_despedida:
-  - text: "Hasta luego"
+    - text: "Hasta luego"
 
   utter_soy_bot:
-  - text: "Soy un bot, entrenado por la MSJL."
-  
+    - text: "Soy un bot, entrenado por la MSJL."
+
   # >> INDEX - MENU
   utter_saludo:
-  - custom:
-      blocks:
-        - type: interactive
-          interactive:
-            type: list
-            header:
-              type: text
-              text: "Consulta Trámites"
-            body:
+    - custom:
+        blocks:
+          - type: image
+            image:
+              id: "1551300402169056"
+              # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+              # caption: MSJL
+          - type: audio
+            audio:
+              id: "907450834672489"
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "Consulta Trámites"
+              body:
                 text: |
-                  ¡Hola! Soy el asistente virtual de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+                  ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+
                   ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
-                  1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL
-                  2. GESTIÓN DEL RIESGO DE DESASTRES
-                  3. ORIENTACIÓN Y REGISTRO
-                  4. REGISTRO CIVIL
-                  5. OBRAS PRIVADAS Y HABILITACIÓN URBANA
-            footer:
-              text: "seleccione el trámite abajo"
-            action:
-              sections:
-                - title: "Escoge el trámite"
-                  rows:
-                    - id: "/formalizacion_promocion_empresarial"
-                      title: "Trámite 1"
-                      description: "FORMALIZACIÓN"
-                    - id: "/gestion"
-                      title: "Trámite 2"
-                      description: "GESTIÓN"
-                    - id: "/orientacion"
-                      title: "Trámite 3"
-                      description: "ORIENTACIÓN"
-                    - id: "/registro"
-                      title: "Trámite 4"
-                      description: "REGISTRO"
-                    - id: "/obras"
-                      title: "Trámite 5"
-                      description: "OBRAS"
-              button: "Seleccionar consulta"
+
+                  *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
+
+                  *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
+
+                  *3. 📋 ORIENTACIÓN Y REGISTRO*
+
+                  *4. 🧾 REGISTRO CIVIL*
+
+                  *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
+              footer:
+                text: "seleccione el trámite abajo 👇"
+              action:
+                sections:
+                  - title: "Escoja trámite"
+                    rows:
+                      - id: "/formalizacion_promocion_empresarial"
+                        title: "Trámite 1"
+                        description: "Formalización 💼"
+                      - id: "/gestion_riesgo_desastre"
+                        title: "Trámite 2"
+                        description: "Gestión 🚨"
+                      - id: "/orientacion_registro"
+                        title: "Trámite 3"
+                        description: "Orientación 📋"
+                      - id: "/registro_civil"
+                        title: "Trámite 4"
+                        description: "Registro"
+                      - id: "/obras_privadas_habilitacion_urbana"
+                        title: "Trámite 5"
+                        description: "Obras 🏗️"
+                button: "Seleccionar trámite"
 
 session_config:
   session_expiration_time: 60

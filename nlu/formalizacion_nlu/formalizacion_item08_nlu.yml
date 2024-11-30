@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - AUTORIZACIÓN PARA PUBLICIDAD EXTERIOR (LETRAS RECORTADAS, LETRERO, PLACA Y TOLDO):
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras
+  examples: |
+    - Autorización para ubicar letras recortadas en bienes privados
+    - Permiso para colocar letreros en propiedades privadas
+    - Solicitud de autorización para toldos publicitarios en bienes privados
+    - Autorización de placas publicitarias en dominio privado
+    - Colocación de elementos publicitarios (letrero, placa, toldo) en bienes de dominio privado
+
+# >> 2.1. NLU - CONSULTA
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+  examples: |
+    - Qué es la autorización para letras recortadas en bienes privados
+    - En qué consiste la autorización de letreros publicitarios en propiedades privadas
+    - Explicación sobre permiso para toldos en dominio privado
+    - Cómo funciona la autorización de placas publicitarias en propiedad privada
+    - Qué cubre la autorización de elementos publicitarios en bienes de dominio privado
+
+# >> 2.1. NLU - NECESIDAD
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+  examples: |
+    - Qué necesito para la autorización de letreros en bienes privados
+    - Requisitos para colocar letras recortadas en dominio privado
+    - Documentación para autorización de toldos publicitarios en propiedad privada
+    - Qué se necesita para permiso de placas publicitarias en bienes de dominio privado
+    - Requisitos para autorización de elementos de publicidad exterior en bienes privados
+
+# >> 2.1. NLU - COSTO
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la autorización para letras recortadas en bienes privados
+    - Precio de permiso para colocar letreros en dominio privado
+    - Tarifa para autorización de toldos publicitarios en propiedad privada
+    - Cuál es el costo de una autorización para placas publicitarias en bienes privados
+    - Precio para permiso de publicidad exterior tipo letrero en bienes de dominio privado

@@ -36,3 +36,8 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
     ```bash
     rasa shell
+
+7. Interactua con el modelo
+
+    ```bash
+    rasa run --enable-api --cors "*"
