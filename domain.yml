@@ -399,9 +399,9 @@ responses:
 
                   2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
-                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
                   5. 📝Inscripción por Compra-Venta
 
@@ -2416,7 +2416,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 153.20
+                💰 *Costo del trámite:* S/ 153.30
   utter_obras_item03:
     - custom:
         blocks:
@@ -2503,7 +2503,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 180.20
+                💰 *Costo del trámite:* S/ 450.30
   utter_obras_item04:
     - custom:
         blocks:
@@ -2590,7 +2590,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 135.20
+                💰 *Costo del trámite:* S/ 450.30
   utter_obras_item05:
     - custom:
         blocks:
