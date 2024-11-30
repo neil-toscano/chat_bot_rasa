@@ -238,7 +238,7 @@ responses:
                       - id: /duplicado_resolucion_autorizacion
                         title: Trámite 10
                         description: DUPLICADO RESOLUCIÓN 📜
-                button: Seleccionar licencia
+                button: Seleccionar trámite
   utter_gestion:
     - custom:
         blocks:
@@ -246,35 +246,35 @@ responses:
             text:
               preview_url: false
               body: |
-                *🟢 Opciones de Trámite:*
+                *🟢 Opciones de Trámite:*  
 
-                1. Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+                1. 🏢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Bajo**  
 
-                2. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+                2. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Bajo**  
 
-                3. Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+                3. 🏢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio**  
 
-                4. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio
+                4. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio**  
 
-                5. Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+                5. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
 
           - type: interactive
             interactive:
               type: list
               body:
                 text: |
-                  6. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+                  6. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
 
-                  7. Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+                  7. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
 
-                  8. Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+                  8. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
 
-                  9. Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
+                  9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta **3,000 personas**  
 
-                  10. Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+                  10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones  
 
               footer:
-                text: '**Seleccione el trámite abajo**'
+                text: '*Seleccione el trámite abajo 👇*'
 
             # >> LISTADO DE OPCIONES :
               action:
@@ -283,35 +283,35 @@ responses:
                     rows:
                       - id: /gestion_item01
                         title: Trámite 1
-                        description: INSPECCIÓN RIESGO BAJO
+                        description: 🏢 INSPECCIÓN RIESGO BAJO
                       - id: /gestion_item02
                         title: Trámite 2
-                        description: RENOVACIÓN RIESGO BAJO
+                        description: 🔄 RENOVACIÓN RIESGO BAJO
                       - id: /gestion_item03
                         title: Trámite 3
-                        description: INSPECCIÓN RIESGO MEDIO
+                        description: 🏢 INSPECCIÓN RIESGO MEDIO
                       - id: /gestion_item04
                         title: Trámite 4
-                        description: RENOVACIÓN RIESGO MEDIO
+                        description: 🔄 RENOVACIÓN RIESGO MEDIO
                       - id: /gestion_item05
                         title: Trámite 5
-                        description: INSPECCIÓN RIESGO ALTO
+                        description: 🏢 INSPECCIÓN RIESGO ALTO
                       - id: /gestion_item06
                         title: Trámite 6
-                        description: RENOVACIÓN RIESGO ALTO
+                        description: 🔄 RENOVACIÓN RIESGO ALTO
                       - id: /gestion_item07
                         title: Trámite 7
-                        description: INSPECCIÓN RIESGO MUY ALTO
+                        description: 🏢 INSPECCIÓN RIESGO MUY ALTO
                       - id: /gestion_item08
                         title: Trámite 8
-                        description: RENOVACIÓN RIESGO MUY ALTO
+                        description: 🔄 RENOVACIÓN RIESGO MUY ALTO
                       - id: /gestion_item09
                         title: Trámite 9
-                        description: EVALUACIÓN
+                        description: 🏟️ EVALUACIÓN
                       - id: /gestion_item10
                         title: Trámite 10
-                        description: DUPLICADO
-                button: Opciones
+                        description: 📄 DUPLICADO
+                button: Seleccionar trámite
   utter_animo:
     - text: Siento escuchar eso, aquí hay algo que te va dar ánimo
       image: https://i.imgur.com/nGF1K8f.jpg
@@ -370,16 +370,16 @@ responses:
                       - id: /formalizacion_promocion_empresarial
                         title: Trámite 1
                         description: Formalización 💼
-                      - id: /gestion_riesgo_desastre
+                      - id: /gestion
                         title: Trámite 2
                         description: Gestión 🚨
-                      - id: /orientacion_registro
+                      - id: /orientacion
                         title: Trámite 3
                         description: Orientación 📋
-                      - id: /registro_civil
+                      - id: /registro
                         title: Trámite 4
-                        description: Registro
-                      - id: /obras_privadas_habilitacion_urbana
+                        description: Registro 🧾
+                      - id: /obras
                         title: Trámite 5
                         description: Obras 🏗️
                 button: Seleccionar trámite
@@ -413,7 +413,7 @@ responses:
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: 🏗️Escoge el trámite
+                  - title: Escoge el trámite
                     rows:
                       - id: /obras_item01
                         title: Trámite 1
@@ -445,12 +445,12 @@ responses:
                 text: '🟢 Opciones de Trámite:'
               body:
                 text: |
-                  1. Inscripción por Sucesión Indivisa
+                  1. 📜 Inscripción por Sucesión Indivisa  
 
-                  2. Inscripción por Sucesión Intestada
+                  2. 🏠 Inscripción por Sucesión Intestada  
 
               footer:
-                text: '**Seleccione el trámite abajo**'
+                text: '*Seleccione el trámite abajo 👇*'
 
             # >> LISTADO DE OPCIONES :
               action:
@@ -459,11 +459,11 @@ responses:
                     rows:
                       - id: /orientacion_item01
                         title: Trámite 1
-                        description: SUCESIÓN INDIVISA
+                        description: 📜 SUCESIÓN INDIVISA
                       - id: /orientacion_item02
                         title: Trámite 2
-                        description: SUCESIÓN INTESTADA
-                button: Opciones
+                        description: 🏠 SUCESIÓN INTESTADA
+                button: Seleccionar trámite
   utter_registro:
     - custom:
         blocks:
@@ -475,16 +475,16 @@ responses:
                 text: '🟢 Opciones de Trámite:'
               body:
                 text: |
-                  1. Matrimonio Civil
+                  1. 💍 Matrimonio Civil  
 
-                  2. Publicación de Edicto Matrimonial tramitado en otros distritos
+                  2. 📜 Publicación de Edicto Matrimonial tramitado en otros distritos  
 
-                  3. Reprogramación de fecha y hora de Ceremonia Matrimonial
+                  3. 🔄 Reprogramación de fecha y hora de Ceremonia Matrimonial  
 
-                  4. Separación Convencional y Divorcio Ulterior: Separación Convencional
+                  4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional  
 
               footer:
-                text: '**Seleccione el trámite abajo**'
+                text: '*Seleccione el trámite abajo 👇*'
 
             # >> LISTADO DE OPCIONES :
               action:
@@ -493,17 +493,17 @@ responses:
                     rows:
                       - id: /registro_item01
                         title: Trámite 1
-                        description: MATROMONIO
+                        description: 💍 MATRIMONIO
                       - id: /registro_item02
                         title: Trámite 2
-                        description: PUBLICACIÓN
+                        description: 📜 PUBLICACIÓN
                       - id: /registro_item03
                         title: Trámite 3
-                        description: REPROGRAMACIÓN
+                        description: 🔄 REPROGRAMACIÓN
                       - id: /registro_item04
                         title: Trámite 4
-                        description: SEPARACIÓN
-                button: Opciones
+                        description: 💔 SEPARACIÓN
+                button: Selecciona trámite
   utter_licencia_funcionamiento_edificacion_riesgo_bajo:
     - custom:
         blocks:
@@ -1459,22 +1459,23 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "🟢 Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*
+                  Haz seleccionado *📋 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*  
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1482,14 +1483,14 @@ responses:
                     rows:
                       - id: /gestion_item01_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item01_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📋 ¿Qué necesito?
                       - id: /gestion_item01_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: 💰 ¿Cuánto cuesta?
+                button: Selecciona pregunta
 
   # >> 2.1... CONSULTA
   utter_gestion_item01_consulta:
@@ -1499,11 +1500,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo.
+                📘 Es una inspección técnica de seguridad que se realiza en establecimientos con nivel de riesgo bajo.  
 
-                *¿Para qué sirve?*
+                *¿Para qué sirve?*  
 
-                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
+                📋 Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
 
   # >> 2.1... NECESIDAD
   utter_gestion_item01_necesidad:
@@ -1513,13 +1514,15 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+                📋 Solicitud de ITSE, indicando número y fecha de pago.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
   # >> 2.1... COSTO
   utter_gestion_item01_costo:
@@ -1529,29 +1532,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 138.50
+                💰 S/ 138.50
   utter_gestion_item02:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*
+                  Haz seleccionado *📋 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*  
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite? 
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1559,14 +1563,14 @@ responses:
                     rows:
                       - id: /gestion_item02_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item02_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📋 ¿Qué necesito?
                       - id: /gestion_item02_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: 💰 ¿Cuánto cuesta?
+                button: Selecciona pregunta
 
   # >> 2.2... CONSULTA
   utter_gestion_item02_consulta:
@@ -1576,11 +1580,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo bajo.
+                📘 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo bajo.  
 
-                *¿Para qué es necesario?*
+                *¿Para qué es necesario?*  
 
-                Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
+                📋 Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
 
   # >> 2.2... NECESIDAD
   utter_gestion_item02_necesidad:
@@ -1590,13 +1594,15 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
   # >> 2.2... COSTO
   utter_gestion_item02_costo:
@@ -1606,29 +1612,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 132.40
+                💰 S/ 132.40
   utter_gestion_item03:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            # header:
+            #   type: text
+            #   text: "🟢 Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*
+                  Haz seleccionado *📋 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*  
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1636,14 +1643,14 @@ responses:
                     rows:
                       - id: /gestion_item03_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item03_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📋 ¿Qué necesito?
                       - id: /gestion_item03_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: 💰 ¿Cuánto cuesta?
+                button: Selecciona pregunta
 
   # >> 2.3... CONSULTA
   utter_gestion_item03_consulta:
@@ -1653,11 +1660,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.
+                📘 Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.  
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*  
 
-                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
+                📋 Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
 
   # >> 2.3... NECESIDAD
   utter_gestion_item03_necesidad:
@@ -1667,13 +1674,15 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
   # >> 2.3... COSTO
   utter_gestion_item03_costo:
@@ -1683,29 +1692,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 162.70
+                💰 S/ 162.70
   utter_gestion_item04:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio*
+                  Haz seleccionado *📋 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio*  
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1713,14 +1723,14 @@ responses:
                     rows:
                       - id: /gestion_item04_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item04_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📋 ¿Qué necesito?
                       - id: /gestion_item04_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
-                button: Opciones
+                        description: 💰 ¿Cuánto cuesta?
+                button: Selecciona pregunta
 
   # >> 2.4... CONSULTA
   utter_gestion_item04_consulta:
@@ -1730,11 +1740,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo medio.
+                📘 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo medio.  
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*  
 
-                Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
+                📋 Asegurar que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
 
   # >> 2.4... NECESIDAD
   utter_gestion_item04_necesidad:
@@ -1744,13 +1754,15 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
   # >> 2.4... COSTO
   utter_gestion_item04_costo:
@@ -1760,29 +1772,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 151.60
+                💰 S/ 151.60
   utter_gestion_item05:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1790,13 +1803,13 @@ responses:
                     rows:
                       - id: /gestion_item05_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item05_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /gestion_item05_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.5... CONSULTA
@@ -1807,11 +1820,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Evaluación de seguridad previa al inicio de actividades en establecimientos con alto riesgo.
+                🏢 Evaluación de seguridad previa al inicio de actividades en establecimientos con alto riesgo.
 
                 *¿Para qué sirve?*
 
-                Asegura que el establecimiento cumpla con las normativas de seguridad antes de comenzar operaciones.
+                ✅ Asegura que el establecimiento cumpla con las normativas de seguridad antes de comenzar operaciones.
 
   # >> 2.5... NECESIDAD
   utter_gestion_item05_necesidad:
@@ -1821,25 +1834,27 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: false
               body: |
-                Documentos técnicos en copia simple:
+                🗂️ Documentos técnicos en copia simple:
 
-                1. Croquis de ubicación
+                1. 🗺️ Croquis de ubicación
 
-                2. Plano de arquitectura y detalle de aforo
+                2. 📐 Plano de arquitectura y detalle de aforo
 
-                3. Plano de distribución eléctrica y cargas
+                3. ⚡ Plano de distribución eléctrica y cargas
 
-                4. Certificado vigente de puesta a tierra
+                4. ✅ Certificado vigente de puesta a tierra
 
-                5. Plan de seguridad del establecimiento
+                5. 🛡️ Plan de seguridad del establecimiento
 
-                6. Memoria de prueba de mantenimiento de equipos y protección contra incendios
+                6. 🔥 Memoria de prueba de mantenimiento de equipos y protección contra incendios
 
   # >> 2.5... COSTO
   utter_gestion_item05_costo:
@@ -1849,29 +1864,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 367.20
+                💰 S/ 367.20
   utter_gestion_item06:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1879,13 +1895,13 @@ responses:
                     rows:
                       - id: /gestion_item06_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item06_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /gestion_item06_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.6... CONSULTA
@@ -1896,11 +1912,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo alto.
+                🏢 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo alto.
 
-                *¿Para qué sirve*
+                *¿Para qué sirve?*
 
-                Asegura que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
+                ✅ Asegura que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
 
   # >> 2.6... NECESIDAD
   utter_gestion_item06_necesidad:
@@ -1910,13 +1926,17 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
   # >> 2.6... COSTO
   utter_gestion_item06_costo:
@@ -1926,29 +1946,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 361.30
+                💰 S/ 361.30
   utter_gestion_item07:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -1956,13 +1977,13 @@ responses:
                     rows:
                       - id: /gestion_item07_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item07_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /gestion_item07_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.7... CONSULTA
@@ -1973,11 +1994,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades
+                🏢 Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades.
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*
 
-                Garantiza que el establecimiento cumpla con todas las normativas de seguridad críticas para minimizar riesgos y proteger a los ocupantes y visitantes.
+                ✅ Garantiza que el establecimiento cumpla con todas las normativas de seguridad críticas para minimizar riesgos y proteger a los ocupantes y visitantes.
 
   # >> 2.7... NECESIDAD
   utter_gestion_item07_necesidad:
@@ -1987,31 +2008,35 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
           - type: text
             text:
               preview_url: false
               body: |
-                Documentos técnicos en copia simple:
+                📄 Documentos técnicos en copia simple:
 
-                1. Croquis de ubicación
+                1. 📍 Croquis de ubicación
 
-                2. Plano de arquitectura y detalle de aforo
+                2. 📐 Plano de arquitectura y detalle de aforo
 
-                3. Plano de distribución eléctrica y cargas
+                3. 💡 Plano de distribución eléctrica y cargas
 
-                4. Certificado vigente de puesta a tierra
+                4. 🔌 Certificado vigente de puesta a tierra
 
-                5. Plan de seguridad del establecimiento
+                5. 🚨 Plan de seguridad del establecimiento
 
-                6. Memoria de prueba de mantenimiento de equipos y protección contra incendios
+                6. 🔥 Memoria de prueba de mantenimiento de equipos y protección contra incendios
 
   # >> 2.7... COSTO
   utter_gestion_item07_costo:
@@ -2021,29 +2046,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 699.70
+                💰 S/ 699.70
   utter_gestion_item08:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2051,13 +2077,13 @@ responses:
                     rows:
                       - id: /gestion_item08_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item08_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /gestion_item08_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.8... CONSULTA
@@ -2068,11 +2094,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el proceso de actualización del certificado que verifica la seguridad en edificaciones con nivel de riesgo muy alto.
+                🏢 Es el proceso de actualización del certificado que verifica la seguridad en edificaciones con nivel de riesgo muy alto.
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*
 
-                Asegura que el establecimiento sigue cumpliendo con las normativas de seguridad y mantiene un entorno seguro, renovando la validez del certificado previamente emitido.
+                ✅ Asegura que el establecimiento sigue cumpliendo con las normativas de seguridad y mantiene un entorno seguro, renovando la validez del certificado previamente emitido.
 
   # >> 2.8... NECESIDAD
   utter_gestion_item08_necesidad:
@@ -2082,13 +2108,17 @@ responses:
             text:
               preview_url: true
               body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf)
 
   # >> 2.8... COSTO
   utter_gestion_item08_costo:
@@ -2098,29 +2128,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 689.10
+                💰 S/ 689.10
   utter_gestion_item09:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2128,13 +2159,13 @@ responses:
                     rows:
                       - id: /gestion_item09_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item09_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /gestion_item09_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.9... CONSULTA
@@ -2145,11 +2176,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
+                🛑 Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*
 
-                Asegura que el evento cumpla con las normativas de seguridad necesarias para proteger a los asistentes y gestionar riesgos durante la realización del evento.
+                ✅ Asegura que el evento cumpla con las normativas de seguridad necesarias para proteger a los asistentes y gestionar riesgos durante la realización del evento.
 
   # >> 2.9... NECESIDAD
   utter_gestion_item09_necesidad:
@@ -2159,27 +2190,27 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud de renovación ITSE, indicando número y fecha de pago.
+                1. 📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
 
-                2. Declaración jurada del solicitante, incluyendo datos del representante legal si aplica.
+                2. 🖋️ Declaración jurada del solicitante, incluyendo datos del representante legal si aplica.
 
-                3. Croquis del lugar donde se realizará el espectáculo
+                3. 📍 Croquis del lugar donde se realizará el espectáculo.
 
-                4. Plano del espacio con distribución del escenario y aforo.
+                4. 🗺️ Plano del espacio con distribución del escenario y aforo.
 
-                5. Descripción del evento, montaje, instalaciones eléctricas, y seguridad.
+                5. 📋 Descripción del evento, montaje, instalaciones eléctricas, y seguridad.
 
-                6. Protocolo de medición del sistema de puesta a tierra (si hay instalaciones eléctricas).
+                6. ⚡ Protocolo de medición del sistema de puesta a tierra (si hay instalaciones eléctricas).
 
-                7. Constancia de mantenimiento de extintores.
+                7. 🔥 Constancia de mantenimiento de extintores.
 
-                8. Plan de seguridad con señalización, rutas de evacuación, y zonas seguras.
+                8. 🚪 Plan de seguridad con señalización, rutas de evacuación, y zonas seguras.
 
-                9. Declaración de instalación segura de gas licuado (si aplica).
+                9. 🏭 Declaración de instalación segura de gas licuado (si aplica).
 
-                10. Memoria descriptiva de seguridad para juegos mecánicos (si se usan).
+                10. 🎢 Memoria descriptiva de seguridad para juegos mecánicos (si se usan).
 
-                11. Certificado de inspección técnica de seguridad (ITSE) si el recinto no lo ha emitido la Municipalidad.
+                11. 🏛️ Certificado de inspección técnica de seguridad (ITSE) si el recinto no lo ha emitido la Municipalidad.
 
   # >> 2.9... COSTO
   utter_gestion_item09_costo:
@@ -2189,29 +2220,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 356.30
+                💰 S/ 356.30
   utter_gestion_item10:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
               footer:
-                text: '**Seleccione la pregunta abajo**'
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2219,13 +2251,13 @@ responses:
                     rows:
                       - id: /gestion_item10_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /gestion_item10_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /gestion_item10_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.10... CONSULTA
@@ -2236,11 +2268,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
+                📄 Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
 
                 *¿Para qué es?*
 
-                Para proporcionar una prueba adicional del cumplimiento de las normativas de seguridad, en caso de pérdida o necesidad de presentar el documento en diferentes lugares.
+                ✅ Para proporcionar una prueba adicional del cumplimiento de las normativas de seguridad, en caso de pérdida o necesidad de presentar el documento en diferentes lugares.
 
   # >> 2.10... NECESIDAD
   utter_gestion_item10_necesidad:
@@ -2250,7 +2282,7 @@ responses:
             text:
               preview_url: false
               body: |
-                Solicitud, indicando número y fecha de pago por el derecho de trámite.
+                📝 Solicitud, indicando número y fecha de pago por el derecho de trámite.
 
   # >> 2.10... COSTO
   utter_gestion_item10_costo:
@@ -2260,7 +2292,7 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 63.60
+                💰 S/ 63.60
   utter_obras_item01:
     - custom:
         blocks:
@@ -2749,22 +2781,23 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Inscripción por Sucesión Indivisa*
+                  Haz seleccionado 📜 *Inscripción por Sucesión Indivisa*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:* 
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '**Seleccione la pregunta abajo**'
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2772,13 +2805,13 @@ responses:
                     rows:
                       - id: /orientacion_item01_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /orientacion_item01_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝¿Qué necesito?
                       - id: /orientacion_item01_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 3.1... CONSULTA
@@ -2789,11 +2822,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el registro en la municipalidad de un bien inmueble, cuando varios herederos comparten la propiedad sin dividirla formalmente.
+                🏠 Es el registro en la municipalidad de un bien inmueble, cuando varios herederos comparten la propiedad sin dividirla formalmente.
 
                 *¿Para qué es necesario?*
 
-                Para reconocer legalmente a los herederos como propietarios conjuntos del inmueble.
+                📜 Para reconocer legalmente a los herederos como propietarios conjuntos del inmueble.
 
   # >> 3.1... NECESIDAD
   utter_orientacion_item01_necesidad:
@@ -2803,13 +2836,13 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Acta de defunción
+                1. 📜 Acta de defunción
 
-                2. Partida de nacimiento o partida de matrimonio; según corresponda.
+                2. 📝 Partida de nacimiento o partida de matrimonio; según corresponda.
 
-                3. Exhibición del DNI de quienes correspondan.
+                3. 🆔 Exhibición del DNI de quienes correspondan.
 
-                4. Documento que acredite la propiedad del bien del fallecido.
+                4. 📑 Documento que acredite la propiedad del bien del fallecido.
 
   # >> 3.1... COSTO
   utter_orientacion_item01_costo:
@@ -2819,29 +2852,30 @@ responses:
             text:
               preview_url: false
               body: |
-                GRATUITO
+                💸 GRATUITO
   utter_orientacion_item02:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Inscripción por Sucesión Intestada*
+                  Haz seleccionado 🏠 *Inscripción por Sucesión Intestada*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '**Seleccione la pregunta abajo**'
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2866,11 +2900,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es el registro de la transferencia de bienes de una persona fallecida sin testamento.
+                ⚖️ Es el registro de la transferencia de bienes de una persona fallecida sin testamento.
 
                 *¿Para qué es necesario?*
 
-                Para reconocer legalmente a los herederos y actualizar los registros con los nuevos propietarios según las leyes de sucesión.
+                📜 Para reconocer legalmente a los herederos y actualizar los registros con los nuevos propietarios según las leyes de sucesión.
 
   # >> 3.2... NECESIDAD
   utter_orientacion_item02_necesidad:
@@ -2880,11 +2914,11 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Copia literal de la sucesión intestada.
+                1. 📜 Copia literal de la sucesión intestada.
 
-                2. Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
+                2. 🏠 Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
 
-                3. Exhibición del DNI de los herederos.
+                3. 🆔 Exhibición del DNI de los herederos.
 
   # >> 3.2... COSTO
   utter_orientacion_item02_costo:
@@ -2894,29 +2928,30 @@ responses:
             text:
               preview_url: false
               body: |
-                GRATUITO
+                💸 GRATUITO
   utter_registro_item01:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Matrimonio Civil*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '**Seleccione la pregunta abajo**'
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2924,13 +2959,13 @@ responses:
                     rows:
                       - id: /registro_item01_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /registro_item01_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /registro_item01_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.1... CONSULTA
@@ -2941,11 +2976,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Este es el proceso administrativo mediante el cual una pareja solicita casarse en la Municipalidad, de acuerdo con lo que establece el Código Civil.
+                💍 Este es el proceso administrativo mediante el cual una pareja solicita casarse en la Municipalidad, de acuerdo con lo que establece el Código Civil.
 
                 *¿Para qué es necesario?*
 
-                Esta unión otorga derechos y deberes legales a los cónyuges, como en temas de herencia, propiedad y protección legal, además de oficializar la relación ante el Estado y la sociedad.
+                📜 Esta unión otorga derechos y deberes legales a los cónyuges, como en temas de herencia, propiedad y protección legal, además de oficializar la relación ante el Estado y la sociedad.
 
   # >> 4.1... NECESIDAD
   utter_registro_item01_necesidad:
@@ -2955,21 +2990,21 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud simple o Formato de solicitud.
+                1. 📝 Solicitud simple o Formato de solicitud.
 
-                2. Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
+                2. 🆔 Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
 
-                3. Copia certificada de Partida de nacimiento de los contrayentes.
+                3. 🍼 Copia certificada de Partida de nacimiento de los contrayentes.
 
-                4. Declaración jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
+                4. 📝 Declaración jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
 
-                5. Certificado médico pre-nupcial y constancia de charlas de Consejería, antiguedad no mayor a 30 días.
+                5. 💉 Certificado médico pre-nupcial y constancia de charlas de Consejería, antigüedad no mayor a 30 días.
 
-                6. Declaración Jurada de no tener impedimento para contraer matrimonio, de los contrayentes.
+                6. 🛑 Declaración Jurada de no tener impedimento para contraer matrimonio, de los contrayentes.
 
-                7. Declaración jurada de domicilio (uno debe residir en el distrito).
+                7. 🏡 Declaración jurada de domicilio (uno debe residir en el distrito).
 
-                8. Indicar la fecha y número de constancia de pago.
+                8. 💰 Indicar la fecha y número de constancia de pago.
 
           - type: interactive
             interactive:
@@ -2996,11 +3031,11 @@ responses:
             text:
               preview_url: false
               body: |
-                1. En el local municipal - S/ 256.10
+                1. 🏢 En el local municipal - S/ 256.10
 
-                2. Fuera del local municipal (dentro del distrito) - S/ 332.10
+                2. 🏘️ Fuera del local municipal (dentro del distrito) - S/ 332.10
 
-                3. Fuera del local municipal (fuera del distrito) - S/ 432.10
+                3. 🌍 Fuera del local municipal (fuera del distrito) - S/ 432.10
 
   # >> 4.1... REQUISITOS
   utter_registro_item01_requisitos:
@@ -3013,17 +3048,17 @@ responses:
                 text: |
                   Se presenta una serie de requisitos dependiendo de la opción que usted elija...
 
-                  1. Para divorciados(as)
+                  1. 💔 Para divorciados(as)
 
-                  2. Para viudos(as)
+                  2. 🖤 Para viudos(as)
 
-                  3. Para extranjeros(as)
+                  3. 🌍 Para extranjeros(as)
 
-                  4. Para matrimonios por poder
+                  4. 🖋️ Para matrimonios por poder
 
-                  5. Para matrimonios por parentesco entre sí
+                  5. 👨‍👩‍👧 Para matrimonios por parentesco entre sí
 
-                  6. Para matrimonios con personas con discapacidad
+                  6. ♿ Para matrimonios con personas con discapacidad
 
               action:
                 sections:
@@ -3062,13 +3097,13 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Copia certificada de anterior matrimonio con insripción de divorcio.
+                1. 📜 Copia certificada de anterior matrimonio con inscripción de divorcio.
 
-                2. DNI actualizado.
+                2. 🆔 DNI actualizado.
 
-                3. Declaración jurada de no administrar bienes de hijos menores.
+                3. 📄 Declaración jurada de no administrar bienes de hijos menores.
 
-                4. En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+                4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
 
   # >> 4.4.2... SUBNECESIDAD 02
   utter_registro_item01_subnecesidad_02:
@@ -3080,13 +3115,13 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Copia certificada de acta de defunción de cónyuge fallecido.
+                1. ⚰️ Copia certificada de acta de defunción de cónyuge fallecido.
 
-                2. DNI actualizado.
+                2. 🆔 DNI actualizado.
 
-                3. Declaración jurada de no administrar bienes de hijos menores.
+                3. 📄 Declaración jurada de no administrar bienes de hijos menores.
 
-                4. En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+                4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
 
   # >> 4.4.3... SUBNECESIDAD 03
   utter_registro_item01_subnecesidad_03:
@@ -3098,13 +3133,13 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Acta de nacimiento visado por el consulado y legalizado por el MRE.
+                1. 🌏 Acta de nacimiento visado por el consulado y legalizado por el MRE.
 
-                2. Copia y original del pasaporte y/o carné de extranjería.
+                2. 🛂 Copia y original del pasaporte y/o carné de extranjería.
 
-                3. Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
+                3. 💍 Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
 
-                4. Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
+                4. 📑 Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
 
   # >> 4.4.4... SUBNECESIDAD 04
   utter_registro_item01_subnecesidad_04:
@@ -3116,13 +3151,13 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Poder por escritura pública con facultades específicas inscrito en registros públicos.
+                1. 📝 Poder por escritura pública con facultades específicas inscrito en registros públicos.
 
-                2. Para poder ortorgado en el Extranjero, presentar copia visada por el Cónsul Peruano, legalizado por el MRE.
+                2. 🌍 Para poder otorgado en el Extranjero, presentar copia visada por el Cónsul Peruano, legalizado por el MRE.
 
-                3. Realizarse dentro de los seis (6) meses de otorgado el poder.
+                3. ⏳ Realizarse dentro de los seis (6) meses de otorgado el poder.
 
-                4. Exhibición del Documento Nacional de Identidad del apoderado.
+                4. 🆔 Exhibición del Documento Nacional de Identidad del apoderado.
 
   # >> 4.1.5... SUBNECESIDAD 05
   utter_registro_item01_subnecesidad_05:
@@ -3134,7 +3169,7 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
+                📑 Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
 
   # >> 4.1.6... SUBNECESIDAD 06
   utter_registro_item01_subnecesidad_06:
@@ -3146,29 +3181,30 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                Copia del Certificado de Discapacidad, expedido conforme a Ley.
+                🧑‍🦽 Copia del Certificado de Discapacidad, expedido conforme a Ley.
   utter_registro_item02:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Publicación de Edicto Matrimonial tramitado en otros distritos*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '**Seleccione la pregunta abajo**'
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -3193,11 +3229,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es la publicación de la celebración del matrimonio en un determinado distrito, cuando el domicilio de uno de los contrayentes es distinto al distrito en el cual se consigna el domicilio del DNI.
+                💍 Es la publicación de la celebración del matrimonio en un determinado distrito, cuando el domicilio de uno de los contrayentes es distinto al distrito en el cual se consigna el domicilio del DNI.
 
                 *¿Para qué es necesario?*
 
-                Permite que cualquier ciudadano que conozca de la existencia de algún impedimento pueda denunciarlo.
+                📢 Permite que cualquier ciudadano que conozca de la existencia de algún impedimento pueda denunciarlo.
 
   # >> 4.2... NECESIDAD
   utter_registro_item02_necesidad:
@@ -3207,11 +3243,11 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud con carácter de Declaración Jurada.
+                1. 📝 Solicitud con carácter de Declaración Jurada.
 
-                2. Copia simple del Edicto Matrimonial.
+                2. 📑 Copia simple del Edicto Matrimonial.
 
-                3. Indicar fecha y número de constancia de pago.
+                3. 💵 Indicar fecha y número de constancia de pago.
 
   # >> 4.2... COSTO
   utter_registro_item02_costo:
@@ -3221,29 +3257,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 44.80
+                💰 S/ 44.80
   utter_registro_item03:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Reprogramación de fecha y hora de Ceremonia Matrimonial*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '**Seleccione la pregunta abajo**'
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -3251,13 +3288,13 @@ responses:
                     rows:
                       - id: /registro_item03_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /registro_item03_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📋 ¿Qué necesito?
                       - id: /registro_item03_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.3... CONSULTA
@@ -3268,7 +3305,7 @@ responses:
             text:
               preview_url: false
               body: |
-                Servicio exclusivo mediante el cual los contrayentes pueden solicitar la postergación y/o reprogramación de la fecha de celebración del matrimonio.
+                ⏳ Servicio exclusivo mediante el cual los contrayentes pueden solicitar la postergación y/o reprogramación de la fecha de celebración del matrimonio.
 
   # >> 4.3... NECESIDAD
   utter_registro_item03_necesidad:
@@ -3278,11 +3315,11 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud con carácter de Declaración Jurada.
+                1. 📝 Solicitud con carácter de Declaración Jurada.
 
-                2. Indicar fecha y número de constancia de pago.
+                2. 💵 Indicar fecha y número de constancia de pago.
 
-                3. El pedido se debe hacer con 5 días hábiles de anticipación.
+                3. 📅 El pedido se debe hacer con 5 días hábiles de anticipación.
 
   # >> 4.3... COSTO
   utter_registro_item03_costo:
@@ -3292,29 +3329,30 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 37.80
+                💰 S/ 37.80
   utter_registro_item04:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: Consulta Trámites
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Separación Convencional y Divorcio Ulterior: Separación Convencional*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '**Seleccione la pregunta abajo**'
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -3322,13 +3360,13 @@ responses:
                     rows:
                       - id: /registro_item04_consulta
                         title: Pregunta 1
-                        description: ¿Qué es?
+                        description: 📘 ¿Qué es?
                       - id: /registro_item04_necesidad
                         title: Pregunta 2
-                        description: ¿Qué necesito?
+                        description: 📝 ¿Qué necesito?
                       - id: /registro_item04_costo
                         title: Pregunta 3
-                        description: ¿Cuánto cuesta?
+                        description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.4... CONSULTA
@@ -3339,11 +3377,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Procedimiento mediante el cual ambos cónyuges manifiestan ante la autoridad municipal su voluntad de separarse.
+                💔 Procedimiento mediante el cual ambos cónyuges manifiestan ante la autoridad municipal su voluntad de separarse.
 
                 *¿Para qué es necesario?*
 
-                La separación convencional sirve para que los cónyuges formalicen su decisión de vivir separados sin disolver inmediatamente el matrimonio.
+                📝 La separación convencional sirve para que los cónyuges formalicen su decisión de vivir separados sin disolver inmediatamente el matrimonio.
 
   # >> 4.4... NECESIDAD
   utter_registro_item04_necesidad:
@@ -3353,17 +3391,17 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud al alcalde manifestando su voluntad de separación, con DNI, dirección, firma y huella de los cónyugues.
+                1. 📝 Solicitud al alcalde manifestando su voluntad de separación, con DNI, dirección, firma y huella de los cónyugues.
 
-                2. Copia certificada del acta o de la partida de matrimonio.
+                2. 📑 Copia certificada del acta o de la partida de matrimonio.
 
-                3. Declaración jurada del último domicilio conyugal.
+                3. 🏠 Declaración jurada del último domicilio conyugal.
 
-                4. En caso de haber representantes, adjuntar un poder notarial específico registrado.
+                4. ✍️ En caso de haber representantes, adjuntar un poder notarial específico registrado.
 
-                5. Exhibición de los DNI de ambos cónyuges y de los representantes legales, si los hay.
+                5. 🆔 Exhibición de los DNI de ambos cónyuges y de los representantes legales, si los hay.
 
-                6. Indicar fecha y número de constancia de pago.
+                6. 💵 Indicar fecha y número de constancia de pago.
 
           - type: interactive
             interactive:
@@ -3390,7 +3428,7 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 372.30
+                💰 S/ 372.30
 
   # >> 4.4... DOCUMENTOS
   utter_registro_item04_documentos:
@@ -3403,13 +3441,13 @@ responses:
                 text: |
                   Se presenta una serie de documentos necesarios en casos especiales dependiendo de la opción que usted elija...
 
-                  1. En caso de no tener hijos
+                  1. 🚫 En caso de no tener hijos
 
-                  2. En caso de tener hijos menores
+                  2. 👶 En caso de tener hijos menores
 
-                  3. En caso de tener hijos mayores discapacitados
+                  3. 👵 En caso de tener hijos mayores discapacitados
 
-                  4. Requisitos relacionados con el patrimonio
+                  4. 🏠 Requisitos relacionados con el patrimonio
 
               action:
                 sections:
@@ -3442,7 +3480,7 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
+                📝 Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
 
   # >> 4.4.2... SUBNECESIDAD 02
   utter_registro_item04_subnecesidad_02:
@@ -3454,9 +3492,9 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Adjuntar copia certificada de acta de nacimiento.
+                1. 📑 Adjuntar copia certificada de acta de nacimiento.
 
-                2. Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+                2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
 
   # >> 4.4.3... SUBNECESIDAD 03
   utter_registro_item04_subnecesidad_03:
@@ -3468,11 +3506,11 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Adjuntar copia certificada de acta de nacimiento.
+                1. 📑 Adjuntar copia certificada de acta de nacimiento.
 
-                2. Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+                2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
 
-                3. Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
+                3. 🏛️ Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
 
   # >> 4.4.4... SUBNECESIDAD 04
   utter_registro_item04_subnecesidad_04:
@@ -3484,11 +3522,11 @@ responses:
               body: |
                 *¿Qué necesito?*
 
-                1. Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
+                1. 🚫 Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
 
-                2. Separación de patrimonios: Escritura pública registrada.
+                2. 🏠 Separación de patrimonios: Escritura pública registrada.
 
-                3. Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
+                3. 🔄 Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

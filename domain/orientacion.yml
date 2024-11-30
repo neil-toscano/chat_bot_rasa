@@ -19,12 +19,12 @@ responses:
               text: "🟢 Opciones de Trámite:"
             body:
               text: |
-                1. Inscripción por Sucesión Indivisa
+                1. 📜 Inscripción por Sucesión Indivisa  
 
-                2. Inscripción por Sucesión Intestada
+                2. 🏠 Inscripción por Sucesión Intestada  
 
             footer:
-              text: "**Seleccione el trámite abajo**"
+              text: "*Seleccione el trámite abajo 👇*"
 
             # >> LISTADO DE OPCIONES :
             action:
@@ -33,8 +33,8 @@ responses:
                   rows:
                     - id: "/orientacion_item01"
                       title: "Trámite 1"
-                      description: "SUCESIÓN INDIVISA"
+                      description: "📜 SUCESIÓN INDIVISA"
                     - id: "/orientacion_item02"
                       title: "Trámite 2"
-                      description: "SUCESIÓN INTESTADA"
-              button: "Opciones"
+                      description: "🏠 SUCESIÓN INTESTADA"
+              button: "Seleccionar trámite"

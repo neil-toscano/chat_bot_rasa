@@ -13,22 +13,23 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Publicación de Edicto Matrimonial tramitado en otros distritos*
 
-                  *🟢 Opciones de pregunta:*
+                  *🟢 Opciones de pregunta:*  
 
-                  1. ¿Qué es?
+                  1️. 📘¿Qué es?  
 
-                  2. ¿Qué necesito?
+                  2️. 📝¿Qué necesito?  
 
-                  3. ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: "**Seleccione la pregunta abajo**"
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
+            footer:
+              text: "*Seleccione la pregunta abajo 👇*"
 
               action:
                 sections:
@@ -53,11 +54,11 @@ responses:
             text:
               preview_url: false
               body: |
-                Es la publicación de la celebración del matrimonio en un determinado distrito, cuando el domicilio de uno de los contrayentes es distinto al distrito en el cual se consigna el domicilio del DNI.
+                  💍 Es la publicación de la celebración del matrimonio en un determinado distrito, cuando el domicilio de uno de los contrayentes es distinto al distrito en el cual se consigna el domicilio del DNI.
 
-                *¿Para qué es necesario?*
+                  *¿Para qué es necesario?*
 
-                Permite que cualquier ciudadano que conozca de la existencia de algún impedimento pueda denunciarlo.
+                  📢 Permite que cualquier ciudadano que conozca de la existencia de algún impedimento pueda denunciarlo.
 
   # >> 4.2... NECESIDAD
   utter_registro_item02_necesidad:
@@ -67,11 +68,11 @@ responses:
             text:
               preview_url: false
               body: |
-                1. Solicitud con carácter de Declaración Jurada.
+                  1. 📝 Solicitud con carácter de Declaración Jurada.
 
-                2. Copia simple del Edicto Matrimonial.
+                  2. 📑 Copia simple del Edicto Matrimonial.
 
-                3. Indicar fecha y número de constancia de pago.
+                  3. 💵 Indicar fecha y número de constancia de pago.
 
   # >> 4.2... COSTO
   utter_registro_item02_costo:
@@ -81,4 +82,4 @@ responses:
             text:
               preview_url: false
               body: |
-                S/ 44.80
+                  💰 S/ 44.80
