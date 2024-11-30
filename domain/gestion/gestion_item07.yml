@@ -14,22 +14,23 @@ responses:
         - type: interactive
           interactive:
             type: list
-            header:
-              type: text
-              text: "Consulta Trámites"
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
             body:
               text: |
                 Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
 
-                *🟢 Opciones de pregunta:*
+                *🟢 Opciones de pregunta:*  
 
-                1. ¿Qué es?
+                1️. 📘¿Qué es?  
 
-                2. ¿Qué necesito?
+                2️. 📝¿Qué necesito?  
 
-                3. ¿Cuánto cuesta el derecho de trámite?
+                3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
             footer:
-              text: "**Seleccione la pregunta abajo**"
+              text: "*Seleccione la pregunta abajo 👇*"
 
             action:
               sections:
@@ -37,13 +38,13 @@ responses:
                   rows:
                     - id: "/gestion_item07_consulta"
                       title: "Pregunta 1"
-                      description: "¿Qué es?"
+                      description: "📘 ¿Qué es?"
                     - id: "/gestion_item07_necesidad"
                       title: "Pregunta 2"
-                      description: "¿Qué necesito?"
+                      description: "📝 ¿Qué necesito?"
                     - id: "/gestion_item07_costo"
                       title: "Pregunta 3"
-                      description: "¿Cuánto cuesta?"
+                      description: "💰 ¿Cuánto cuesta?"
               button: "Opciones"
 
   # >> 2.7... CONSULTA
@@ -54,11 +55,11 @@ responses:
           text:
             preview_url: false
             body: |
-                Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades
+                🏢 Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades.
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*
 
-                Garantiza que el establecimiento cumpla con todas las normativas de seguridad críticas para minimizar riesgos y proteger a los ocupantes y visitantes.
+                ✅ Garantiza que el establecimiento cumpla con todas las normativas de seguridad críticas para minimizar riesgos y proteger a los ocupantes y visitantes.
 
   # >> 2.7... NECESIDAD
   utter_gestion_item07_necesidad:
@@ -68,31 +69,35 @@ responses:
           text:
             preview_url: true
             body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
-  
+                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+                
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+
         - type: text
           text:
             preview_url: true
             body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+                
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
         - type: text
           text:
             preview_url: false
             body: |
-                Documentos técnicos en copia simple:
+                📄 Documentos técnicos en copia simple:
 
-                1. Croquis de ubicación
+                1. 📍 Croquis de ubicación
 
-                2. Plano de arquitectura y detalle de aforo
+                2. 📐 Plano de arquitectura y detalle de aforo
 
-                3. Plano de distribución eléctrica y cargas
+                3. 💡 Plano de distribución eléctrica y cargas
 
-                4. Certificado vigente de puesta a tierra
+                4. 🔌 Certificado vigente de puesta a tierra
 
-                5. Plan de seguridad del establecimiento
+                5. 🚨 Plan de seguridad del establecimiento
 
-                6. Memoria de prueba de mantenimiento de equipos y protección contra incendios
+                6. 🔥 Memoria de prueba de mantenimiento de equipos y protección contra incendios
 
   # >> 2.7... COSTO
   utter_gestion_item07_costo:
@@ -102,4 +107,4 @@ responses:
           text:
             preview_url: false
             body: |
-                S/ 699.70
+                💰 S/ 699.70

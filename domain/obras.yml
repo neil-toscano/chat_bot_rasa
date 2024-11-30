@@ -40,7 +40,7 @@ responses:
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: "🏗️Escoge el trámite"
+                  - title: "Escoge el trámite"
                     rows:
                       - id: "/obras_item01"
                         title: "Trámite 1"

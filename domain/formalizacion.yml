@@ -83,4 +83,4 @@ responses:
                       - id: "/duplicado_resolucion_autorizacion"
                         title: "Trámite 10"
                         description: "DUPLICADO RESOLUCIÓN 📜"
-                button: "Seleccionar licencia"
+                button: "Seleccionar trámite"

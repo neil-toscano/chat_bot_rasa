@@ -14,22 +14,23 @@ responses:
         - type: interactive
           interactive:
             type: list
-            header:
-              type: text
-              text: "Consulta Trámites"
+            # header:
+            #   type: text
+            #   text: "🟢 Consulta Trámites"
             body:
               text: |
-                Haz seleccionado *Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*
+                Haz seleccionado *📋 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*  
 
-                *🟢 Opciones de pregunta:*
+                *🟢 Opciones de pregunta:*  
 
-                1. ¿Qué es?
+                1️. 📘¿Qué es?  
 
-                2. ¿Qué necesito?
+                2️. 📝¿Qué necesito?  
 
-                3. ¿Cuánto cuesta el derecho de trámite?
+                3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
             footer:
-              text: "**Seleccione la pregunta abajo**"
+              text: "*Seleccione la pregunta abajo 👇*"
 
             action:
               sections:
@@ -37,14 +38,14 @@ responses:
                   rows:
                     - id: "/gestion_item03_consulta"
                       title: "Pregunta 1"
-                      description: "¿Qué es?"
+                      description: "📘 ¿Qué es?"
                     - id: "/gestion_item03_necesidad"
                       title: "Pregunta 2"
-                      description: "¿Qué necesito?"
+                      description: "📋 ¿Qué necesito?"
                     - id: "/gestion_item03_costo"
                       title: "Pregunta 3"
-                      description: "¿Cuánto cuesta?"
-              button: "Opciones"
+                      description: "💰 ¿Cuánto cuesta?"
+              button: "Selecciona pregunta"
 
   # >> 2.3... CONSULTA
   utter_gestion_item03_consulta:
@@ -54,11 +55,11 @@ responses:
           text:
             preview_url: false
             body: |
-                Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.
+                📘 Es una inspección técnica de seguridad que se realiza en establecimientos con riesgo medio después de que han comenzado sus actividades.  
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*  
 
-                Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
+                📋 Para garantizar que el establecimiento cumpla con las normativas de seguridad y proporciona un entorno seguro para los ocupantes y visitantes.
 
   # >> 2.3... NECESIDAD
   utter_gestion_item03_necesidad:
@@ -68,13 +69,15 @@ responses:
           text:
             preview_url: true
             body: |
-                Solicitud de renovación ITSE, indicando número y fecha de pago. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
   
         - type: text
           text:
             preview_url: true
             body: |
-                Declaración jurada de cumplimiento de Seguridad en Edificaciones. \n http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
   # >> 2.3... COSTO
   utter_gestion_item03_costo:
@@ -84,4 +87,4 @@ responses:
           text:
             preview_url: false
             body: |
-                S/ 162.70
+                💰 S/ 162.70

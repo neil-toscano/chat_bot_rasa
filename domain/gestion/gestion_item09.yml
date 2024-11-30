@@ -14,22 +14,23 @@ responses:
         - type: interactive
           interactive:
             type: list
-            header:
-              type: text
-              text: "Consulta Trámites"
+            #header:
+            #  type: text
+            #  text: "Consulta Trámites"
             body:
               text: |
                 Haz seleccionado *Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas*
 
-                *🟢 Opciones de pregunta:*
+                *🟢 Opciones de pregunta:*  
 
-                1. ¿Qué es?
+                1️. 📘¿Qué es?  
 
-                2. ¿Qué necesito?
+                2️. 📝¿Qué necesito?  
 
-                3. ¿Cuánto cuesta el derecho de trámite?
+                3️. 💰¿Cuánto cuesta el derecho de trámite?  
+
             footer:
-              text: "**Seleccione la pregunta abajo**"
+              text: "*Seleccione la pregunta abajo 👇*"
 
             action:
               sections:
@@ -37,13 +38,13 @@ responses:
                   rows:
                     - id: "/gestion_item09_consulta"
                       title: "Pregunta 1"
-                      description: "¿Qué es?"
+                      description: "📘 ¿Qué es?"
                     - id: "/gestion_item09_necesidad"
                       title: "Pregunta 2"
-                      description: "¿Qué necesito?"
+                      description: "📝 ¿Qué necesito?"
                     - id: "/gestion_item09_costo"
                       title: "Pregunta 3"
-                      description: "¿Cuánto cuesta?"
+                      description: "💰 ¿Cuánto cuesta?"
               button: "Opciones"
 
   # >> 2.9... CONSULTA
@@ -54,11 +55,11 @@ responses:
           text:
             preview_url: false
             body: |
-                Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
+                🛑 Evaluación de las condiciones de seguridad para eventos públicos, deportivos y no deportivos, con una asistencia de hasta 3,000 personas.
 
-                *¿Para qué es necesario*
+                *¿Para qué es necesario?*
 
-                Asegura que el evento cumpla con las normativas de seguridad necesarias para proteger a los asistentes y gestionar riesgos durante la realización del evento.
+                ✅ Asegura que el evento cumpla con las normativas de seguridad necesarias para proteger a los asistentes y gestionar riesgos durante la realización del evento.
 
   # >> 2.9... NECESIDAD
   utter_gestion_item09_necesidad:
@@ -68,28 +69,28 @@ responses:
           text:
             preview_url: false
             body: |
-                1. Solicitud de renovación ITSE, indicando número y fecha de pago.
+                1. 📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
                 
-                2. Declaración jurada del solicitante, incluyendo datos del representante legal si aplica.
+                2. 🖋️ Declaración jurada del solicitante, incluyendo datos del representante legal si aplica.
 
-                3. Croquis del lugar donde se realizará el espectáculo
+                3. 📍 Croquis del lugar donde se realizará el espectáculo.
 
-                4. Plano del espacio con distribución del escenario y aforo.
+                4. 🗺️ Plano del espacio con distribución del escenario y aforo.
 
-                5. Descripción del evento, montaje, instalaciones eléctricas, y seguridad.
+                5. 📋 Descripción del evento, montaje, instalaciones eléctricas, y seguridad.
 
-                6. Protocolo de medición del sistema de puesta a tierra (si hay instalaciones eléctricas).
+                6. ⚡ Protocolo de medición del sistema de puesta a tierra (si hay instalaciones eléctricas).
 
-                7. Constancia de mantenimiento de extintores.
+                7. 🔥 Constancia de mantenimiento de extintores.
 
-                8. Plan de seguridad con señalización, rutas de evacuación, y zonas seguras.
+                8. 🚪 Plan de seguridad con señalización, rutas de evacuación, y zonas seguras.
 
-                9. Declaración de instalación segura de gas licuado (si aplica).
+                9. 🏭 Declaración de instalación segura de gas licuado (si aplica).
 
-                10. Memoria descriptiva de seguridad para juegos mecánicos (si se usan).
+                10. 🎢 Memoria descriptiva de seguridad para juegos mecánicos (si se usan).
 
-                11. Certificado de inspección técnica de seguridad (ITSE) si el recinto no lo ha emitido la Municipalidad.
-  
+                11. 🏛️ Certificado de inspección técnica de seguridad (ITSE) si el recinto no lo ha emitido la Municipalidad.
+
   # >> 2.9... COSTO
   utter_gestion_item09_costo:
   - custom:
@@ -98,4 +99,4 @@ responses:
           text:
             preview_url: false
             body: |
-                S/ 356.30
+                💰 S/ 356.30
