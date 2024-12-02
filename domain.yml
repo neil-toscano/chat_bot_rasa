@@ -334,12 +334,12 @@ responses:
         blocks:
           - type: image
             image:
-              id: '1551300402169056'
+              id: '1071065871158259'
               # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
               # caption: MSJL
           - type: audio
             audio:
-              id: '907450834672489'
+              id: '616219857732078'
           - type: interactive
             interactive:
               type: list
