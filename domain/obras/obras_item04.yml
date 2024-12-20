@@ -18,7 +18,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
+                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
 
                   *❓ Opciones de pregunta:*
 
@@ -93,4 +93,4 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 135.20
+                💰 *Costo del trámite:* S/ 450.30

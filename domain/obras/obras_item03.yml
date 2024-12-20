@@ -18,7 +18,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏠 Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+                  *🏠 Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
 
                   *❓ Opciones de pregunta:*
 
@@ -93,4 +93,4 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 180.20
+                💰 *Costo del trámite:* S/ 450.30

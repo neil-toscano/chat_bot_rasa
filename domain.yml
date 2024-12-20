@@ -399,7 +399,7 @@ responses:
 
                   2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
                   4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
 
@@ -1532,7 +1532,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 138.50
+                💰 S/ 142.50
   utter_gestion_item02:
     - custom:
         blocks:
@@ -1612,7 +1612,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 132.40
+                💰 S/ 136.40
   utter_gestion_item03:
     - custom:
         blocks:
@@ -1692,7 +1692,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 162.70
+                💰 S/ 166.70
   utter_gestion_item04:
     - custom:
         blocks:
@@ -1772,7 +1772,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 151.60
+                💰 S/ 155.60
   utter_gestion_item05:
     - custom:
         blocks:
@@ -1864,7 +1864,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 367.20
+                💰 S/ 371.00
   utter_gestion_item06:
     - custom:
         blocks:
@@ -1946,7 +1946,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 361.30
+                💰 S/ 374.80
   utter_gestion_item07:
     - custom:
         blocks:
@@ -2046,7 +2046,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 699.70
+                💰 S/ 703.40
   utter_gestion_item08:
     - custom:
         blocks:
@@ -2128,7 +2128,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 689.10
+                💰 S/ 707.20
   utter_gestion_item09:
     - custom:
         blocks:
@@ -2220,7 +2220,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 356.30
+                💰 S/ 359.60
   utter_gestion_item10:
     - custom:
         blocks:
@@ -2292,7 +2292,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 63.60
+                💰 S/ 67.80
   utter_obras_item01:
     - custom:
         blocks:
@@ -2448,7 +2448,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 153.20
+                💰 *Costo del trámite:* S/ 153.30
   utter_obras_item03:
     - custom:
         blocks:
@@ -2460,7 +2460,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏠 Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+                  *🏠 Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
 
                   *❓ Opciones de pregunta:*
 
@@ -2535,7 +2535,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 180.20
+                💰 *Costo del trámite:* S/ 450.30
   utter_obras_item04:
     - custom:
         blocks:
@@ -2547,7 +2547,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
+                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
 
                   *❓ Opciones de pregunta:*
 
@@ -2622,7 +2622,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 135.20
+                💰 *Costo del trámite:* S/ 450.30
   utter_obras_item05:
     - custom:
         blocks:
@@ -2796,8 +2796,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2874,8 +2874,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -2950,8 +2950,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -3203,8 +3203,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -3279,8 +3279,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
@@ -3351,8 +3351,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:

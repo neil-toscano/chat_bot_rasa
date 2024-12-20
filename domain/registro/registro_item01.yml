@@ -35,8 +35,8 @@ responses:
 
                   3️. 💰¿Cuánto cuesta el derecho de trámite?  
 
-            footer:
-              text: "*Seleccione la pregunta abajo 👇*"
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
 
               action:
                 sections:
