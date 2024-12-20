@@ -36,13 +36,13 @@ responses:
                   - title: "Escoja la pregunta"
                     rows:
                       - id: "/formalizacion_item03_riesgo_alto_que_es"
-                        title: "Trámite 1"
+                        title: "Opción 1"
                         description: "¿Qué es? 📘"
                       - id: "/formalizacion_item03_riesgo_alto_que_necesito"
-                        title: "Trámite 2"
+                        title: "Opción 2"
                         description: "¿Qué necesito? 📝"
                       - id: "/formalizacion_item03_riesgo_alto_cuanto_cuesta"
-                        title: "Trámite 3"
+                        title: "Opción 3"
                         description: "¿Cuánto cuesta? 💰"
                 button: "Opciones"
 
@@ -107,13 +107,13 @@ responses:
                   - title: "Seleccione actividad"
                     rows:
                       - id: "/formalizacion_item03_servicio_de_salud"
-                        title: "Trámite 1"
+                        title: "Opción 1"
                         description: "Salud"
                       - id: "/formalizacion_item03_actividad_requiere_autorizacion"
-                        title: "Trámite 2"
+                        title: "Opción 2"
                         description: "Autorización"
                       - id: "/formalizacion_item03_monumento_del_patrimonio_cultural"
-                        title: "Trámite 3"
+                        title: "Opción 3"
                         description: "Patrimonio cultural"
                 button: "Seleccione actividad"
 

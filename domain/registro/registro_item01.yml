@@ -33,10 +33,10 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: "*Seleccione la pregunta abajo 👇*"
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
 
               action:
                 sections:
@@ -61,11 +61,11 @@ responses:
             text:
               preview_url: false
               body: |
-                  💍 Este es el proceso administrativo mediante el cual una pareja solicita casarse en la Municipalidad, de acuerdo con lo que establece el Código Civil.
+                💍 Este es el proceso administrativo mediante el cual una pareja solicita casarse en la Municipalidad, de acuerdo con lo que establece el Código Civil.
 
-                  *¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                  📜 Esta unión otorga derechos y deberes legales a los cónyuges, como en temas de herencia, propiedad y protección legal, además de oficializar la relación ante el Estado y la sociedad.
+                📜 Esta unión otorga derechos y deberes legales a los cónyuges, como en temas de herencia, propiedad y protección legal, además de oficializar la relación ante el Estado y la sociedad.
 
   # >> 4.1... NECESIDAD
   utter_registro_item01_necesidad:
@@ -75,21 +75,21 @@ responses:
             text:
               preview_url: false
               body: |
-                  1. 📝 Solicitud simple o Formato de solicitud.
+                1. 📝 Solicitud simple o Formato de solicitud.
 
-                  2. 🆔 Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
+                2. 🆔 Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
 
-                  3. 🍼 Copia certificada de Partida de nacimiento de los contrayentes.
+                3. 🍼 Copia certificada de Partida de nacimiento de los contrayentes.
 
-                  4. 📝 Declaración jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
+                4. 📝 Declaración jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
 
-                  5. 💉 Certificado médico pre-nupcial y constancia de charlas de Consejería, antigüedad no mayor a 30 días.
+                5. 💉 Certificado médico pre-nupcial y constancia de charlas de Consejería, antigüedad no mayor a 30 días.
 
-                  6. 🛑 Declaración Jurada de no tener impedimento para contraer matrimonio, de los contrayentes.
+                6. 🛑 Declaración Jurada de no tener impedimento para contraer matrimonio, de los contrayentes.
 
-                  7. 🏡 Declaración jurada de domicilio (uno debe residir en el distrito).
+                7. 🏡 Declaración jurada de domicilio (uno debe residir en el distrito).
 
-                  8. 💰 Indicar la fecha y número de constancia de pago.
+                8. 💰 Indicar la fecha y número de constancia de pago.
 
           - type: interactive
             interactive:
@@ -116,12 +116,12 @@ responses:
             text:
               preview_url: false
               body: |
-                  1. 🏢 En el local municipal - S/ 256.10
+                1. 🏢 En el local municipal - S/ 256.10
 
-                  2. 🏘️ Fuera del local municipal (dentro del distrito) - S/ 332.10
+                2. 🏘️ Fuera del local municipal (dentro del distrito) - S/ 332.10
 
-                  3. 🌍 Fuera del local municipal (fuera del distrito) - S/ 432.10
-    
+                3. 🌍 Fuera del local municipal (fuera del distrito) - S/ 432.10
+
   # >> 4.1... REQUISITOS
   utter_registro_item01_requisitos:
     - custom:
@@ -180,15 +180,15 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. 📜 Copia certificada de anterior matrimonio con inscripción de divorcio.
+                1. 📜 Copia certificada de anterior matrimonio con inscripción de divorcio.
 
-                  2. 🆔 DNI actualizado.
+                2. 🆔 DNI actualizado.
 
-                  3. 📄 Declaración jurada de no administrar bienes de hijos menores.
+                3. 📄 Declaración jurada de no administrar bienes de hijos menores.
 
-                  4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+                4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
 
   # >> 4.4.2... SUBNECESIDAD 02
   utter_registro_item01_subnecesidad_02:
@@ -198,15 +198,15 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. ⚰️ Copia certificada de acta de defunción de cónyuge fallecido.
+                1. ⚰️ Copia certificada de acta de defunción de cónyuge fallecido.
 
-                  2. 🆔 DNI actualizado.
+                2. 🆔 DNI actualizado.
 
-                  3. 📄 Declaración jurada de no administrar bienes de hijos menores.
+                3. 📄 Declaración jurada de no administrar bienes de hijos menores.
 
-                  4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
+                4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
 
   # >> 4.4.3... SUBNECESIDAD 03
   utter_registro_item01_subnecesidad_03:
@@ -216,15 +216,15 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. 🌏 Acta de nacimiento visado por el consulado y legalizado por el MRE.
+                1. 🌏 Acta de nacimiento visado por el consulado y legalizado por el MRE.
 
-                  2. 🛂 Copia y original del pasaporte y/o carné de extranjería.
+                2. 🛂 Copia y original del pasaporte y/o carné de extranjería.
 
-                  3. 💍 Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
+                3. 💍 Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
 
-                  4. 📑 Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
+                4. 📑 Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
 
   # >> 4.4.4... SUBNECESIDAD 04
   utter_registro_item01_subnecesidad_04:
@@ -234,15 +234,15 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. 📝 Poder por escritura pública con facultades específicas inscrito en registros públicos.
+                1. 📝 Poder por escritura pública con facultades específicas inscrito en registros públicos.
 
-                  2. 🌍 Para poder otorgado en el Extranjero, presentar copia visada por el Cónsul Peruano, legalizado por el MRE.
+                2. 🌍 Para poder otorgado en el Extranjero, presentar copia visada por el Cónsul Peruano, legalizado por el MRE.
 
-                  3. ⏳ Realizarse dentro de los seis (6) meses de otorgado el poder.
+                3. ⏳ Realizarse dentro de los seis (6) meses de otorgado el poder.
 
-                  4. 🆔 Exhibición del Documento Nacional de Identidad del apoderado.
+                4. 🆔 Exhibición del Documento Nacional de Identidad del apoderado.
 
   # >> 4.1.5... SUBNECESIDAD 05
   utter_registro_item01_subnecesidad_05:
@@ -252,9 +252,9 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  📑 Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
+                📑 Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
 
   # >> 4.1.6... SUBNECESIDAD 06
   utter_registro_item01_subnecesidad_06:
@@ -264,6 +264,6 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  🧑‍🦽 Copia del Certificado de Discapacidad, expedido conforme a Ley.
+                🧑‍🦽 Copia del Certificado de Discapacidad, expedido conforme a Ley.

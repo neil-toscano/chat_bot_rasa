@@ -38,13 +38,13 @@ responses:
                   - title: "Escoja la pregunta"
                     rows:
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_que_es"
-                        title: "Trámite 1"
+                        title: "Opción 1"
                         description: "¿Qué es? 📘"
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito"
-                        title: "Trámite 2"
+                        title: "Opción 2"
                         description: "¿Qué necesito? 📝"
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta"
-                        title: "Trámite 3"
+                        title: "Opción 3"
                         description: "¿Cuánto cuesta? 💰"
                 button: "Opciones"
 
@@ -106,13 +106,13 @@ responses:
                   - title: "Seleccione actividad"
                     rows:
                       - id: "/servicio_de_salud"
-                        title: "Trámite 1"
+                        title: "Opción 1"
                         description: "Salud"
                       - id: "/actividad_requiere_autorizacion"
-                        title: "Trámite 2"
+                        title: "Opción 2"
                         description: "Autorización"
                       - id: "/monumento_del_patrimonio_cultural"
-                        title: "Trámite 3"
+                        title: "Opción 3"
                         description: "Patrimonio cultural"
                 button: "Seleccione actividad"
   utter_servicio_de_salud:

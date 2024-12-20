@@ -30,7 +30,7 @@ stories:
     steps:
       - intent: registro_item01_requisitos
       - action: utter_registro_item01_requisitos
-  
+
   # >> 4.1.1... STORIES - SUBNECESIDAD 01
   - story: matrimonio civil subnecesidad uno
     steps:

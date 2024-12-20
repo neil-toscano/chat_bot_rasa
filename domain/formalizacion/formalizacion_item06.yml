@@ -33,13 +33,13 @@ responses:
                   - title: "Escoja la pregunta"
                     rows:
                       - id: "/formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es"
-                        title: "Trámite 1"
+                        title: "Opción 1"
                         description: "¿Qué es? 📘"
                       - id: "/formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito"
-                        title: "Trámite 2"
+                        title: "Opción 2"
                         description: "¿Qué necesito? 📝"
                       - id: "/formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta"
-                        title: "Trámite 3"
+                        title: "Opción 3"
                         description: "¿Cuánto cuesta? 💰"
                 button: "Opciones"
 
