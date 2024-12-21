@@ -82,6 +82,10 @@ intents:
   - formalizacion_item09_duplicado_certificado_que_es
   - formalizacion_item09_duplicado_certificado_que_necesito
   - formalizacion_item09_duplicado_certificado_cuanto_cuesta
+  - formalizacion_item10_duplicado_resolucion
+  - formalizacion_item10_duplicado_resolucion_que_es
+  - formalizacion_item10_duplicado_resolucion_que_necesito
+  - formalizacion_item10_duplicado_resolucion_cuanto_cuesta
   - gestion_item01_consulta
   - gestion_item01_necesidad
   - gestion_item01_costo
@@ -202,43 +206,43 @@ responses:
                   10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
 
               footer:
-                text: '*Seleccione la licencia abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
               action:
                 sections:
-                  - title: Escoja trámite
+                  - title: Escoja Opción
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo
-                        title: Trámite 1
+                        title: Opción 1
                         description: RIESGO BAJO 🟢
                       - id: /formalizacion_item02_edificacion_riesgo_medio
-                        title: Trámite 2
+                        title: Opción 2
                         description: RIESGO MEDIO 🟡
                       - id: /formalizacion_item03_edificacion_riesgo_alto
-                        title: Trámite 3
+                        title: Opción 3
                         description: RIESGO ALTO 🔴
                       - id: /formalizacion_item04_edificacion_riesgo_muy_alto
-                        title: Trámite 4
+                        title: Opción 4
                         description: RIESGO MUY ALTO ⚠️
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento
-                        title: Trámite 5
+                        title: Opción 5
                         description: TRANSFERENCIA O CAMBIO 🔄
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro
-                        title: Trámite 6
+                        title: Opción 6
                         description: CAMBIO DE GIRO 🔃
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche
-                        title: Trámite 7
+                        title: Opción 7
                         description: PUBLICIDAD AFICHE 🖼️
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras
-                        title: Trámite 8
+                        title: Opción 8
                         description: PUBLICIDAD LETRAS 🔤
-                      - id: /duplicado_certificado_funcionamiento
-                        title: Trámite 9
+                      - id: /formalizacion_item09_duplicado_certificado
+                        title: Opción 9
                         description: DUPLICADO 📄
-                      - id: /duplicado_resolucion_autorizacion
-                        title: Trámite 10
+                      - id: /formalizacion_item10_duplicado_resolucion
+                        title: Opción 10
                         description: DUPLICADO RESOLUCIÓN 📜
-                button: Seleccionar trámite
+                button: Seleccionar opción
   utter_gestion:
     - custom:
         blocks:
@@ -256,7 +260,7 @@ responses:
 
                 4. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio**  
 
-                5. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
+                5. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**
 
           - type: interactive
             interactive:
@@ -271,47 +275,47 @@ responses:
 
                   9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta **3,000 personas**  
 
-                  10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones  
+                  10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
 
               footer:
-                text: '*Seleccione el trámite abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
-            # >> LISTADO DE OPCIONES :
+              # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: Escoge la opción
                     rows:
                       - id: /gestion_item01
-                        title: Trámite 1
+                        title: Opción 1
                         description: 🏢 INSPECCIÓN RIESGO BAJO
                       - id: /gestion_item02
-                        title: Trámite 2
+                        title: Opción 2
                         description: 🔄 RENOVACIÓN RIESGO BAJO
                       - id: /gestion_item03
-                        title: Trámite 3
+                        title: Opción 3
                         description: 🏢 INSPECCIÓN RIESGO MEDIO
                       - id: /gestion_item04
-                        title: Trámite 4
+                        title: Opción 4
                         description: 🔄 RENOVACIÓN RIESGO MEDIO
                       - id: /gestion_item05
-                        title: Trámite 5
+                        title: Opción 5
                         description: 🏢 INSPECCIÓN RIESGO ALTO
                       - id: /gestion_item06
-                        title: Trámite 6
+                        title: Opción 6
                         description: 🔄 RENOVACIÓN RIESGO ALTO
                       - id: /gestion_item07
-                        title: Trámite 7
+                        title: Opción 7
                         description: 🏢 INSPECCIÓN RIESGO MUY ALTO
                       - id: /gestion_item08
-                        title: Trámite 8
+                        title: Opción 8
                         description: 🔄 RENOVACIÓN RIESGO MUY ALTO
                       - id: /gestion_item09
-                        title: Trámite 9
+                        title: Opción 9
                         description: 🏟️ EVALUACIÓN
                       - id: /gestion_item10
-                        title: Trámite 10
+                        title: Opción 10
                         description: 📄 DUPLICADO
-                button: Seleccionar trámite
+                button: Seleccionar Opción
   utter_animo:
     - text: Siento escuchar eso, aquí hay algo que te va dar ánimo
       image: https://i.imgur.com/nGF1K8f.jpg
@@ -399,7 +403,7 @@ responses:
 
                   2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
                   4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
@@ -408,32 +412,32 @@ responses:
                   6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
 
               footer:
-                text: '*Seleccione el trámite abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: 'Escoge la '
                     rows:
                       - id: /obras_item01
-                        title: Trámite 1
+                        title: Opción 1
                         description: 📝 CERTIFICADO
                       - id: /obras_item02
-                        title: Trámite 2
+                        title: Opción 2
                         description: ✏️ VISACIÓN
                       - id: /obras_item03
-                        title: Trámite 3
+                        title: Opción 3
                         description: 🛠️ LICENCIA CONSTRUCCIÓN
                       - id: /obras_item04
-                        title: Trámite 4
+                        title: Opción 4
                         description: 🏚️ LICENCIA DEMOLICIÓN
                       - id: /obras_item05
-                        title: Trámite 5
+                        title: Opción 5
                         description: 🤝 COMPRA-VENTA
                       - id: /obras_item06
-                        title: Trámite 6
+                        title: Opción 6
                         description: 📂 INDEPENDIZACIÓN
-                button: Seleccionar trámite
+                button: Seleccionar opción
   utter_orientacion:
     - custom:
         blocks:
@@ -442,28 +446,28 @@ responses:
               type: list
               header:
                 type: text
-                text: '🟢 Opciones de Trámite:'
+                text: '🟢 Opciones de Inscripción:'
               body:
                 text: |
                   1. 📜 Inscripción por Sucesión Indivisa  
 
-                  2. 🏠 Inscripción por Sucesión Intestada  
+                  2. 🏠 Inscripción por Sucesión Intestada
 
               footer:
-                text: '*Seleccione el trámite abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
-            # >> LISTADO DE OPCIONES :
+              # >> LISTADO DE OPCIONES :
               action:
                 sections:
                   - title: Escoge el trámite
                     rows:
                       - id: /orientacion_item01
-                        title: Trámite 1
+                        title: Opción 1
                         description: 📜 SUCESIÓN INDIVISA
                       - id: /orientacion_item02
-                        title: Trámite 2
+                        title: Opción 2
                         description: 🏠 SUCESIÓN INTESTADA
-                button: Seleccionar trámite
+                button: Seleccionar Opción
   utter_registro:
     - custom:
         blocks:
@@ -481,29 +485,29 @@ responses:
 
                   3. 🔄 Reprogramación de fecha y hora de Ceremonia Matrimonial  
 
-                  4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional  
+                  4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional
 
               footer:
-                text: '*Seleccione el trámite abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
-            # >> LISTADO DE OPCIONES :
+              # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoge el trámite
+                  - title: Escoga la Opción
                     rows:
                       - id: /registro_item01
-                        title: Trámite 1
+                        title: Opción 1
                         description: 💍 MATRIMONIO
                       - id: /registro_item02
-                        title: Trámite 2
+                        title: Opción 2
                         description: 📜 PUBLICACIÓN
                       - id: /registro_item03
-                        title: Trámite 3
+                        title: Opción 3
                         description: 🔄 REPROGRAMACIÓN
                       - id: /registro_item04
-                        title: Trámite 4
+                        title: Opción 4
                         description: 💔 SEPARACIÓN
-                button: Selecciona trámite
+                button: Selecciona Opción
   utter_licencia_funcionamiento_edificacion_riesgo_bajo:
     - custom:
         blocks:
@@ -532,13 +536,13 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
@@ -600,13 +604,13 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /servicio_de_salud
-                        title: Trámite 1
+                        title: Opción 1
                         description: Salud
                       - id: /actividad_requiere_autorizacion
-                        title: Trámite 2
+                        title: Opción 2
                         description: Autorización
                       - id: /monumento_del_patrimonio_cultural
-                        title: Trámite 3
+                        title: Opción 3
                         description: Patrimonio cultural
                 button: Seleccione actividad
   utter_servicio_de_salud:
@@ -671,17 +675,17 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item02_riesgo_medio_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item02_riesgo_medio_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item02_riesgo_medio_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========***=======================
+  # ==========***=======================
 
   utter_formalizacion_item02_riesgo_medio_que_es:
     - custom:
@@ -736,13 +740,13 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /formalizacion_item02_servicio_de_salud
-                        title: Trámite 1
+                        title: Opción 1
                         description: Salud
                       - id: /formalizacion_item02_actividad_requiere_autorizacion
-                        title: Trámite 2
+                        title: Opción 2
                         description: Autorización
                       - id: /formalizacion_item02_monumento_del_patrimonio_cultural
-                        title: Trámite 3
+                        title: Opción 3
                         description: Patrimonio cultural
                 button: Seleccione actividad
 
@@ -781,6 +785,7 @@ responses:
               preview_url: false
               body: |
                 💵 S/ 253.40
+
 # =============================================
   utter_formalizacion_item03_edificacion_riesgo_alto:
     - custom:
@@ -807,13 +812,13 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item03_riesgo_alto_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item03_riesgo_alto_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item03_riesgo_alto_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
@@ -878,13 +883,13 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /formalizacion_item03_servicio_de_salud
-                        title: Trámite 1
+                        title: Opción 1
                         description: Salud
                       - id: /formalizacion_item03_actividad_requiere_autorizacion
-                        title: Trámite 2
+                        title: Opción 2
                         description: Autorización
                       - id: /formalizacion_item03_monumento_del_patrimonio_cultural
-                        title: Trámite 3
+                        title: Opción 3
                         description: Patrimonio cultural
                 button: Seleccione actividad
 
@@ -950,13 +955,13 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item04_riesgo_muy_alto_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item04_riesgo_muy_alto_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
@@ -1021,13 +1026,13 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /formalizacion_item04_servicio_de_salud
-                        title: Trámite 1
+                        title: Opción 1
                         description: Salud
                       - id: /formalizacion_item04_actividad_requiere_autorizacion
-                        title: Trámite 2
+                        title: Opción 2
                         description: Autorización
                       - id: /formalizacion_item04_monumento_del_patrimonio_cultural
-                        title: Trámite 3
+                        title: Opción 3
                         description: Patrimonio cultural
                 button: Seleccione actividad
 
@@ -1093,13 +1098,13 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
@@ -1172,13 +1177,13 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
@@ -1245,17 +1250,17 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========***=======================
+  # ==========***=======================
 
   utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es:
     - custom:
@@ -1289,7 +1294,6 @@ responses:
                 g. 🏛️ Aprobación del Ministerio de Cultura si el elemento está en una zona protegida
                 h. 📑 En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
 
-
   utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta:
     - custom:
         blocks:
@@ -1298,7 +1302,6 @@ responses:
               preview_url: false
               body: |
                 💵 S/ 119.00
-
 
 # =============================================
   utter_formalizacion_item08_autorizacion_publicidad_exterior_letras:
@@ -1326,17 +1329,17 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========***=======================
+  # ==========***=======================
 
   utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es:
     - custom:
@@ -1348,7 +1351,6 @@ responses:
                 📄Es una autorización para instalar elementos de publicidad exterior sencillos (letras recortadas, letreros, placas y toldos) en bienes de dominio privado.
                 *¿Para qué es necesario?*
                 a.Cumplir con las normativas municipales y permite a los establecimientos colocar publicidad visible en sus fachadas, vinculada a su licencia de funcionamiento.
-
 
   utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito:
     - custom:
@@ -1373,7 +1375,6 @@ responses:
                 g. 🏛️ Aprobación del Ministerio de Cultura si el elemento está en una zona protegida
                 h. 📑 En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
 
-
   utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta:
     - custom:
         blocks:
@@ -1382,7 +1383,6 @@ responses:
               preview_url: false
               body: |
                 💵 S/ 119.00
-
 
 # =============================================
   utter_formalizacion_item09_duplicado_certificado:
@@ -1410,17 +1410,17 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item09_duplicado_certificado_que_es
-                        title: Trámite 1
+                        title: Opción 1
                         description: ¿Qué es? 📘
                       - id: /formalizacion_item09_duplicado_certificado_que_necesito
-                        title: Trámite 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📝
                       - id: /formalizacion_item09_duplicado_certificado_cuanto_cuesta
-                        title: Trámite 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💰
                 button: Opciones
 
-# ==========***=======================
+  # ==========***=======================
 
   utter_formalizacion_item09_duplicado_certificado_que_es:
     - custom:
@@ -1430,7 +1430,6 @@ responses:
               preview_url: false
               body: |
                 📄Un servicio exclusivo a través del cual, el titular de una Licencia de Funcionamiento puede acceder a un duplicado del Certificado de Licencia de Funcionamiento, en casos de pérdida o deterioro.
-
 
   utter_formalizacion_item09_duplicado_certificado_que_necesito:
     - custom:
@@ -1451,6 +1450,71 @@ responses:
               body: |
                 💵 S/ 78.10
 
+# =============================================
+  utter_formalizacion_item10_duplicado_resolucion:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado duplicación de la resolución de autorización.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item10_duplicado_resolucion_que_es
+                        title: Opción 1
+                        description: ¿Qué es? 📘
+                      - id: /formalizacion_item10_duplicado_resolucion_que_necesito
+                        title: Opción 2
+                        description: ¿Qué necesito? 📝
+                      - id: /formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+                        title: Opción 3
+                        description: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========***=======================
+
+  utter_formalizacion_item10_duplicado_resolucion_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Es un duplicado del documento que autoriza la instalación de elementos de publicidad exterior (como letreros o toldos) en propiedades privadas.
+
+  utter_formalizacion_item10_duplicado_resolucion_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 🗂️ Solicitud simple con el número de Resolución
+                b. 📅 Indicar fecha y número de constancia de pago
+
+  utter_formalizacion_item10_duplicado_resolucion_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 77.20
 
 # =============================================
   utter_gestion_item01:
@@ -1532,7 +1596,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 138.50
+                💰 S/ 142.50
   utter_gestion_item02:
     - custom:
         blocks:
@@ -1612,7 +1676,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 132.40
+                💰 S/ 136.40
   utter_gestion_item03:
     - custom:
         blocks:
@@ -1692,7 +1756,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 162.70
+                💰 S/ 166.70
   utter_gestion_item04:
     - custom:
         blocks:
@@ -1772,7 +1836,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 151.60
+                💰 S/ 155.60
   utter_gestion_item05:
     - custom:
         blocks:
@@ -1864,7 +1928,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 367.20
+                💰 S/ 371.00
   utter_gestion_item06:
     - custom:
         blocks:
@@ -1946,7 +2010,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 361.30
+                💰 S/ 374.80
   utter_gestion_item07:
     - custom:
         blocks:
@@ -2046,7 +2110,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 699.70
+                💰 S/ 703.40
   utter_gestion_item08:
     - custom:
         blocks:
@@ -2128,7 +2192,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 689.10
+                💰 S/ 707.20
   utter_gestion_item09:
     - custom:
         blocks:
@@ -2220,7 +2284,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 356.30
+                💰 S/ 359.60
   utter_gestion_item10:
     - custom:
         blocks:
@@ -2292,7 +2356,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 S/ 63.60
+                💰 S/ 67.80
   utter_obras_item01:
     - custom:
         blocks:
@@ -2314,20 +2378,20 @@ responses:
 
                   3. 💵¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '*Seleccione la pregunta abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
               action:
                 sections:
-                  - title: Escoge la pregunta
+                  - title: Escoge la opción
                     rows:
                       - id: /obras_item01_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: ¿Qué es? 📄
                       - id: /obras_item01_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: ¿Qué necesito? 📋
                       - id: /obras_item01_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
@@ -2460,7 +2524,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏠 Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+                  *🏠 Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
 
                   *❓ Opciones de pregunta:*
 
@@ -2547,7 +2611,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad A: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
+                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
 
                   *❓ Opciones de pregunta:*
 
@@ -2801,16 +2865,16 @@ responses:
 
               action:
                 sections:
-                  - title: Escoge la pregunta
+                  - title: Escoga la opción
                     rows:
                       - id: /orientacion_item01_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: 📘 ¿Qué es?
                       - id: /orientacion_item01_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: 📝¿Qué necesito?
                       - id: /orientacion_item01_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
@@ -2875,20 +2939,20 @@ responses:
                   3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
-                text: '*Seleccione la pregunta abajo 👇*'
+                text: '*Seleccione la opción abajo 👇*'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /orientacion_item02_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: ¿Qué es?
                       - id: /orientacion_item02_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: ¿Qué necesito?
                       - id: /orientacion_item02_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta?
                 button: Opciones
 
@@ -2958,13 +3022,13 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item01_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: 📘 ¿Qué es?
                       - id: /registro_item01_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: 📝 ¿Qué necesito?
                       - id: /registro_item01_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: 💰¿Cuánto cuesta?
                 button: Opciones
 
@@ -3201,23 +3265,23 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item02_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: ¿Qué es?
                       - id: /registro_item02_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: ¿Qué necesito?
                       - id: /registro_item02_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: ¿Cuánto cuesta?
                 button: Opciones
 
@@ -3277,23 +3341,23 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item03_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: 📘 ¿Qué es?
                       - id: /registro_item03_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: 📋 ¿Qué necesito?
                       - id: /registro_item03_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
@@ -3349,23 +3413,23 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: '*Seleccione la pregunta abajo 👇*'
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item04_consulta
-                        title: Pregunta 1
+                        title: Opción 1
                         description: 📘 ¿Qué es?
                       - id: /registro_item04_necesidad
-                        title: Pregunta 2
+                        title: Opción 2
                         description: 📝 ¿Qué necesito?
                       - id: /registro_item04_costo
-                        title: Pregunta 3
+                        title: Opción 3
                         description: 💰 ¿Cuánto cuesta?
                 button: Opciones
 

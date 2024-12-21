@@ -1,29 +1,26 @@
 version: "3.1"
 
 stories:
-# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO MEDIO:
-- story: duplicacion del certificado licencia
-  steps:
-  - intent: formalizacion_item09_duplicado_certificado
-  - action: utter_formalizacion_item09_duplicado_certificado
+  # >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO MEDIO:
+  - story: duplicacion del certificado licencia
+    steps:
+      - intent: formalizacion_item09_duplicado_certificado
+      - action: utter_formalizacion_item09_duplicado_certificado
 
-# >> 1.1... STORIES - CONSULTA
-- story: duplicacion del certificado licencia que es
-  steps:
-  - intent: formalizacion_item09_duplicado_certificado_que_es
-  - action: utter_formalizacion_item09_duplicado_certificado_que_es
+  # >> 1.1... STORIES - CONSULTA
+  - story: duplicacion del certificado licencia que es
+    steps:
+      - intent: formalizacion_item09_duplicado_certificado_que_es
+      - action: utter_formalizacion_item09_duplicado_certificado_que_es
 
-# >> 1.1... STORIES - NECESIDAD
-- story: duplicacion del certificado licencia que necesito
-  steps:
-  - intent: formalizacion_item09_duplicado_certificado_que_necesito
-  - action: utter_formalizacion_item09_duplicado_certificado_que_necesito
+  # >> 1.1... STORIES - NECESIDAD
+  - story: duplicacion del certificado licencia que necesito
+    steps:
+      - intent: formalizacion_item09_duplicado_certificado_que_necesito
+      - action: utter_formalizacion_item09_duplicado_certificado_que_necesito
 
-
-
-
-# >> 1.1... STORIES - CUANTO CUESTA
-- story: duplicacion del certificado licencia cuanto cuesta
-  steps:
-  - intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
-  - action: utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta
+  # >> 1.1... STORIES - CUANTO CUESTA
+  - story: duplicacion del certificado licencia cuanto cuesta
+    steps:
+      - intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
+      - action: utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta

@@ -22,6 +22,7 @@ nlu:
 - intent: saludo
   examples: |
     - hola
+    - hola señor
     - qué tal
     - buenos días
     - buenas tardes
@@ -36,6 +37,9 @@ nlu:
     - saludos
     - hola amigo
     - hola, buenas
+    - hi
+    - hello
+    - how are you
 
 # >> DESPEDIDA :
 - intent: despedida
@@ -549,8 +553,8 @@ nlu:
     - Cuál es el costo de un duplicado de certificado de funcionamiento
     - Precio para duplicado de licencia de funcionamiento
 
-# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION :
-- intent: formalizacion_item10_duplicado_resolucion_autorizacion
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION :
+- intent: formalizacion_item10_duplicado_resolucion
   examples: |
     - Solicitud de duplicado de la resolución de autorización para publicidad exterior
     - Obtener duplicado de la resolución de autorización para ubicación de elemento publicitario
@@ -558,8 +562,8 @@ nlu:
     - Duplicado de mi resolución de autorización para publicidad exterior
     - Cómo solicitar un duplicado de la resolución de autorización para publicidad exterior
 
-# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION :
-- intent: formalizacion_item10_duplicado_resolucion_autorizacion
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION QUE ES :
+- intent: formalizacion_item10_duplicado_resolucion_que_es
   examples: |
     - Qué es el duplicado de la resolución de autorización para publicidad exterior
     - Para qué sirve un duplicado de la resolución de autorización para publicidad exterior
@@ -567,8 +571,8 @@ nlu:
     - En qué consiste la reposición de la resolución de autorización para publicidad exterior
     - Qué cubre el duplicado de la resolución de autorización para publicidad exterior
 
-# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION QUE NECESITO :
-- intent: formalizacion_item10_duplicado_resolucion_autorizacion_que_necesito
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION QUE NECESITO :
+- intent: formalizacion_item10_duplicado_resolucion_que_necesito
   examples: |
     - Qué necesito para solicitar un duplicado de la resolución de autorización para publicidad exterior
     - Requisitos para duplicado de la resolución de autorización de publicidad exterior
@@ -576,8 +580,8 @@ nlu:
     - Qué se requiere para la reposición de resolución de autorización para publicidad exterior
     - Requisitos para pedir un duplicado de la resolución de autorización para publicidad exterior
 
-# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION AUTORIZACION CUANTO CUESTA :
-- intent: formalizacion_item10_duplicado_resolucion_autorizacion_cuanto_cuesta
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION CUANTO CUESTA :
+- intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
   examples: |
     - Cuánto cuesta el duplicado de la resolución de autorización para publicidad exterior
     - Precio para obtener duplicado de resolución de autorización para publicidad exterior

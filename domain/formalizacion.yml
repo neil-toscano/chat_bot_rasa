@@ -47,7 +47,7 @@ responses:
                   10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
 
               footer:
-                text: "*Seleccione la licencia abajo 👇*"
+                text: "*Seleccione la opción abajo 👇*"
 
               action:
                 sections:
@@ -77,10 +77,10 @@ responses:
                       - id: "/formalizacion_item08_autorizacion_publicidad_exterior_letras"
                         title: "Opción 8"
                         description: "PUBLICIDAD LETRAS 🔤"
-                      - id: "/duplicado_certificado_funcionamiento"
+                      - id: "/formalizacion_item09_duplicado_certificado"
                         title: "Opción 9"
                         description: "DUPLICADO 📄"
-                      - id: "/duplicado_resolucion_autorizacion"
+                      - id: "/formalizacion_item10_duplicado_resolucion"
                         title: "Opción 10"
                         description: "DUPLICADO RESOLUCIÓN 📜"
                 button: "Seleccionar opción"

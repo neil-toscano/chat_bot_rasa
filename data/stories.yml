@@ -48,6 +48,12 @@ stories:
   - intent: negacion
   - action: utter_despedida
 
+# >> DESPEDIDA PATH :
+- story: despedida path
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
   steps:
@@ -359,6 +365,30 @@ stories:
   steps:
   - intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
   - action: utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta
+
+# >> DUPLICACION DE LA RESOLUCION DE AUTORIZACION :
+- story: duplicacion de la resolucion de autorizacion
+  steps:
+  - intent: formalizacion_item10_duplicado_resolucion
+  - action: utter_formalizacion_item10_duplicado_resolucion
+
+# >> DUPLICACION DEL CERTIFICADO DE RESOLUCIÓN QUE ES :
+- story: duplicacion del certificado de resolución que es
+  steps:
+  - intent: formalizacion_item10_duplicado_resolucion_que_es
+  - action: utter_formalizacion_item10_duplicado_resolucion_que_es
+
+# >> DUPLICACION DEL CERTIFICADO RESOLUCION QUE NECESITO :
+- story: duplicacion del certificado resolucion que necesito
+  steps:
+  - intent: formalizacion_item10_duplicado_resolucion_que_necesito
+  - action: utter_formalizacion_item10_duplicado_resolucion_que_necesito
+
+# >> DUPLICACION DEL CERTIFICADO RESOLUCION CUANTO CUESTA :
+- story: duplicacion del certificado resolucion cuanto cuesta
+  steps:
+  - intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+  - action: utter_formalizacion_item10_duplicado_resolucion_cuanto_cuesta
 
 # >> INSPECCION RIESGO BAJO :
 - story: inspeccion riesgo bajo

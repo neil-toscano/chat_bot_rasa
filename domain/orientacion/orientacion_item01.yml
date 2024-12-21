@@ -33,16 +33,16 @@ responses:
 
               action:
                 sections:
-                  - title: "Escoge la pregunta"
+                  - title: "Escoga la opción"
                     rows:
                       - id: "/orientacion_item01_consulta"
-                        title: "Pregunta 1"
+                        title: "Opción 1"
                         description: "📘 ¿Qué es?"
                       - id: "/orientacion_item01_necesidad"
-                        title: "Pregunta 2"
+                        title: "Opción 2"
                         description: "📝¿Qué necesito?"
                       - id: "/orientacion_item01_costo"
-                        title: "Pregunta 3"
+                        title: "Opción 3"
                         description: "💰 ¿Cuánto cuesta?"
                 button: "Opciones"
 

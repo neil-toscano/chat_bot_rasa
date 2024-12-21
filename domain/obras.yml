@@ -26,7 +26,7 @@ responses:
 
                   2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
 
-                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
 
                   4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
@@ -35,29 +35,29 @@ responses:
                   6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
 
               footer:
-                text: "*Seleccione el trámite abajo 👇*"
+                text: "*Seleccione la opción abajo 👇*"
 
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: "Escoge el trámite"
+                  - title: "Escoge la "
                     rows:
                       - id: "/obras_item01"
-                        title: "Trámite 1"
+                        title: "Opción 1"
                         description: "📝 CERTIFICADO"
                       - id: "/obras_item02"
-                        title: "Trámite 2"
+                        title: "Opción 2"
                         description: "✏️ VISACIÓN"
                       - id: "/obras_item03"
-                        title: "Trámite 3"
+                        title: "Opción 3"
                         description: "🛠️ LICENCIA CONSTRUCCIÓN"
                       - id: "/obras_item04"
-                        title: "Trámite 4"
+                        title: "Opción 4"
                         description: "🏚️ LICENCIA DEMOLICIÓN"
                       - id: "/obras_item05"
-                        title: "Trámite 5"
+                        title: "Opción 5"
                         description: "🤝 COMPRA-VENTA"
                       - id: "/obras_item06"
-                        title: "Trámite 6"
+                        title: "Opción 6"
                         description: "📂 INDEPENDIZACIÓN"
-                button: "Seleccionar trámite"
+                button: "Seleccionar opción"

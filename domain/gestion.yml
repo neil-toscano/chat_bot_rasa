@@ -14,15 +14,14 @@ intents:
   - gestion_item10
 
 responses:
-
   # >> 2. GESTIÓN DEL RIESGO DE DESASTRES :
   utter_gestion:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: false
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
                 *🟢 Opciones de Trámite:*  
 
                 1. 🏢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Bajo**  
@@ -33,59 +32,59 @@ responses:
 
                 4. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio**  
 
-                5. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
+                5. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**
 
-        - type: interactive
-          interactive:
-            type: list
-            body:
-              text: |
-                6. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  6. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
 
-                7. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
+                  7. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
 
-                8. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
+                  8. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
 
-                9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta **3,000 personas**  
+                  9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta **3,000 personas**  
 
-                10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones  
+                  10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
 
-            footer:
-              text: "*Seleccione el trámite abajo 👇*"
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
 
-            # >> LISTADO DE OPCIONES :
-            action:
-              sections:
-                - title: "Escoge el trámite"
-                  rows:
-                    - id: "/gestion_item01"
-                      title: "Trámite 1"
-                      description: "🏢 INSPECCIÓN RIESGO BAJO"
-                    - id: "/gestion_item02"
-                      title: "Trámite 2"
-                      description: "🔄 RENOVACIÓN RIESGO BAJO"
-                    - id: "/gestion_item03"
-                      title: "Trámite 3"
-                      description: "🏢 INSPECCIÓN RIESGO MEDIO"
-                    - id: "/gestion_item04"
-                      title: "Trámite 4"
-                      description: "🔄 RENOVACIÓN RIESGO MEDIO"
-                    - id: "/gestion_item05"
-                      title: "Trámite 5"
-                      description: "🏢 INSPECCIÓN RIESGO ALTO"
-                    - id: "/gestion_item06"
-                      title: "Trámite 6"
-                      description: "🔄 RENOVACIÓN RIESGO ALTO"
-                    - id: "/gestion_item07"
-                      title: "Trámite 7"
-                      description: "🏢 INSPECCIÓN RIESGO MUY ALTO"
-                    - id: "/gestion_item08"
-                      title: "Trámite 8"
-                      description: "🔄 RENOVACIÓN RIESGO MUY ALTO"
-                    - id: "/gestion_item09"
-                      title: "Trámite 9"
-                      description: "🏟️ EVALUACIÓN"
-                    - id: "/gestion_item10"
-                      title: "Trámite 10"
-                      description: "📄 DUPLICADO"
-              button: "Seleccionar trámite"
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/gestion_item01"
+                        title: "Opción 1"
+                        description: "🏢 INSPECCIÓN RIESGO BAJO"
+                      - id: "/gestion_item02"
+                        title: "Opción 2"
+                        description: "🔄 RENOVACIÓN RIESGO BAJO"
+                      - id: "/gestion_item03"
+                        title: "Opción 3"
+                        description: "🏢 INSPECCIÓN RIESGO MEDIO"
+                      - id: "/gestion_item04"
+                        title: "Opción 4"
+                        description: "🔄 RENOVACIÓN RIESGO MEDIO"
+                      - id: "/gestion_item05"
+                        title: "Opción 5"
+                        description: "🏢 INSPECCIÓN RIESGO ALTO"
+                      - id: "/gestion_item06"
+                        title: "Opción 6"
+                        description: "🔄 RENOVACIÓN RIESGO ALTO"
+                      - id: "/gestion_item07"
+                        title: "Opción 7"
+                        description: "🏢 INSPECCIÓN RIESGO MUY ALTO"
+                      - id: "/gestion_item08"
+                        title: "Opción 8"
+                        description: "🔄 RENOVACIÓN RIESGO MUY ALTO"
+                      - id: "/gestion_item09"
+                        title: "Opción 9"
+                        description: "🏟️ EVALUACIÓN"
+                      - id: "/gestion_item10"
+                        title: "Opción 10"
+                        description: "📄 DUPLICADO"
+                button: "Seleccionar Opción"

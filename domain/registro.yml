@@ -8,45 +8,44 @@ intents:
   - registro_item04
 
 responses:
-
   # >> 4. REGISTRO CIVIL :
   utter_registro:
-  - custom:
-      blocks:
-        - type: interactive
-          interactive:
-            type: list
-            header:
-              type: text
-              text: "🟢 Opciones de Trámite:"
-            body:
-              text: |
-                1. 💍 Matrimonio Civil  
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "🟢 Opciones de Trámite:"
+              body:
+                text: |
+                  1. 💍 Matrimonio Civil  
 
-                2. 📜 Publicación de Edicto Matrimonial tramitado en otros distritos  
+                  2. 📜 Publicación de Edicto Matrimonial tramitado en otros distritos  
 
-                3. 🔄 Reprogramación de fecha y hora de Ceremonia Matrimonial  
+                  3. 🔄 Reprogramación de fecha y hora de Ceremonia Matrimonial  
 
-                4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional  
+                  4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional
 
-            footer:
-              text: "*Seleccione el trámite abajo 👇*"
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
 
-            # >> LISTADO DE OPCIONES :
-            action:
-              sections:
-                - title: "Escoge el trámite"
-                  rows:
-                    - id: "/registro_item01"
-                      title: "Trámite 1"
-                      description: "💍 MATRIMONIO"
-                    - id: "/registro_item02"
-                      title: "Trámite 2"
-                      description: "📜 PUBLICACIÓN"
-                    - id: "/registro_item03"
-                      title: "Trámite 3"
-                      description: "🔄 REPROGRAMACIÓN"
-                    - id: "/registro_item04"
-                      title: "Trámite 4"
-                      description: "💔 SEPARACIÓN"
-              button: "Selecciona trámite"
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoga la Opción"
+                    rows:
+                      - id: "/registro_item01"
+                        title: "Opción 1"
+                        description: "💍 MATRIMONIO"
+                      - id: "/registro_item02"
+                        title: "Opción 2"
+                        description: "📜 PUBLICACIÓN"
+                      - id: "/registro_item03"
+                        title: "Opción 3"
+                        description: "🔄 REPROGRAMACIÓN"
+                      - id: "/registro_item04"
+                        title: "Opción 4"
+                        description: "💔 SEPARACIÓN"
+                button: "Selecciona Opción"

@@ -31,23 +31,23 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: "*Seleccione la pregunta abajo 👇*"
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
 
               action:
                 sections:
                   - title: "Escoge la pregunta"
                     rows:
                       - id: "/registro_item04_consulta"
-                        title: "Pregunta 1"
+                        title: "Opción 1"
                         description: "📘 ¿Qué es?"
                       - id: "/registro_item04_necesidad"
-                        title: "Pregunta 2"
+                        title: "Opción 2"
                         description: "📝 ¿Qué necesito?"
                       - id: "/registro_item04_costo"
-                        title: "Pregunta 3"
+                        title: "Opción 3"
                         description: "💰 ¿Cuánto cuesta?"
                 button: "Opciones"
 
@@ -59,11 +59,11 @@ responses:
             text:
               preview_url: false
               body: |
-                  💔 Procedimiento mediante el cual ambos cónyuges manifiestan ante la autoridad municipal su voluntad de separarse.
+                💔 Procedimiento mediante el cual ambos cónyuges manifiestan ante la autoridad municipal su voluntad de separarse.
 
-                  *¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                  📝 La separación convencional sirve para que los cónyuges formalicen su decisión de vivir separados sin disolver inmediatamente el matrimonio.
+                📝 La separación convencional sirve para que los cónyuges formalicen su decisión de vivir separados sin disolver inmediatamente el matrimonio.
 
   # >> 4.4... NECESIDAD
   utter_registro_item04_necesidad:
@@ -73,17 +73,17 @@ responses:
             text:
               preview_url: false
               body: |
-                  1. 📝 Solicitud al alcalde manifestando su voluntad de separación, con DNI, dirección, firma y huella de los cónyugues.
+                1. 📝 Solicitud al alcalde manifestando su voluntad de separación, con DNI, dirección, firma y huella de los cónyugues.
 
-                  2. 📑 Copia certificada del acta o de la partida de matrimonio.
+                2. 📑 Copia certificada del acta o de la partida de matrimonio.
 
-                  3. 🏠 Declaración jurada del último domicilio conyugal.
+                3. 🏠 Declaración jurada del último domicilio conyugal.
 
-                  4. ✍️ En caso de haber representantes, adjuntar un poder notarial específico registrado.
+                4. ✍️ En caso de haber representantes, adjuntar un poder notarial específico registrado.
 
-                  5. 🆔 Exhibición de los DNI de ambos cónyuges y de los representantes legales, si los hay.
+                5. 🆔 Exhibición de los DNI de ambos cónyuges y de los representantes legales, si los hay.
 
-                  6. 💵 Indicar fecha y número de constancia de pago.
+                6. 💵 Indicar fecha y número de constancia de pago.
 
           - type: interactive
             interactive:
@@ -110,7 +110,7 @@ responses:
             text:
               preview_url: false
               body: |
-                  💰 S/ 372.30
+                💰 S/ 372.30
 
   # >> 4.4... DOCUMENTOS
   utter_registro_item04_documentos:
@@ -160,9 +160,9 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  📝 Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
+                📝 Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
 
   # >> 4.4.2... SUBNECESIDAD 02
   utter_registro_item04_subnecesidad_02:
@@ -172,11 +172,11 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. 📑 Adjuntar copia certificada de acta de nacimiento.
+                1. 📑 Adjuntar copia certificada de acta de nacimiento.
 
-                  2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+                2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
 
   # >> 4.4.3... SUBNECESIDAD 03
   utter_registro_item04_subnecesidad_03:
@@ -186,13 +186,13 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. 📑 Adjuntar copia certificada de acta de nacimiento.
+                1. 📑 Adjuntar copia certificada de acta de nacimiento.
 
-                  2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+                2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
 
-                  3. 🏛️ Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
+                3. 🏛️ Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
 
   # >> 4.4.4... SUBNECESIDAD 04
   utter_registro_item04_subnecesidad_04:
@@ -202,10 +202,10 @@ responses:
             text:
               preview_url: false
               body: |
-                  *¿Qué necesito?*
+                *¿Qué necesito?*
 
-                  1. 🚫 Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
+                1. 🚫 Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
 
-                  2. 🏠 Separación de patrimonios: Escritura pública registrada.
+                2. 🏠 Separación de patrimonios: Escritura pública registrada.
 
-                  3. 🔄 Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
+                3. 🔄 Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
