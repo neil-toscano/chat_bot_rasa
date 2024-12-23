@@ -8,6 +8,8 @@ intents:
   - animo_bien
   - animo_mal
   - bot_challenge
+  - estado_cuenta
+  - consulta_tramites
 
 responses:
   utter_animo:
@@ -24,7 +26,7 @@ responses:
     - text: "Hasta luego"
 
   utter_soy_bot:
-    - text: "Soy un bot, entrenado por la MSJL."
+    - text: "Soy un bot, entrenado por la MDSJL."
 
   # >> INDEX - MENU
   utter_saludo:
@@ -40,7 +42,7 @@ responses:
               id: "939730344345911"
           - type: interactive
             interactive:
-              type: list
+              type: button
               header:
                 type: text
                 text: "Consulta Trámites"
@@ -48,6 +50,47 @@ responses:
                 text: |
                   ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
 
+                  ¿Qué consulta desea realizar? Por favor, elige una de las siguientes opciones:
+              footer:
+                text: "seleccione la opción abajo 👇"
+              action:
+                buttons:
+                  - type: "reply"
+                    reply:
+                      id: "/estado_cuenta"
+                      title: "Estado de cuenta"
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_tramites"
+                      title: "Consulta tramites"
+
+  utter_estado_cuenta:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                🌐 Puede revisar su estado de cuenta en el siguiente link👉: https://plataformavirtual.munisjl.gob.pe/
+  utter_tramite:
+    - custom:
+        blocks:
+          #- type: image
+          #  image:
+          #    id: "1144245547046868"
+          # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+          # caption: MSJL
+          #- type: audio
+          #  audio:
+          #    id: "939730344345911"
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "Consulta Trámites"
+              body:
+                text: |
                   ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
 
                   *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
@@ -66,21 +109,65 @@ responses:
                   - title: "Escoja trámite"
                     rows:
                       - id: "/formalizacion_promocion_empresarial"
-                        title: "Trámite 1"
-                        description: "Formalización 💼"
+                        title: "Formalización 💼"
                       - id: "/gestion"
-                        title: "Trámite 2"
-                        description: "Gestión 🚨"
+                        title: "Gestión 🚨"
                       - id: "/orientacion"
-                        title: "Trámite 3"
-                        description: "Orientación 📋"
+                        title: "Orientación 📋"
                       - id: "/registro"
-                        title: "Trámite 4"
-                        description: "Registro 🧾"
+                        title: "Registro 🧾"
                       - id: "/obras"
-                        title: "Trámite 5"
-                        description: "Obras 🏗️"
+                        title: "Obras 🏗️"
                 button: "Seleccionar trámite"
+  # utter_saludo:
+  #   - custom:
+  #       blocks:
+  #         - type: image
+  #           image:
+  #             id: "1144245547046868"
+  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+  #             # caption: MSJL
+  #         - type: audio
+  #           audio:
+  #             id: "939730344345911"
+  #         - type: interactive
+  #           interactive:
+  #             type: list
+  #             header:
+  #               type: text
+  #               text: "Consulta Trámites"
+  #             body:
+  #               text: |
+  #                 ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+
+  #                 ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
+
+  #                 *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
+
+  #                 *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
+
+  #                 *3. 📋 ORIENTACIÓN Y REGISTRO*
+
+  #                 *4. 🧾 REGISTRO CIVIL*
+
+  #                 *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
+  #             footer:
+  #               text: "seleccione el trámite abajo 👇"
+  #             action:
+  #               sections:
+  #                 - title: "Escoja trámite"
+  #                   rows:
+  #                     - id: "/formalizacion_promocion_empresarial"
+  #                       title: "Formalización 💼"
+  #                     - id: "/gestion"
+  #                       title: "Gestión 🚨"
+  #                     - id: "/orientacion"
+  #                       title: "Orientación 📋"
+  #                     - id: "/registro"
+  #                       title: "Registro 🧾"
+  #                     - id: "/obras"
+  #                       title: "Obras 🏗️"
+  #               button: "Seleccionar trámite"
 
 session_config:
   session_expiration_time: 60

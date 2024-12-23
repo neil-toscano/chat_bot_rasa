@@ -35,14 +35,11 @@ responses:
                   - title: "Escoge la opción"
                     rows:
                       - id: "/obras_item01_consulta"
-                        title: "Opción 1"
-                        description: "¿Qué es? 📄"
+                        title: "¿Qué es? 📄"
                       - id: "/obras_item01_necesidad"
-                        title: "Opción 2"
-                        description: "¿Qué necesito? 📋"
+                        title: "¿Qué necesito? 📋"
                       - id: "/obras_item01_costo"
-                        title: "Opción 3"
-                        description: "¿Cuánto cuesta? 💵"
+                        title: "¿Cuánto cuesta? 💵"
                 button: "✅ Opciones"
 
   # >> 5.1... CONSULTA

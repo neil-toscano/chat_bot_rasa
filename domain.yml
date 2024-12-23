@@ -20,6 +20,8 @@ intents:
   - animo_bien
   - animo_mal
   - bot_challenge
+  - estado_cuenta
+  - consulta_tramites
   - obras
   - obras_item01
   - obras_item02
@@ -213,35 +215,25 @@ responses:
                   - title: Escoja Opción
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo
-                        title: Opción 1
-                        description: RIESGO BAJO 🟢
+                        title: RIESGO BAJO 🟢
                       - id: /formalizacion_item02_edificacion_riesgo_medio
-                        title: Opción 2
-                        description: RIESGO MEDIO 🟡
+                        title: RIESGO MEDIO 🟡
                       - id: /formalizacion_item03_edificacion_riesgo_alto
-                        title: Opción 3
-                        description: RIESGO ALTO 🔴
+                        title: RIESGO ALTO 🔴
                       - id: /formalizacion_item04_edificacion_riesgo_muy_alto
-                        title: Opción 4
-                        description: RIESGO MUY ALTO ⚠️
+                        title: RIESGO MUY ALTO ⚠️
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento
-                        title: Opción 5
-                        description: TRANSFERENCIA O CAMBIO 🔄
+                        title: TRANSFERENCIA O CAMBIO 🔄
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro
-                        title: Opción 6
-                        description: CAMBIO DE GIRO 🔃
+                        title: CAMBIO DE GIRO 🔃
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche
-                        title: Opción 7
-                        description: PUBLICIDAD AFICHE 🖼️
+                        title: PUBLICIDAD AFICHE 🖼️
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras
-                        title: Opción 8
-                        description: PUBLICIDAD LETRAS 🔤
+                        title: PUBLICIDAD LETRAS 🔤
                       - id: /formalizacion_item09_duplicado_certificado
-                        title: Opción 9
-                        description: DUPLICADO 📄
+                        title: DUPLICADO 📄
                       - id: /formalizacion_item10_duplicado_resolucion
-                        title: Opción 10
-                        description: DUPLICADO RESOLUCIÓN 📜
+                        title: DUPLICADO RESOLUCIÓN 📜
                 button: Seleccionar opción
   utter_gestion:
     - custom:
@@ -286,35 +278,25 @@ responses:
                   - title: Escoge la opción
                     rows:
                       - id: /gestion_item01
-                        title: Opción 1
-                        description: 🏢 INSPECCIÓN RIESGO BAJO
+                        title: 🏢 INSPECCIÓN RIESGO BAJO
                       - id: /gestion_item02
-                        title: Opción 2
-                        description: 🔄 RENOVACIÓN RIESGO BAJO
+                        title: 🔄 RENOVACIÓN RIESGO BAJO
                       - id: /gestion_item03
-                        title: Opción 3
-                        description: 🏢 INSPECCIÓN RIESGO MEDIO
+                        title: 🏢 INSPECCIÓN RIESGO MEDIO
                       - id: /gestion_item04
-                        title: Opción 4
-                        description: 🔄 RENOVACIÓN RIESGO MEDIO
+                        title: 🔄 RENOVACIÓN RIESGO MEDIO
                       - id: /gestion_item05
-                        title: Opción 5
-                        description: 🏢 INSPECCIÓN RIESGO ALTO
+                        title: 🏢 INSPECCIÓN RIESGO ALTO
                       - id: /gestion_item06
-                        title: Opción 6
-                        description: 🔄 RENOVACIÓN RIESGO ALTO
+                        title: 🔄 RENOVACIÓN RIESGO ALTO
                       - id: /gestion_item07
-                        title: Opción 7
-                        description: 🏢 INSPECCIÓN RIESGO MUY ALTO
+                        title: 🏢 INSPECCIÓN RIESGO MUY ALTO
                       - id: /gestion_item08
-                        title: Opción 8
-                        description: 🔄 RENOVACIÓN RIESGO MUY ALTO
+                        title: 🔄 RENOVACIÓN RIESGO MUY ALTO
                       - id: /gestion_item09
-                        title: Opción 9
-                        description: 🏟️ EVALUACIÓN
+                        title: 🏟️ EVALUACIÓN
                       - id: /gestion_item10
-                        title: Opción 10
-                        description: 📄 DUPLICADO
+                        title: 📄 DUPLICADO
                 button: Seleccionar Opción
   utter_animo:
     - text: Siento escuchar eso, aquí hay algo que te va dar ánimo
@@ -330,7 +312,7 @@ responses:
     - text: Hasta luego
 
   utter_soy_bot:
-    - text: Soy un bot, entrenado por la MSJL.
+    - text: Soy un bot, entrenado por la MDSJL.
 
   # >> INDEX - MENU
   utter_saludo:
@@ -338,12 +320,55 @@ responses:
         blocks:
           - type: image
             image:
-              id: '1071065871158259'
+              id: '1144245547046868'
               # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
               # caption: MSJL
           - type: audio
             audio:
-              id: '616219857732078'
+              id: '939730344345911'
+          - type: interactive
+            interactive:
+              type: button
+              header:
+                type: text
+                text: Consulta Trámites
+              body:
+                text: |
+                  ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+
+                  ¿Qué consulta desea realizar? Por favor, elige una de las siguientes opciones:
+              footer:
+                text: seleccione la opción abajo 👇
+              action:
+                buttons:
+                  - type: reply
+                    reply:
+                      id: /estado_cuenta
+                      title: Estado de cuenta
+                  - type: reply
+                    reply:
+                      id: /consulta_tramites
+                      title: Consulta tramites
+
+  utter_estado_cuenta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                🌐 Puede revisar su estado de cuenta en el siguiente link👉: https://plataformavirtual.munisjl.gob.pe/
+  utter_tramite:
+    - custom:
+        blocks:
+          #- type: image
+          #  image:
+          #    id: "1144245547046868"
+          # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+          # caption: MSJL
+          #- type: audio
+          #  audio:
+          #    id: "939730344345911"
           - type: interactive
             interactive:
               type: list
@@ -352,8 +377,6 @@ responses:
                 text: Consulta Trámites
               body:
                 text: |
-                  ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
-
                   ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
 
                   *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
@@ -372,21 +395,65 @@ responses:
                   - title: Escoja trámite
                     rows:
                       - id: /formalizacion_promocion_empresarial
-                        title: Trámite 1
-                        description: Formalización 💼
+                        title: Formalización 💼
                       - id: /gestion
-                        title: Trámite 2
-                        description: Gestión 🚨
+                        title: Gestión 🚨
                       - id: /orientacion
-                        title: Trámite 3
-                        description: Orientación 📋
+                        title: Orientación 📋
                       - id: /registro
-                        title: Trámite 4
-                        description: Registro 🧾
+                        title: Registro 🧾
                       - id: /obras
-                        title: Trámite 5
-                        description: Obras 🏗️
+                        title: Obras 🏗️
                 button: Seleccionar trámite
+  # utter_saludo:
+  #   - custom:
+  #       blocks:
+  #         - type: image
+  #           image:
+  #             id: "1144245547046868"
+  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+  #             # caption: MSJL
+  #         - type: audio
+  #           audio:
+  #             id: "939730344345911"
+  #         - type: interactive
+  #           interactive:
+  #             type: list
+  #             header:
+  #               type: text
+  #               text: "Consulta Trámites"
+  #             body:
+  #               text: |
+  #                 ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
+
+  #                 ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
+
+  #                 *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
+
+  #                 *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
+
+  #                 *3. 📋 ORIENTACIÓN Y REGISTRO*
+
+  #                 *4. 🧾 REGISTRO CIVIL*
+
+  #                 *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
+  #             footer:
+  #               text: "seleccione el trámite abajo 👇"
+  #             action:
+  #               sections:
+  #                 - title: "Escoja trámite"
+  #                   rows:
+  #                     - id: "/formalizacion_promocion_empresarial"
+  #                       title: "Formalización 💼"
+  #                     - id: "/gestion"
+  #                       title: "Gestión 🚨"
+  #                     - id: "/orientacion"
+  #                       title: "Orientación 📋"
+  #                     - id: "/registro"
+  #                       title: "Registro 🧾"
+  #                     - id: "/obras"
+  #                       title: "Obras 🏗️"
+  #               button: "Seleccionar trámite"
 
   utter_obras:
     - custom:
@@ -420,23 +487,17 @@ responses:
                   - title: 'Escoge la '
                     rows:
                       - id: /obras_item01
-                        title: Opción 1
-                        description: 📝 CERTIFICADO
+                        title: 📝 CERTIFICADO
                       - id: /obras_item02
-                        title: Opción 2
-                        description: ✏️ VISACIÓN
+                        title: ✏️ VISACIÓN
                       - id: /obras_item03
-                        title: Opción 3
-                        description: 🛠️ LICENCIA CONSTRUCCIÓN
+                        title: 🛠️ LICENCIA CONSTRUCCIÓN
                       - id: /obras_item04
-                        title: Opción 4
-                        description: 🏚️ LICENCIA DEMOLICIÓN
+                        title: 🏚️ LICENCIA DEMOLICIÓN
                       - id: /obras_item05
-                        title: Opción 5
-                        description: 🤝 COMPRA-VENTA
+                        title: 🤝 COMPRA-VENTA
                       - id: /obras_item06
-                        title: Opción 6
-                        description: 📂 INDEPENDIZACIÓN
+                        title: 📂 INDEPENDIZACIÓN
                 button: Seleccionar opción
   utter_orientacion:
     - custom:
@@ -462,11 +523,9 @@ responses:
                   - title: Escoge el trámite
                     rows:
                       - id: /orientacion_item01
-                        title: Opción 1
-                        description: 📜 SUCESIÓN INDIVISA
+                        title: 📜 SUCESIÓN INDIVISA
                       - id: /orientacion_item02
-                        title: Opción 2
-                        description: 🏠 SUCESIÓN INTESTADA
+                        title: 🏠 SUCESIÓN INTESTADA
                 button: Seleccionar Opción
   utter_registro:
     - custom:
@@ -496,17 +555,13 @@ responses:
                   - title: Escoga la Opción
                     rows:
                       - id: /registro_item01
-                        title: Opción 1
-                        description: 💍 MATRIMONIO
+                        title: 💍 MATRIMONIO
                       - id: /registro_item02
-                        title: Opción 2
-                        description: 📜 PUBLICACIÓN
+                        title: 📜 PUBLICACIÓN
                       - id: /registro_item03
-                        title: Opción 3
-                        description: 🔄 REPROGRAMACIÓN
+                        title: 🔄 REPROGRAMACIÓN
                       - id: /registro_item04
-                        title: Opción 4
-                        description: 💔 SEPARACIÓN
+                        title: 💔 SEPARACIÓN
                 button: Selecciona Opción
   utter_licencia_funcionamiento_edificacion_riesgo_bajo:
     - custom:
@@ -536,14 +591,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -604,14 +656,11 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /servicio_de_salud
-                        title: Opción 1
-                        description: Salud
+                        title: Salud
                       - id: /actividad_requiere_autorizacion
-                        title: Opción 2
-                        description: Autorización
+                        title: Autorización
                       - id: /monumento_del_patrimonio_cultural
-                        title: Opción 3
-                        description: Patrimonio cultural
+                        title: Patrimonio cultural
                 button: Seleccione actividad
   utter_servicio_de_salud:
     - custom:
@@ -675,14 +724,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item02_riesgo_medio_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item02_riesgo_medio_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item02_riesgo_medio_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -740,14 +786,11 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /formalizacion_item02_servicio_de_salud
-                        title: Opción 1
-                        description: Salud
+                        title: Salud
                       - id: /formalizacion_item02_actividad_requiere_autorizacion
-                        title: Opción 2
-                        description: Autorización
+                        title: Autorización
                       - id: /formalizacion_item02_monumento_del_patrimonio_cultural
-                        title: Opción 3
-                        description: Patrimonio cultural
+                        title: Patrimonio cultural
                 button: Seleccione actividad
 
   utter_formalizacion_item02_servicio_de_salud:
@@ -812,14 +855,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item03_riesgo_alto_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item03_riesgo_alto_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item03_riesgo_alto_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -883,14 +923,11 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /formalizacion_item03_servicio_de_salud
-                        title: Opción 1
-                        description: Salud
+                        title: Salud
                       - id: /formalizacion_item03_actividad_requiere_autorizacion
-                        title: Opción 2
-                        description: Autorización
+                        title: Autorización
                       - id: /formalizacion_item03_monumento_del_patrimonio_cultural
-                        title: Opción 3
-                        description: Patrimonio cultural
+                        title: Patrimonio cultural
                 button: Seleccione actividad
 
   utter_formalizacion_item03_servicio_de_salud:
@@ -955,14 +992,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item04_riesgo_muy_alto_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item04_riesgo_muy_alto_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========4.2=======================
@@ -1026,14 +1060,11 @@ responses:
                   - title: Seleccione actividad
                     rows:
                       - id: /formalizacion_item04_servicio_de_salud
-                        title: Opción 1
-                        description: Salud
+                        title: Salud
                       - id: /formalizacion_item04_actividad_requiere_autorizacion
-                        title: Opción 2
-                        description: Autorización
+                        title: Autorización
                       - id: /formalizacion_item04_monumento_del_patrimonio_cultural
-                        title: Opción 3
-                        description: Patrimonio cultural
+                        title: Patrimonio cultural
                 button: Seleccione actividad
 
   utter_formalizacion_item04_servicio_de_salud:
@@ -1098,14 +1129,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========4.2=======================
@@ -1177,14 +1205,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========4.2=======================
@@ -1250,14 +1275,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -1329,14 +1351,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -1410,14 +1429,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item09_duplicado_certificado_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item09_duplicado_certificado_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item09_duplicado_certificado_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -1476,14 +1492,11 @@ responses:
                   - title: Escoja la pregunta
                     rows:
                       - id: /formalizacion_item10_duplicado_resolucion_que_es
-                        title: Opción 1
-                        description: ¿Qué es? 📘
+                        title: ¿Qué es? 📘
                       - id: /formalizacion_item10_duplicado_resolucion_que_necesito
-                        title: Opción 2
-                        description: ¿Qué necesito? 📝
+                        title: ¿Qué necesito? 📝
                       - id: /formalizacion_item10_duplicado_resolucion_cuanto_cuesta
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💰
+                        title: ¿Cuánto cuesta? 💰
                 button: Opciones
 
   # ==========***=======================
@@ -1523,9 +1536,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "🟢 Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "🟢 Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *📋 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*  
@@ -1536,7 +1549,7 @@ responses:
 
                   2️. 📝¿Qué necesito?
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -1546,14 +1559,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item01_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item01_necesidad
-                        title: Pregunta 2
-                        description: 📋 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /gestion_item01_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Selecciona pregunta
 
   # >> 2.1... CONSULTA
@@ -1603,9 +1613,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *📋 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo*  
@@ -1616,7 +1626,7 @@ responses:
 
                   2️. 📝¿Qué necesito?
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite? 
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -1626,14 +1636,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item02_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item02_necesidad
-                        title: Pregunta 2
-                        description: 📋 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /gestion_item02_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Selecciona pregunta
 
   # >> 2.2... CONSULTA
@@ -1683,9 +1690,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            # header:
-            #   type: text
-            #   text: "🟢 Consulta Trámites"
+              # header:
+              #   type: text
+              #   text: "🟢 Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *📋 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio*  
@@ -1696,7 +1703,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -1706,14 +1713,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item03_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item03_necesidad
-                        title: Pregunta 2
-                        description: 📋 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /gestion_item03_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Selecciona pregunta
 
   # >> 2.3... CONSULTA
@@ -1763,9 +1767,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *📋 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel De Riesgo Medio*  
@@ -1776,7 +1780,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -1786,14 +1790,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item04_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item04_necesidad
-                        title: Pregunta 2
-                        description: 📋 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /gestion_item04_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Selecciona pregunta
 
   # >> 2.4... CONSULTA
@@ -1843,9 +1844,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
@@ -1856,7 +1857,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -1866,14 +1867,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item05_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item05_necesidad
-                        title: Pregunta 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /gestion_item05_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.5... CONSULTA
@@ -1935,9 +1933,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
@@ -1948,7 +1946,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -1958,14 +1956,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item06_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item06_necesidad
-                        title: Pregunta 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /gestion_item06_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.6... CONSULTA
@@ -2017,9 +2012,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
@@ -2030,7 +2025,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -2040,14 +2035,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item07_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item07_necesidad
-                        title: Pregunta 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /gestion_item07_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.7... CONSULTA
@@ -2117,9 +2109,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
@@ -2130,7 +2122,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -2140,14 +2132,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item08_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item08_necesidad
-                        title: Pregunta 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /gestion_item08_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.8... CONSULTA
@@ -2199,9 +2188,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas*
@@ -2212,7 +2201,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -2222,14 +2211,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item09_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item09_necesidad
-                        title: Pregunta 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /gestion_item09_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.9... CONSULTA
@@ -2291,9 +2277,9 @@ responses:
           - type: interactive
             interactive:
               type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
               body:
                 text: |
                   Haz seleccionado *Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones*
@@ -2304,7 +2290,7 @@ responses:
 
                   2️. 📝¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -2314,14 +2300,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /gestion_item10_consulta
-                        title: Pregunta 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /gestion_item10_necesidad
-                        title: Pregunta 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /gestion_item10_costo
-                        title: Pregunta 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 2.10... CONSULTA
@@ -2385,14 +2368,11 @@ responses:
                   - title: Escoge la opción
                     rows:
                       - id: /obras_item01_consulta
-                        title: Opción 1
-                        description: ¿Qué es? 📄
+                        title: ¿Qué es? 📄
                       - id: /obras_item01_necesidad
-                        title: Opción 2
-                        description: ¿Qué necesito? 📋
+                        title: ¿Qué necesito? 📋
                       - id: /obras_item01_costo
-                        title: Opción 3
-                        description: ¿Cuánto cuesta? 💵
+                        title: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
   # >> 5.1... CONSULTA
@@ -2462,14 +2442,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item02_consulta
-                        title: Pregunta 1
-                        description: ¿Qué es? 📄
+                        title: ¿Qué es? 📄
                       - id: /obras_item02_necesidad
-                        title: Pregunta 2
-                        description: ¿Qué necesito? 📋
+                        title: ¿Qué necesito? 📋
                       - id: /obras_item02_costo
-                        title: Pregunta 3
-                        description: ¿Cuánto cuesta? 💵
+                        title: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
   # >> 5.2... CONSULTA
@@ -2541,14 +2518,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item03_consulta
-                        title: Pregunta 1
-                        description: ¿Qué es? 📄
+                        title: ¿Qué es? 📄
                       - id: /obras_item03_necesidad
-                        title: Pregunta 2
-                        description: ¿Qué necesito? 📋
+                        title: ¿Qué necesito? 📋
                       - id: /obras_item03_costo
-                        title: Pregunta 3
-                        description: ¿Cuánto cuesta? 💵
+                        title: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
   # >> 5.3... CONSULTA
@@ -2628,14 +2602,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item04_consulta
-                        title: Pregunta 1
-                        description: ¿Qué es? 📄
+                        title: ¿Qué es? 📄
                       - id: /obras_item04_necesidad
-                        title: Pregunta 2
-                        description: ¿Qué necesito? 📋
+                        title: ¿Qué necesito? 📋
                       - id: /obras_item04_costo
-                        title: Pregunta 3
-                        description: ¿Cuánto cuesta? 💵
+                        title: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
   # >> 5.4... CONSULTA
@@ -2715,14 +2686,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item05_consulta
-                        title: Pregunta 1
-                        description: ¿Qué es? 📄
+                        title: ¿Qué es? 📄
                       - id: /obras_item05_necesidad
-                        title: Pregunta 2
-                        description: ¿Qué necesito? 📋
+                        title: ¿Qué necesito? 📋
                       - id: /obras_item05_costo
-                        title: Pregunta 3
-                        description: ¿Cuánto cuesta? 💵
+                        title: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
   # >> 5.5... CONSULTA
@@ -2790,14 +2758,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item06_consulta
-                        title: Pregunta 1
-                        description: ¿Qué es? 📄
+                        title: ¿Qué es? 📄
                       - id: /obras_item06_necesidad
-                        title: Pregunta 2
-                        description: ¿Qué necesito? 📋
+                        title: ¿Qué necesito? 📋
                       - id: /obras_item06_costo
-                        title: Pregunta 3
-                        description: ¿Cuánto cuesta? 💵
+                        title: ¿Cuánto cuesta? 💵
                 button: ✅ Opciones
 
   # >> 5.6... CONSULTA
@@ -2868,14 +2833,11 @@ responses:
                   - title: Escoga la opción
                     rows:
                       - id: /orientacion_item01_consulta
-                        title: Opción 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /orientacion_item01_necesidad
-                        title: Opción 2
-                        description: 📝¿Qué necesito?
+                        title: 📝¿Qué necesito?
                       - id: /orientacion_item01_costo
-                        title: Opción 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 3.1... CONSULTA
@@ -2946,14 +2908,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /orientacion_item02_consulta
-                        title: Opción 1
-                        description: ¿Qué es?
+                        title: ¿Qué es?
                       - id: /orientacion_item02_necesidad
-                        title: Opción 2
-                        description: ¿Qué necesito?
+                        title: ¿Qué necesito?
                       - id: /orientacion_item02_costo
-                        title: Opción 3
-                        description: ¿Cuánto cuesta?
+                        title: ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 3.2... CONSULTA
@@ -3022,14 +2981,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item01_consulta
-                        title: Opción 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /registro_item01_necesidad
-                        title: Opción 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /registro_item01_costo
-                        title: Opción 3
-                        description: 💰¿Cuánto cuesta?
+                        title: 💰¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.1... CONSULTA
@@ -3129,26 +3085,19 @@ responses:
                   - title: Selecciona la opción
                     rows:
                       - id: /registro_item01_subnecesidad_01
-                        title: Opción 1
-                        description: Divorciados
+                        title: Divorciados
                       - id: /registro_item01_subnecesidad_02
-                        title: Opción 2
-                        description: Viudos
+                        title: Viudos
                       - id: /registro_item01_subnecesidad_03
-                        title: Opción 3
-                        description: Extranjeros
+                        title: Extranjeros
                       - id: /registro_item01_subnecesidad_04
-                        title: Opción 4
-                        description: Poder
+                        title: Poder
                       - id: /registro_item01_subnecesidad_05
-                        title: Opción 5
-                        description: Parentesco
+                        title: Parentesco
                       - id: /registro_item01_subnecesidad_06
-                        title: Opción 6
-                        description: Discapacitados
+                        title: Discapacitados
                       - id: /registro_item01_necesidad
-                        title: Volver
-                        description: Volver a lo anterior
+                        title: Volver a lo anterior
                 button: Opciones
 
   # >> 4.4.1... SUBNECESIDAD 01
@@ -3275,14 +3224,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item02_consulta
-                        title: Opción 1
-                        description: ¿Qué es?
+                        title: ¿Qué es?
                       - id: /registro_item02_necesidad
-                        title: Opción 2
-                        description: ¿Qué necesito?
+                        title: ¿Qué necesito?
                       - id: /registro_item02_costo
-                        title: Opción 3
-                        description: ¿Cuánto cuesta?
+                        title: ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.2... CONSULTA
@@ -3351,14 +3297,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item03_consulta
-                        title: Opción 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /registro_item03_necesidad
-                        title: Opción 2
-                        description: 📋 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /registro_item03_costo
-                        title: Opción 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.3... CONSULTA
@@ -3423,14 +3366,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item04_consulta
-                        title: Opción 1
-                        description: 📘 ¿Qué es?
+                        title: 📘 ¿Qué es?
                       - id: /registro_item04_necesidad
-                        title: Opción 2
-                        description: 📝 ¿Qué necesito?
+                        title: 📝 ¿Qué necesito?
                       - id: /registro_item04_costo
-                        title: Opción 3
-                        description: 💰 ¿Cuánto cuesta?
+                        title: 💰 ¿Cuánto cuesta?
                 button: Opciones
 
   # >> 4.4... CONSULTA
@@ -3518,20 +3458,15 @@ responses:
                   - title: Selecciona la opción
                     rows:
                       - id: /registro_item04_subnecesidad_01
-                        title: Opción 1
-                        description: No hijos
+                        title: No hijos
                       - id: /registro_item04_subnecesidad_02
-                        title: Opción 2
-                        description: Hijos menores
+                        title: Hijos menores
                       - id: /registro_item04_subnecesidad_03
-                        title: Opción 3
-                        description: Mayores discapacitados
+                        title: Mayores discapacitados
                       - id: /registro_item04_subnecesidad_04
-                        title: Opción 4
-                        description: Patrimonio
+                        title: Patrimonio
                       - id: /registro_item04_necesidad
-                        title: Volver
-                        description: Volver a lo anterior
+                        title: Volver a lo anterior
                 button: Opciones
 
   # >> 4.4.1... SUBNECESIDAD 01

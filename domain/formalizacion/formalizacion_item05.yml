@@ -33,14 +33,11 @@ responses:
                   - title: "Escoja la pregunta"
                     rows:
                       - id: "/formalizacion_item05_transferencia_licencia_funcionamiento_que_es"
-                        title: "Opción 1"
-                        description: "¿Qué es? 📘"
+                        title: "¿Qué es? 📘"
                       - id: "/formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito"
-                        title: "Opción 2"
-                        description: "¿Qué necesito? 📝"
+                        title: "¿Qué necesito? 📝"
                       - id: "/formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta"
-                        title: "Opción 3"
-                        description: "¿Cuánto cuesta? 💰"
+                        title: "¿Cuánto cuesta? 💰"
                 button: "Opciones"
 
   # ==========4.2=======================

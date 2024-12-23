@@ -113,6 +113,22 @@ nlu:
     - ¿estoy hablando con un bot?
     - ¿estoy hablando con un humano?
 
+# >> ESTADO CUENTA :
+- intent: estado_cuenta
+  examples: |
+    - ¿Cuál es mi estado de cuenta?
+    - Cómo saber mi estado de cuenta
+    - Donde saber mi estado de cuenta
+    - Cuanto debo a la municpalidad
+    - Como pagar mi estado de cuenta
+
+# >> CONSULTA TRAMITES :
+- intent: consulta_tramites
+  examples: |
+    - quiero saber sobre tramites de la municipalidad
+    - quiero saber sobre los requisitos de algún trámite
+    - cuales son los requisitos
+
 # >> OBRAS :
 - intent: obras
   examples: |

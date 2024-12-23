@@ -6,55 +6,51 @@ intents:
   - gestion_item08_costo
 
 responses:
-
   # >> 2.8. RENOVACIÓN RIESGO MUY ALTO
   utter_gestion_item08:
-  - custom:
-      blocks:
-        - type: interactive
-          interactive:
-            type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
-            body:
-              text: |
-                Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
+              body:
+                text: |
+                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
 
-                *🟢 Opciones de pregunta:*  
+                  *🟢 Opciones de pregunta:*  
 
-                1️. 📘¿Qué es?  
+                  1️. 📘¿Qué es?  
 
-                2️. 📝¿Qué necesito?  
+                  2️. 📝¿Qué necesito?  
 
-                3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: "*Seleccione la pregunta abajo 👇*"
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
 
-            action:
-              sections:
-                - title: "Escoge la pregunta"
-                  rows:
-                    - id: "/gestion_item08_consulta"
-                      title: "Pregunta 1"
-                      description: "📘 ¿Qué es?"
-                    - id: "/gestion_item08_necesidad"
-                      title: "Pregunta 2"
-                      description: "📝 ¿Qué necesito?"
-                    - id: "/gestion_item08_costo"
-                      title: "Pregunta 3"
-                      description: "💰 ¿Cuánto cuesta?"
-              button: "Opciones"
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/gestion_item08_consulta"
+                        title: "📘 ¿Qué es?"
+                      - id: "/gestion_item08_necesidad"
+                        title: "📝 ¿Qué necesito?"
+                      - id: "/gestion_item08_costo"
+                        title: "💰 ¿Cuánto cuesta?"
+                button: "Opciones"
 
   # >> 2.8... CONSULTA
   utter_gestion_item08_consulta:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: false
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
                 🏢 Es el proceso de actualización del certificado que verifica la seguridad en edificaciones con nivel de riesgo muy alto.
 
                 *¿Para qué es necesario?*
@@ -63,30 +59,30 @@ responses:
 
   # >> 2.8... NECESIDAD
   utter_gestion_item08_necesidad:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: true
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
                 📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
-                
+
                 http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
-  
-        - type: text
-          text:
-            preview_url: true
-            body: |
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
                 🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
-                
+
                 http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf)
 
   # >> 2.8... COSTO
   utter_gestion_item08_costo:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: false
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
                 💰 S/ 707.20

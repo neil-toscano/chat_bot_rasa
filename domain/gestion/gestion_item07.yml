@@ -6,55 +6,51 @@ intents:
   - gestion_item07_costo
 
 responses:
-
   # >> 2.7. INSPECCIÓN RIESGO MUY ALTO
   utter_gestion_item07:
-  - custom:
-      blocks:
-        - type: interactive
-          interactive:
-            type: list
-            #header:
-            #  type: text
-            #  text: "Consulta Trámites"
-            body:
-              text: |
-                Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
+              body:
+                text: |
+                  Haz seleccionado *Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto*
 
-                *🟢 Opciones de pregunta:*  
+                  *🟢 Opciones de pregunta:*  
 
-                1️. 📘¿Qué es?  
+                  1️. 📘¿Qué es?  
 
-                2️. 📝¿Qué necesito?  
+                  2️. 📝¿Qué necesito?  
 
-                3️. 💰¿Cuánto cuesta el derecho de trámite?  
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
 
-            footer:
-              text: "*Seleccione la pregunta abajo 👇*"
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
 
-            action:
-              sections:
-                - title: "Escoge la pregunta"
-                  rows:
-                    - id: "/gestion_item07_consulta"
-                      title: "Pregunta 1"
-                      description: "📘 ¿Qué es?"
-                    - id: "/gestion_item07_necesidad"
-                      title: "Pregunta 2"
-                      description: "📝 ¿Qué necesito?"
-                    - id: "/gestion_item07_costo"
-                      title: "Pregunta 3"
-                      description: "💰 ¿Cuánto cuesta?"
-              button: "Opciones"
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/gestion_item07_consulta"
+                        title: "📘 ¿Qué es?"
+                      - id: "/gestion_item07_necesidad"
+                        title: "📝 ¿Qué necesito?"
+                      - id: "/gestion_item07_costo"
+                        title: "💰 ¿Cuánto cuesta?"
+                button: "Opciones"
 
   # >> 2.7... CONSULTA
   utter_gestion_item07_consulta:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: false
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
                 🏢 Es una evaluación técnica de seguridad realizada antes de que un establecimiento con nivel de riesgo muy alto comience sus actividades.
 
                 *¿Para qué es necesario?*
@@ -63,28 +59,28 @@ responses:
 
   # >> 2.7... NECESIDAD
   utter_gestion_item07_necesidad:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: true
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
                 📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
-                
+
                 http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
-        - type: text
-          text:
-            preview_url: true
-            body: |
+          - type: text
+            text:
+              preview_url: true
+              body: |
                 🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
-                
+
                 http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
-        - type: text
-          text:
-            preview_url: false
-            body: |
+          - type: text
+            text:
+              preview_url: false
+              body: |
                 📄 Documentos técnicos en copia simple:
 
                 1. 📍 Croquis de ubicación
@@ -101,10 +97,10 @@ responses:
 
   # >> 2.7... COSTO
   utter_gestion_item07_costo:
-  - custom:
-      blocks:
-        - type: text
-          text:
-            preview_url: false
-            body: |
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
                 💰 S/ 703.40

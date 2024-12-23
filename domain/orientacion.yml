@@ -31,9 +31,7 @@ responses:
                   - title: "Escoge el trámite"
                     rows:
                       - id: "/orientacion_item01"
-                        title: "Opción 1"
-                        description: "📜 SUCESIÓN INDIVISA"
+                        title: "📜 SUCESIÓN INDIVISA"
                       - id: "/orientacion_item02"
-                        title: "Opción 2"
-                        description: "🏠 SUCESIÓN INTESTADA"
+                        title: "🏠 SUCESIÓN INTESTADA"
                 button: "Seleccionar Opción"

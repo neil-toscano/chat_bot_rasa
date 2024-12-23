@@ -33,3 +33,13 @@ stories:
     steps:
       - intent: despedida
       - action: utter_despedida
+
+  - story: estado cuenta path
+    steps:
+      - intent: estado_cuenta
+      - action: utter_estado_cuenta
+
+  - story: tramite muni sjl path
+    steps:
+      - intent: consulta_tramites
+      - action: utter_tramite

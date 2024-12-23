@@ -38,14 +38,11 @@ responses:
                   - title: "Escoja la pregunta"
                     rows:
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_que_es"
-                        title: "Opción 1"
-                        description: "¿Qué es? 📘"
+                        title: "¿Qué es? 📘"
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito"
-                        title: "Opción 2"
-                        description: "¿Qué necesito? 📝"
+                        title: "¿Qué necesito? 📝"
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta"
-                        title: "Opción 3"
-                        description: "¿Cuánto cuesta? 💰"
+                        title: "¿Cuánto cuesta? 💰"
                 button: "Opciones"
 
   # ==========***=======================
@@ -106,14 +103,11 @@ responses:
                   - title: "Seleccione actividad"
                     rows:
                       - id: "/servicio_de_salud"
-                        title: "Opción 1"
-                        description: "Salud"
+                        title: "Salud"
                       - id: "/actividad_requiere_autorizacion"
-                        title: "Opción 2"
-                        description: "Autorización"
+                        title: "Autorización"
                       - id: "/monumento_del_patrimonio_cultural"
-                        title: "Opción 3"
-                        description: "Patrimonio cultural"
+                        title: "Patrimonio cultural"
                 button: "Seleccione actividad"
   utter_servicio_de_salud:
     - custom:

@@ -54,6 +54,18 @@ stories:
   - intent: despedida
   - action: utter_despedida
 
+# >> ESTADO CUENTA PATH :
+- story: estado cuenta path
+  steps:
+  - intent: estado_cuenta
+  - action: utter_estado_cuenta
+
+# >> TRAMITE MUNI SJL PATH :
+- story: tramite muni sjl path
+  steps:
+  - intent: consulta_tramites
+  - action: utter_tramite
+
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
   steps:

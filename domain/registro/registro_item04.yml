@@ -41,14 +41,11 @@ responses:
                   - title: "Escoge la pregunta"
                     rows:
                       - id: "/registro_item04_consulta"
-                        title: "Opción 1"
-                        description: "📘 ¿Qué es?"
+                        title: "📘 ¿Qué es?"
                       - id: "/registro_item04_necesidad"
-                        title: "Opción 2"
-                        description: "📝 ¿Qué necesito?"
+                        title: "📝 ¿Qué necesito?"
                       - id: "/registro_item04_costo"
-                        title: "Opción 3"
-                        description: "💰 ¿Cuánto cuesta?"
+                        title: "💰 ¿Cuánto cuesta?"
                 button: "Opciones"
 
   # >> 4.4... CONSULTA
@@ -136,20 +133,15 @@ responses:
                   - title: "Selecciona la opción"
                     rows:
                       - id: "/registro_item04_subnecesidad_01"
-                        title: "Opción 1"
-                        description: "No hijos"
+                        title: "No hijos"
                       - id: "/registro_item04_subnecesidad_02"
-                        title: "Opción 2"
-                        description: "Hijos menores"
+                        title: "Hijos menores"
                       - id: "/registro_item04_subnecesidad_03"
-                        title: "Opción 3"
-                        description: "Mayores discapacitados"
+                        title: "Mayores discapacitados"
                       - id: "/registro_item04_subnecesidad_04"
-                        title: "Opción 4"
-                        description: "Patrimonio"
+                        title: "Patrimonio"
                       - id: "/registro_item04_necesidad"
-                        title: "Volver"
-                        description: "Volver a lo anterior"
+                        title: "Volver a lo anterior"
                 button: "Opciones"
 
   # >> 4.4.1... SUBNECESIDAD 01

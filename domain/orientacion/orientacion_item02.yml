@@ -36,14 +36,11 @@ responses:
                   - title: "Escoge la pregunta"
                     rows:
                       - id: "/orientacion_item02_consulta"
-                        title: "Opción 1"
-                        description: "¿Qué es?"
+                        title: "¿Qué es?"
                       - id: "/orientacion_item02_necesidad"
-                        title: "Opción 2"
-                        description: "¿Qué necesito?"
+                        title: "¿Qué necesito?"
                       - id: "/orientacion_item02_costo"
-                        title: "Opción 3"
-                        description: "¿Cuánto cuesta?"
+                        title: "¿Cuánto cuesta?"
                 button: "Opciones"
 
   # >> 3.2... CONSULTA

@@ -36,14 +36,11 @@ responses:
                   - title: "Escoge la pregunta"
                     rows:
                       - id: "/registro_item03_consulta"
-                        title: "Opción 1"
-                        description: "📘 ¿Qué es?"
+                        title: "📘 ¿Qué es?"
                       - id: "/registro_item03_necesidad"
-                        title: "Opción 2"
-                        description: "📋 ¿Qué necesito?"
+                        title: "📋 ¿Qué necesito?"
                       - id: "/registro_item03_costo"
-                        title: "Opción 3"
-                        description: "💰 ¿Cuánto cuesta?"
+                        title: "💰 ¿Cuánto cuesta?"
                 button: "Opciones"
 
   # >> 4.3... CONSULTA
