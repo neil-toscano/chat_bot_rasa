@@ -60,7 +60,7 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Declaración jurada para informar el cambio de giro. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+                a. 📄Declaración jurada para informar el cambio de giro.
 
           - type: "text"
             text:

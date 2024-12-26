@@ -60,7 +60,7 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Formato de delaración jurada para licencia de funcionamiento. https://www.bn.com.pe/nosotros/archivos/manual-procesos-bn.pdf
+                a. 📄Formato de delaración jurada para licencia de funcionamiento.
 
           - type: "text"
             text:
