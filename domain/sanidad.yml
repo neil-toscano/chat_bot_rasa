@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+  - carnet_sanidad
+  - carnet_sanidad_no_manipular_alimentos
+
+responses:
+  # >> 5. SANIDAD :
+  utter_carnet_sanidad:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "🟢 Opciones de Carnet de Sanidad:"
+              body:
+                text: |
+                  1. 📜 Carnet de Sanidad no manipulador de alimentos
+
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/carnet_sanidad_no_manipular_alimentos"
+                        title: "📜 Carnet de Sanidad"
+                button: "Seleccionar Opción"

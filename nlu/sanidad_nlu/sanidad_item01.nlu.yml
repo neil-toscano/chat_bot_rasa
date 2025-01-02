@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+# >> 1.1. NLU - CARNET DE SANIDAD - NO MANIPULAR ALIMENTOS:
+- intent: carnet_sanidad_no_manipular_alimentos
+  examples: |
+    - ¿Cómo puedo solicitar el carnet de sanidad para no manipular alimentos?
+    - Quiero saber el procedimiento para obtener el carnet de sanidad
+    - Solicitar carnet de sanidad para no manipular alimentos
+    - Procedimiento para emitir carnet de sanidad para no manipular alimentos
+    - ¿Cómo acceder a los servicios públicos con el carnet de sanidad?
+    - ¿Qué se necesita para obtener el carnet de sanidad para no manipular alimentos?
+    - Emisión de carnet de sanidad para no manipular alimentos
+
+# >> 1.1... NLU - CONSULTA
+- intent: carnet_sanidad_no_manipular_alimentos_que_es
+  examples: |
+    - ¿Qué es el carnet de sanidad para no manipular alimentos?
+    - Explícame qué es el carnet de sanidad para no manipular alimentos
+    - ¿En qué consiste el carnet de sanidad para no manipular alimentos?
+    - Definición de carnet de sanidad para no manipular alimentos
+    - ¿Qué significa el carnet de sanidad para no manipular alimentos?
+
+# >> 1.1... NLU - NECESIDAD
+- intent: carnet_sanidad_no_manipular_alimentos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el carnet de sanidad para no manipular alimentos?
+    - Requisitos para el carnet de sanidad para no manipular alimentos
+    - ¿Qué documentos se necesitan para el carnet de sanidad para no manipular alimentos?
+    - ¿Cuáles son los requisitos para obtener el carnet de sanidad para no manipular alimentos?
+    - Documentos necesarios para solicitar el carnet de sanidad para no manipular alimentos
+
+# >> 1.1... NLU - COSTO
+- intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta 
+  examples: |
+    - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
+    - Costo del carnet de sanidad para no manipular alimentos
+    - ¿Qué tarifas se aplican para el carnet de sanidad para no manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
+    - Tarifas y costos para la emisión de carnet de sanidad para no manipular alimentos
+    - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
+

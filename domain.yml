@@ -1,5 +1,7 @@
 version: '3.1'
 intents:
+  - constancia_posesion
+  - constancia_posesion_servicios_basicos
   - formalizacion_promocion_empresarial
   - licencia_funcionamiento_edificacion_riesgo_bajo
   - gestion
@@ -37,6 +39,11 @@ intents:
   - registro_item02
   - registro_item03
   - registro_item04
+  - carnet_sanidad
+  - carnet_sanidad_no_manipular_alimentos
+  - constancia_posesion_servicios_basicos_que_es
+  - constancia_posesion_servicios_basicos_que_necesito
+  - constancia_posesion_servicios_basicos_cuanto_cuesta
   - licencia_funcionamiento_edificacion_riesgo_bajo_que_es
   - licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
   - servicio_de_salud
@@ -166,7 +173,34 @@ intents:
   - registro_item04_subnecesidad_02
   - registro_item04_subnecesidad_03
   - registro_item04_subnecesidad_04
+  - carnet_sanidad_no_manipular_alimentos_que_es
+  - carnet_sanidad_no_manipular_alimentos_que_necesito
+  - carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
 responses:
+  utter_constancia_posesion:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: '🟢 Opciones de Constancia de Posesión:'
+              body:
+                text: |
+                  1. 📜 CONSTANCIA DE POSESIÓN PARA FINES DEL OTORGAMIENTO DE SERVICIOS BÁSICOS
+
+              footer:
+                text: '*Seleccione la opción abajo 👇*'
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge la opción
+                    rows:
+                      - id: /constancia_posesion_servicios_basicos
+                        title: 📜 Constancia
+                button: Seleccionar Opción
   utter_formalizacion_promocion_empresarial:
     - custom:
         blocks:
@@ -174,7 +208,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *Formalización y promoción empresarial*
+                *Licencia de funcionamiento y anuncio publicitario*
                 1. 🟢Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
                       _(con ITSE posterior)_
 
@@ -348,7 +382,7 @@ responses:
                   - type: reply
                     reply:
                       id: /consulta_tramites
-                      title: Consulta tramites
+                      title: Consulta trámites
 
   utter_estado_cuenta:
     - custom:
@@ -379,15 +413,19 @@ responses:
                 text: |
                   ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
 
-                  *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
+                  *1. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
 
-                  *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
+                  *2. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
 
-                  *3. 📋 ORIENTACIÓN Y REGISTRO*
+                  *3. 📋 INSCRIPCIÓN DE PREDIOS*
 
-                  *4. 🧾 REGISTRO CIVIL*
+                  *4. 🧾 MATRIMONIOS Y DIVORCIOS*
 
-                  *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
+                  *5. 🏗️ OBRAS PRIVADAS*
+
+                  *6. 📜 CONSTANCIA DE POSESIÓN*
+
+                  *7. 🩺 CARNET DE SANIDAD*
               footer:
                 text: seleccione el trámite abajo 👇
               action:
@@ -395,15 +433,19 @@ responses:
                   - title: Escoja trámite
                     rows:
                       - id: /formalizacion_promocion_empresarial
-                        title: Formalización 💼
+                        title: Licencias 💼
                       - id: /gestion
-                        title: Gestión 🚨
+                        title: Certificados 🚨
                       - id: /orientacion
-                        title: Orientación 📋
+                        title: Inscripción 📋
                       - id: /registro
-                        title: Registro 🧾
+                        title: Matrimonios 🧾
                       - id: /obras
                         title: Obras 🏗️
+                      - id: /constancia_posesion
+                        title: Constancia 📜
+                      - id: /carnet_sanidad
+                        title: Carnet 🩺
                 button: Seleccionar trámite
   # utter_saludo:
   #   - custom:
@@ -564,6 +606,100 @@ responses:
                       - id: /registro_item04
                         title: 💔 SEPARACIÓN
                 button: Selecciona Opción
+  utter_carnet_sanidad:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: '🟢 Opciones de Carnet de Sanidad:'
+              body:
+                text: |
+                  1. 📜 Carnet de Sanidad no manipulador de alimentos
+
+              footer:
+                text: '*Seleccione la opción abajo 👇*'
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: Escoge la opción
+                    rows:
+                      - id: /carnet_sanidad_no_manipular_alimentos
+                        title: 📜 Carnet de Sanidad
+                button: Seleccionar Opción
+  utter_constancia_posesion_servicios_basicos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🎉 Haz seleccionado Constancia de Posesión*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Requisitos?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la opción abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la opción
+                    rows:
+                      - id: /constancia_posesion_servicios_basicos_que_es
+                        title: ¿Qué es? 📄
+                      - id: /constancia_posesion_servicios_basicos_que_necesito
+                        title: ¿Requisitos? 📋
+                      - id: /constancia_posesion_servicios_basicos_cuanto_cuesta
+                        title: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.1... CONSULTA
+  utter_constancia_posesion_servicios_basicos_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Procedimiento mediante el cual el posesionario de un predio, solicita la emisión de una constancia señalando la posesión del predio para efectos de acceder a los servicios públicos.
+
+  # >> 5.1... NECESIDAD
+  utter_constancia_posesion_servicios_basicos_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Requisitos para el trámite:*
+
+                1. 🖊️Presentar solicitud firmada por el administrado, señalando el número de recibo y la fecha del pago efectuado por el derecho de tramitación.
+
+                2. 📍Plano simple de ubicación del Predio
+
+                3. 📂Indicar número y fecha de expedición del Acta de verificación de posesión efectiva del predio emitida por la Municipalidad Distrital de San Juan de Lurigancho, y suscrita por todos los colindantes del predio, o Acta policial de posesión suscrita por todos los colindantes de dicho predio.
+
+  # >> 5.1... COSTO
+  utter_constancia_posesion_servicios_basicos_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 55.20
   utter_licencia_funcionamiento_edificacion_riesgo_bajo:
     - custom:
         blocks:
@@ -828,7 +964,7 @@ responses:
             text:
               preview_url: false
               body: |
-                💵 S/ 253.40
+                💵 S/ 260.80
 
 # =============================================
   utter_formalizacion_item03_edificacion_riesgo_alto:
@@ -3529,6 +3665,75 @@ responses:
                 2. 🏠 Separación de patrimonios: Escritura pública registrada.
 
                 3. 🔄 Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
+  utter_carnet_sanidad_no_manipular_alimentos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🎉 Haz seleccionado Carnet de Sanidad para no manipular alimentos*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Requisitos?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la opción abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la opción
+                    rows:
+                      - id: /carnet_sanidad_no_manipular_alimentos_que_es
+                        title: ¿Qué es? 📄
+                      - id: /carnet_sanidad_no_manipular_alimentos_que_necesito
+                        title: ¿Requisitos? 📋
+                      - id: /carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+                        title: ¿Cuánto cuesta? 💵
+                button: ✅ Opciones
+
+  # >> 5.1... CONSULTA
+  utter_carnet_sanidad_no_manipular_alimentos_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es un documento que certifica que una persona cumple requisitos sanitarios para trabajos que no implican manipular alimentos.
+
+  # >> 5.1... NECESIDAD
+  utter_carnet_sanidad_no_manipular_alimentos_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Requisitos para el trámite:*
+
+                1. 💰Pago por derecho de servicios
+
+                2. 🆔DNI y/o carnet de extranjería 
+
+  # >> 5.1... COSTO
+  utter_carnet_sanidad_no_manipular_alimentos_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 15.00
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

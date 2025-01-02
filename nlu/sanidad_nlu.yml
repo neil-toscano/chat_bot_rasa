@@ -1,0 +1,14 @@
+version: "3.1"
+
+# >> 1. NLU - CARNET DE SANIDAD :
+nlu:
+- intent: carnet_sanidad
+  examples: |
+    - Necesito un carnet de sanidad
+    - ¿Cómo obtengo un carnet de sanidad?
+    - Información sobre el carnet de sanidad
+    - Quiero hablar sobre el carnet de sanidad
+    - Carnet de sanidad para fines de servicios básicos
+    - Hablemos de cómo obtener el carnet de sanidad
+    - Ayuda con el carnet de sanidad
+    - ¿Qué es el carnet de sanidad?

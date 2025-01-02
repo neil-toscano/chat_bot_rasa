@@ -2,6 +2,12 @@ version: "3.1"
 
 stories:
 
+# >> CONSTANCIA POSESION :
+- story: constancia posesion
+  steps:
+  - intent: constancia_posesion
+  - action: utter_constancia_posesion
+
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
   steps:
@@ -89,6 +95,36 @@ stories:
   - action: utter_saludo
   - intent: registro
   - action: utter_registro
+
+# >> CARNET SANIDAD :
+- story: carnet sanidad
+  steps:
+  - intent: carnet_sanidad
+  - action: utter_carnet_sanidad
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS :
+- story: constancia posesion servicios basicos
+  steps:
+  - intent: constancia_posesion_servicios_basicos
+  - action: utter_constancia_posesion_servicios_basicos
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS QUE ES :
+- story: constancia posesion servicios basicos que es
+  steps:
+  - intent: constancia_posesion_servicios_basicos_que_es
+  - action: utter_constancia_posesion_servicios_basicos_que_es
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS QUE NECESITO :
+- story: constancia posesion servicios basicos que necesito
+  steps:
+  - intent: constancia_posesion_servicios_basicos_que_necesito
+  - action: utter_constancia_posesion_servicios_basicos_que_necesito
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS CUANTO CUESTA :
+- story: constancia posesion servicios basicos cuanto cuesta
+  steps:
+  - intent: constancia_posesion_servicios_basicos_cuanto_cuesta
+  - action: utter_constancia_posesion_servicios_basicos_cuanto_cuesta
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO :
 - story: licencia funcionamiento riesgo bajo
@@ -1001,3 +1037,27 @@ stories:
   steps:
   - intent: registro_item04_subnecesidad_04
   - action: utter_registro_item04_subnecesidad_04
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS :
+- story: carnet sanidad no manipular alimentos
+  steps:
+  - intent: carnet_sanidad_no_manipular_alimentos
+  - action: utter_carnet_sanidad_no_manipular_alimentos
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE ES :
+- story: carnet sanidad no manipular alimentos que es
+  steps:
+  - intent: carnet_sanidad_no_manipular_alimentos_que_es
+  - action: utter_carnet_sanidad_no_manipular_alimentos_que_es
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE NECESITO :
+- story: carnet sanidad no manipular alimentos que necesito
+  steps:
+  - intent: carnet_sanidad_no_manipular_alimentos_que_necesito
+  - action: utter_carnet_sanidad_no_manipular_alimentos_que_necesito
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS CUANTO CUESTA :
+- story: carnet sanidad no manipular alimentos cuanto cuesta
+  steps:
+  - intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+  - action: utter_carnet_sanidad_no_manipular_alimentos_cuanto_cuesta

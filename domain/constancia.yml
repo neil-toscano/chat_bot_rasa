@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+  - constancia_posesion
+  - constancia_posesion_servicios_basicos
+
+responses:
+  # >> 3. CONSTANCIA DE POSESIÓN :
+  utter_constancia_posesion:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "🟢 Opciones de Constancia de Posesión:"
+              body:
+                text: |
+                  1. 📜 CONSTANCIA DE POSESIÓN PARA FINES DEL OTORGAMIENTO DE SERVICIOS BÁSICOS
+
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/constancia_posesion_servicios_basicos"
+                        title: "📜 Constancia"
+                button: "Seleccionar Opción"

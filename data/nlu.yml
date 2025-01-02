@@ -1,6 +1,18 @@
 version: "3.1"
 
 nlu:
+# >> CONSTANCIA POSESION :
+- intent: constancia_posesion
+  examples: |
+    - Necesito una constancia de posesión para servicios básicos
+    - ¿Cómo obtengo una constancia de posesión para servicios básicos?
+    - Información sobre la constancia de posesión
+    - Quiero hablar sobre la constancia de posesión
+    - Constancia de posesión para fines de servicios básicos
+    - Hablemos de cómo obtener la constancia de posesión
+    - Ayuda con la constancia de posesión para servicios básicos
+    - ¿Qué es la constancia de posesión?
+
 # >> FORMALIZACION PROMOCION EMPRESARIAL :
 - intent: formalizacion_promocion_empresarial
   examples: |
@@ -156,6 +168,59 @@ nlu:
     - Registro civil
     - Civil
     - dime acerca de registro civil
+
+# >> CARNET SANIDAD :
+- intent: carnet_sanidad
+  examples: |
+    - Necesito un carnet de sanidad
+    - ¿Cómo obtengo un carnet de sanidad?
+    - Información sobre el carnet de sanidad
+    - Quiero hablar sobre el carnet de sanidad
+    - Carnet de sanidad para fines de servicios básicos
+    - Hablemos de cómo obtener el carnet de sanidad
+    - Ayuda con el carnet de sanidad
+    - ¿Qué es el carnet de sanidad?
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS :
+- intent: constancia_posesion_servicios_basicos
+  examples: |
+    - ¿Cómo puedo solicitar la constancia de posesión para acceder a los servicios públicos?
+    - Quiero saber el procedimiento para la constancia de posesión de un predio
+    - Solicitar constancia de posesión para acceder a servicios públicos
+    - Procedimiento para emitir constancia de posesión de un predio
+    - ¿Cómo acceder a los servicios públicos con la constancia de posesión?
+    - ¿Qué se necesita para obtener la constancia de posesión para servicios públicos?
+    - Emisión de constancia de posesión para efectos de servicios públicos
+    - Requisitos para la constancia de posesión y acceso a servicios básicos
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS QUE ES :
+- intent: constancia_posesion_servicios_basicos_que_es
+  examples: |
+    - ¿Qué es la constancia de posesión para servicios básicos?
+    - Explícame qué es la constancia de posesión
+    - ¿En qué consiste la constancia de posesión para servicios públicos?
+    - Definición de constancia de posesión
+    - ¿Qué significa la constancia de posesión para acceder a servicios básicos?
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS QUE NECESITO :
+- intent: constancia_posesion_servicios_basicos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener la constancia de posesión?
+    - Requisitos para la constancia de posesión para servicios básicos
+    - ¿Qué documentos se necesitan para la constancia de posesión?
+    - ¿Cuáles son los requisitos para obtener la constancia de posesión?
+    - Documentos necesarios para solicitar la constancia de posesión
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS CUANTO CUESTA :
+- intent: constancia_posesion_servicios_basicos_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta la constancia de posesión para servicios básicos?
+    - Costo de la constancia de posesión para servicios públicos
+    - ¿Qué tarifas se aplican para la constancia de posesión?
+    - ¿Cuánto se paga por la constancia de posesión?
+    - Tarifas y costos para la emisión de constancia de posesión
+    - ¿Cuánto cuesta la constancia de posesión para servicios públicos?
+    - ¿Cuánto se paga por la constancia de posesión para servicios básicos?
 
 # >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO :
 - intent: licencia_funcionamiento_edificacion_riesgo_bajo
@@ -1373,4 +1438,44 @@ nlu:
     - Qué documentos necesarios necesito en caso el requisito sea relacionado con el patrimonio
     - Que documentos son necesarios en caso sea relacionado con el patrimonio
     - Que documentos necesito si es relacionado con el patrimonio
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS :
+- intent: carnet_sanidad_no_manipular_alimentos
+  examples: |
+    - ¿Cómo puedo solicitar el carnet de sanidad para no manipular alimentos?
+    - Quiero saber el procedimiento para obtener el carnet de sanidad
+    - Solicitar carnet de sanidad para no manipular alimentos
+    - Procedimiento para emitir carnet de sanidad para no manipular alimentos
+    - ¿Cómo acceder a los servicios públicos con el carnet de sanidad?
+    - ¿Qué se necesita para obtener el carnet de sanidad para no manipular alimentos?
+    - Emisión de carnet de sanidad para no manipular alimentos
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE ES :
+- intent: carnet_sanidad_no_manipular_alimentos_que_es
+  examples: |
+    - ¿Qué es el carnet de sanidad para no manipular alimentos?
+    - Explícame qué es el carnet de sanidad para no manipular alimentos
+    - ¿En qué consiste el carnet de sanidad para no manipular alimentos?
+    - Definición de carnet de sanidad para no manipular alimentos
+    - ¿Qué significa el carnet de sanidad para no manipular alimentos?
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE NECESITO :
+- intent: carnet_sanidad_no_manipular_alimentos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el carnet de sanidad para no manipular alimentos?
+    - Requisitos para el carnet de sanidad para no manipular alimentos
+    - ¿Qué documentos se necesitan para el carnet de sanidad para no manipular alimentos?
+    - ¿Cuáles son los requisitos para obtener el carnet de sanidad para no manipular alimentos?
+    - Documentos necesarios para solicitar el carnet de sanidad para no manipular alimentos
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS CUANTO CUESTA :
+- intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
+    - Costo del carnet de sanidad para no manipular alimentos
+    - ¿Qué tarifas se aplican para el carnet de sanidad para no manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
+    - Tarifas y costos para la emisión de carnet de sanidad para no manipular alimentos
+    - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
 

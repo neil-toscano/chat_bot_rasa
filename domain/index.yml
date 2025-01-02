@@ -62,7 +62,7 @@ responses:
                   - type: "reply"
                     reply:
                       id: "/consulta_tramites"
-                      title: "Consulta tramites"
+                      title: "Consulta trámites"
 
   utter_estado_cuenta:
     - custom:
@@ -93,15 +93,19 @@ responses:
                 text: |
                   ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
 
-                  *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
+                  *1. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
 
-                  *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
+                  *2. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
 
-                  *3. 📋 ORIENTACIÓN Y REGISTRO*
+                  *3. 📋 INSCRIPCIÓN DE PREDIOS*
 
-                  *4. 🧾 REGISTRO CIVIL*
+                  *4. 🧾 MATRIMONIOS Y DIVORCIOS*
 
-                  *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
+                  *5. 🏗️ OBRAS PRIVADAS*
+
+                  *6. 📜 CONSTANCIA DE POSESIÓN*
+
+                  *7. 🩺 CARNET DE SANIDAD*
               footer:
                 text: "seleccione el trámite abajo 👇"
               action:
@@ -109,15 +113,19 @@ responses:
                   - title: "Escoja trámite"
                     rows:
                       - id: "/formalizacion_promocion_empresarial"
-                        title: "Formalización 💼"
+                        title: "Licencias 💼"
                       - id: "/gestion"
-                        title: "Gestión 🚨"
+                        title: "Certificados 🚨"
                       - id: "/orientacion"
-                        title: "Orientación 📋"
+                        title: "Inscripción 📋"
                       - id: "/registro"
-                        title: "Registro 🧾"
+                        title: "Matrimonios 🧾"
                       - id: "/obras"
                         title: "Obras 🏗️"
+                      - id: "/constancia_posesion"
+                        title: "Constancia 📜"
+                      - id: "/carnet_sanidad"
+                        title: "Carnet 🩺"
                 button: "Seleccionar trámite"
   # utter_saludo:
   #   - custom:
