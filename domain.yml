@@ -29,11 +29,11 @@ intents:
   - obras_item02
   - obras_item03
   - obras_item04
-  - obras_item05
-  - obras_item06
   - orientacion
   - orientacion_item01
   - orientacion_item02
+  - orientacion_item03
+  - orientacion_item04
   - registro
   - registro_item01
   - registro_item02
@@ -137,18 +137,18 @@ intents:
   - obras_item04_consulta
   - obras_item04_necesidad
   - obras_item04_costo
-  - obras_item05_consulta
-  - obras_item05_necesidad
-  - obras_item05_costo
-  - obras_item06_consulta
-  - obras_item06_necesidad
-  - obras_item06_costo
   - orientacion_item01_consulta
   - orientacion_item01_necesidad
   - orientacion_item01_costo
   - orientacion_item02_consulta
   - orientacion_item02_necesidad
   - orientacion_item02_costo
+  - orientacion_item03_consulta
+  - orientacion_item03_necesidad
+  - orientacion_item03_costo
+  - orientacion_item04_consulta
+  - orientacion_item04_necesidad
+  - orientacion_item04_costo
   - registro_item01_consulta
   - registro_item01_necesidad
   - registro_item01_costo
@@ -516,10 +516,6 @@ responses:
 
                   4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
-                  5. 📝Inscripción por Compra-Venta
-
-                  6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
-
               footer:
                 text: '*Seleccione la opción abajo 👇*'
 
@@ -536,10 +532,6 @@ responses:
                         title: 🛠️ LICENCIA CONSTRUCCIÓN
                       - id: /obras_item04
                         title: 🏚️ LICENCIA DEMOLICIÓN
-                      - id: /obras_item05
-                        title: 🤝 COMPRA-VENTA
-                      - id: /obras_item06
-                        title: 📂 INDEPENDIZACIÓN
                 button: Seleccionar opción
   utter_orientacion:
     - custom:
@@ -556,6 +548,10 @@ responses:
 
                   2. 🏠 Inscripción por Sucesión Intestada
 
+                  3. 💼 Inscripción por Compra-Venta
+
+                  4. 🗺️ Inscripción de una Independización o Subdivisión de Lotes
+
               footer:
                 text: '*Seleccione la opción abajo 👇*'
 
@@ -568,6 +564,10 @@ responses:
                         title: 📜 SUCESIÓN INDIVISA
                       - id: /orientacion_item02
                         title: 🏠 SUCESIÓN INTESTADA
+                      - id: /orientacion_item03
+                        title: 💼 COMPRA-VENTA
+                      - id: /orientacion_item04
+                        title: 🗺️ INDEPENDIZACIÓN
                 button: Seleccionar Opción
   utter_registro:
     - custom:
@@ -587,7 +587,8 @@ responses:
                   3. 🔄 Reprogramación de fecha y hora de Ceremonia Matrimonial  
 
                   4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional
-                  🌐 La documentación necesaria lo econtrará en el siguiente LINK 👉: https://web.munisjl.gob.pe/web/matrimonios.php
+
+                  🌐 La documentación necesaria lo encontrará en el siguiente LINK 👉: https://web.munisjl.gob.pe/web/matrimonios.php
 
               footer:
                 text: '*Seleccione la opción abajo 👇*'
@@ -2795,152 +2796,6 @@ responses:
               preview_url: false
               body: |
                 💰 *Costo del trámite:* S/ 450.30
-  utter_obras_item05:
-    - custom:
-        blocks:
-          - type: interactive
-            interactive:
-              type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
-              body:
-                text: |
-                  *🏘️ Haz seleccionado Inscripción por Compra-Venta*
-
-                  *❓ Opciones de pregunta:*
-
-                  1. 📄 ¿Qué es?
-
-                  2. 📋 ¿Qué necesito?
-
-                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '*Seleccione la pregunta abajo 👇*'
-
-              action:
-                sections:
-                  - title: Escoge la pregunta
-                    rows:
-                      - id: /obras_item05_consulta
-                        title: ¿Qué es? 📄
-                      - id: /obras_item05_necesidad
-                        title: ¿Qué necesito? 📋
-                      - id: /obras_item05_costo
-                        title: ¿Cuánto cuesta? 💵
-                button: ✅ Opciones
-
-  # >> 5.5... CONSULTA
-  utter_obras_item05_consulta:
-    - custom:
-        blocks:
-          - type: text
-            text:
-              preview_url: false
-              body: |
-                📜 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
-
-                *🏘️ ¿Para qué es necesario?*
-
-                Para legalizar y actualizar el cambio de propietario ante los registros municipales.
-
-  # >> 5.5... NECESIDAD
-  utter_obras_item05_necesidad:
-    - custom:
-        blocks:
-          - type: text
-            text:
-              preview_url: false
-              body: |
-                *📋 Requisitos para el trámite:*
-
-                1. 🖊️ Minuta con número de KARDEX o escritura pública.
-
-                2. 📄 Copia literal.
-
-  # >> 5.5... COSTO
-  utter_obras_item05_costo:
-    - custom:
-        blocks:
-          - type: text
-            text:
-              preview_url: false
-              body: |
-                💰 *Costo del trámite:* GRATUITO
-  utter_obras_item06:
-    - custom:
-        blocks:
-          - type: interactive
-            interactive:
-              type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
-              body:
-                text: |
-                  *🏗️ Haz seleccionado Inscripción de una Independización o Subdivisión de Lotes*
-
-                  *❓ Opciones de pregunta:*
-
-                  1. 📄 ¿Qué es?
-
-                  2. 📋 ¿Qué necesito?
-
-                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
-              footer:
-                text: '*Seleccione la pregunta abajo 👇*'
-
-              action:
-                sections:
-                  - title: Escoge la pregunta
-                    rows:
-                      - id: /obras_item06_consulta
-                        title: ¿Qué es? 📄
-                      - id: /obras_item06_necesidad
-                        title: ¿Qué necesito? 📋
-                      - id: /obras_item06_costo
-                        title: ¿Cuánto cuesta? 💵
-                button: ✅ Opciones
-
-  # >> 5.6... CONSULTA
-  utter_obras_item06_consulta:
-    - custom:
-        blocks:
-          - type: text
-            text:
-              preview_url: false
-              body: |
-                📜 Es el registro de la división de un terreno o propiedad en lotes individuales.
-
-                *🏘️ ¿Para qué es necesario?*
-
-                Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
-
-  # >> 5.6... NECESIDAD
-  utter_obras_item06_necesidad:
-    - custom:
-        blocks:
-          - type: text
-            text:
-              preview_url: false
-              body: |
-                *📋 Requisitos para el trámite:*
-
-                1. 📄 Copia literal o partida electrónica con todos los asientos.
-
-                2. 📜 Certificados literales o partidas electrónicas de las unidades inmobiliarias, secciones, sublotes y otros.
-
-                3. 🆔 Exhibición del DNI.
-
-  # >> 5.6... COSTO
-  utter_obras_item06_costo:
-    - custom:
-        blocks:
-          - type: text
-            text:
-              preview_url: false
-              body: |
-                💰 *Costo del trámite:* GRATUITO
   utter_orientacion_item01:
     - custom:
         blocks:
@@ -3084,6 +2939,154 @@ responses:
 
   # >> 3.2... COSTO
   utter_orientacion_item02_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💸 GRATUITO
+  utter_orientacion_item03:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
+              body:
+                text: |
+                  Haz seleccionado 💼 *Inscripción por Compra-Venta*
+
+                  *🟢 Opciones de pregunta:*  
+
+                  1️. 📘¿Qué es?  
+
+                  2️. 📝¿Qué necesito?  
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+
+              footer:
+                text: '*Seleccione la opción abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /orientacion_item02_consulta
+                        title: ¿Qué es?
+                      - id: /orientacion_item02_necesidad
+                        title: ¿Qué necesito?
+                      - id: /orientacion_item02_costo
+                        title: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 3.3... CONSULTA
+  utter_orientacion_item03_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
+
+                *🏘️ ¿Para qué es necesario?*
+
+                Para legalizar y actualizar el cambio de propietario ante los registros municipales.yes de sucesión.
+
+  # >> 3.3... NECESIDAD
+  utter_orientacion_item03_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 🖊️ Minuta con número de KARDEX o escritura pública.
+
+                2. 📄 Copia literal.
+
+  # >> 3.3... COSTO
+  utter_orientacion_item03_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💸 GRATUITO
+  utter_orientacion_item04:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
+              body:
+                text: |
+                  Haz seleccionado 🗺️ *Inscripción de una Independización o Subdivisión de Lotes*
+
+                  *🟢 Opciones de pregunta:*  
+
+                  1️. 📘¿Qué es?  
+
+                  2️. 📝¿Qué necesito?  
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+
+              footer:
+                text: '*Seleccione la opción abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoge la pregunta
+                    rows:
+                      - id: /orientacion_item02_consulta
+                        title: ¿Qué es?
+                      - id: /orientacion_item02_necesidad
+                        title: ¿Qué necesito?
+                      - id: /orientacion_item02_costo
+                        title: ¿Cuánto cuesta?
+                button: Opciones
+
+  # >> 3.4... CONSULTA
+  utter_orientacion_item04_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el registro de la división de un terreno o propiedad en lotes individuales.
+
+                *🏘️ ¿Para qué es necesario?*
+
+                Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
+
+  # >> 3.4... NECESIDAD
+  utter_orientacion_item04_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *📋 Requisitos para el trámite:*
+
+                1. 📄 Copia literal o partida electrónica con todos los asientos.
+
+                2. 📜 Certificados literales o partidas electrónicas de las unidades inmobiliarias, secciones, sublotes y otros.
+
+                3. 🆔 Exhibición del DNI.
+
+  # >> 3.4... COSTO
+  utter_orientacion_item04_costo:
     - custom:
         blocks:
           - type: text

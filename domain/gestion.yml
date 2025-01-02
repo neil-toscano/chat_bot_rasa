@@ -14,7 +14,7 @@ intents:
   - gestion_item10
 
 responses:
-  # >> 2. GESTIÓN DEL RIESGO DE DESASTRES :
+  # >> 2. CERRTIFICADO DE DEFENSA CIVIL :
   utter_gestion:
     - custom:
         blocks:

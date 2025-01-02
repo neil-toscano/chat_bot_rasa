@@ -6,8 +6,6 @@ intents:
   - obras_item02
   - obras_item03
   - obras_item04
-  - obras_item05
-  - obras_item06
 
 responses:
   # >> 5. OBRAS PRIVADAS Y HABILITACIÓN URBANA :
@@ -30,10 +28,6 @@ responses:
 
                   4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
-                  5. 📝Inscripción por Compra-Venta
-
-                  6. 🗂️Inscripción de una Independización o Subdivisión de Lotes
-
               footer:
                 text: "*Seleccione la opción abajo 👇*"
 
@@ -50,8 +44,4 @@ responses:
                         title: "🛠️ LICENCIA CONSTRUCCIÓN"
                       - id: "/obras_item04"
                         title: "🏚️ LICENCIA DEMOLICIÓN"
-                      - id: "/obras_item05"
-                        title: "🤝 COMPRA-VENTA"
-                      - id: "/obras_item06"
-                        title: "📂 INDEPENDIZACIÓN"
                 button: "Seleccionar opción"
