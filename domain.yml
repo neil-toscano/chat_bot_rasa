@@ -442,9 +442,9 @@ responses:
                         title: Matrimonios 🧾
                       - id: /obras
                         title: Obras 🏗️
-                      - id: /constancia_posesion
+                      - id: /constancia_posesion_servicios_basicos
                         title: Constancia 📜
-                      - id: /carnet_sanidad
+                      - id: /carnet_sanidad_no_manipular_alimentos
                         title: Carnet 🩺
                 button: Seleccionar trámite
   # utter_saludo:
