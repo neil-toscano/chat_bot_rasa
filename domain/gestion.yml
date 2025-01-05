@@ -24,28 +24,28 @@ responses:
               body: |
                 *🟢 Opciones de Trámite:*  
 
-                1. 🏢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Bajo**  
+                1. 🏢🟢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Bajo*  
 
-                2. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Bajo**  
+                2. 🔄🟢 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Bajo*  
 
-                3. 🏢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio**  
+                3. 🏢🟡 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio*  
 
-                4. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio**  
+                4. 🔄🟡 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Medio*  
 
-                5. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**
+                5. 🏢🟠 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Alto*
 
           - type: interactive
             interactive:
               type: list
               body:
                 text: |
-                  6. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Alto**  
+                  6. 🔄🟠 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Alto*  
 
-                  7. 🏢 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
+                  7. 🏢🔴 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Muy Alto*  
 
-                  8. 🔄 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Muy Alto**  
+                  8. 🔄🔴 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Muy Alto*  
 
-                  9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta **3,000 personas**  
+                  9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta *3,000 personas* 
 
                   10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
 
@@ -58,21 +58,21 @@ responses:
                   - title: "Escoge la opción"
                     rows:
                       - id: "/gestion_item01"
-                        title: "🏢 INSPECCIÓN RIESGO BAJO"
+                        title: "🏢🟢 INSPECCIÓN BAJO"
                       - id: "/gestion_item02"
-                        title: "🔄 RENOVACIÓN RIESGO BAJO"
+                        title: "🔄🟢 RENOVACIÓN BAJO"
                       - id: "/gestion_item03"
-                        title: "🏢 INSPECCIÓN RIESGO MEDIO"
+                        title: "🏢🟡 INSPECCIÓN MEDIO"
                       - id: "/gestion_item04"
-                        title: "🔄 RENOVACIÓN RIESGO MEDIO"
+                        title: "🔄🟡 RENOVACIÓN MEDIO"
                       - id: "/gestion_item05"
-                        title: "🏢 INSPECCIÓN RIESGO ALTO"
+                        title: "🏢🟠 INSPECCIÓN ALTO"
                       - id: "/gestion_item06"
-                        title: "🔄 RENOVACIÓN RIESGO ALTO"
+                        title: "🔄🟠 RENOVACIÓN ALTO"
                       - id: "/gestion_item07"
-                        title: "🏢 INSPECCIÓN RIESGO MUY ALTO"
+                        title: "🏢🔴 INSPECCIÓN MUY ALTO"
                       - id: "/gestion_item08"
-                        title: "🔄 RENOVACIÓN RIESGO MUY ALTO"
+                        title: "🔄🔴 RENOVACIÓN MUY ALTO"
                       - id: "/gestion_item09"
                         title: "🏟️ EVALUACIÓN"
                       - id: "/gestion_item10"
