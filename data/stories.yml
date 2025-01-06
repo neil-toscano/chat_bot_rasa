@@ -822,50 +822,50 @@ stories:
   - intent: orientacion_item02_costo
   - action: utter_orientacion_item02_costo
 
-# >> SUCESION INTESTADA :
-- story: sucesion intestada
+# >> COMPRA VENTA :
+- story: compra venta
   steps:
   - intent: orientacion_item03
   - action: utter_orientacion_item03
 
-# >> SUCESION INTESTADA CONSULTA :
-- story: sucesion intestada consulta
+# >> COMPRA VENTA CONSULTA :
+- story: compra venta consulta
   steps:
   - intent: orientacion_item03_consulta
   - action: utter_orientacion_item03_consulta
 
-# >> SUCESION INTESTADA NECESIDAD :
-- story: sucesion intestada necesidad
+# >> COMPRA VENTA NECESIDAD :
+- story: compra venta necesidad
   steps:
   - intent: orientacion_item03_necesidad
   - action: utter_orientacion_item03_necesidad
 
-# >> SUCESION INTESTADA COSTO :
-- story: sucesion intestada costo
+# >> COMPRA VENTA COSTO :
+- story: compra venta costo
   steps:
   - intent: orientacion_item03_costo
   - action: utter_orientacion_item03_costo
 
-# >> SUCESION INTESTADA :
-- story: sucesion intestada
+# >> INDEPENDIZACION :
+- story: independizacion
   steps:
   - intent: orientacion_item04
   - action: utter_orientacion_item04
 
-# >> SUCESION INTESTADA CONSULTA :
-- story: sucesion intestada consulta
+# >> INDEPENDIZACION CONSULTA :
+- story: independizacion consulta
   steps:
   - intent: orientacion_item04_consulta
   - action: utter_orientacion_item04_consulta
 
-# >> SUCESION INTESTADA NECESIDAD :
-- story: sucesion intestada necesidad
+# >> INDEPENDIZACION NECESIDAD :
+- story: independizacion necesidad
   steps:
   - intent: orientacion_item04_necesidad
   - action: utter_orientacion_item04_necesidad
 
-# >> SUCESION INTESTADA COSTO :
-- story: sucesion intestada costo
+# >> INDEPENDIZACION COSTO :
+- story: independizacion costo
   steps:
   - intent: orientacion_item04_costo
   - action: utter_orientacion_item04_costo
