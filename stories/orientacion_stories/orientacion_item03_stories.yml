@@ -2,25 +2,25 @@ version: "3.1"
 
 stories:
   # >> 3.3. STORIES - COMPRA-VENTA :
-  - story: sucesion intestada
+  - story: compra venta
     steps:
       - intent: orientacion_item03
       - action: utter_orientacion_item03
 
   # >> 3.3... STORIES - CONSULTA
-  - story: sucesion intestada consulta
+  - story: compra venta consulta
     steps:
       - intent: orientacion_item03_consulta
       - action: utter_orientacion_item03_consulta
 
   # >> 3.3... STORIES - NECESIDAD
-  - story: sucesion intestada necesidad
+  - story: compra venta necesidad
     steps:
       - intent: orientacion_item03_necesidad
       - action: utter_orientacion_item03_necesidad
 
   # >> 3.3... STORIES - COSTO
-  - story: sucesion intestada costo
+  - story: compra venta costo
     steps:
       - intent: orientacion_item03_costo
       - action: utter_orientacion_item03_costo
