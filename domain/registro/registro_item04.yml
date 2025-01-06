@@ -133,15 +133,15 @@ responses:
                   - title: "Selecciona la opción"
                     rows:
                       - id: "/registro_item04_subnecesidad_01"
-                        title: "No hijos"
+                        title: "🚫 No hijos"
                       - id: "/registro_item04_subnecesidad_02"
-                        title: "Hijos menores"
+                        title: "👶 Hijos menores"
                       - id: "/registro_item04_subnecesidad_03"
-                        title: "Mayores discapacitados"
+                        title: "👵 Discapacitados"
                       - id: "/registro_item04_subnecesidad_04"
-                        title: "Patrimonio"
+                        title: "🏠 Patrimonio"
                       - id: "/registro_item04_necesidad"
-                        title: "Volver a lo anterior"
+                        title: "🔙 Volver"
                 button: "Opciones"
 
   # >> 4.4.1... SUBNECESIDAD 01
