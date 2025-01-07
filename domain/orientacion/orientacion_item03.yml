@@ -35,11 +35,11 @@ responses:
                 sections:
                   - title: "Escoge la pregunta"
                     rows:
-                      - id: "/orientacion_item02_consulta"
+                      - id: "/orientacion_item03_consulta"
                         title: "¿Qué es?"
-                      - id: "/orientacion_item02_necesidad"
+                      - id: "/orientacion_item03_necesidad"
                         title: "¿Qué necesito?"
-                      - id: "/orientacion_item02_costo"
+                      - id: "/orientacion_item03_costo"
                         title: "¿Cuánto cuesta?"
                 button: "Opciones"
 
