@@ -1,0 +1,51 @@
+- intent: formalizacion_item12_transferencia_licencia
+  examples: |
+    - Quiero transferir mi licencia de funcionamiento
+    - Necesito ceder mi licencia de funcionamiento a otra persona
+    - Cómo solicito la transferencia de una licencia de funcionamiento
+    - Soy un tercero y quiero transferir una licencia de funcionamiento
+    - Necesito hacer la transferencia automática de una licencia
+    - Quiero cambiar el titular de mi licencia de funcionamiento
+    - Procedimiento para transferir una licencia de funcionamiento
+    - Cómo inicio el trámite de transferencia de licencia
+    - Solicitud de transferencia de licencia de funcionamiento
+    - Quiero cambiar la denominación de mi licencia de funcionamiento
+
+- intent: formalizacion_item10_transferencia_licencia_que_es
+  examples: |
+    - Qué es la transferencia de licencia de funcionamiento
+    - Para qué sirve transferir una licencia de funcionamiento
+    - En qué consiste cambiar el titular de una licencia
+    - Me pueden explicar qué implica la transferencia de licencia
+    - Qué significa el cambio de denominación de una licencia
+    - Qué es el procedimiento de transferencia de licencia
+    - En qué casos puedo transferir mi licencia de funcionamiento
+    - Qué implica transferir una licencia municipal
+    - Cuál es el propósito de la transferencia de licencia
+    - Qué significa ceder una licencia comercial
+
+- intent: formalizacion_item10_transferencia_licencia_que_necesito
+  examples: |
+    - Qué documentos necesito para transferir mi licencia
+    - Requisitos para transferir una licencia de funcionamiento
+    - Qué debo presentar para el cambio de titular de licencia
+    - Documentación necesaria para transferir una licencia comercial
+    - Cómo acredito la transferencia de una licencia a otra persona
+    - Qué papeles necesito para ceder mi licencia
+    - Requisitos para tramitar el cambio de denominación de una licencia
+    - Qué documentación necesito para transferir mi licencia a otra persona
+    - Qué necesito para realizar el cambio de nombre de mi licencia municipal
+    - Documentos para solicitar la transferencia de una licencia
+
+- intent: formalizacion_item10_transferencia_licencia_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta transferir una licencia de funcionamiento
+    - Precio del trámite de transferencia de licencia
+    - Costo para ceder una licencia de funcionamiento
+    - Cuál es el precio del cambio de titular de una licencia
+    - Tarifa para transferir una licencia municipal
+    - Valor del trámite de cambio de denominación de licencia
+    - Cuánto se paga por la transferencia de una licencia comercial
+    - Costo del procedimiento de transferencia de licencia
+    - Precio para cambiar el nombre de una licencia
+    - Cuánto debo pagar para transferir mi licencia

@@ -1,4 +1,7 @@
 version: '3.1'
+actions:
+  - action_set_reminder
+  - action_react_to_reminder
 intents:
   - constancia_posesion
   - constancia_posesion_servicios_basicos
@@ -24,6 +27,7 @@ intents:
   - bot_challenge
   - estado_cuenta
   - consulta_tramites
+  - EXTERNAL_reminder
   - obras
   - obras_item01
   - obras_item02
@@ -95,6 +99,14 @@ intents:
   - formalizacion_item10_duplicado_resolucion_que_es
   - formalizacion_item10_duplicado_resolucion_que_necesito
   - formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+  - formalizacion_item11_cese_licencia
+  - formalizacion_item11_cese_licencia_que_es
+  - formalizacion_item11_cese_licencia_que_necesito
+  - formalizacion_item11_cese_licencia_cuanto_cuesta
+  - formalizacion_item12_transferencia_licencia
+  - formalizacion_item12_transferencia_licencia_que_es
+  - formalizacion_item12_transferencia_licencia_que_necesito
+  - formalizacion_item12_transferencia_licencia_cuanto_cuesta
   - gestion_item01_consulta
   - gestion_item01_necesidad
   - gestion_item01_costo
@@ -223,52 +235,75 @@ responses:
 
                 5. 🔄Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
 
-          - type: interactive
-            interactive:
-              type: list
+          - type: text
+            text:
+              # body: list
               # header:
               #   type: text
               #   text: "Consulta Trámites"
+              preview_url: false
+              body: |
+                6. 🔃Licencia de funcionamiento para cambio de giro
+
+                7. 🖼️Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
+
+                8. 🔤Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
+
+                9. 📄Duplicado del certificado de licencia de funcionamiento
+
+                10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+
+                11. 📜Cese de licencia de funcionamiento
+                *Seleccione la opción abajo 👇*
+
+          - type: interactive
+            interactive:
+              type: list
               body:
                 text: |
-                  6. 🔃Licencia de funcionamiento para cambio de giro
-
-                  7. 🖼️Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
-
-                  8. 🔤Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
-
-                  9. 📄Duplicado del certificado de licencia de funcionamiento
-
-                  10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
-
-              footer:
-                text: '*Seleccione la opción abajo 👇*'
+                  Seleccionar Publicidad - Duplicado
 
               action:
                 sections:
                   - title: Escoja Opción
                     rows:
                       - id: /licencia_funcionamiento_edificacion_riesgo_bajo
-                        title: RIESGO BAJO 🟢
+                        title: 1. RIESGO BAJO 🟢
                       - id: /formalizacion_item02_edificacion_riesgo_medio
-                        title: RIESGO MEDIO 🟡
+                        title: 2. RIESGO MEDIO 🟡
                       - id: /formalizacion_item03_edificacion_riesgo_alto
-                        title: RIESGO ALTO 🔴
+                        title: 3. RIESGO ALTO 🔴
                       - id: /formalizacion_item04_edificacion_riesgo_muy_alto
-                        title: RIESGO MUY ALTO ⚠️
+                        title: 4. RIESGO MUY ALTO ⚠️
                       - id: /formalizacion_item05_transferencia_licencia_funcionamiento
-                        title: TRANSFERENCIA O CAMBIO 🔄
+                        title: 5. TRANSFERENCIA 🔄
                       - id: /formalizacion_item06_licencia_funcionamiento_cambio_giro
-                        title: CAMBIO DE GIRO 🔃
+                        title: 6. CAMBIO DE GIRO 🔃
+                button: Seleccionar (1 - 6)
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Seleccionar Licencia - Transferencia
+
+              action:
+                sections:
+                  - title: Escoja Opción
+                    rows:
                       - id: /formalizacion_item07_autorizacion_publicidad_exterior_afiche
-                        title: PUBLICIDAD AFICHE 🖼️
+                        title: 7. PUBLICIDAD 🖼️
                       - id: /formalizacion_item08_autorizacion_publicidad_exterior_letras
-                        title: PUBLICIDAD LETRAS 🔤
+                        title: 8. PUBLICIDAD LETRAS 🔤
                       - id: /formalizacion_item09_duplicado_certificado
-                        title: DUPLICADO 📄
+                        title: 9. DUPLICADO 📄
                       - id: /formalizacion_item10_duplicado_resolucion
-                        title: DUPLICADO RESOLUCIÓN 📜
-                button: Seleccionar opción
+                        title: 10. DUP. RESOLUCIÓN 📜
+                      - id: /formalizacion_item11_cese_licencia
+                        title: 11. CESE LICENCIA 📜
+                      - id: /formalizacion_item12_transferencia_licencia
+                        title: 12. TRANSFERENCIA 🔄
+                button: Seleccionar (7-12)
   utter_gestion:
     - custom:
         blocks:
@@ -312,26 +347,27 @@ responses:
                   - title: Escoge la opción
                     rows:
                       - id: /gestion_item01
-                        title: 🏢🟢 INSPECCIÓN BAJO
+                        title: 1. 🏢🟢 INSPECCIÓN BAJO
                       - id: /gestion_item02
-                        title: 🔄🟢 RENOVACIÓN BAJO
+                        title: 2. 🔄🟢 RENOVACIÓN BAJO
                       - id: /gestion_item03
-                        title: 🏢🟡 INSPECCIÓN MEDIO
+                        title: 3. 🏢🟡 INSPECCIÓN MEDIO
                       - id: /gestion_item04
-                        title: 🔄🟡 RENOVACIÓN MEDIO
+                        title: 4. 🔄🟡 RENOVACIÓN MEDIO
                       - id: /gestion_item05
-                        title: 🏢🟠 INSPECCIÓN ALTO
+                        title: 5. 🏢🟠 INSPECCIÓN ALTO
                       - id: /gestion_item06
-                        title: 🔄🟠 RENOVACIÓN ALTO
+                        title: 6. 🔄🟠 RENOVACIÓN ALTO
                       - id: /gestion_item07
-                        title: 🏢🔴 INSPECCIÓN MUY ALTO
+                        title: 7. 🏢🔴 INSP. MUY ALTO
                       - id: /gestion_item08
-                        title: 🔄🔴 RENOVACIÓN MUY ALTO
+                        title: 8. 🔄🔴 RENOV. MUY ALTO
                       - id: /gestion_item09
-                        title: 🏟️ EVALUACIÓN
+                        title: 9. 🏟️ EVALUACIÓN
                       - id: /gestion_item10
-                        title: 📄 DUPLICADO
+                        title: 10. 📄 DUPLICADO
                 button: Seleccionar Opción
+
   utter_animo:
     - text: Siento escuchar eso, aquí hay algo que te va dar ánimo
       image: https://i.imgur.com/nGF1K8f.jpg
@@ -349,40 +385,6 @@ responses:
     - text: Soy un bot, entrenado por la MDSJL.
 
   # >> INDEX - MENU
-  # utter_saludo:
-  #   - custom:
-  #       blocks:
-  #         - type: image
-  #           image:
-  #             id: "1144245547046868"
-  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-  #             # caption: MSJL
-  #         - type: audio
-  #           audio:
-  #             id: "939730344345911"
-  #         - type: interactive
-  #           interactive:
-  #             type: button
-  #             header:
-  #               type: text
-  #               text: "Consulta Trámites"
-  #             body:
-  #               text: |
-  #                 ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
-
-  #                 ¿Qué consulta desea realizar? Por favor, elige una de las siguientes opciones:
-  #             footer:
-  #               text: "seleccione la opción abajo 👇"
-  #             action:
-  #               buttons:
-  #                 - type: "reply"
-  #                   reply:
-  #                     id: "/estado_cuenta"
-  #                     title: "Estado de cuenta"
-  #                 - type: "reply"
-  #                   reply:
-  #                     id: "/consulta_tramites"
-  #                     title: "Consulta trámites"
   utter_saludo:
     - custom:
         blocks:
@@ -396,7 +398,7 @@ responses:
               id: '957422266353539'
           - type: interactive
             interactive:
-              type: list
+              type: button
               header:
                 type: text
                 text: Servicios de la Municipalidad
@@ -404,44 +406,77 @@ responses:
                 text: |
                   ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
 
-                  *1. 💰 ESTADO DE CUENTA*
-
-                  *2. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
-
-                  *3. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
-
-                  *4. 📋 INSCRIPCIÓN DE PREDIOS*
-
-                  *5. 🧾 MATRIMONIOS Y DIVORCIOS*
-
-                  *6. 🏗️ OBRAS PRIVADAS*
-
-                  *7. 📜 CONSTANCIA DE POSESIÓN*
-
-                  *8. 🩺 CARNET DE SANIDAD*
               footer:
                 text: seleccione la opción abajo 👇
               action:
-                sections:
-                  - title: Escoja trámite
-                    rows:
-                      - id: /estado_cuenta
-                        title: Estado de cuenta 💼
-                      - id: /formalizacion_promocion_empresarial
-                        title: Licencias 💼
-                      - id: /gestion
-                        title: Certificados 🚨
-                      - id: /orientacion
-                        title: Inscripción 📋
-                      - id: /registro
-                        title: Matrimonios 🧾
-                      - id: /obras
-                        title: Obras 🏗️
-                      - id: /constancia_posesion_servicios_basicos
-                        title: Constancia 📜
-                      - id: /carnet_sanidad_no_manipular_alimentos
-                        title: Carnet 🩺
-                button: Seleccionar opción
+                buttons:
+                  - type: reply
+                    reply:
+                      id: /estado_cuenta
+                      title: Estado de cuenta
+                  - type: reply
+                    reply:
+                      id: /consulta_tramites
+                      title: Consulta trámites
+  # utter_saludo:
+  #   - custom:
+  #       blocks:
+  #         - type: image
+  #           image:
+  #             id: "1144245547046868"
+  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+  #             # caption: MSJL
+  #         - type: audio
+  #           audio:
+  #             id: "957422266353539"
+  #         - type: interactive
+  #           interactive:
+  #             type: list
+  #             header:
+  #               type: text
+  #               text: "Servicios de la Municipalidad"
+  #             body:
+  #               text: |
+  #                 ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
+
+  #                 *1. 💰 ESTADO DE CUENTA*
+
+  #                 *2. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
+
+  #                 *3. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
+
+  #                 *4. 📋 INSCRIPCIÓN DE PREDIOS*
+
+  #                 *5. 🧾 MATRIMONIOS Y DIVORCIOS*
+
+  #                 *6. 🏗️ OBRAS PRIVADAS*
+
+  #                 *7. 📜 CONSTANCIA DE POSESIÓN*
+
+  #                 *8. 🩺 CARNET DE SANIDAD*
+  #             footer:
+  #               text: "seleccione la opción abajo 👇"
+  #             action:
+  #               sections:
+  #                 - title: "Escoja trámite"
+  #                   rows:
+  #                     - id: "/estado_cuenta"
+  #                       title: "Estado de cuenta 💼"
+  #                     - id: "/formalizacion_promocion_empresarial"
+  #                       title: "Licencias 💼"
+  #                     - id: "/gestion"
+  #                       title: "Certificados 🚨"
+  #                     - id: "/orientacion"
+  #                       title: "Inscripción 📋"
+  #                     - id: "/registro"
+  #                       title: "Matrimonios 🧾"
+  #                     - id: "/obras"
+  #                       title: "Obras 🏗️"
+  #                     - id: "/constancia_posesion_servicios_basicos"
+  #                       title: "Constancia 📜"
+  #                     - id: "/carnet_sanidad_no_manipular_alimentos"
+  #                       title: "Carnet 🩺"
+  #               button: "Seleccionar opción"
 
   utter_estado_cuenta:
     - custom:
@@ -492,19 +527,19 @@ responses:
                   - title: Escoja trámite
                     rows:
                       - id: /formalizacion_promocion_empresarial
-                        title: Licencias 💼
+                        title: 1. Licencias 💼
                       - id: /gestion
-                        title: Certificados 🚨
+                        title: 2. Certificados 🚨
                       - id: /orientacion
-                        title: Inscripción 📋
+                        title: 3. Inscripción 📋
                       - id: /registro
-                        title: Matrimonios 🧾
+                        title: 4. Matrimonios 🧾
                       - id: /obras
-                        title: Obras 🏗️
+                        title: 5. Obras 🏗️
                       - id: /constancia_posesion_servicios_basicos
-                        title: Constancia 📜
+                        title: 6. Constancia 📜
                       - id: /carnet_sanidad_no_manipular_alimentos
-                        title: Carnet 🩺
+                        title: 7. Carnet 🩺
                 button: Seleccionar trámite
   # utter_saludo:
   #   - custom:
@@ -562,47 +597,49 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: '🟢 Opciones de Trámite:'
               body:
                 text: |
-                  1. 🏢Certificado de Parámetros Urbanísticos y Edificatorios
+                  🟢 Has seleccionado *Obras Privadas y Habilitación Urbana*
 
-                  2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+                  👇 Opciones de trámite:
 
-                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  1. 🏢 Certificado de Parámetros Urbanísticos y Edificatorios
 
-                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
+                  2. 📐 Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+
+                  3. 🏠 Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+
+                  4. 🔨 Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
               footer:
-                text: '*Seleccione la opción abajo 👇*'
+                text: '*Seleccione la opción abajo* 👇'
 
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: 'Escoge la '
+                  - title: Escoge el trámite
                     rows:
                       - id: /obras_item01
-                        title: 📝 CERTIFICADO
+                        title: 1. 📝 CERTIFICADO
                       - id: /obras_item02
-                        title: ✏️ VISACIÓN
+                        title: 2. ✏️ VISACIÓN
                       - id: /obras_item03
-                        title: 🛠️ LICENCIA CONSTRUCCIÓN
+                        title: 3. 🛠️ LIC.CONSTRUCCIÓN
                       - id: /obras_item04
-                        title: 🏚️ LICENCIA DEMOLICIÓN
-                button: Seleccionar opción
+                        title: 4. 🏚️ LIC.DEMOLICIÓN
+                button: ✅ Opciones
   utter_orientacion:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: '🟢 Opciones de Inscripción:'
               body:
                 text: |
+                  🟢 Has seleccionado *Inscripción de Predios*
+
+                  👇 Opciones de trámite:
+
                   1. 📜 Inscripción por Sucesión Indivisa  
 
                   2. 🏠 Inscripción por Sucesión Intestada
@@ -620,25 +657,26 @@ responses:
                   - title: Escoge el trámite
                     rows:
                       - id: /orientacion_item01
-                        title: 📜 SUCESIÓN INDIVISA
+                        title: 1. 📜 SUC. INDIVISA
                       - id: /orientacion_item02
-                        title: 🏠 SUCESIÓN INTESTADA
+                        title: 2. 🏠 SUC. INTESTADA
                       - id: /orientacion_item03
-                        title: 💼 COMPRA-VENTA
+                        title: 3. 💼 COMPRA-VENTA
                       - id: /orientacion_item04
-                        title: 🗺️ INDEPENDIZACIÓN
-                button: Seleccionar Opción
+                        title: 4. 🗺️ INDEPENDIZACIÓN
+                button: ✅ Opciones
   utter_registro:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: '🟢 Opciones de Trámite:'
               body:
                 text: |
+                  🟢 Has seleccionado *Matrimonios y Divorcios*
+
+                  👇 Opciones de trámite:
+
                   1. 💍 Matrimonio Civil  
 
                   2. 📜 Publicación de Edicto Matrimonial tramitado en otros distritos  
@@ -650,22 +688,22 @@ responses:
                   🌐 La documentación necesaria lo encontrará en el siguiente LINK 👉: https://web.munisjl.gob.pe/web/matrimonios.php
 
               footer:
-                text: '*Seleccione la opción abajo 👇*'
+                text: '*Seleccione la opción abajo* 👇'
 
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: Escoga la Opción
+                  - title: Escoga el trámite
                     rows:
                       - id: /registro_item01
-                        title: 💍 MATRIMONIO
+                        title: 1. 💍 MATRIMONIO
                       - id: /registro_item02
-                        title: 📜 PUBLICACIÓN
+                        title: 2. 📜 PUBLICACIÓN
                       - id: /registro_item03
-                        title: 🔄 REPROGRAMACIÓN
+                        title: 3. 🔄 REPROGRAMACIÓN
                       - id: /registro_item04
-                        title: 💔 SEPARACIÓN
-                button: Selecciona Opción
+                        title: 4. 💔 SEPARACIÓN
+                button: ✅ Opciones
   utter_carnet_sanidad:
     - custom:
         blocks:
@@ -771,7 +809,7 @@ responses:
               #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🎉 Haz seleccionado licencia de funcionamiento de edificación de riesgo bajo*
+                  *🎉 Has seleccionado licencia de funcionamiento de edificación de riesgo bajo*
 
                   *❓ Opciones de pregunta:*
 
@@ -813,19 +851,26 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Formato de declaración jurada para licencia de funcionamiento.
+                a. 📋 Formato de declaración jurada para licencia de funcionamiento.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
+
+                b. 🔍 Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. ℹ️ Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                d. ⚠️ Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+
+                e. 🏗️ Declaraciòn jurada del cumpliminto de las condiciones de seguridad en la edificaciòn(anexo 4)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                b. 📄Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación.
-
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                c. 📄Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+                f. 👔 Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada o nùmero de la partida
 
           - type: interactive
             interactive:
@@ -946,19 +991,26 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Formato de declaración jurada para licencia de funcionamiento.
+                a. 📝 Formato de declaración jurada para licencia de funcionamiento.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
 
+                b. 🏢 Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. ℹ️ Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                d. ⚠️ Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+                    
+                e. ✅ Declaraciòn jurada del cumpliminto de las condiciones de seguridad en la edificaciòn(anexo 4)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
+                    
           - type: text
             text:
               preview_url: true
               body: |
-                b. 📄Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación.
-
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                c. 📄Declaración jurada del representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+                f. 📄Declaración jurada del representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
 
           - type: interactive
             interactive:
@@ -1077,25 +1129,29 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Formato de declaración jurada para licencia de funcionamiento.
+                a. 📝 Formato de declaración jurada para licencia de funcionamiento.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
 
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                b. 📄Declaración jurada de seguridad.
+                b. 🏢 Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. ⚠️ Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                d. 📊 Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
 
           - type: text
             text:
               preview_url: false
               body: |
-                c. 📄 Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
-                d. 🗺️ Croquis de ubicación	
-                e. 🏛️ Plano de arquitectura y cálculo de aforo
-                f. ⚡ Planos eléctricos, unifilares y cargas
-                g. 📜 Certificado del sistema puesto a tierra
-                h. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
-                i. 🛡️ Plan de seguridad del establecimiento
+                e. 👔 Declaración jurada de representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+                f. 🗺️ Croquis de ubicación	
+                g. 🏛️ Plano de arquitectura y cálculo de aforo
+                h. ⚡ Planos eléctricos, unifilares y cargas
+                i. ⚡ Certificado del sistema puesto a tierra
+                j. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
+                k. 🛡️ Plan de seguridad del establecimiento
 
           - type: interactive
             interactive:
@@ -1154,7 +1210,7 @@ responses:
               body: |
                 Se necesita tener copia de autorización del Ministerio de Cultura
 
-  utter_formalizacion_item03_riesgo_medio_cuanto_cuesta:
+  utter_formalizacion_item03_riesgo_alto_cuanto_cuesta:
     - custom:
         blocks:
           - type: text
@@ -1214,25 +1270,34 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Formato de declaración jurada para licencia de funcionamiento.
+                a. ✍️ Formato de declaración jurada para licencia de funcionamiento.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
+
+                b. 🏢 Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. ℹ️ Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                d. 📊 Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                b. 📄Declaración jurada de representante legal, en el caso de personas jurídicas, copia literal de la vigencia de poder actualizada
+                e. 👔 Declaración jurada de representante legal, en el caso de personas jurídicas, copia literal de la vigencia de poder actualizada
 
           - type: text
             text:
               preview_url: false
               body: |
-                c. 📄 Declaración jurada de seguridad
-                d. 🗺️ Croquis de ubicación	
-                e. 🏛️ Plano de arquitectura y cálculo de aforo
-                f. ⚡ Planos eléctricos, unifilares y cargas
-                g. 📜 Certificado del sistema puesto a tierra
-                h. 🔥 Memoria de operatividad y mantenimiento, y certificado contra incendios
-                i. 🛡️ Plan de seguridad del establecimiento
+                f. 📍 Croquis de ubicación	
+                g. 📐 Plano de arquitectura y cálculo de aforo
+                h. ⚡ Planos eléctricos, unifilares y cargas
+                i. 🔌 Certificado del sistema puesto a tierra
+                j. 🧯 Memoria de operatividad y mantenimiento, y certificado contra incendios
+                k. 🛡️ Plan de seguridad del establecimiento
 
           - type: interactive
             interactive:
@@ -1354,18 +1419,19 @@ responses:
               preview_url: true
               body: |
                 a. 📄Formato de delaración jurada para licencia de funcionamiento.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                b. 📄En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+                b. 🏢En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
 
           - type: text
             text:
               preview_url: false
               body: |
-                c. 📄 Copia simple de contrato de transferencia
+                c. 🖋️ Copia simple de contrato de transferencia
 
   utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta:
     - custom:
@@ -1429,13 +1495,14 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Declaración jurada para informar el cambio de giro.
+                a. 📝 Declaración jurada para informar el cambio de giro.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                b. 📄En el caso de personas jurídicas, Declaración jurada de representante legal y N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+                b. 🏢En el caso de personas jurídicas, Declaración jurada de representante legal y N° de partida electrónico y asiento de inscripción SUNARP (vigente)
 
   utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta:
     - custom:
@@ -1497,7 +1564,8 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄 Presentar una declaración jurada con tus datos personales y el número de recibo de pago
+                a. 📄 Solicitud con caràcter de declaración jurada
+                    https://citasbackend.munisjl.gob.pe/api/files/pdf/57e3a9b4-6b84-461b-93cf-75a47c8b9920.pdf
                 b. 📝 Carta de responsabilidad de instalación suscrita por el responsable competente (Arq. o Ing. Civil)
                 c. 📁 *Documentos necesarios*
                     1. 🎨 Un diseño o arte del elemento publicitario con detalles y medidas.
@@ -1575,7 +1643,8 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄 Presentar una declaración jurada con tus datos personales y el número de recibo de pago
+                a. 📄 Solicitud con caràcter de declaración jurada 
+                    https://citasbackend.munisjl.gob.pe/api/files/pdf/57e3a9b4-6b84-461b-93cf-75a47c8b9920.pdf
                 b. 📝 Carta de responsabilidad de instalación suscrita por el responsable competente (Arq. o Ing. Civil)
                 c. 📁 *Documentos necesarios*
                     1. 🎨Un diseño o arte del elemento publicitario con detalles y medidas.
@@ -1727,6 +1796,136 @@ responses:
                 💵 S/ 77.20
 
 # =============================================
+  utter_formalizacion_item11_cese_licencia:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado cese de licencia.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item11_cese_licencia_que_es
+                        title: ¿Qué es? 📘
+                      - id: /formalizacion_item11_cese_licencia_que_necesito
+                        title: ¿Qué necesito? 📝
+                      - id: /formalizacion_item11_cese_licencia_cuanto_cuesta
+                        title: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========***=======================
+
+  utter_formalizacion_item11_cese_licencia_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Procedimiento a través del cual, toda persona natural o jurídica, solicita dejar sin efecto la licencia de funcionamiento otorgada. El cese de actividades puede ser solicitado por un tercero con legítimo interés, para lo cual debe acreditar su actuación ante la municipalidad. El procedimiento es de aprobación automática.
+
+  utter_formalizacion_item11_cese_licencia_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 🗂️ Comunicación de cese de actividades
+                b. 📅 Formato de declaración jurada para licencia de funcionamiento
+                https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
+
+
+  utter_formalizacion_item11_cese_licencia_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 Gratuito
+
+# =============================================
+  utter_formalizacion_item12_transferencia_licencia:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado transferencia de licencia.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: '*Seleccione la pregunta abajo 👇*'
+
+              action:
+                sections:
+                  - title: Escoja la pregunta
+                    rows:
+                      - id: /formalizacion_item12_transferencia_licencia_que_es
+                        title: ¿Qué es? 📘
+                      - id: /formalizacion_item12_transferencia_licencia_que_necesito
+                        title: ¿Qué necesito? 📝
+                      - id: /formalizacion_item12_transferencia_licencia_cuanto_cuesta
+                        title: ¿Cuánto cuesta? 💰
+                button: Opciones
+
+  # ==========***=======================
+
+  utter_formalizacion_item12_transferencia_licencia_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄Procedimiento a través del cual, toda persona natural o jurídica, solicita transferir a otra persona natural o jurídica la licencia de funcionamiento, para lo cual se deben mantener los giros autorizados y la zonificación. El procedimiento es el mismo para los casos de cambio de denominación o nombre comercial de la persona jurídica, y es de aprobación automática.
+
+  utter_formalizacion_item12_transferencia_licencia_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 🗂️ Copia simple del contrato de transferencia, en caso transferencia de la licencia de funcionamiento.
+                b. 📅 Formato de declaración jurada para licencia de funcionamiento
+                https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
+
+
+  utter_formalizacion_item12_transferencia_licencia_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💵 S/. 88.70
+
+# =============================================
   utter_gestion_item01:
     - custom:
         blocks:
@@ -1785,15 +1984,17 @@ responses:
             text:
               preview_url: true
               body: |
-                📋 Solicitud de ITSE, indicando número y fecha de pago.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+                a. 📄Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
 
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                b. 📄Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                c. 📄Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+                    
+                d. 📄Declaraciòn jurada del cumpliminto de las condiciones de seguridad en la edificaciòn(anexo 4)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
 
   # >> 2.1... COSTO
   utter_gestion_item01_costo:
@@ -1862,15 +2063,25 @@ responses:
             text:
               preview_url: true
               body: |
-                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                a. 📑 Declaración jurada de cumplimiento de Seguridad en Edificaciones  
+                  http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+
+                b. 📋 Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                c. 📝 Declaración jurada para renovación del certificado de inspección técnica de seguridad en edificaciones (Anexo 5)  
+                  https://citasbackend.munisjl.gob.pe/api/files/pdf/7da95186-07da-42c4-a3ae-ba68cdf999e5.pdf
+
+                d. 📄 Copia de licencia de funcionamiento  
+                e. 🏢 Copia del certificado ITSE vigente  
+                f. 🆔 En caso de ser persona jurídica, traer:  
+                  - DNI físicamente  
+                  - Vigencia de poder  
+                  - Plano de ubicación  
 
   # >> 2.2... COSTO
   utter_gestion_item02_costo:
@@ -1939,15 +2150,18 @@ responses:
             text:
               preview_url: true
               body: |
-                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+                a. 📄🛠️ Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
 
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                b. 📄📊 Información proporcionada por el solicitante para la determinación del nivel de riesgo del establecimiento objeto de inspección (Anexo 2)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                c. 📄📉 Reporte del nivel de riesgo del establecimiento objeto de inspección (Anexo 3)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+                    
+                d. 📄✅ Declaración jurada del cumplimiento de las condiciones de seguridad en la edificación (Anexo 4)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
+
 
   # >> 2.3... COSTO
   utter_gestion_item03_costo:
@@ -2016,15 +2230,26 @@ responses:
             text:
               preview_url: true
               body: |
-                📋 Solicitud de renovación ITSE, indicando número y fecha de pago.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                a. 📄Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                b. 📄Información proporcionada por el solicitante para la determinación del nivel de riesgo del establecimiento objeto de inspección (Anexo 2)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
 
           - type: text
             text:
               preview_url: true
               body: |
-                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                c. 📄Reporte del nivel de riesgo del establecimiento objeto de inspección (Anexo 3)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+                    
+                d. 📄Declaración jurada del cumplimiento de las condiciones de seguridad en la edificación (Anexo 4)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
+                    
+                e. 🏢Copia de licencia de funcionamiento
+                f. ✅Copia del certificado ITSE vigente
+                g. 🆔En caso de persona jurídica traer DNI físicamente, vigencia de poder y plano de ubicación
+
 
   # >> 2.4... COSTO
   utter_gestion_item04_costo:
@@ -2093,9 +2318,14 @@ responses:
             text:
               preview_url: true
               body: |
-                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+                a. 📝 Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
 
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                b. 📊 Información proporcionada por el solicitante para la determinación del nivel de riesgo del establecimiento objeto de inspección (Anexo 2)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                c. 🗂️ Reporte del nivel de riesgo del establecimiento objeto de inspección (Anexo 3)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
 
           - type: text
             text:
@@ -2182,17 +2412,18 @@ responses:
             text:
               preview_url: true
               body: |
-                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
-
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
-
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+                a. 🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
 
                 http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                b. 📝 Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. 🗂️ Declaración jurada para renovación del certificado de inspección técnica de seguridad en edificaciones (Anexo 5)  
+                  👉https://cdn.www.gob.pe/uploads/document/file/6084753/5384902-anexo-5-declaracion-jurada-para-la-renovacion-del-certificado-de-inspeccion-tecnica-de-seguridad-de-edificaciones.pdf
+
+                d. 🏢 Copia de licencia de funcionamiento  
+                e. ✅ Copia del certificado ITSE vigente  
+                f. 🆔 En caso de persona jurídica traer DNI físicamente, vigencia de poder y plano de ubicación
 
   # >> 2.6... COSTO
   utter_gestion_item06_costo:
@@ -2261,35 +2492,40 @@ responses:
             text:
               preview_url: true
               body: |
-                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+                a. 🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+                  
+                  http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
 
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                b. 📑 Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  👉 https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
 
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+                c. 📋 Información proporcionada por el solicitante para la determinación del nivel de riesgo del establecimiento objeto de inspección (Anexo 2)  
+                  👉 https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
 
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                d. 📊 Reporte del nivel de riesgo del establecimiento objeto de inspección (Anexo 3)  
+                  👉 https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
 
           - type: text
             text:
               preview_url: false
               body: |
                 📄 Documentos técnicos en copia simple:
+                1. 📋 Copia de licencia
+                2. 🪪 Copia DNI- Vigencia de poder
+                3. 🧾 Comprobante de pago por derecho de trámite
+                4. 🗺️ Plano de ubicación y cuadro de áreas, con firma Arq.
+                5. 📐 Plano de Arquitectura de la distribución existente con cotas y detalle del cálculo de aforo con firma Arq.
+                6. 🚪 Plano de señalización y Evacuación con firma Arq.
+                7. 🏢 Plano de seguridad del establecimiento objeto de inspección
+                8. ⚡ Plano de distribución de tableros eléctricos, diagramas unifilares y cuadro de carga con firma del Ing. Eléctrico o Mecánico Electricista
+                9. 🔌 Certificado vigente de medición del sistema de puesta a tierra
+                10. 💡 Certificado de luces de emergencia, con firma del Ing. Eléctrico o Mecánico electricista
+                11. 🔔 Certificado de detector de humo centralizado, con firma del Ing. Eléctrico o Mecánico electricista
+                12. 🧯 Certificado de operatividad y mantenimiento de extintores
+                13. 👨‍🏫 Certificado de capacitación de uso y manejo de extintores, primeros auxilios y evacuaciones
+                14. 📊 Memoria o protocolos de pruebas operativas y/o mantenimiento de los equipos de seguridad y protección contra incendios (Gabinete contra incendio, rociadores, etc.)
+                15. 📝 En caso de tercero carta poder y copia de DNI
 
-                1. 📍 Croquis de ubicación
-
-                2. 📐 Plano de arquitectura y detalle de aforo
-
-                3. 💡 Plano de distribución eléctrica y cargas
-
-                4. 🔌 Certificado vigente de puesta a tierra
-
-                5. 🚨 Plan de seguridad del establecimiento
-
-                6. 🔥 Memoria de prueba de mantenimiento de equipos y protección contra incendios
 
   # >> 2.7... COSTO
   utter_gestion_item07_costo:
@@ -2358,17 +2594,19 @@ responses:
             text:
               preview_url: true
               body: |
-                📝 Solicitud de renovación ITSE, indicando número y fecha de pago.
+                a. 📄 Copia de licencia de funcionamiento
+                b. 📋 Copia de certificado ITSE vigente
+                c. 🏢 En caso de persona jurídica:
+                   • 📌 DNI físicamente
+                   • 📎 Vigencia de poder
+                   • 🗺️ Plano de ubicación
 
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112532.pdf
+                d. 📑 Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (anexo 1)
+                    👉 https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
 
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+                e. 📄 Declaración jurada para renovación del certificado de inspección técnica de seguridad en edificaciones (anexo 5)
+                    👉 https://cdn.www.gob.pe/uploads/document/file/6084753/5384902-anexo-5-declaracion-jurada-para-la-renovacion-del-certificado-de-inspeccion-tecnica-de-seguridad-de-edificaciones.pdf
 
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf)
 
   # >> 2.8... COSTO
   utter_gestion_item08_costo:
@@ -2543,33 +2781,30 @@ responses:
           - type: interactive
             interactive:
               type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🎉 Haz seleccionado Certificado de Parámetros Urbanísticos y Edificatorios*
+                  🎉 Has seleccionado *Certificado de Parámetros Urbanísticos y Edificatorios*
 
-                  *❓ Opciones de pregunta:*
+                  ❓ *Opciones de pregunta:*
 
-                  1. 📄¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. 📋¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. 💵¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '*Seleccione la opción abajo 👇*'
+                text: '*Seleccione la opción abajo* 👇'
 
               action:
                 sections:
-                  - title: Escoge la opción
+                  - title: Escoge la pregunta
                     rows:
                       - id: /obras_item01_consulta
-                        title: ¿Qué es? 📄
+                        title: 📄 ¿Qué es?
                       - id: /obras_item01_necesidad
-                        title: ¿Qué necesito? 📋
+                        title: 📋 ¿Qué necesito?
                       - id: /obras_item01_costo
-                        title: ¿Cuánto cuesta? 💵
+                        title: 💵 ¿Cuánto cuesta?
                 button: ✅ Opciones
 
   # >> 5.1... CONSULTA
@@ -2582,9 +2817,9 @@ responses:
               body: |
                 📜 Es el documento que te permite saber los requisitos técnicos de diseño de una edificación, por ejemplo alturas máximas, retiros municipales, porcentaje de área libre, cantidad de estacionamientos, etc.
 
-                *🏗️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para construir, para vender, alquilar, trámites en el banco y temas académicos.
+                🏗️ Para construir, para vender, alquilar, trámites en el banco y temas académicos.
 
   # >> 5.1... NECESIDAD
   utter_obras_item01_necesidad:
@@ -2594,13 +2829,13 @@ responses:
             text:
               preview_url: false
               body: |
-                *Requisitos para el trámite:*
+                📋 *Requisitos para el trámite:*
 
-                1. 🖊️Solicitud dirigida al alcalde.
+                1. 🖊️ Solicitud dirigida al alcalde.
 
-                2. 📍Indicar la dirección exacta del predio.
+                2. 📍 Indicar la dirección exacta del predio.
 
-                3. 📂Escribir el numero de partida registral.
+                3. 📂 Escribir el numero de partida registral.
 
   # >> 5.1... COSTO
   utter_obras_item01_costo:
@@ -2610,40 +2845,39 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 57.10
+                *Costo del trámite* 👇
+
+                💰 S/ 57.10
   utter_obras_item02:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏢 Haz seleccionado Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)*
+                  🏢 Has seleccionado *Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (para predios urbanos)*
 
-                  *❓ Opciones de pregunta:*
+                  ❓ *Opciones de pregunta:*
 
-                  1. 📄¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. 📋¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. 💵¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: '*Seleccione la pregunta abajo 👇*'
+                text: '*Seleccione la pregunta abajo* 👇'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item02_consulta
-                        title: ¿Qué es? 📄
+                        title: 📄 ¿Qué es?
                       - id: /obras_item02_necesidad
-                        title: ¿Qué necesito? 📋
+                        title: 📋 ¿Qué necesito?
                       - id: /obras_item02_costo
-                        title: ¿Cuánto cuesta? 💵
+                        title: 💵 ¿Cuánto cuesta?
                 button: ✅ Opciones
 
   # >> 5.2... CONSULTA
@@ -2656,9 +2890,9 @@ responses:
               body: |
                 📜 Es cuando la municipalidad verifica y garantiza de manera técnica la documentación con predio.
 
-                *🏗️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para prescripción adquisitiva de dominio, título supletorio, rectificación de linderos y medidas perimétricas.
+                📄 Para prescripción adquisitiva de dominio, título supletorio, rectificación de linderos y medidas perimétricas.
 
   # >> 5.2... NECESIDAD
   utter_obras_item02_necesidad:
@@ -2668,15 +2902,15 @@ responses:
             text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos para el trámite:*
 
-                1. 🖊️Solicitud dirigida al alcalde.
+                1. 🖊️ Solicitud dirigida al alcalde.
 
-                2. 📍Plano de ubicación y localización (2 juegos originales).
+                2. 📍 Plano de ubicación y localización (2 juegos originales).
 
-                3. 📐Planos perimétricos (2 juegos originales).
+                3. 📐 Planos perimétricos (2 juegos originales).
 
-                4. 📝Memoria descriptiva (2 juegos originales).
+                4. 📝 Memoria descriptiva (2 juegos originales).
 
   # >> 5.2... COSTO
   utter_obras_item02_costo:
@@ -2686,27 +2920,26 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 153.30
+                *Costo del trámite* 👇
+
+                💰 S/ 153.30
   utter_obras_item03:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏠 Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+                  🏠 Has seleccionado *Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
 
                   *❓ Opciones de pregunta:*
 
-                  1. 📄¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. 📋¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. 💵¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
 
@@ -2715,11 +2948,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item03_consulta
-                        title: ¿Qué es? 📄
+                        title: 📄 ¿Qué es?
                       - id: /obras_item03_necesidad
-                        title: ¿Qué necesito? 📋
+                        title: 📋 ¿Qué necesito?
                       - id: /obras_item03_costo
-                        title: ¿Cuánto cuesta? 💵
+                        title: 💵 ¿Cuánto cuesta?
                 button: ✅ Opciones
 
   # >> 5.3... CONSULTA
@@ -2732,9 +2965,9 @@ responses:
               body: |
                 📜 Es el permiso que entrega la municipalidad antes de construir.
 
-                *🏗️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+                🏗️ Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
 
   # >> 5.3... NECESIDAD
   utter_obras_item03_necesidad:
@@ -2742,25 +2975,47 @@ responses:
         blocks:
           - type: text
             text:
+              preview_url: true
+              body: |
+                📋 Formulario Único de Edificación - FUE:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/II-FUE_%20ANEXO%20II_LICENCIA%20DE%20OBRA_REV.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona natural:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/V-FUE_ANEXO%20A_PERSONAS%20NATURALES.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona jurídica:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/VI-FUE_ANEXO%20B_PERSONAS%20JUR%C3%8DDICAS_REV.pdf
+
+          - type: text
+            text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos adicionales:*
 
-                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
+                1. 📄 Documento que acredite el derecho a edificar.
 
-                2. 📄 Documento que acredite el derecho a edificar.
+                2. 💿 CD con documentos en original.
 
-                3. 💿 CD con documentos en original.
+                3. 📍 Plano de ubicación y localización.
 
-                4. 📍 Plano de ubicación y localización.
+                4. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
 
-                5. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
+                5. 🏗️ Planos de estructuras.
 
-                6. 🏗️ Planos de estructuras.
+                6. 🚰 Planos de instalaciones sanitarias.
 
-                7. 🚰 Planos de instalaciones sanitarias.
-
-                8. 💡 Plano de instalaciones eléctricas.
+                7. 💡 Plano de instalaciones eléctricas.
 
   # >> 5.3... COSTO
   utter_obras_item03_costo:
@@ -2770,27 +3025,26 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 450.30
+                *Costo del trámite* 👇
+
+                💰 S/ 450.30
   utter_obras_item04:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏗️ Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
+                  🏗️ Has seleccionado *Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos.*
 
-                  *❓ Opciones de pregunta:*
+                  ❓ *Opciones de pregunta:*
 
-                  1. 📄¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. 📋¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. 💵¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
 
@@ -2799,11 +3053,11 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /obras_item04_consulta
-                        title: ¿Qué es? 📄
+                        title: 📄 ¿Qué es?
                       - id: /obras_item04_necesidad
-                        title: ¿Qué necesito? 📋
+                        title: 📋 ¿Qué necesito?
                       - id: /obras_item04_costo
-                        title: ¿Cuánto cuesta? 💵
+                        title: 💵 ¿Cuánto cuesta?
                 button: ✅ Opciones
 
   # >> 5.4... CONSULTA
@@ -2816,9 +3070,9 @@ responses:
               body: |
                 📜 Es el permiso que entrega la municipalidad antes de eliminar una construcción de hasta 3 pisos de altura.
 
-                *🏗️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para facilitar la construcción de una edificación nueva.
+                🏗️ Para facilitar la construcción de una edificación nueva.
 
   # >> 5.4... NECESIDAD
   utter_obras_item04_necesidad:
@@ -2826,25 +3080,47 @@ responses:
         blocks:
           - type: text
             text:
+              preview_url: true
+              body: |
+                📋 Formulario Único de Edificación - FUE:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/II-FUE_%20ANEXO%20II_LICENCIA%20DE%20OBRA_REV.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona natural:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/V-FUE_ANEXO%20A_PERSONAS%20NATURALES.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona jurídica:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/VI-FUE_ANEXO%20B_PERSONAS%20JUR%C3%8DDICAS_REV.pdf
+
+          - type: text
+            text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos adicionales:*
 
-                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
+                1. 📄 Documento que acredite el derecho a edificar.
 
-                2. 📄 Documento que acredite el derecho a edificar.
+                2. 🏢 Declaratoria de fábrica con respectivos planos.
 
-                3. 🏢 Declaratoria de fábrica con respectivos planos.
+                3. 💿 CD con información en digital.
 
-                4. 💿 CD con información en digital.
+                4. 📍 Plano de ubicación y localización.
 
-                5. 📍 Plano de ubicación y localización.
+                5. 📑 Carta de seguridad de obra.
 
-                6. 📑 Carta de seguridad de obra.
+                6. ✍️ Memoria descriptiva del proceso de demolición (Firmada por Ingeniero Civil).
 
-                7. ✍️ Memoria descriptiva del proceso de demolición (Firmada por Ingeniero Civil).
-
-                8. 🚧 Plano cerramiento del predio.
+                7. 🚧 Plano cerramiento del predio.
 
   # >> 5.4... COSTO
   utter_obras_item04_costo:
@@ -2854,27 +3130,26 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 450.30
+                *Costo del trámite* 👇
+
+                💰 S/ 450.30
   utter_orientacion_item01:
     - custom:
         blocks:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado 📜 *Inscripción por Sucesión Indivisa*
+                  📜 Has seleccionado *Inscripción por Sucesión Indivisa*
 
-                  *🟢 Opciones de pregunta:* 
+                  ❓ *Opciones de pregunta:* 
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -2884,12 +3159,12 @@ responses:
                   - title: Escoga la opción
                     rows:
                       - id: /orientacion_item01_consulta
-                        title: 📘 ¿Qué es?
+                        title: 📄 ¿Qué es?
                       - id: /orientacion_item01_necesidad
-                        title: 📝¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /orientacion_item01_costo
-                        title: 💰 ¿Cuánto cuesta?
-                button: Opciones
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 3.1... CONSULTA
   utter_orientacion_item01_consulta:
@@ -2929,6 +3204,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+
                 💸 GRATUITO
   utter_orientacion_item02:
     - custom:
@@ -2936,37 +3213,34 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado 🏠 *Inscripción por Sucesión Intestada*
+                  🏠 Has seleccionado *Inscripción por Sucesión Intestada*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:*  
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
                   ↪️ Puedes Iniciar trámite para solicitar cita para inscripción por suceción intestada en el siguiente link  👉: http://gestioncitas.munisjl.gob.pe/
 
               footer:
-                text: '*Seleccione la opción abajo 👇*'
+                text: '*Seleccione la opción abajo* 👇'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /orientacion_item02_consulta
-                        title: ¿Qué es?
+                        title: 📄 ¿Qué es?
                       - id: /orientacion_item02_necesidad
-                        title: ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /orientacion_item02_costo
-                        title: ¿Cuánto cuesta?
-                button: Opciones
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 3.2... CONSULTA
   utter_orientacion_item02_consulta:
@@ -2992,9 +3266,11 @@ responses:
               body: |
                 1. 📜 Copia literal de la sucesión intestada.
 
-                2. 🏠 Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
+                2. ✅ Sucesión intestada con cambio de dominio.
 
                 3. 🆔 Exhibición del DNI de los herederos.
+
+                4. 🏠 Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
 
   # >> 3.2... COSTO
   utter_orientacion_item02_costo:
@@ -3004,6 +3280,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+
                 💸 GRATUITO
   utter_orientacion_item03:
     - custom:
@@ -3011,20 +3289,17 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado 💼 *Inscripción por Compra-Venta*
+                  💼 Has seleccionado *Inscripción por Compra-Venta*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:* 
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la opción abajo 👇*'
@@ -3033,13 +3308,13 @@ responses:
                 sections:
                   - title: Escoge la pregunta
                     rows:
-                      - id: /orientacion_item02_consulta
-                        title: ¿Qué es?
-                      - id: /orientacion_item02_necesidad
-                        title: ¿Qué necesito?
-                      - id: /orientacion_item02_costo
-                        title: ¿Cuánto cuesta?
-                button: Opciones
+                      - id: /orientacion_item03_consulta
+                        title: 📄 ¿Qué es?
+                      - id: /orientacion_item03_necesidad
+                        title: 📋 ¿Qué necesito?
+                      - id: /orientacion_item03_costo
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 3.3... CONSULTA
   utter_orientacion_item03_consulta:
@@ -3051,9 +3326,9 @@ responses:
               body: |
                 📜 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
 
-                *🏘️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para legalizar y actualizar el cambio de propietario ante los registros municipales.
+                🏘️ Para legalizar y actualizar el cambio de propietario ante los registros municipales.
 
   # >> 3.3... NECESIDAD
   utter_orientacion_item03_necesidad:
@@ -3063,7 +3338,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos para el trámite:*
 
                 1. 🖊️ Minuta con número de KARDEX o escritura pública.
 
@@ -3077,6 +3352,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+
                 💸 GRATUITO
   utter_orientacion_item04:
     - custom:
@@ -3084,22 +3361,19 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado 🗺️ *Inscripción de una Independización o Subdivisión de Lotes*
+                  🗺️ Has seleccionado *Inscripción de una Independización o Subdivisión de Lotes*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:* 
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
-                  ↪️ Puedes Iniciar trámite para solicitar cita para inscripción por suceción intestada en el siguiente link  👉: http://gestioncitas.munisjl.gob.pe/
+                  ↪️ Puedes iniciar el trámite para solicitar cita para inscripción por sucesión intestada en el siguiente link  👉: http://gestioncitas.munisjl.gob.pe/
 
               footer:
                 text: '*Seleccione la opción abajo 👇*'
@@ -3108,13 +3382,13 @@ responses:
                 sections:
                   - title: Escoge la pregunta
                     rows:
-                      - id: /orientacion_item02_consulta
-                        title: ❓ ¿Qué es?
-                      - id: /orientacion_item02_necesidad
+                      - id: /orientacion_item04_consulta
+                        title: 📄 ¿Qué es?
+                      - id: /orientacion_item04_necesidad
                         title: 📋 ¿Qué necesito?
-                      - id: /orientacion_item02_costo
-                        title: 💰 ¿Cuánto cuesta?
-                button: Opciones
+                      - id: /orientacion_item04_costo
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 3.4... CONSULTA
   utter_orientacion_item04_consulta:
@@ -3126,9 +3400,9 @@ responses:
               body: |
                 📜 Es el registro de la división de un terreno o propiedad en lotes individuales.
 
-                *🏘️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
+                🏘️ Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
 
   # >> 3.4... NECESIDAD
   utter_orientacion_item04_necesidad:
@@ -3138,7 +3412,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos para el trámite:*
 
                 1. 📄 Copia literal o partida electrónica con todos los asientos.
 
@@ -3154,6 +3428,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+
                 💸 GRATUITO
   utter_registro_item01:
     - custom:
@@ -3161,35 +3437,32 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Matrimonio Civil*
+                  💍 Has seleccionado *Matrimonio Civil*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:*
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
-                text: '*Seleccione la pregunta abajo 👇*'
+                text: '*Seleccione la pregunta abajo* 👇'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item01_consulta
-                        title: 📘 ¿Qué es?
+                        title: 📄 ¿Qué es?
                       - id: /registro_item01_necesidad
-                        title: 📝 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /registro_item01_costo
-                        title: 💰¿Cuánto cuesta?
-                button: Opciones
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 4.1... CONSULTA
   utter_registro_item01_consulta:
@@ -3211,39 +3484,53 @@ responses:
         blocks:
           - type: text
             text:
+              preview_url: true
+              body: |
+                📋 Solicitud de Celebración de Matrimonio Civil:
+
+                🔗 https://web.munisjl.gob.pe/web/data_files/matrimonio/1m-solicitud-de-celebracion-de-matrimonio-civil.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Declaración de la Capacidad Nupcial de los contrayentes:
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737132068/DECLARACION_JURADA_DE_CAPACIDAD_NUPCIAL_lqxh8p.pdf
+
+          - type: text
+            text:
               preview_url: false
               body: |
-                1. 📝 Solicitud simple o Formato de solicitud.
+                📋 *Requisitos para el trámite:*
 
-                2. 🆔 Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
+                1. 🆔 Exhibición de los DNI de los contrayentes y testigos al abrir el expediente matrimonial.
 
-                3. 🍼 Copia certificada de Partida de nacimiento de los contrayentes.
+                2. 🍼 Copia certificada de Partida de Nacimiento de los contrayentes.
 
-                4. 📝 Declaración jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
+                3. 📝 Declaración Jurada de dos testigos que conozcan a los contrayentes, según el formato de la Municipalidad.
 
-                5. 💉 Certificado médico pre-nupcial y constancia de charlas de Consejería, antigüedad no mayor a 30 días.
+                4. 💉 Certificado Médico Pre-Nupcial y Constancia de Charlas de Consejería, antigüedad no mayor a 30 días.
 
-                6. 🛑 Declaración Jurada de no tener impedimento para contraer matrimonio, de los contrayentes.
+                5. 🏡 Declaración Jurada de Domicilio (debe residir en el distrito).
 
-                7. 🏡 Declaración jurada de domicilio (uno debe residir en el distrito).
-
-                8. 💰 Indicar la fecha y número de constancia de pago.
+                6. 💰 Indicar la fecha y número de constancia de pago.
 
           - type: interactive
             interactive:
               type: list
               body:
                 text: |
-                  ¿Deseas saber los requisitos adicionales?
+                  🤔 ¿Deseas saber los requisitos adicionales?
 
               action:
                 sections:
-                  - title: Escoge la opción...
+                  - title: 📋 Escoge la opción...
                     rows:
                       - id: /registro_item01_requisitos
-                        title: Sí, deseo
+                        title: ✅ Sí, deseo
                       - id: /registro_item01
-                        title: No, gracias
+                        title: ❌ No, gracias
                 button: Opciones
 
   # >> 4.1... COSTO
@@ -3254,6 +3541,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costos del trámite* 👇
+
                 1. 🏢 En el local municipal - S/ 256.10
 
                 2. 🏘️ Fuera del local municipal (dentro del distrito) - S/ 332.10
@@ -3269,7 +3558,7 @@ responses:
               type: list
               body:
                 text: |
-                  Se presenta una serie de requisitos dependiendo de la opción que usted elija...
+                  👇 Se presenta una serie de requisitos dependiendo de la opción que usted elija...
 
                   1. 💔 Para divorciados(as)
 
@@ -3277,7 +3566,7 @@ responses:
 
                   3. 🌍 Para extranjeros(as)
 
-                  4. 🖋️ Para matrimonios por poder
+                  4. ✊ Para matrimonios por poder
 
                   5. 👨‍👩‍👧 Para matrimonios por parentesco entre sí
 
@@ -3288,17 +3577,17 @@ responses:
                   - title: Selecciona la opción
                     rows:
                       - id: /registro_item01_subnecesidad_01
-                        title: 💔 Divorciados
+                        title: 1. 💔 Divorciados
                       - id: /registro_item01_subnecesidad_02
-                        title: 🖤 Viudos
+                        title: 2. 🖤 Viudos
                       - id: /registro_item01_subnecesidad_03
-                        title: 🌍 Extranjeros
+                        title: 3. 🌍 Extranjeros
                       - id: /registro_item01_subnecesidad_04
-                        title: ✊ Poder
+                        title: 4. ✊ Poder
                       - id: /registro_item01_subnecesidad_05
-                        title: 👨‍👩‍👧‍👦 Parentesco
+                        title: 5. 👨‍👩‍👧‍👦 Parentesco
                       - id: /registro_item01_subnecesidad_06
-                        title: ♿ Discapacitados
+                        title: 6. ♿ Discapacitados
                       - id: /registro_item01_necesidad
                         title: 🔙 Volver
                 button: Opciones
@@ -3311,13 +3600,13 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📝 *¿Qué necesito?*
 
                 1. 📜 Copia certificada de anterior matrimonio con inscripción de divorcio.
 
                 2. 🆔 DNI actualizado.
 
-                3. 📄 Declaración jurada de no administrar bienes de hijos menores.
+                3. 📄 Declaración Jurada de no administrar bienes de hijos menores.
 
                 4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
 
@@ -3329,13 +3618,13 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📝 *¿Qué necesito?*
 
                 1. ⚰️ Copia certificada de acta de defunción de cónyuge fallecido.
 
                 2. 🆔 DNI actualizado.
 
-                3. 📄 Declaración jurada de no administrar bienes de hijos menores.
+                3. 📄 Declaración Jurada de no administrar bienes de hijos menores.
 
                 4. 🏥 En el caso de la mujer, haber transcurrido 300 días desde el divorcio, y presentar constancia médica de NO EMBARAZO.
 
@@ -3347,13 +3636,13 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📝 *¿Qué necesito?*
 
                 1. 🌏 Acta de nacimiento visado por el consulado y legalizado por el MRE.
 
-                2. 🛂 Copia y original del pasaporte y/o carné de extranjería.
+                2. 🛂 Copia y original del pasaporte y/o carnet de extranjería.
 
-                3. 💍 Certificado de soltería emitido por el consulado Peruano y legalizado por el Ministerio de Relaciones exteriores.
+                3. 💍 Certificado de Soltería emitido por el Consulado Peruano y legalizado por el Ministerio de Relaciones Exteriores.
 
                 4. 📑 Inventario Judicial o Declaración Jurada de no tener hijos bajo su patria potestad o de que éstos no tienen bienes.
 
@@ -3365,7 +3654,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📝 *¿Qué necesito?*
 
                 1. 📝 Poder por escritura pública con facultades específicas inscrito en registros públicos.
 
@@ -3383,7 +3672,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📝 *¿Qué necesito?*
 
                 📑 Dispensa judicial de parentesco de consanguinidad colateral de tercer grado.
 
@@ -3395,7 +3684,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📝 *¿Qué necesito?*
 
                 🧑‍🦽 Copia del Certificado de Discapacidad, expedido conforme a Ley.
   utter_registro_item02:
@@ -3404,35 +3693,32 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Publicación de Edicto Matrimonial tramitado en otros distritos*
+                  📜 Has seleccionado *Publicación de Edicto Matrimonial tramitado en otros distritos*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:*
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
-                text: '*Seleccione la pregunta abajo 👇*'
+                text: '*Seleccione la pregunta abajo* 👇'
 
               action:
                 sections:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item02_consulta
-                        title: ¿Qué es?
+                        title: 📄 ¿Qué es?
                       - id: /registro_item02_necesidad
-                        title: ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /registro_item02_costo
-                        title: ¿Cuánto cuesta?
-                button: Opciones
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 4.2... CONSULTA
   utter_registro_item02_consulta:
@@ -3456,6 +3742,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *📋 Requisitos para el trámite:*
+
                 1. 📝 Solicitud con carácter de Declaración Jurada.
 
                 2. 📑 Copia simple del Edicto Matrimonial.
@@ -3470,6 +3758,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+
                 💰 S/ 44.80
   utter_registro_item03:
     - custom:
@@ -3477,20 +3767,17 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Reprogramación de fecha y hora de Ceremonia Matrimonial*
+                  🔄 Has seleccionado *Reprogramación de fecha y hora de Ceremonia Matrimonial*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:*
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -3500,12 +3787,12 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item03_consulta
-                        title: 📘 ¿Qué es?
+                        title: 📄 ¿Qué es?
                       - id: /registro_item03_necesidad
                         title: 📋 ¿Qué necesito?
                       - id: /registro_item03_costo
-                        title: 💰 ¿Cuánto cuesta?
-                button: Opciones
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 4.3... CONSULTA
   utter_registro_item03_consulta:
@@ -3523,13 +3810,21 @@ responses:
         blocks:
           - type: text
             text:
+              preview_url: true
+              body: |
+                📋 Acto de Compromiso de los Contrayentes:
+
+                🔗 https://web.munisjl.gob.pe/web/data_files/matrimonio/3m-acta-de-compromiso-de-los-contrayentes-vf.pdf
+
+          - type: text
+            text:
               preview_url: false
               body: |
-                1. 📝 Solicitud con carácter de Declaración Jurada.
+                *📋 Requisitos adicionales:*
 
-                2. 💵 Indicar fecha y número de constancia de pago.
+                1. 💵 Indicar fecha y número de constancia de pago.
 
-                3. 📅 El pedido se debe hacer con 5 días hábiles de anticipación.
+                2. 📅 El pedido se debe hacer con 5 días hábiles de anticipación.
 
   # >> 4.3... COSTO
   utter_registro_item03_costo:
@@ -3539,6 +3834,8 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+
                 💰 S/ 37.80
   utter_registro_item04:
     - custom:
@@ -3546,20 +3843,17 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado *Separación Convencional y Divorcio Ulterior: Separación Convencional*
+                  💔 Has seleccionado *Separación Convencional y Divorcio Ulterior: Separación Convencional*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:*
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: '*Seleccione la pregunta abajo 👇*'
@@ -3569,12 +3863,12 @@ responses:
                   - title: Escoge la pregunta
                     rows:
                       - id: /registro_item04_consulta
-                        title: 📘 ¿Qué es?
+                        title: 📄 ¿Qué es?
                       - id: /registro_item04_necesidad
-                        title: 📝 ¿Qué necesito?
+                        title: 📋 ¿Qué necesito?
                       - id: /registro_item04_costo
-                        title: 💰 ¿Cuánto cuesta?
-                button: Opciones
+                        title: 💵 ¿Cuánto cuesta?
+                button: ✅ Opciones
 
   # >> 4.4... CONSULTA
   utter_registro_item04_consulta:
@@ -3615,16 +3909,16 @@ responses:
               type: list
               body:
                 text: |
-                  ¿Deseas saber los documentos necesarios en casos especiales?
+                  🤔 ¿Deseas saber los documentos necesarios en casos especiales?
 
               action:
                 sections:
                   - title: Escoge la opción...
                     rows:
                       - id: /registro_item04_documentos
-                        title: Sí, deseo
+                        title: ✅ Sí, deseo
                       - id: /registro_item04
-                        title: No, gracias
+                        title: ❌ No, gracias
                 button: Opciones
 
   # >> 4.4... COSTO
@@ -3678,11 +3972,21 @@ responses:
         blocks:
           - type: text
             text:
-              preview_url: false
+              preview_url: true
               body: |
-                *¿Qué necesito?*
+                📋 *¿Qué necesito?*
 
-                📝 Declaración jurada con firma y huella, indicando no tener hijos menores de edad o mayores con discapacidad.
+                📑 Declaración Jurada de no tener hijos menores de edad:
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737132063/DECLARACION_JURADA_DE_NO_TENER_HIJOS_MENORES_DE_EDAD_enqhmt.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📑 Declaración Jurada de no tener hijos mayores con incapacidad:
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737131469/DECLARACION_JURADA_DE_NO_TENER_HIJOS_MAYORES_CON_INCAPACIDAD_mr86fz.pdf
 
   # >> 4.4.2... SUBNECESIDAD 02
   utter_registro_item04_subnecesidad_02:
@@ -3692,7 +3996,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📋 ¿Qué necesito? 
 
                 1. 📑 Adjuntar copia certificada de acta de nacimiento.
 
@@ -3706,7 +4010,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                📋 *¿Qué necesito?*
 
                 1. 📑 Adjuntar copia certificada de acta de nacimiento.
 
@@ -3720,15 +4024,23 @@ responses:
         blocks:
           - type: text
             text:
+              preview_url: true
+              body: |
+                📋 *¿Qué necesito?*
+
+                🚫 *En caso de no tener bienes:*
+
+                📑 Declaración Jurada de carecer bienes sujetos al Régimen de Sociedad de Gananciales
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737131454/DECLARACION_JURADA_DE_CARECER_DE_BIENES_SUJETOS_AL_REGIMEN_DE_SOCIEDADES_GANANCIALES_ghbnve.pdf
+
+          - type: text
+            text:
               preview_url: false
               body: |
-                *¿Qué necesito?*
+                🏠 *En caso de separación de patrimonios:* Presentar escritura pública registrada.
 
-                1. 🚫 Sin bienes: Declaración jurada de no tener bienes en sociedad de gananciales.
-
-                2. 🏠 Separación de patrimonios: Escritura pública registrada.
-
-                3. 🔄 Cambio o liquidación de régimen: Escritura pública registrada del cambio o liquidación.
+                🔄 *En caso de cambio o liquidación de régimen:* Presentar escritura pública registrada del cambio o liquidación.
   utter_carnet_sanidad_no_manipular_alimentos:
     - custom:
         blocks:

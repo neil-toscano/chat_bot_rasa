@@ -9,3 +9,4 @@ stories:
   - action: utter_saludo
   - intent: formalizacion_promocion_empresarial
   - action: utter_formalizacion_promocion_empresarial
+  - action: action_set_reminder

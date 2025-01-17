@@ -9,3 +9,4 @@ stories:
   - action: utter_saludo
   - intent: gestion
   - action: utter_gestion
+  - action: action_set_reminder

@@ -10,6 +10,11 @@ intents:
   - bot_challenge
   - estado_cuenta
   - consulta_tramites
+  - EXTERNAL_reminder
+
+actions:
+  - action_set_reminder
+  - action_react_to_reminder
 
 responses:
   utter_animo:
@@ -29,40 +34,6 @@ responses:
     - text: "Soy un bot, entrenado por la MDSJL."
 
   # >> INDEX - MENU
-  # utter_saludo:
-  #   - custom:
-  #       blocks:
-  #         - type: image
-  #           image:
-  #             id: "1144245547046868"
-  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-  #             # caption: MSJL
-  #         - type: audio
-  #           audio:
-  #             id: "939730344345911"
-  #         - type: interactive
-  #           interactive:
-  #             type: button
-  #             header:
-  #               type: text
-  #               text: "Consulta Trámites"
-  #             body:
-  #               text: |
-  #                 ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
-
-  #                 ¿Qué consulta desea realizar? Por favor, elige una de las siguientes opciones:
-  #             footer:
-  #               text: "seleccione la opción abajo 👇"
-  #             action:
-  #               buttons:
-  #                 - type: "reply"
-  #                   reply:
-  #                     id: "/estado_cuenta"
-  #                     title: "Estado de cuenta"
-  #                 - type: "reply"
-  #                   reply:
-  #                     id: "/consulta_tramites"
-  #                     title: "Consulta trámites"
   utter_saludo:
     - custom:
         blocks:
@@ -76,7 +47,7 @@ responses:
               id: "957422266353539"
           - type: interactive
             interactive:
-              type: list
+              type: button
               header:
                 type: text
                 text: "Servicios de la Municipalidad"
@@ -84,44 +55,77 @@ responses:
                 text: |
                   ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
 
-                  *1. 💰 ESTADO DE CUENTA*
-
-                  *2. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
-
-                  *3. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
-
-                  *4. 📋 INSCRIPCIÓN DE PREDIOS*
-
-                  *5. 🧾 MATRIMONIOS Y DIVORCIOS*
-
-                  *6. 🏗️ OBRAS PRIVADAS*
-
-                  *7. 📜 CONSTANCIA DE POSESIÓN*
-
-                  *8. 🩺 CARNET DE SANIDAD*
               footer:
                 text: "seleccione la opción abajo 👇"
               action:
-                sections:
-                  - title: "Escoja trámite"
-                    rows:
-                      - id: "/estado_cuenta"
-                        title: "Estado de cuenta 💼"
-                      - id: "/formalizacion_promocion_empresarial"
-                        title: "Licencias 💼"
-                      - id: "/gestion"
-                        title: "Certificados 🚨"
-                      - id: "/orientacion"
-                        title: "Inscripción 📋"
-                      - id: "/registro"
-                        title: "Matrimonios 🧾"
-                      - id: "/obras"
-                        title: "Obras 🏗️"
-                      - id: "/constancia_posesion_servicios_basicos"
-                        title: "Constancia 📜"
-                      - id: "/carnet_sanidad_no_manipular_alimentos"
-                        title: "Carnet 🩺"
-                button: "Seleccionar opción"
+                buttons:
+                  - type: "reply"
+                    reply:
+                      id: "/estado_cuenta"
+                      title: "Estado de cuenta"
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_tramites"
+                      title: "Consulta trámites"
+  # utter_saludo:
+  #   - custom:
+  #       blocks:
+  #         - type: image
+  #           image:
+  #             id: "1144245547046868"
+  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
+  #             # caption: MSJL
+  #         - type: audio
+  #           audio:
+  #             id: "957422266353539"
+  #         - type: interactive
+  #           interactive:
+  #             type: list
+  #             header:
+  #               type: text
+  #               text: "Servicios de la Municipalidad"
+  #             body:
+  #               text: |
+  #                 ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
+
+  #                 *1. 💰 ESTADO DE CUENTA*
+
+  #                 *2. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
+
+  #                 *3. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
+
+  #                 *4. 📋 INSCRIPCIÓN DE PREDIOS*
+
+  #                 *5. 🧾 MATRIMONIOS Y DIVORCIOS*
+
+  #                 *6. 🏗️ OBRAS PRIVADAS*
+
+  #                 *7. 📜 CONSTANCIA DE POSESIÓN*
+
+  #                 *8. 🩺 CARNET DE SANIDAD*
+  #             footer:
+  #               text: "seleccione la opción abajo 👇"
+  #             action:
+  #               sections:
+  #                 - title: "Escoja trámite"
+  #                   rows:
+  #                     - id: "/estado_cuenta"
+  #                       title: "Estado de cuenta 💼"
+  #                     - id: "/formalizacion_promocion_empresarial"
+  #                       title: "Licencias 💼"
+  #                     - id: "/gestion"
+  #                       title: "Certificados 🚨"
+  #                     - id: "/orientacion"
+  #                       title: "Inscripción 📋"
+  #                     - id: "/registro"
+  #                       title: "Matrimonios 🧾"
+  #                     - id: "/obras"
+  #                       title: "Obras 🏗️"
+  #                     - id: "/constancia_posesion_servicios_basicos"
+  #                       title: "Constancia 📜"
+  #                     - id: "/carnet_sanidad_no_manipular_alimentos"
+  #                       title: "Carnet 🩺"
+  #               button: "Seleccionar opción"
 
   utter_estado_cuenta:
     - custom:
@@ -172,19 +176,19 @@ responses:
                   - title: "Escoja trámite"
                     rows:
                       - id: "/formalizacion_promocion_empresarial"
-                        title: "Licencias 💼"
+                        title: "1. Licencias 💼"
                       - id: "/gestion"
-                        title: "Certificados 🚨"
+                        title: "2. Certificados 🚨"
                       - id: "/orientacion"
-                        title: "Inscripción 📋"
+                        title: "3. Inscripción 📋"
                       - id: "/registro"
-                        title: "Matrimonios 🧾"
+                        title: "4. Matrimonios 🧾"
                       - id: "/obras"
-                        title: "Obras 🏗️"
+                        title: "5. Obras 🏗️"
                       - id: "/constancia_posesion_servicios_basicos"
-                        title: "Constancia 📜"
+                        title: "6. Constancia 📜"
                       - id: "/carnet_sanidad_no_manipular_alimentos"
-                        title: "Carnet 🩺"
+                        title: "7. Carnet 🩺"
                 button: "Seleccionar trámite"
   # utter_saludo:
   #   - custom:

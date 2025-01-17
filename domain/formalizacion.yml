@@ -28,49 +28,72 @@ responses:
 
                 5. 🔄Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
 
-          - type: interactive
-            interactive:
-              type: list
+          - type: text
+            text:
+              # body: list
               # header:
               #   type: text
               #   text: "Consulta Trámites"
+              preview_url: false
+              body: |
+                6. 🔃Licencia de funcionamiento para cambio de giro
+
+                7. 🖼️Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
+
+                8. 🔤Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
+
+                9. 📄Duplicado del certificado de licencia de funcionamiento
+
+                10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+                
+                11. 📜Cese de licencia de funcionamiento
+                *Seleccione la opción abajo 👇*
+
+          - type: interactive
+            interactive:
+              type: list
               body:
                 text: |
-                  6. 🔃Licencia de funcionamiento para cambio de giro
-
-                  7. 🖼️Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
-
-                  8. 🔤Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
-
-                  9. 📄Duplicado del certificado de licencia de funcionamiento
-
-                  10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
-
-              footer:
-                text: "*Seleccione la opción abajo 👇*"
+                  Seleccionar Publicidad - Duplicado
 
               action:
                 sections:
                   - title: "Escoja Opción"
                     rows:
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
-                        title: "RIESGO BAJO 🟢"
+                        title: "1. RIESGO BAJO 🟢"
                       - id: "/formalizacion_item02_edificacion_riesgo_medio"
-                        title: "RIESGO MEDIO 🟡"
+                        title: "2. RIESGO MEDIO 🟡"
                       - id: "/formalizacion_item03_edificacion_riesgo_alto"
-                        title: "RIESGO ALTO 🔴"
+                        title: "3. RIESGO ALTO 🔴"
                       - id: "/formalizacion_item04_edificacion_riesgo_muy_alto"
-                        title: "RIESGO MUY ALTO ⚠️"
+                        title: "4. RIESGO MUY ALTO ⚠️"
                       - id: "/formalizacion_item05_transferencia_licencia_funcionamiento"
-                        title: "TRANSFERENCIA O CAMBIO 🔄"
+                        title: "5. TRANSFERENCIA 🔄"
                       - id: "/formalizacion_item06_licencia_funcionamiento_cambio_giro"
-                        title: "CAMBIO DE GIRO 🔃"
+                        title: "6. CAMBIO DE GIRO 🔃"
+                button: "Seleccionar (1 - 6)"
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Seleccionar Licencia - Transferencia
+
+              action:
+                sections:
+                  - title: "Escoja Opción"
+                    rows:
                       - id: "/formalizacion_item07_autorizacion_publicidad_exterior_afiche"
-                        title: "PUBLICIDAD AFICHE 🖼️"
+                        title: "7. PUBLICIDAD 🖼️"
                       - id: "/formalizacion_item08_autorizacion_publicidad_exterior_letras"
-                        title: "PUBLICIDAD LETRAS 🔤"
+                        title: "8. PUBLICIDAD LETRAS 🔤"
                       - id: "/formalizacion_item09_duplicado_certificado"
-                        title: "DUPLICADO 📄"
+                        title: "9. DUPLICADO 📄"
                       - id: "/formalizacion_item10_duplicado_resolucion"
-                        title: "DUPLICADO RESOLUCIÓN 📜"
-                button: "Seleccionar opción"
+                        title: "10. DUP. RESOLUCIÓN 📜"
+                      - id: "/formalizacion_item11_cese_licencia"
+                        title: "11. CESE LICENCIA 📜"
+                      - id: "/formalizacion_item12_transferencia_licencia"
+                        title: "12. TRANSFERENCIA 🔄"
+                button: "Seleccionar (7-12)"

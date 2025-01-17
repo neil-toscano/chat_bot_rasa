@@ -8,6 +8,7 @@ def consolidate_domain_files():
     yaml.indent(mapping=2, sequence=4, offset=2)
     combined_content = {
         "version": "3.1",
+        "actions": [],
         "intents": [],
         "responses": {},
         "session_config": {
@@ -34,6 +35,9 @@ def consolidate_domain_files():
                     
                     if "responses" in content:
                         combined_content["responses"].update(content["responses"])
+
+                    if "actions" in content:  # Verificar y agregar las acciones
+                        combined_content["actions"].extend(content["actions"])
 
     # Escribir el archivo combinado en el archivo principal
     with open("domain.yml", 'w', encoding='utf-8') as output:

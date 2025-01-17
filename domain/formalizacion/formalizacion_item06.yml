@@ -60,13 +60,14 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Declaración jurada para informar el cambio de giro.
+                a. 📝 Declaración jurada para informar el cambio de giro.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
 
           - type: "text"
             text:
               preview_url: true
               body: |
-                b. 📄En el caso de personas jurídicas, Declaración jurada de representante legal y N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+                b. 🏢En el caso de personas jurídicas, Declaración jurada de representante legal y N° de partida electrónico y asiento de inscripción SUNARP (vigente)
 
   utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta:
     - custom:

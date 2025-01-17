@@ -28,7 +28,7 @@ responses:
                   ↪️ Puedes Iniciar trámite para solicitar cita para inscripción por suceción intestada en el siguiente link  👉: http://gestioncitas.munisjl.gob.pe/
 
               footer:
-                text: "*Seleccione la opción abajo 👇*"
+                text: "*Seleccione la opción abajo* 👇"
 
               action:
                 sections:
@@ -80,6 +80,6 @@ responses:
             text:
               preview_url: false
               body: |
-                 *Costo del trámite* 👇
-
+                *Costo del trámite* 👇
+                
                 💸 GRATUITO

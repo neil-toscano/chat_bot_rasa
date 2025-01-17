@@ -7,6 +7,7 @@ stories:
   steps:
   - intent: constancia_posesion
   - action: utter_constancia_posesion
+  - action: action_set_reminder
 
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
@@ -15,6 +16,7 @@ stories:
   - action: utter_saludo
   - intent: formalizacion_promocion_empresarial
   - action: utter_formalizacion_promocion_empresarial
+  - action: action_set_reminder
 
 # >> GESTION DEL RIESGO DE DESASTRES :
 - story: gestion del riesgo de desastres
@@ -23,6 +25,7 @@ stories:
   - action: utter_saludo
   - intent: gestion
   - action: utter_gestion
+  - action: action_set_reminder
 
 # >> HAPPY PATH :
 - story: happy path
@@ -65,12 +68,20 @@ stories:
   steps:
   - intent: estado_cuenta
   - action: utter_estado_cuenta
+  - action: action_set_reminder
 
 # >> TRAMITE MUNI SJL PATH :
 - story: tramite muni sjl path
   steps:
   - intent: consulta_tramites
   - action: utter_tramite
+  - action: action_set_reminder
+
+# >> RESPONDER AL RECORDATORIO :
+- story: responder al recordatorio
+  steps:
+  - intent: EXTERNAL_reminder
+  - action: action_react_to_reminder
 
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
@@ -79,6 +90,7 @@ stories:
   - action: utter_saludo
   - intent: obras
   - action: utter_obras
+  - action: action_set_reminder
 
 # >> ORIENTACION Y REGISTRO :
 - story: orientacion y registro
@@ -87,6 +99,7 @@ stories:
   - action: utter_saludo
   - intent: orientacion
   - action: utter_orientacion
+  - action: action_set_reminder
 
 # >> REGISTRO CIVIL :
 - story: registro civil
@@ -95,969 +108,1187 @@ stories:
   - action: utter_saludo
   - intent: registro
   - action: utter_registro
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD :
 - story: carnet sanidad
   steps:
   - intent: carnet_sanidad
   - action: utter_carnet_sanidad
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS :
 - story: constancia posesion servicios basicos
   steps:
   - intent: constancia_posesion_servicios_basicos
   - action: utter_constancia_posesion_servicios_basicos
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS QUE ES :
 - story: constancia posesion servicios basicos que es
   steps:
   - intent: constancia_posesion_servicios_basicos_que_es
   - action: utter_constancia_posesion_servicios_basicos_que_es
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS QUE NECESITO :
 - story: constancia posesion servicios basicos que necesito
   steps:
   - intent: constancia_posesion_servicios_basicos_que_necesito
   - action: utter_constancia_posesion_servicios_basicos_que_necesito
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS CUANTO CUESTA :
 - story: constancia posesion servicios basicos cuanto cuesta
   steps:
   - intent: constancia_posesion_servicios_basicos_cuanto_cuesta
   - action: utter_constancia_posesion_servicios_basicos_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO :
 - story: licencia funcionamiento riesgo bajo
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIEGO BAJO QUE ES :
 - story: licencia funcionamiento riego bajo que es
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO QUE NECESITO :
 - story: licencia funcionamiento riesgo bajo que necesito
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo bajo requisito especial salud
   steps:
   - intent: servicio_de_salud
   - action: utter_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo bajo requisito especial autorizacion
   steps:
   - intent: actividad_requiere_autorizacion
   - action: utter_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo bajo requisito especial patrimonio cultural
   steps:
   - intent: monumento_del_patrimonio_cultural
   - action: utter_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO QUE CUANTO CUESTA :
 - story: licencia funcionamiento riesgo bajo que cuanto cuesta
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO :
 - story: licencia funcionamiento riesgo medio
   steps:
   - intent: formalizacion_item02_edificacion_riesgo_medio
   - action: utter_formalizacion_item02_edificacion_riesgo_medio
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO QUE ES :
 - story: licencia funcionamiento riesgo medio que es
   steps:
   - intent: formalizacion_item02_riesgo_medio_que_es
   - action: utter_formalizacion_item02_riesgo_medio_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO QUE NECESITO :
 - story: licencia funcionamiento riesgo medio que necesito
   steps:
   - intent: formalizacion_item02_riesgo_medio_que_necesito
   - action: utter_formalizacion_item02_riesgo_medio_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo medio requisito especial salud
   steps:
   - intent: formalizacion_item02_servicio_de_salud
   - action: utter_formalizacion_item02_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo medio requisito especial autorizacion
   steps:
   - intent: formalizacion_item02_actividad_requiere_autorizacion
   - action: utter_formalizacion_item02_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo medio requisito especial patrimonio cultural
   steps:
   - intent: formalizacion_item02_monumento_del_patrimonio_cultural
   - action: utter_formalizacion_item02_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO CUANTO CUESTA :
 - story: licencia funcionamiento riesgo medio cuanto cuesta
   steps:
   - intent: formalizacion_item02_riesgo_medio_cuanto_cuesta
   - action: utter_formalizacion_item02_riesgo_medio_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO :
 - story: licencia funcionamiento riesgo alto
   steps:
   - intent: formalizacion_item03_edificacion_riesgo_alto
   - action: utter_formalizacion_item03_edificacion_riesgo_alto
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO QUE ES :
 - story: licencia funcionamiento riesgo alto que es
   steps:
   - intent: formalizacion_item03_riesgo_alto_que_es
   - action: utter_formalizacion_item03_riesgo_alto_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO QUE NECESITO :
 - story: licencia funcionamiento riesgo alto que necesito
   steps:
   - intent: formalizacion_item03_riesgo_alto_que_necesito
   - action: utter_formalizacion_item03_riesgo_alto_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo medio requisito especial salud
   steps:
   - intent: formalizacion_item03_servicio_de_salud
   - action: utter_formalizacion_item03_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo alto requisito especial autorizacion
   steps:
   - intent: formalizacion_item03_actividad_requiere_autorizacion
   - action: utter_formalizacion_item03_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo alto requisito especial patrimonio cultural
   steps:
   - intent: formalizacion_item03_monumento_del_patrimonio_cultural
   - action: utter_formalizacion_item03_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO CUANTO CUESTA :
 - story: licencia funcionamiento riesgo alto cuanto cuesta
   steps:
   - intent: formalizacion_item03_riesgo_alto_cuanto_cuesta
-  - action: utter_formalizacion_item03_riesgo_medio_cuanto_cuesta
+  - action: utter_formalizacion_item03_riesgo_alto_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO :
 - story: licencia funcionamiento riesgo muy alto
   steps:
   - intent: formalizacion_item04_edificacion_riesgo_muy_alto
   - action: utter_formalizacion_item04_edificacion_riesgo_muy_alto
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO QUE ES :
 - story: licencia funcionamiento riesgo muy alto que es
   steps:
   - intent: formalizacion_item04_riesgo_muy_alto_que_es
   - action: utter_formalizacion_item04_riesgo_muy_alto_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO QUE NECESITO :
 - story: licencia funcionamiento riesgo muy alto que necesito
   steps:
   - intent: formalizacion_item04_riesgo_muy_alto_que_necesito
   - action: utter_formalizacion_item04_riesgo_muy_alto_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo muy alto requisito especial salud
   steps:
   - intent: formalizacion_item04_servicio_de_salud
   - action: utter_formalizacion_item04_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo muy alto requisito especial autorizacion
   steps:
   - intent: formalizacion_item04_actividad_requiere_autorizacion
   - action: utter_formalizacion_item04_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo muy alto requisito especial patrimonio cultural
   steps:
   - intent: formalizacion_item04_monumento_del_patrimonio_cultural
   - action: utter_formalizacion_item04_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO CUANTO CUESTA :
 - story: licencia funcionamiento riesgo muy alto cuanto cuesta
   steps:
   - intent: formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
   - action: utter_formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA DE LICENCIA DE FUNCIONAMIENTO :
 - story: transferencia de licencia de funcionamiento
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE ES :
 - story: transferencia licencia funcionamiento que es
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE NECESITO :
 - story: transferencia licencia funcionamiento que necesito
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA LICENCIA FUNCIONAMIENTO CUANTO CUESTA :
 - story: transferencia licencia funcionamiento cuanto cuesta
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO :
 - story: licencia de funcionamiento cambio de giro
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO QUE ES :
 - story: licencia de funcionamiento cambio de giro que es
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO QUE NECESITO :
 - story: licencia de funcionamiento cambio de giro que necesito
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO CUANTO CUESTA :
 - story: licencia de funcionamiento cambio de giro cuanto cuesta
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE :
 - story: autorizacion publicidad exterior afiche
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE ES :
 - story: autorizacion publicidad exterior afiche que es
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE NECESITO :
 - story: autorizacion publicidad exterior afiche que necesito
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE CUANTO CUESTA :
 - story: autorizacion publicidad exterior afiche cuanto cuesta
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS :
 - story: autorizacion publicidad exterior letras
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE ES :
 - story: autorizacion publicidad exterior letras que es
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE NECESITO :
 - story: autorizacion publicidad exterior letras que necesito
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS CUANTO CUESTA :
 - story: autorizacion publicidad exterior letras cuanto cuesta
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA :
 - story: duplicacion del certificado licencia
   steps:
   - intent: formalizacion_item09_duplicado_certificado
   - action: utter_formalizacion_item09_duplicado_certificado
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA QUE ES :
 - story: duplicacion del certificado licencia que es
   steps:
   - intent: formalizacion_item09_duplicado_certificado_que_es
   - action: utter_formalizacion_item09_duplicado_certificado_que_es
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA QUE NECESITO :
 - story: duplicacion del certificado licencia que necesito
   steps:
   - intent: formalizacion_item09_duplicado_certificado_que_necesito
   - action: utter_formalizacion_item09_duplicado_certificado_que_necesito
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA CUANTO CUESTA :
 - story: duplicacion del certificado licencia cuanto cuesta
   steps:
   - intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
   - action: utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> DUPLICACION DE LA RESOLUCION DE AUTORIZACION :
 - story: duplicacion de la resolucion de autorizacion
   steps:
   - intent: formalizacion_item10_duplicado_resolucion
   - action: utter_formalizacion_item10_duplicado_resolucion
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO DE RESOLUCIÓN QUE ES :
 - story: duplicacion del certificado de resolución que es
   steps:
   - intent: formalizacion_item10_duplicado_resolucion_que_es
   - action: utter_formalizacion_item10_duplicado_resolucion_que_es
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO RESOLUCION QUE NECESITO :
 - story: duplicacion del certificado resolucion que necesito
   steps:
   - intent: formalizacion_item10_duplicado_resolucion_que_necesito
   - action: utter_formalizacion_item10_duplicado_resolucion_que_necesito
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO RESOLUCION CUANTO CUESTA :
 - story: duplicacion del certificado resolucion cuanto cuesta
   steps:
   - intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
   - action: utter_formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+  - action: action_set_reminder
+
+# >> CESE LICENCIA :
+- story: cese licencia
+  steps:
+  - intent: formalizacion_item11_cese_licencia
+  - action: utter_formalizacion_item11_cese_licencia
+  - action: action_set_reminder
+
+# >> CESE LICENCIA QUE ES :
+- story: cese licencia que es
+  steps:
+  - intent: formalizacion_item11_cese_licencia_que_es
+  - action: utter_formalizacion_item11_cese_licencia_que_es
+  - action: action_set_reminder
+
+# >> CESE LICENCIA QUE NECESITO :
+- story: cese licencia que necesito
+  steps:
+  - intent: formalizacion_item11_cese_licencia_que_necesito
+  - action: utter_formalizacion_item11_cese_licencia_que_necesito
+  - action: action_set_reminder
+
+# >> CESE LICENCIA CUANTO CUESTA :
+- story: cese licencia cuanto cuesta
+  steps:
+  - intent: formalizacion_item11_cese_licencia_cuanto_cuesta
+  - action: utter_formalizacion_item11_cese_licencia_cuanto_cuesta
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA :
+- story: transferencia licencia
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia
+  - action: utter_formalizacion_item12_transferencia_licencia
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA QUE ES :
+- story: transferencia licencia que es
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia_que_es
+  - action: utter_formalizacion_item12_transferencia_licencia_que_es
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA QUE NECESITO :
+- story: transferencia licencia que necesito
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia_que_necesito
+  - action: utter_formalizacion_item12_transferencia_licencia_que_necesito
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA CUANTO CUESTA :
+- story: transferencia licencia cuanto cuesta
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia_cuanto_cuesta
+  - action: utter_formalizacion_item12_transferencia_licencia_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO :
 - story: inspeccion riesgo bajo
   steps:
   - intent: gestion_item01
   - action: utter_gestion_item01
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO CONSULTA :
 - story: inspeccion riesgo bajo consulta
   steps:
   - intent: gestion_item01_consulta
   - action: utter_gestion_item01_consulta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO NECESIDAD :
 - story: inspeccion riesgo bajo necesidad
   steps:
   - intent: gestion_item01_necesidad
   - action: utter_gestion_item01_necesidad
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO COSTO :
 - story: inspeccion riesgo bajo costo
   steps:
   - intent: gestion_item01_costo
   - action: utter_gestion_item01_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO :
 - story: renovacion riesgo bajo
   steps:
   - intent: gestion_item02
   - action: utter_gestion_item02
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO CONSULTA :
 - story: renovacion riesgo bajo consulta
   steps:
   - intent: gestion_item02_consulta
   - action: utter_gestion_item02_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO NECESIDAD :
 - story: renovacion riesgo bajo necesidad
   steps:
   - intent: gestion_item02_necesidad
   - action: utter_gestion_item02_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO COSTO :
 - story: renovacion riesgo bajo costo
   steps:
   - intent: gestion_item02_costo
   - action: utter_gestion_item02_costo
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO :
 - story: inscripcion riesgo medio
   steps:
   - intent: gestion_item03
   - action: utter_gestion_item03
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO CONSULTA :
 - story: inscripcion riesgo medio consulta
   steps:
   - intent: gestion_item03_consulta
   - action: utter_gestion_item03_consulta
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO NECESIDAD :
 - story: inscripcion riesgo medio necesidad
   steps:
   - intent: gestion_item03_necesidad
   - action: utter_gestion_item03_necesidad
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO COSTO :
 - story: inscripcion riesgo medio costo
   steps:
   - intent: gestion_item03_costo
   - action: utter_gestion_item03_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO :
 - story: renovacion riesgo medio
   steps:
   - intent: gestion_item04
   - action: utter_gestion_item04
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO CONSULTA :
 - story: renovacion riesgo medio consulta
   steps:
   - intent: gestion_item04_consulta
   - action: utter_gestion_item04_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO NECESIDAD :
 - story: renovacion riesgo medio necesidad
   steps:
   - intent: gestion_item04_necesidad
   - action: utter_gestion_item04_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO COSTO :
 - story: renovacion riesgo medio costo
   steps:
   - intent: gestion_item04_costo
   - action: utter_gestion_item04_costo
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO :
 - story: inspeccion riesgo alto
   steps:
   - intent: gestion_item05
   - action: utter_gestion_item05
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO CONSULTA :
 - story: inspeccion riesgo alto consulta
   steps:
   - intent: gestion_item05_consulta
   - action: utter_gestion_item05_consulta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO NECESIDAD :
 - story: inspeccion riesgo alto necesidad
   steps:
   - intent: gestion_item05_necesidad
   - action: utter_gestion_item05_necesidad
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO COSTO :
 - story: inspeccion riesgo alto costo
   steps:
   - intent: gestion_item05_costo
   - action: utter_gestion_item05_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO :
 - story: renovacion riesgo alto
   steps:
   - intent: gestion_item06
   - action: utter_gestion_item06
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO CONSULTA :
 - story: renovacion riesgo alto consulta
   steps:
   - intent: gestion_item06_consulta
   - action: utter_gestion_item06_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO NECESIDAD :
 - story: renovacion riesgo alto necesidad
   steps:
   - intent: gestion_item06_necesidad
   - action: utter_gestion_item06_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO COSTO :
 - story: renovacion riesgo alto costo
   steps:
   - intent: gestion_item06_costo
   - action: utter_gestion_item06_costo
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO :
 - story: inspeccion riesgo muy alto
   steps:
   - intent: gestion_item07
   - action: utter_gestion_item07
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO CONSULTA :
 - story: inspeccion riesgo muy alto consulta
   steps:
   - intent: gestion_item07_consulta
   - action: utter_gestion_item07_consulta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO NECESIDAD :
 - story: inspeccion riesgo muy alto necesidad
   steps:
   - intent: gestion_item07_necesidad
   - action: utter_gestion_item07_necesidad
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO COSTO :
 - story: inspeccion riesgo muy alto costo
   steps:
   - intent: gestion_item07_costo
   - action: utter_gestion_item07_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO :
 - story: renovacion riesgo muy alto
   steps:
   - intent: gestion_item08
   - action: utter_gestion_item08
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO CONSULTA :
 - story: renovacion riesgo muy alto consulta
   steps:
   - intent: gestion_item08_consulta
   - action: utter_gestion_item08_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO NECESIDAD :
 - story: renovacion riesgo muy alto necesidad
   steps:
   - intent: gestion_item08_necesidad
   - action: utter_gestion_item08_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO COSTO :
 - story: renovacion riesgo muy alto costo
   steps:
   - intent: gestion_item08_costo
   - action: utter_gestion_item08_costo
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD :
 - story: evaluacion condiciones de seguridad
   steps:
   - intent: gestion_item09
   - action: utter_gestion_item09
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD CONSULTA :
 - story: evaluacion condiciones de seguridad consulta
   steps:
   - intent: gestion_item09_consulta
   - action: utter_gestion_item09_consulta
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD NECESIDAD :
 - story: evaluacion condiciones de seguridad necesidad
   steps:
   - intent: gestion_item09_necesidad
   - action: utter_gestion_item09_necesidad
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD COSTO :
 - story: evaluacion condiciones de seguridad costo
   steps:
   - intent: gestion_item09_costo
   - action: utter_gestion_item09_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO :
 - story: renovacion riesgo muy alto
   steps:
   - intent: gestion_item10
   - action: utter_gestion_item10
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO CONSULTA :
 - story: renovacion riesgo muy alto consulta
   steps:
   - intent: gestion_item10_consulta
   - action: utter_gestion_item10_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO NECESIDAD :
 - story: renovacion riesgo muy alto necesidad
   steps:
   - intent: gestion_item10_necesidad
   - action: utter_gestion_item10_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO COSTO :
 - story: renovacion riesgo muy alto costo
   steps:
   - intent: gestion_item10_costo
   - action: utter_gestion_item10_costo
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS :
 - story: certificado de parametros
   steps:
   - intent: obras_item01
   - action: utter_obras_item01
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS CONSULTA :
 - story: certificado de parametros consulta
   steps:
   - intent: obras_item01_consulta
   - action: utter_obras_item01_consulta
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS NECESIDAD :
 - story: certificado de parametros necesidad
   steps:
   - intent: obras_item01_necesidad
   - action: utter_obras_item01_necesidad
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS COSTO :
 - story: certificado de parametros costo
   steps:
   - intent: obras_item01_costo
   - action: utter_obras_item01_costo
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS :
 - story: visacion de planos
   steps:
   - intent: obras_item02
   - action: utter_obras_item02
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS CONSULTA :
 - story: visacion de planos consulta
   steps:
   - intent: obras_item02_consulta
   - action: utter_obras_item02_consulta
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS NECESIDAD :
 - story: visacion de planos necesidad
   steps:
   - intent: obras_item02_necesidad
   - action: utter_obras_item02_necesidad
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS COSTO :
 - story: visacion de planos costo
   steps:
   - intent: obras_item02_costo
   - action: utter_obras_item02_costo
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION :
 - story: licencia construccion
   steps:
   - intent: obras_item03
   - action: utter_obras_item03
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION CONSULTA :
 - story: licencia construccion consulta
   steps:
   - intent: obras_item03_consulta
   - action: utter_obras_item03_consulta
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION NECESIDAD :
 - story: licencia construccion necesidad
   steps:
   - intent: obras_item03_necesidad
   - action: utter_obras_item03_necesidad
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION COSTO :
 - story: licencia construccion costo
   steps:
   - intent: obras_item03_costo
   - action: utter_obras_item03_costo
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION :
 - story: licencia demolicion
   steps:
   - intent: obras_item04
   - action: utter_obras_item04
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION CONSULTA :
 - story: licencia demolicion consulta
   steps:
   - intent: obras_item04_consulta
   - action: utter_obras_item04_consulta
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION NECESIDAD :
 - story: licencia demolicion necesidad
   steps:
   - intent: obras_item04_necesidad
   - action: utter_obras_item04_necesidad
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION COSTO :
 - story: licencia demolicion costo
   steps:
   - intent: obras_item04_costo
   - action: utter_obras_item04_costo
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA :
 - story: sucesion indivisa
   steps:
   - intent: orientacion_item01
   - action: utter_orientacion_item01
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA CONSULTA :
 - story: sucesion indivisa consulta
   steps:
   - intent: orientacion_item01_consulta
   - action: utter_orientacion_item01_consulta
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA NECESIDAD :
 - story: sucesion indivisa necesidad
   steps:
   - intent: orientacion_item01_necesidad
   - action: utter_orientacion_item01_necesidad
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA COSTO :
 - story: sucesion indivisa costo
   steps:
   - intent: orientacion_item01_costo
   - action: utter_orientacion_item01_costo
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA :
 - story: sucesion intestada
   steps:
   - intent: orientacion_item02
   - action: utter_orientacion_item02
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA CONSULTA :
 - story: sucesion intestada consulta
   steps:
   - intent: orientacion_item02_consulta
   - action: utter_orientacion_item02_consulta
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA NECESIDAD :
 - story: sucesion intestada necesidad
   steps:
   - intent: orientacion_item02_necesidad
   - action: utter_orientacion_item02_necesidad
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA COSTO :
 - story: sucesion intestada costo
   steps:
   - intent: orientacion_item02_costo
   - action: utter_orientacion_item02_costo
+  - action: action_set_reminder
 
 # >> COMPRA VENTA :
 - story: compra venta
   steps:
   - intent: orientacion_item03
   - action: utter_orientacion_item03
+  - action: action_set_reminder
 
 # >> COMPRA VENTA CONSULTA :
 - story: compra venta consulta
   steps:
   - intent: orientacion_item03_consulta
   - action: utter_orientacion_item03_consulta
+  - action: action_set_reminder
 
 # >> COMPRA VENTA NECESIDAD :
 - story: compra venta necesidad
   steps:
   - intent: orientacion_item03_necesidad
   - action: utter_orientacion_item03_necesidad
+  - action: action_set_reminder
 
 # >> COMPRA VENTA COSTO :
 - story: compra venta costo
   steps:
   - intent: orientacion_item03_costo
   - action: utter_orientacion_item03_costo
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION :
 - story: independizacion
   steps:
   - intent: orientacion_item04
   - action: utter_orientacion_item04
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION CONSULTA :
 - story: independizacion consulta
   steps:
   - intent: orientacion_item04_consulta
   - action: utter_orientacion_item04_consulta
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION NECESIDAD :
 - story: independizacion necesidad
   steps:
   - intent: orientacion_item04_necesidad
   - action: utter_orientacion_item04_necesidad
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION COSTO :
 - story: independizacion costo
   steps:
   - intent: orientacion_item04_costo
   - action: utter_orientacion_item04_costo
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL :
 - story: matrimonio civil
   steps:
   - intent: registro_item01
   - action: utter_registro_item01
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL CONSULTA :
 - story: matrimonio civil consulta
   steps:
   - intent: registro_item01_consulta
   - action: utter_registro_item01_consulta
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL NECESIDAD :
 - story: matrimonio civil necesidad
   steps:
   - intent: registro_item01_necesidad
   - action: utter_registro_item01_necesidad
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL COSTO :
 - story: matrimonio civil costo
   steps:
   - intent: registro_item01_costo
   - action: utter_registro_item01_costo
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL REQUISITOS :
 - story: matrimonio civil requisitos
   steps:
   - intent: registro_item01_requisitos
   - action: utter_registro_item01_requisitos
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD UNO :
 - story: matrimonio civil subnecesidad uno
   steps:
   - intent: registro_item01_subnecesidad_01
   - action: utter_registro_item01_subnecesidad_01
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD DOS :
 - story: matrimonio civil subnecesidad dos
   steps:
   - intent: registro_item01_subnecesidad_02
   - action: utter_registro_item01_subnecesidad_02
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD TRES :
 - story: matrimonio civil subnecesidad tres
   steps:
   - intent: registro_item01_subnecesidad_03
   - action: utter_registro_item01_subnecesidad_03
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD CUATRO :
 - story: matrimonio civil subnecesidad cuatro
   steps:
   - intent: registro_item01_subnecesidad_04
   - action: utter_registro_item01_subnecesidad_04
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD CINCO :
 - story: matrimonio civil subnecesidad cinco
   steps:
   - intent: registro_item01_subnecesidad_05
   - action: utter_registro_item01_subnecesidad_05
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD SEIS :
 - story: matrimonio civil subnecesidad seis
   steps:
   - intent: registro_item01_subnecesidad_06
   - action: utter_registro_item01_subnecesidad_06
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL :
 - story: publicacion edicto matrimonial
   steps:
   - intent: registro_item02
   - action: utter_registro_item02
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL CONSULTA :
 - story: publicacion edicto matrimonial consulta
   steps:
   - intent: registro_item02_consulta
   - action: utter_registro_item02_consulta
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL NECESIDAD :
 - story: publicacion edicto matrimonial necesidad
   steps:
   - intent: registro_item02_necesidad
   - action: utter_registro_item02_necesidad
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL COSTO :
 - story: publicacion edicto matrimonial costo
   steps:
   - intent: registro_item02_costo
   - action: utter_registro_item02_costo
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA :
 - story: reprogramacion fecha hora
   steps:
   - intent: registro_item03
   - action: utter_registro_item03
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA CONSULTA :
 - story: reprogramacion fecha hora consulta
   steps:
   - intent: registro_item03_consulta
   - action: utter_registro_item03_consulta
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA NECESIDAD :
 - story: reprogramacion fecha hora necesidad
   steps:
   - intent: registro_item03_necesidad
   - action: utter_registro_item03_necesidad
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA COSTO :
 - story: reprogramacion fecha hora costo
   steps:
   - intent: registro_item03_costo
   - action: utter_registro_item03_costo
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO :
 - story: separacion divorcio
   steps:
   - intent: registro_item04
   - action: utter_registro_item04
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO CONSULTA :
 - story: separacion divorcio consulta
   steps:
   - intent: registro_item04_consulta
   - action: utter_registro_item04_consulta
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO NECESIDAD :
 - story: separacion divorcio necesidad
   steps:
   - intent: registro_item04_necesidad
   - action: utter_registro_item04_necesidad
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO COSTO :
 - story: separacion divorcio costo
   steps:
   - intent: registro_item04_costo
   - action: utter_registro_item04_costo
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO DOCUMENTOS :
 - story: separacion divorcio documentos
   steps:
   - intent: registro_item04_documentos
   - action: utter_registro_item04_documentos
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD UNO :
 - story: separacion divorcio subnecesidad uno
   steps:
   - intent: registro_item04_subnecesidad_01
   - action: utter_registro_item04_subnecesidad_01
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD DOS :
 - story: separacion divorcio subnecesidad dos
   steps:
   - intent: registro_item04_subnecesidad_02
   - action: utter_registro_item04_subnecesidad_02
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD TRES :
 - story: separacion divorcio subnecesidad tres
   steps:
   - intent: registro_item04_subnecesidad_03
   - action: utter_registro_item04_subnecesidad_03
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD CUATRO :
 - story: separacion divorcio subnecesidad cuatro
   steps:
   - intent: registro_item04_subnecesidad_04
   - action: utter_registro_item04_subnecesidad_04
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS :
 - story: carnet sanidad no manipular alimentos
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos
   - action: utter_carnet_sanidad_no_manipular_alimentos
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE ES :
 - story: carnet sanidad no manipular alimentos que es
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_que_es
   - action: utter_carnet_sanidad_no_manipular_alimentos_que_es
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE NECESITO :
 - story: carnet sanidad no manipular alimentos que necesito
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_que_necesito
   - action: utter_carnet_sanidad_no_manipular_alimentos_que_necesito
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS CUANTO CUESTA :
 - story: carnet sanidad no manipular alimentos cuanto cuesta
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
   - action: utter_carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+  - action: action_set_reminder

@@ -84,16 +84,16 @@ responses:
               type: list
               body:
                 text: |
-                  ¿Deseas saber los documentos necesarios en casos especiales?
+                  🤔 ¿Deseas saber los documentos necesarios en casos especiales?
 
               action:
                 sections:
                   - title: "Escoge la opción..."
                     rows:
                       - id: "/registro_item04_documentos"
-                        title: "Sí, deseo"
+                        title: "✅ Sí, deseo"
                       - id: "/registro_item04"
-                        title: "No, gracias"
+                        title: "❌ No, gracias"
                 button: "Opciones"
 
   # >> 4.4... COSTO

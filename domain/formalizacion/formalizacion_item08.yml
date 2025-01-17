@@ -60,7 +60,8 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄 Presentar una declaración jurada con tus datos personales y el número de recibo de pago
+                a. 📄 Solicitud con caràcter de declaración jurada 
+                    https://citasbackend.munisjl.gob.pe/api/files/pdf/57e3a9b4-6b84-461b-93cf-75a47c8b9920.pdf
                 b. 📝 Carta de responsabilidad de instalación suscrita por el responsable competente (Arq. o Ing. Civil)
                 c. 📁 *Documentos necesarios*
                     1. 🎨Un diseño o arte del elemento publicitario con detalles y medidas.

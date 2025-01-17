@@ -6,22 +6,25 @@ stories:
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - CONSULTA
 - story: transferencia licencia funcionamiento que es
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - NECESIDAD
 - story: transferencia licencia funcionamiento que necesito
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
-
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - CUANTO CUESTA
 - story: transferencia licencia funcionamiento cuanto cuesta
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  - action: action_set_reminder

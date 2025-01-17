@@ -6,22 +6,25 @@ stories:
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos
   - action: utter_carnet_sanidad_no_manipular_alimentos
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - CONSULTA
 - story: carnet sanidad no manipular alimentos que es
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_que_es
   - action: utter_carnet_sanidad_no_manipular_alimentos_que_es
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - NECESIDAD
 - story: carnet sanidad no manipular alimentos que necesito
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_que_necesito
-  - action: utter_carnet_sanidad_no_manipular_alimentos_que_necesito
+  - action: utter_carnet_sanidad_no_manipular_alimentos_que_necesito  
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - CUANTO CUESTA
 - story: carnet sanidad no manipular alimentos cuanto cuesta
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
   - action: utter_carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
-
+  - action: action_set_reminder

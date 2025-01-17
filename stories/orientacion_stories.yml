@@ -9,3 +9,4 @@ stories:
   - action: utter_saludo
   - intent: orientacion
   - action: utter_orientacion
+  - action: action_set_reminder
