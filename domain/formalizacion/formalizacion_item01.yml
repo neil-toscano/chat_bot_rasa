@@ -110,11 +110,11 @@ responses:
                   - title: "Seleccione actividad"
                     rows:
                       - id: "/servicio_de_salud"
-                        title: "Salud"
+                        title: "Salud 🏥"
                       - id: "/actividad_requiere_autorizacion"
-                        title: "Autorización"
+                        title: "Autorización 📜"
                       - id: "/monumento_del_patrimonio_cultural"
-                        title: "Patrimonio cultural"
+                        title: "Patrimonio cultural 🏛️"
                 button: "Seleccione actividad"
   utter_servicio_de_salud:
     - custom:

@@ -108,11 +108,11 @@ responses:
                   - title: "Seleccione actividad"
                     rows:
                       - id: "/formalizacion_item03_servicio_de_salud"
-                        title: "Salud"
+                        title: "Salud 🏥"
                       - id: "/formalizacion_item03_actividad_requiere_autorizacion"
-                        title: "Autorización"
+                        title: "Autorización 📜"
                       - id: "/formalizacion_item03_monumento_del_patrimonio_cultural"
-                        title: "Patrimonio cultural"
+                        title: "Patrimonio cultural 🏛️"
                 button: "Seleccione actividad"
 
   utter_formalizacion_item03_servicio_de_salud:

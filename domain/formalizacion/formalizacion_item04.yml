@@ -110,15 +110,15 @@ responses:
 
               action:
                 sections:
-                  - title: "Seleccione actividad"
+                  - title: "Seleccione actividad 🔍"
                     rows:
                       - id: "/formalizacion_item04_servicio_de_salud"
-                        title: "Salud"
+                        title: "🏥 Salud"
                       - id: "/formalizacion_item04_actividad_requiere_autorizacion"
-                        title: "Autorización"
+                        title: "📜 Autorización"
                       - id: "/formalizacion_item04_monumento_del_patrimonio_cultural"
-                        title: "Patrimonio cultural"
-                button: "Seleccione actividad"
+                        title: "🏛️ Patrimonio cultural"
+                button: "Seleccione actividad ✅"
 
   utter_formalizacion_item04_servicio_de_salud:
     - custom:
