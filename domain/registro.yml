@@ -15,11 +15,12 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: "🟢 Opciones de Trámite:"
               body:
                 text: |
+                  🟢 Has seleccionado *Matrimonios y Divorcios*
+
+                  👇 Opciones de trámite:
+
                   1. 💍 Matrimonio Civil  
 
                   2. 📜 Publicación de Edicto Matrimonial tramitado en otros distritos  
@@ -31,19 +32,19 @@ responses:
                   🌐 La documentación necesaria lo encontrará en el siguiente LINK 👉: https://web.munisjl.gob.pe/web/matrimonios.php
 
               footer:
-                text: "*Seleccione la opción abajo 👇*"
+                text: "*Seleccione la opción abajo* 👇"
 
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: "Escoga la Opción"
+                  - title: "Escoga el trámite"
                     rows:
                       - id: "/registro_item01"
-                        title: "💍 MATRIMONIO"
+                        title: "1. 💍 MATRIMONIO"
                       - id: "/registro_item02"
-                        title: "📜 PUBLICACIÓN"
+                        title: "2. 📜 PUBLICACIÓN"
                       - id: "/registro_item03"
-                        title: "🔄 REPROGRAMACIÓN"
+                        title: "3. 🔄 REPROGRAMACIÓN"
                       - id: "/registro_item04"
-                        title: "💔 SEPARACIÓN"
-                button: "Selecciona Opción"
+                        title: "4. 💔 SEPARACIÓN"
+                button: "✅ Opciones"

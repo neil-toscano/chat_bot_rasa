@@ -7,21 +7,25 @@ stories:
   steps:
   - intent: gestion_item05
   - action: utter_gestion_item05
+  - action: action_set_reminder
 
 # >> 2.5... STORIES - CONSULTA
 - story: inspeccion riesgo alto consulta
   steps:
   - intent: gestion_item05_consulta
   - action: utter_gestion_item05_consulta
+  - action: action_set_reminder
 
 # >> 2.5... STORIES - NECESIDAD
 - story: inspeccion riesgo alto necesidad
   steps:
   - intent: gestion_item05_necesidad
   - action: utter_gestion_item05_necesidad
+  - action: action_set_reminder
 
 # >> 2.5... STORIES - COSTO
 - story: inspeccion riesgo alto costo
   steps:
   - intent: gestion_item05_costo
   - action: utter_gestion_item05_costo
+  - action: action_set_reminder

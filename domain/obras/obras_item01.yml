@@ -13,33 +13,30 @@ responses:
           - type: interactive
             interactive:
               type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🎉 Haz seleccionado Certificado de Parámetros Urbanísticos y Edificatorios*
+                  🎉 Has seleccionado *Certificado de Parámetros Urbanísticos y Edificatorios*
 
-                  *❓ Opciones de pregunta:*
+                  ❓ *Opciones de pregunta:*
 
-                  1. 📄¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. 📋¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. 💵¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
-                text: "*Seleccione la opción abajo 👇*"
+                text: "*Seleccione la opción abajo* 👇"
 
               action:
                 sections:
-                  - title: "Escoge la opción"
+                  - title: "Escoge la pregunta"
                     rows:
                       - id: "/obras_item01_consulta"
-                        title: "¿Qué es? 📄"
+                        title: "📄 ¿Qué es?"
                       - id: "/obras_item01_necesidad"
-                        title: "¿Qué necesito? 📋"
+                        title: "📋 ¿Qué necesito?"
                       - id: "/obras_item01_costo"
-                        title: "¿Cuánto cuesta? 💵"
+                        title: "💵 ¿Cuánto cuesta?"
                 button: "✅ Opciones"
 
   # >> 5.1... CONSULTA
@@ -52,9 +49,9 @@ responses:
               body: |
                 📜 Es el documento que te permite saber los requisitos técnicos de diseño de una edificación, por ejemplo alturas máximas, retiros municipales, porcentaje de área libre, cantidad de estacionamientos, etc.
 
-                *🏗️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para construir, para vender, alquilar, trámites en el banco y temas académicos.
+                🏗️ Para construir, para vender, alquilar, trámites en el banco y temas académicos.
 
   # >> 5.1... NECESIDAD
   utter_obras_item01_necesidad:
@@ -64,13 +61,13 @@ responses:
             text:
               preview_url: false
               body: |
-                *Requisitos para el trámite:*
+                📋 *Requisitos para el trámite:*
 
-                1. 🖊️Solicitud dirigida al alcalde.
+                1. 🖊️ Solicitud dirigida al alcalde.
 
-                2. 📍Indicar la dirección exacta del predio.
+                2. 📍 Indicar la dirección exacta del predio.
 
-                3. 📂Escribir el numero de partida registral.
+                3. 📂 Escribir el numero de partida registral.
 
   # >> 5.1... COSTO
   utter_obras_item01_costo:
@@ -80,4 +77,6 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 57.10
+                *Costo del trámite* 👇
+
+                💰 S/ 57.10

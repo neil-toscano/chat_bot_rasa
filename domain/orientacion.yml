@@ -15,11 +15,12 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: "🟢 Opciones de Inscripción:"
               body:
                 text: |
+                  🟢 Has seleccionado *Inscripción de Predios*
+
+                  👇 Opciones de trámite:
+
                   1. 📜 Inscripción por Sucesión Indivisa  
 
                   2. 🏠 Inscripción por Sucesión Intestada
@@ -37,11 +38,11 @@ responses:
                   - title: "Escoge el trámite"
                     rows:
                       - id: "/orientacion_item01"
-                        title: "📜 SUCESIÓN INDIVISA"
+                        title: "1. 📜 SUC. INDIVISA"
                       - id: "/orientacion_item02"
-                        title: "🏠 SUCESIÓN INTESTADA"
+                        title: "2. 🏠 SUC. INTESTADA"
                       - id: "/orientacion_item03"
-                        title: "💼 COMPRA-VENTA"
+                        title: "3. 💼 COMPRA-VENTA"
                       - id: "/orientacion_item04"
-                        title: "🗺️ INDEPENDIZACIÓN"
-                button: "Seleccionar Opción"
+                        title: "4. 🗺️ INDEPENDIZACIÓN"
+                button: "✅ Opciones"

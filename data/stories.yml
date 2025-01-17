@@ -570,600 +570,700 @@ stories:
   steps:
   - intent: gestion_item01
   - action: utter_gestion_item01
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO CONSULTA :
 - story: inspeccion riesgo bajo consulta
   steps:
   - intent: gestion_item01_consulta
   - action: utter_gestion_item01_consulta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO NECESIDAD :
 - story: inspeccion riesgo bajo necesidad
   steps:
   - intent: gestion_item01_necesidad
   - action: utter_gestion_item01_necesidad
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO COSTO :
 - story: inspeccion riesgo bajo costo
   steps:
   - intent: gestion_item01_costo
   - action: utter_gestion_item01_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO :
 - story: renovacion riesgo bajo
   steps:
   - intent: gestion_item02
   - action: utter_gestion_item02
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO CONSULTA :
 - story: renovacion riesgo bajo consulta
   steps:
   - intent: gestion_item02_consulta
   - action: utter_gestion_item02_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO NECESIDAD :
 - story: renovacion riesgo bajo necesidad
   steps:
   - intent: gestion_item02_necesidad
   - action: utter_gestion_item02_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO BAJO COSTO :
 - story: renovacion riesgo bajo costo
   steps:
   - intent: gestion_item02_costo
   - action: utter_gestion_item02_costo
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO :
 - story: inscripcion riesgo medio
   steps:
   - intent: gestion_item03
   - action: utter_gestion_item03
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO CONSULTA :
 - story: inscripcion riesgo medio consulta
   steps:
   - intent: gestion_item03_consulta
   - action: utter_gestion_item03_consulta
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO NECESIDAD :
 - story: inscripcion riesgo medio necesidad
   steps:
   - intent: gestion_item03_necesidad
   - action: utter_gestion_item03_necesidad
+  - action: action_set_reminder
 
 # >> INSCRIPCION RIESGO MEDIO COSTO :
 - story: inscripcion riesgo medio costo
   steps:
   - intent: gestion_item03_costo
   - action: utter_gestion_item03_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO :
 - story: renovacion riesgo medio
   steps:
   - intent: gestion_item04
   - action: utter_gestion_item04
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO CONSULTA :
 - story: renovacion riesgo medio consulta
   steps:
   - intent: gestion_item04_consulta
   - action: utter_gestion_item04_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO NECESIDAD :
 - story: renovacion riesgo medio necesidad
   steps:
   - intent: gestion_item04_necesidad
   - action: utter_gestion_item04_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MEDIO COSTO :
 - story: renovacion riesgo medio costo
   steps:
   - intent: gestion_item04_costo
   - action: utter_gestion_item04_costo
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO :
 - story: inspeccion riesgo alto
   steps:
   - intent: gestion_item05
   - action: utter_gestion_item05
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO CONSULTA :
 - story: inspeccion riesgo alto consulta
   steps:
   - intent: gestion_item05_consulta
   - action: utter_gestion_item05_consulta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO NECESIDAD :
 - story: inspeccion riesgo alto necesidad
   steps:
   - intent: gestion_item05_necesidad
   - action: utter_gestion_item05_necesidad
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO ALTO COSTO :
 - story: inspeccion riesgo alto costo
   steps:
   - intent: gestion_item05_costo
   - action: utter_gestion_item05_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO :
 - story: renovacion riesgo alto
   steps:
   - intent: gestion_item06
   - action: utter_gestion_item06
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO CONSULTA :
 - story: renovacion riesgo alto consulta
   steps:
   - intent: gestion_item06_consulta
   - action: utter_gestion_item06_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO NECESIDAD :
 - story: renovacion riesgo alto necesidad
   steps:
   - intent: gestion_item06_necesidad
   - action: utter_gestion_item06_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO ALTO COSTO :
 - story: renovacion riesgo alto costo
   steps:
   - intent: gestion_item06_costo
   - action: utter_gestion_item06_costo
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO :
 - story: inspeccion riesgo muy alto
   steps:
   - intent: gestion_item07
   - action: utter_gestion_item07
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO CONSULTA :
 - story: inspeccion riesgo muy alto consulta
   steps:
   - intent: gestion_item07_consulta
   - action: utter_gestion_item07_consulta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO NECESIDAD :
 - story: inspeccion riesgo muy alto necesidad
   steps:
   - intent: gestion_item07_necesidad
   - action: utter_gestion_item07_necesidad
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO MUY ALTO COSTO :
 - story: inspeccion riesgo muy alto costo
   steps:
   - intent: gestion_item07_costo
   - action: utter_gestion_item07_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO :
 - story: renovacion riesgo muy alto
   steps:
   - intent: gestion_item08
   - action: utter_gestion_item08
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO CONSULTA :
 - story: renovacion riesgo muy alto consulta
   steps:
   - intent: gestion_item08_consulta
   - action: utter_gestion_item08_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO NECESIDAD :
 - story: renovacion riesgo muy alto necesidad
   steps:
   - intent: gestion_item08_necesidad
   - action: utter_gestion_item08_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO COSTO :
 - story: renovacion riesgo muy alto costo
   steps:
   - intent: gestion_item08_costo
   - action: utter_gestion_item08_costo
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD :
 - story: evaluacion condiciones de seguridad
   steps:
   - intent: gestion_item09
   - action: utter_gestion_item09
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD CONSULTA :
 - story: evaluacion condiciones de seguridad consulta
   steps:
   - intent: gestion_item09_consulta
   - action: utter_gestion_item09_consulta
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD NECESIDAD :
 - story: evaluacion condiciones de seguridad necesidad
   steps:
   - intent: gestion_item09_necesidad
   - action: utter_gestion_item09_necesidad
+  - action: action_set_reminder
 
 # >> EVALUACION CONDICIONES DE SEGURIDAD COSTO :
 - story: evaluacion condiciones de seguridad costo
   steps:
   - intent: gestion_item09_costo
   - action: utter_gestion_item09_costo
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO :
 - story: renovacion riesgo muy alto
   steps:
   - intent: gestion_item10
   - action: utter_gestion_item10
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO CONSULTA :
 - story: renovacion riesgo muy alto consulta
   steps:
   - intent: gestion_item10_consulta
   - action: utter_gestion_item10_consulta
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO NECESIDAD :
 - story: renovacion riesgo muy alto necesidad
   steps:
   - intent: gestion_item10_necesidad
   - action: utter_gestion_item10_necesidad
+  - action: action_set_reminder
 
 # >> RENOVACION RIESGO MUY ALTO COSTO :
 - story: renovacion riesgo muy alto costo
   steps:
   - intent: gestion_item10_costo
   - action: utter_gestion_item10_costo
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS :
 - story: certificado de parametros
   steps:
   - intent: obras_item01
   - action: utter_obras_item01
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS CONSULTA :
 - story: certificado de parametros consulta
   steps:
   - intent: obras_item01_consulta
   - action: utter_obras_item01_consulta
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS NECESIDAD :
 - story: certificado de parametros necesidad
   steps:
   - intent: obras_item01_necesidad
   - action: utter_obras_item01_necesidad
+  - action: action_set_reminder
 
 # >> CERTIFICADO DE PARAMETROS COSTO :
 - story: certificado de parametros costo
   steps:
   - intent: obras_item01_costo
   - action: utter_obras_item01_costo
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS :
 - story: visacion de planos
   steps:
   - intent: obras_item02
   - action: utter_obras_item02
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS CONSULTA :
 - story: visacion de planos consulta
   steps:
   - intent: obras_item02_consulta
   - action: utter_obras_item02_consulta
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS NECESIDAD :
 - story: visacion de planos necesidad
   steps:
   - intent: obras_item02_necesidad
   - action: utter_obras_item02_necesidad
+  - action: action_set_reminder
 
 # >> VISACION DE PLANOS COSTO :
 - story: visacion de planos costo
   steps:
   - intent: obras_item02_costo
   - action: utter_obras_item02_costo
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION :
 - story: licencia construccion
   steps:
   - intent: obras_item03
   - action: utter_obras_item03
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION CONSULTA :
 - story: licencia construccion consulta
   steps:
   - intent: obras_item03_consulta
   - action: utter_obras_item03_consulta
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION NECESIDAD :
 - story: licencia construccion necesidad
   steps:
   - intent: obras_item03_necesidad
   - action: utter_obras_item03_necesidad
+  - action: action_set_reminder
 
 # >> LICENCIA CONSTRUCCION COSTO :
 - story: licencia construccion costo
   steps:
   - intent: obras_item03_costo
   - action: utter_obras_item03_costo
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION :
 - story: licencia demolicion
   steps:
   - intent: obras_item04
   - action: utter_obras_item04
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION CONSULTA :
 - story: licencia demolicion consulta
   steps:
   - intent: obras_item04_consulta
   - action: utter_obras_item04_consulta
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION NECESIDAD :
 - story: licencia demolicion necesidad
   steps:
   - intent: obras_item04_necesidad
   - action: utter_obras_item04_necesidad
+  - action: action_set_reminder
 
 # >> LICENCIA DEMOLICION COSTO :
 - story: licencia demolicion costo
   steps:
   - intent: obras_item04_costo
   - action: utter_obras_item04_costo
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA :
 - story: sucesion indivisa
   steps:
   - intent: orientacion_item01
   - action: utter_orientacion_item01
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA CONSULTA :
 - story: sucesion indivisa consulta
   steps:
   - intent: orientacion_item01_consulta
   - action: utter_orientacion_item01_consulta
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA NECESIDAD :
 - story: sucesion indivisa necesidad
   steps:
   - intent: orientacion_item01_necesidad
   - action: utter_orientacion_item01_necesidad
+  - action: action_set_reminder
 
 # >> SUCESION INDIVISA COSTO :
 - story: sucesion indivisa costo
   steps:
   - intent: orientacion_item01_costo
   - action: utter_orientacion_item01_costo
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA :
 - story: sucesion intestada
   steps:
   - intent: orientacion_item02
   - action: utter_orientacion_item02
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA CONSULTA :
 - story: sucesion intestada consulta
   steps:
   - intent: orientacion_item02_consulta
   - action: utter_orientacion_item02_consulta
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA NECESIDAD :
 - story: sucesion intestada necesidad
   steps:
   - intent: orientacion_item02_necesidad
   - action: utter_orientacion_item02_necesidad
+  - action: action_set_reminder
 
 # >> SUCESION INTESTADA COSTO :
 - story: sucesion intestada costo
   steps:
   - intent: orientacion_item02_costo
   - action: utter_orientacion_item02_costo
+  - action: action_set_reminder
 
 # >> COMPRA VENTA :
 - story: compra venta
   steps:
   - intent: orientacion_item03
   - action: utter_orientacion_item03
+  - action: action_set_reminder
 
 # >> COMPRA VENTA CONSULTA :
 - story: compra venta consulta
   steps:
   - intent: orientacion_item03_consulta
   - action: utter_orientacion_item03_consulta
+  - action: action_set_reminder
 
 # >> COMPRA VENTA NECESIDAD :
 - story: compra venta necesidad
   steps:
   - intent: orientacion_item03_necesidad
   - action: utter_orientacion_item03_necesidad
+  - action: action_set_reminder
 
 # >> COMPRA VENTA COSTO :
 - story: compra venta costo
   steps:
   - intent: orientacion_item03_costo
   - action: utter_orientacion_item03_costo
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION :
 - story: independizacion
   steps:
   - intent: orientacion_item04
   - action: utter_orientacion_item04
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION CONSULTA :
 - story: independizacion consulta
   steps:
   - intent: orientacion_item04_consulta
   - action: utter_orientacion_item04_consulta
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION NECESIDAD :
 - story: independizacion necesidad
   steps:
   - intent: orientacion_item04_necesidad
   - action: utter_orientacion_item04_necesidad
+  - action: action_set_reminder
 
 # >> INDEPENDIZACION COSTO :
 - story: independizacion costo
   steps:
   - intent: orientacion_item04_costo
   - action: utter_orientacion_item04_costo
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL :
 - story: matrimonio civil
   steps:
   - intent: registro_item01
   - action: utter_registro_item01
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL CONSULTA :
 - story: matrimonio civil consulta
   steps:
   - intent: registro_item01_consulta
   - action: utter_registro_item01_consulta
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL NECESIDAD :
 - story: matrimonio civil necesidad
   steps:
   - intent: registro_item01_necesidad
   - action: utter_registro_item01_necesidad
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL COSTO :
 - story: matrimonio civil costo
   steps:
   - intent: registro_item01_costo
   - action: utter_registro_item01_costo
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL REQUISITOS :
 - story: matrimonio civil requisitos
   steps:
   - intent: registro_item01_requisitos
   - action: utter_registro_item01_requisitos
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD UNO :
 - story: matrimonio civil subnecesidad uno
   steps:
   - intent: registro_item01_subnecesidad_01
   - action: utter_registro_item01_subnecesidad_01
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD DOS :
 - story: matrimonio civil subnecesidad dos
   steps:
   - intent: registro_item01_subnecesidad_02
   - action: utter_registro_item01_subnecesidad_02
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD TRES :
 - story: matrimonio civil subnecesidad tres
   steps:
   - intent: registro_item01_subnecesidad_03
   - action: utter_registro_item01_subnecesidad_03
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD CUATRO :
 - story: matrimonio civil subnecesidad cuatro
   steps:
   - intent: registro_item01_subnecesidad_04
   - action: utter_registro_item01_subnecesidad_04
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD CINCO :
 - story: matrimonio civil subnecesidad cinco
   steps:
   - intent: registro_item01_subnecesidad_05
   - action: utter_registro_item01_subnecesidad_05
+  - action: action_set_reminder
 
 # >> MATRIMONIO CIVIL SUBNECESIDAD SEIS :
 - story: matrimonio civil subnecesidad seis
   steps:
   - intent: registro_item01_subnecesidad_06
   - action: utter_registro_item01_subnecesidad_06
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL :
 - story: publicacion edicto matrimonial
   steps:
   - intent: registro_item02
   - action: utter_registro_item02
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL CONSULTA :
 - story: publicacion edicto matrimonial consulta
   steps:
   - intent: registro_item02_consulta
   - action: utter_registro_item02_consulta
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL NECESIDAD :
 - story: publicacion edicto matrimonial necesidad
   steps:
   - intent: registro_item02_necesidad
   - action: utter_registro_item02_necesidad
+  - action: action_set_reminder
 
 # >> PUBLICACION EDICTO MATRIMONIAL COSTO :
 - story: publicacion edicto matrimonial costo
   steps:
   - intent: registro_item02_costo
   - action: utter_registro_item02_costo
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA :
 - story: reprogramacion fecha hora
   steps:
   - intent: registro_item03
   - action: utter_registro_item03
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA CONSULTA :
 - story: reprogramacion fecha hora consulta
   steps:
   - intent: registro_item03_consulta
   - action: utter_registro_item03_consulta
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA NECESIDAD :
 - story: reprogramacion fecha hora necesidad
   steps:
   - intent: registro_item03_necesidad
   - action: utter_registro_item03_necesidad
+  - action: action_set_reminder
 
 # >> REPROGRAMACION FECHA HORA COSTO :
 - story: reprogramacion fecha hora costo
   steps:
   - intent: registro_item03_costo
   - action: utter_registro_item03_costo
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO :
 - story: separacion divorcio
   steps:
   - intent: registro_item04
   - action: utter_registro_item04
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO CONSULTA :
 - story: separacion divorcio consulta
   steps:
   - intent: registro_item04_consulta
   - action: utter_registro_item04_consulta
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO NECESIDAD :
 - story: separacion divorcio necesidad
   steps:
   - intent: registro_item04_necesidad
   - action: utter_registro_item04_necesidad
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO COSTO :
 - story: separacion divorcio costo
   steps:
   - intent: registro_item04_costo
   - action: utter_registro_item04_costo
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO DOCUMENTOS :
 - story: separacion divorcio documentos
   steps:
   - intent: registro_item04_documentos
   - action: utter_registro_item04_documentos
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD UNO :
 - story: separacion divorcio subnecesidad uno
   steps:
   - intent: registro_item04_subnecesidad_01
   - action: utter_registro_item04_subnecesidad_01
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD DOS :
 - story: separacion divorcio subnecesidad dos
   steps:
   - intent: registro_item04_subnecesidad_02
   - action: utter_registro_item04_subnecesidad_02
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD TRES :
 - story: separacion divorcio subnecesidad tres
   steps:
   - intent: registro_item04_subnecesidad_03
   - action: utter_registro_item04_subnecesidad_03
+  - action: action_set_reminder
 
 # >> SEPARACION DIVORCIO SUBNECESIDAD CUATRO :
 - story: separacion divorcio subnecesidad cuatro
   steps:
   - intent: registro_item04_subnecesidad_04
   - action: utter_registro_item04_subnecesidad_04
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS :
 - story: carnet sanidad no manipular alimentos

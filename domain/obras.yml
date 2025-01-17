@@ -15,33 +15,34 @@ responses:
           - type: interactive
             interactive:
               type: list
-              header:
-                type: text
-                text: "🟢 Opciones de Trámite:"
               body:
                 text: |
-                  1. 🏢Certificado de Parámetros Urbanísticos y Edificatorios
+                  🟢 Has seleccionado *Obras Privadas y Habilitación Urbana*
 
-                  2. 📐Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+                  👇 Opciones de trámite:
 
-                  3. 🏠Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+                  1. 🏢 Certificado de Parámetros Urbanísticos y Edificatorios
 
-                  4. 🔨Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
+                  2. 📐 Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+
+                  3. 🏠 Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+
+                  4. 🔨 Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
 
               footer:
-                text: "*Seleccione la opción abajo 👇*"
+                text: "*Seleccione la opción abajo* 👇"
 
               # >> LISTADO DE OPCIONES :
               action:
                 sections:
-                  - title: "Escoge la "
+                  - title: "Escoge el trámite"
                     rows:
                       - id: "/obras_item01"
-                        title: "📝 CERTIFICADO"
+                        title: "1. 📝 CERTIFICADO"
                       - id: "/obras_item02"
-                        title: "✏️ VISACIÓN"
+                        title: "2. ✏️ VISACIÓN"
                       - id: "/obras_item03"
-                        title: "🛠️ LICENCIA CONSTRUCCIÓN"
+                        title: "3. 🛠️ LIC.CONSTRUCCIÓN"
                       - id: "/obras_item04"
-                        title: "🏚️ LICENCIA DEMOLICIÓN"
-                button: "Seleccionar opción"
+                        title: "4. 🏚️ LIC.DEMOLICIÓN"
+                button: "✅ Opciones"
