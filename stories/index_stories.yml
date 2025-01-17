@@ -38,8 +38,18 @@ stories:
     steps:
       - intent: estado_cuenta
       - action: utter_estado_cuenta
+      - action: action_set_reminder 
+
 
   - story: tramite muni sjl path
     steps:
       - intent: consulta_tramites
       - action: utter_tramite
+      - action: action_set_reminder
+
+
+
+  - story: responder al recordatorio
+    steps:
+      - intent: EXTERNAL_reminder
+      - action: action_react_to_reminder

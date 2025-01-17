@@ -65,15 +65,17 @@ responses:
             text:
               preview_url: true
               body: |
-                📋 Solicitud de ITSE, indicando número y fecha de pago.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112320.pdf
+                a. 📄Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
 
-          - type: text
-            text:
-              preview_url: true
-              body: |
-                📋 Declaración jurada de cumplimiento de Seguridad en Edificaciones.  
-                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                b. 📄Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                c. 📄Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+                    
+                d. 📄Declaraciòn jurada del cumpliminto de las condiciones de seguridad en la edificaciòn(anexo 4)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
 
   # >> 2.1... COSTO
   utter_gestion_item01_costo:

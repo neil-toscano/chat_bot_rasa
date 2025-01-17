@@ -7,6 +7,7 @@ stories:
   steps:
   - intent: constancia_posesion
   - action: utter_constancia_posesion
+  - action: action_set_reminder
 
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
@@ -15,6 +16,7 @@ stories:
   - action: utter_saludo
   - intent: formalizacion_promocion_empresarial
   - action: utter_formalizacion_promocion_empresarial
+  - action: action_set_reminder
 
 # >> GESTION DEL RIESGO DE DESASTRES :
 - story: gestion del riesgo de desastres
@@ -23,6 +25,7 @@ stories:
   - action: utter_saludo
   - intent: gestion
   - action: utter_gestion
+  - action: action_set_reminder
 
 # >> HAPPY PATH :
 - story: happy path
@@ -65,12 +68,20 @@ stories:
   steps:
   - intent: estado_cuenta
   - action: utter_estado_cuenta
+  - action: action_set_reminder
 
 # >> TRAMITE MUNI SJL PATH :
 - story: tramite muni sjl path
   steps:
   - intent: consulta_tramites
   - action: utter_tramite
+  - action: action_set_reminder
+
+# >> RESPONDER AL RECORDATORIO :
+- story: responder al recordatorio
+  steps:
+  - intent: EXTERNAL_reminder
+  - action: action_react_to_reminder
 
 # >> FORMALIZACION Y PROMOCION EMPRESARIAL :
 - story: formalizacion y promocion empresarial
@@ -79,6 +90,7 @@ stories:
   - action: utter_saludo
   - intent: obras
   - action: utter_obras
+  - action: action_set_reminder
 
 # >> ORIENTACION Y REGISTRO :
 - story: orientacion y registro
@@ -87,6 +99,7 @@ stories:
   - action: utter_saludo
   - intent: orientacion
   - action: utter_orientacion
+  - action: action_set_reminder
 
 # >> REGISTRO CIVIL :
 - story: registro civil
@@ -95,348 +108,462 @@ stories:
   - action: utter_saludo
   - intent: registro
   - action: utter_registro
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD :
 - story: carnet sanidad
   steps:
   - intent: carnet_sanidad
   - action: utter_carnet_sanidad
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS :
 - story: constancia posesion servicios basicos
   steps:
   - intent: constancia_posesion_servicios_basicos
   - action: utter_constancia_posesion_servicios_basicos
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS QUE ES :
 - story: constancia posesion servicios basicos que es
   steps:
   - intent: constancia_posesion_servicios_basicos_que_es
   - action: utter_constancia_posesion_servicios_basicos_que_es
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS QUE NECESITO :
 - story: constancia posesion servicios basicos que necesito
   steps:
   - intent: constancia_posesion_servicios_basicos_que_necesito
   - action: utter_constancia_posesion_servicios_basicos_que_necesito
+  - action: action_set_reminder
 
 # >> CONSTANCIA POSESION SERVICIOS BASICOS CUANTO CUESTA :
 - story: constancia posesion servicios basicos cuanto cuesta
   steps:
   - intent: constancia_posesion_servicios_basicos_cuanto_cuesta
   - action: utter_constancia_posesion_servicios_basicos_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO :
 - story: licencia funcionamiento riesgo bajo
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIEGO BAJO QUE ES :
 - story: licencia funcionamiento riego bajo que es
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO QUE NECESITO :
 - story: licencia funcionamiento riesgo bajo que necesito
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo bajo requisito especial salud
   steps:
   - intent: servicio_de_salud
   - action: utter_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo bajo requisito especial autorizacion
   steps:
   - intent: actividad_requiere_autorizacion
   - action: utter_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo bajo requisito especial patrimonio cultural
   steps:
   - intent: monumento_del_patrimonio_cultural
   - action: utter_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO BAJO QUE CUANTO CUESTA :
 - story: licencia funcionamiento riesgo bajo que cuanto cuesta
   steps:
   - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
   - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO :
 - story: licencia funcionamiento riesgo medio
   steps:
   - intent: formalizacion_item02_edificacion_riesgo_medio
   - action: utter_formalizacion_item02_edificacion_riesgo_medio
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO QUE ES :
 - story: licencia funcionamiento riesgo medio que es
   steps:
   - intent: formalizacion_item02_riesgo_medio_que_es
   - action: utter_formalizacion_item02_riesgo_medio_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO QUE NECESITO :
 - story: licencia funcionamiento riesgo medio que necesito
   steps:
   - intent: formalizacion_item02_riesgo_medio_que_necesito
   - action: utter_formalizacion_item02_riesgo_medio_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo medio requisito especial salud
   steps:
   - intent: formalizacion_item02_servicio_de_salud
   - action: utter_formalizacion_item02_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo medio requisito especial autorizacion
   steps:
   - intent: formalizacion_item02_actividad_requiere_autorizacion
   - action: utter_formalizacion_item02_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo medio requisito especial patrimonio cultural
   steps:
   - intent: formalizacion_item02_monumento_del_patrimonio_cultural
   - action: utter_formalizacion_item02_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO CUANTO CUESTA :
 - story: licencia funcionamiento riesgo medio cuanto cuesta
   steps:
   - intent: formalizacion_item02_riesgo_medio_cuanto_cuesta
   - action: utter_formalizacion_item02_riesgo_medio_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO :
 - story: licencia funcionamiento riesgo alto
   steps:
   - intent: formalizacion_item03_edificacion_riesgo_alto
   - action: utter_formalizacion_item03_edificacion_riesgo_alto
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO QUE ES :
 - story: licencia funcionamiento riesgo alto que es
   steps:
   - intent: formalizacion_item03_riesgo_alto_que_es
   - action: utter_formalizacion_item03_riesgo_alto_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO QUE NECESITO :
 - story: licencia funcionamiento riesgo alto que necesito
   steps:
   - intent: formalizacion_item03_riesgo_alto_que_necesito
   - action: utter_formalizacion_item03_riesgo_alto_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MEDIO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo medio requisito especial salud
   steps:
   - intent: formalizacion_item03_servicio_de_salud
   - action: utter_formalizacion_item03_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo alto requisito especial autorizacion
   steps:
   - intent: formalizacion_item03_actividad_requiere_autorizacion
   - action: utter_formalizacion_item03_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo alto requisito especial patrimonio cultural
   steps:
   - intent: formalizacion_item03_monumento_del_patrimonio_cultural
   - action: utter_formalizacion_item03_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO ALTO CUANTO CUESTA :
 - story: licencia funcionamiento riesgo alto cuanto cuesta
   steps:
   - intent: formalizacion_item03_riesgo_alto_cuanto_cuesta
-  - action: utter_formalizacion_item03_riesgo_medio_cuanto_cuesta
+  - action: utter_formalizacion_item03_riesgo_alto_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO :
 - story: licencia funcionamiento riesgo muy alto
   steps:
   - intent: formalizacion_item04_edificacion_riesgo_muy_alto
   - action: utter_formalizacion_item04_edificacion_riesgo_muy_alto
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO QUE ES :
 - story: licencia funcionamiento riesgo muy alto que es
   steps:
   - intent: formalizacion_item04_riesgo_muy_alto_que_es
   - action: utter_formalizacion_item04_riesgo_muy_alto_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO QUE NECESITO :
 - story: licencia funcionamiento riesgo muy alto que necesito
   steps:
   - intent: formalizacion_item04_riesgo_muy_alto_que_necesito
   - action: utter_formalizacion_item04_riesgo_muy_alto_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO REQUISITO ESPECIAL SALUD :
 - story: licencia funcionamiento riesgo muy alto requisito especial salud
   steps:
   - intent: formalizacion_item04_servicio_de_salud
   - action: utter_formalizacion_item04_servicio_de_salud
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO REQUISITO ESPECIAL AUTORIZACION :
 - story: licencia funcionamiento riesgo muy alto requisito especial autorizacion
   steps:
   - intent: formalizacion_item04_actividad_requiere_autorizacion
   - action: utter_formalizacion_item04_actividad_requiere_autorizacion
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO REQUISITO ESPECIAL PATRIMONIO CULTURAL :
 - story: licencia funcionamiento riesgo muy alto requisito especial patrimonio cultural
   steps:
   - intent: formalizacion_item04_monumento_del_patrimonio_cultural
   - action: utter_formalizacion_item04_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
 
 # >> LICENCIA FUNCIONAMIENTO RIESGO MUY ALTO CUANTO CUESTA :
 - story: licencia funcionamiento riesgo muy alto cuanto cuesta
   steps:
   - intent: formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
   - action: utter_formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA DE LICENCIA DE FUNCIONAMIENTO :
 - story: transferencia de licencia de funcionamiento
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE ES :
 - story: transferencia licencia funcionamiento que es
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE NECESITO :
 - story: transferencia licencia funcionamiento que necesito
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  - action: action_set_reminder
 
 # >> TRANSFERENCIA LICENCIA FUNCIONAMIENTO CUANTO CUESTA :
 - story: transferencia licencia funcionamiento cuanto cuesta
   steps:
   - intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
   - action: utter_formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO :
 - story: licencia de funcionamiento cambio de giro
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO QUE ES :
 - story: licencia de funcionamiento cambio de giro que es
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO QUE NECESITO :
 - story: licencia de funcionamiento cambio de giro que necesito
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  - action: action_set_reminder
 
 # >> LICENCIA DE FUNCIONAMIENTO CAMBIO DE GIRO CUANTO CUESTA :
 - story: licencia de funcionamiento cambio de giro cuanto cuesta
   steps:
   - intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
   - action: utter_formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE :
 - story: autorizacion publicidad exterior afiche
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE ES :
 - story: autorizacion publicidad exterior afiche que es
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE NECESITO :
 - story: autorizacion publicidad exterior afiche que necesito
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR AFICHE CUANTO CUESTA :
 - story: autorizacion publicidad exterior afiche cuanto cuesta
   steps:
   - intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
   - action: utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS :
 - story: autorizacion publicidad exterior letras
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE ES :
 - story: autorizacion publicidad exterior letras que es
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE NECESITO :
 - story: autorizacion publicidad exterior letras que necesito
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+  - action: action_set_reminder
 
 # >> AUTORIZACION PUBLICIDAD EXTERIOR LETRAS CUANTO CUESTA :
 - story: autorizacion publicidad exterior letras cuanto cuesta
   steps:
   - intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
   - action: utter_formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA :
 - story: duplicacion del certificado licencia
   steps:
   - intent: formalizacion_item09_duplicado_certificado
   - action: utter_formalizacion_item09_duplicado_certificado
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA QUE ES :
 - story: duplicacion del certificado licencia que es
   steps:
   - intent: formalizacion_item09_duplicado_certificado_que_es
   - action: utter_formalizacion_item09_duplicado_certificado_que_es
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA QUE NECESITO :
 - story: duplicacion del certificado licencia que necesito
   steps:
   - intent: formalizacion_item09_duplicado_certificado_que_necesito
   - action: utter_formalizacion_item09_duplicado_certificado_que_necesito
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO LICENCIA CUANTO CUESTA :
 - story: duplicacion del certificado licencia cuanto cuesta
   steps:
   - intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
   - action: utter_formalizacion_item09_duplicado_certificado_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> DUPLICACION DE LA RESOLUCION DE AUTORIZACION :
 - story: duplicacion de la resolucion de autorizacion
   steps:
   - intent: formalizacion_item10_duplicado_resolucion
   - action: utter_formalizacion_item10_duplicado_resolucion
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO DE RESOLUCIÓN QUE ES :
 - story: duplicacion del certificado de resolución que es
   steps:
   - intent: formalizacion_item10_duplicado_resolucion_que_es
   - action: utter_formalizacion_item10_duplicado_resolucion_que_es
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO RESOLUCION QUE NECESITO :
 - story: duplicacion del certificado resolucion que necesito
   steps:
   - intent: formalizacion_item10_duplicado_resolucion_que_necesito
   - action: utter_formalizacion_item10_duplicado_resolucion_que_necesito
+  - action: action_set_reminder
 
 # >> DUPLICACION DEL CERTIFICADO RESOLUCION CUANTO CUESTA :
 - story: duplicacion del certificado resolucion cuanto cuesta
   steps:
   - intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
   - action: utter_formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+  - action: action_set_reminder
+
+# >> CESE LICENCIA :
+- story: cese licencia
+  steps:
+  - intent: formalizacion_item11_cese_licencia
+  - action: utter_formalizacion_item11_cese_licencia
+  - action: action_set_reminder
+
+# >> CESE LICENCIA QUE ES :
+- story: cese licencia que es
+  steps:
+  - intent: formalizacion_item11_cese_licencia_que_es
+  - action: utter_formalizacion_item11_cese_licencia_que_es
+  - action: action_set_reminder
+
+# >> CESE LICENCIA QUE NECESITO :
+- story: cese licencia que necesito
+  steps:
+  - intent: formalizacion_item11_cese_licencia_que_necesito
+  - action: utter_formalizacion_item11_cese_licencia_que_necesito
+  - action: action_set_reminder
+
+# >> CESE LICENCIA CUANTO CUESTA :
+- story: cese licencia cuanto cuesta
+  steps:
+  - intent: formalizacion_item11_cese_licencia_cuanto_cuesta
+  - action: utter_formalizacion_item11_cese_licencia_cuanto_cuesta
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA :
+- story: transferencia licencia
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia
+  - action: utter_formalizacion_item12_transferencia_licencia
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA QUE ES :
+- story: transferencia licencia que es
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia_que_es
+  - action: utter_formalizacion_item12_transferencia_licencia_que_es
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA QUE NECESITO :
+- story: transferencia licencia que necesito
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia_que_necesito
+  - action: utter_formalizacion_item12_transferencia_licencia_que_necesito
+  - action: action_set_reminder
+
+# >> TRANSFERENCIA LICENCIA CUANTO CUESTA :
+- story: transferencia licencia cuanto cuesta
+  steps:
+  - intent: formalizacion_item12_transferencia_licencia_cuanto_cuesta
+  - action: utter_formalizacion_item12_transferencia_licencia_cuanto_cuesta
+  - action: action_set_reminder
 
 # >> INSPECCION RIESGO BAJO :
 - story: inspeccion riesgo bajo
@@ -1043,21 +1170,25 @@ stories:
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos
   - action: utter_carnet_sanidad_no_manipular_alimentos
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE ES :
 - story: carnet sanidad no manipular alimentos que es
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_que_es
   - action: utter_carnet_sanidad_no_manipular_alimentos_que_es
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE NECESITO :
 - story: carnet sanidad no manipular alimentos que necesito
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_que_necesito
   - action: utter_carnet_sanidad_no_manipular_alimentos_que_necesito
+  - action: action_set_reminder
 
 # >> CARNET SANIDAD NO MANIPULAR ALIMENTOS CUANTO CUESTA :
 - story: carnet sanidad no manipular alimentos cuanto cuesta
   steps:
   - intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
   - action: utter_carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+  - action: action_set_reminder

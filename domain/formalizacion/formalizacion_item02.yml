@@ -61,19 +61,26 @@ responses:
             text:
               preview_url: true
               body: |
-                a. 📄Formato de declaración jurada para licencia de funcionamiento.
+                a. 📝 Formato de declaración jurada para licencia de funcionamiento.
+                    👉https://web.munisjl.gob.pe/web/pdf/lfuncionamiento/formato_declaracion-jurada.pdf
 
+                b. 🏢 Solicitud de inspecciòn tècnica de seguridad en edificaciónes(ITSE) y de evaluación de condiciones de seguridad en espectàculos pùblicos deportivos y no deportivos(ECSE)(anexo 1)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. ℹ️ Informaciòn proporcionada por el solictante para la determinaciòn del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 2)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO02.pdf
+
+                d. ⚠️ Reporte del nivel de riesgo del establecimiento objeto de inspecciòn(anexo 3)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO03.pdf
+                    
+                e. ✅ Declaraciòn jurada del cumpliminto de las condiciones de seguridad en la edificaciòn(anexo 4)
+                    👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO04.pdf
+                    
           - type: "text"
             text:
               preview_url: true
               body: |
-                b. 📄Declaración jurada de cumplimiento de las condiciones de seguridad en la edificación.
-
-          - type: "text"
-            text:
-              preview_url: true
-              body: |
-                c. 📄Declaración jurada del representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
+                f. 📄Declaración jurada del representante legal, en el caso de personas jurídicas, Copia literal de la vigencia de poder actualizada
 
           - type: interactive
             interactive:

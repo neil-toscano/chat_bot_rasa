@@ -10,6 +10,11 @@ intents:
   - bot_challenge
   - estado_cuenta
   - consulta_tramites
+  - EXTERNAL_reminder
+
+actions:
+  - action_set_reminder
+  - action_react_to_reminder
 
 responses:
   utter_animo:
@@ -171,19 +176,19 @@ responses:
                   - title: "Escoja trámite"
                     rows:
                       - id: "/formalizacion_promocion_empresarial"
-                        title: "Licencias 💼"
+                        title: "1. Licencias 💼"
                       - id: "/gestion"
-                        title: "Certificados 🚨"
+                        title: "2. Certificados 🚨"
                       - id: "/orientacion"
-                        title: "Inscripción 📋"
+                        title: "3. Inscripción 📋"
                       - id: "/registro"
-                        title: "Matrimonios 🧾"
+                        title: "4. Matrimonios 🧾"
                       - id: "/obras"
-                        title: "Obras 🏗️"
+                        title: "5. Obras 🏗️"
                       - id: "/constancia_posesion_servicios_basicos"
-                        title: "Constancia 📜"
+                        title: "6. Constancia 📜"
                       - id: "/carnet_sanidad_no_manipular_alimentos"
-                        title: "Carnet 🩺"
+                        title: "7. Carnet 🩺"
                 button: "Seleccionar trámite"
   # utter_saludo:
   #   - custom:

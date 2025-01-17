@@ -6,21 +6,24 @@ stories:
   steps:
   - intent: constancia_posesion_servicios_basicos
   - action: utter_constancia_posesion_servicios_basicos
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - CONSULTA
 - story: constancia posesion servicios basicos que es
   steps:
   - intent: constancia_posesion_servicios_basicos_que_es
   - action: utter_constancia_posesion_servicios_basicos_que_es
+  - action: action_set_reminder
 
 # >> 1.1... STORIES - NECESIDAD
 - story: constancia posesion servicios basicos que necesito
   steps:
   - intent: constancia_posesion_servicios_basicos_que_necesito
   - action: utter_constancia_posesion_servicios_basicos_que_necesito
-
+  - action: action_set_reminder
 # >> 1.1... STORIES - CUANTO CUESTA
 - story: constancia posesion servicios basicos cuanto cuesta
   steps:
   - intent: constancia_posesion_servicios_basicos_cuanto_cuesta
   - action: utter_constancia_posesion_servicios_basicos_cuanto_cuesta
+  - action: action_set_reminder
