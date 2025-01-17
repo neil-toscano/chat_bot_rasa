@@ -13,20 +13,17 @@ responses:
           - type: interactive
             interactive:
               type: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               body:
                 text: |
-                  *🏠 Haz seleccionado Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+                  🏠 Has seleccionado *Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
 
                   *❓ Opciones de pregunta:*
 
-                  1. 📄¿Qué es?
+                  1. 📄 ¿Qué es?
 
-                  2. 📋¿Qué necesito?
+                  2. 📋 ¿Qué necesito?
 
-                  3. 💵¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
               footer:
                 text: "*Seleccione la pregunta abajo 👇*"
 
@@ -35,11 +32,11 @@ responses:
                   - title: "Escoge la pregunta"
                     rows:
                       - id: "/obras_item03_consulta"
-                        title: "¿Qué es? 📄"
+                        title: "📄 ¿Qué es?"
                       - id: "/obras_item03_necesidad"
-                        title: "¿Qué necesito? 📋"
+                        title: "📋 ¿Qué necesito?"
                       - id: "/obras_item03_costo"
-                        title: "¿Cuánto cuesta? 💵"
+                        title: "💵 ¿Cuánto cuesta?"
                 button: "✅ Opciones"
 
   # >> 5.3... CONSULTA
@@ -52,9 +49,9 @@ responses:
               body: |
                 📜 Es el permiso que entrega la municipalidad antes de construir.
 
-                *🏗️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+                🏗️ Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
 
   # >> 5.3... NECESIDAD
   utter_obras_item03_necesidad:
@@ -62,25 +59,47 @@ responses:
         blocks:
           - type: text
             text:
+              preview_url: true
+              body: |
+                📋 Formulario Único de Edificación - FUE:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/II-FUE_%20ANEXO%20II_LICENCIA%20DE%20OBRA_REV.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona natural:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/V-FUE_ANEXO%20A_PERSONAS%20NATURALES.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona jurídica:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/VI-FUE_ANEXO%20B_PERSONAS%20JUR%C3%8DDICAS_REV.pdf
+
+          - type: text
+            text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos adicionales:*
 
-                1. 🖊️ FUE - Licencia de Edificación FUE - ANEXO A o B.
+                1. 📄 Documento que acredite el derecho a edificar.
 
-                2. 📄 Documento que acredite el derecho a edificar.
+                2. 💿 CD con documentos en original.
 
-                3. 💿 CD con documentos en original.
+                3. 📍 Plano de ubicación y localización.
 
-                4. 📍 Plano de ubicación y localización.
+                4. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
 
-                5. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
+                5. 🏗️ Planos de estructuras.
 
-                6. 🏗️ Planos de estructuras.
+                6. 🚰 Planos de instalaciones sanitarias.
 
-                7. 🚰 Planos de instalaciones sanitarias.
-
-                8. 💡 Plano de instalaciones eléctricas.
+                7. 💡 Plano de instalaciones eléctricas.
 
   # >> 5.3... COSTO
   utter_obras_item03_costo:
@@ -90,4 +109,6 @@ responses:
             text:
               preview_url: false
               body: |
-                💰 *Costo del trámite:* S/ 450.30
+                *Costo del trámite* 👇
+
+                💰 S/ 450.30

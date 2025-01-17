@@ -13,20 +13,17 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado 💼 *Inscripción por Compra-Venta*
+                  💼 Has seleccionado *Inscripción por Compra-Venta*
+                  
+                  ❓ *Opciones de pregunta:* 
+                  
+                  1. 📄 ¿Qué es?  
 
-                  *🟢 Opciones de pregunta:*  
+                  2. 📋 ¿Qué necesito?  
 
-                  1️. 📘¿Qué es?  
-
-                  2️. 📝¿Qué necesito?  
-
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
               footer:
                 text: "*Seleccione la opción abajo 👇*"
@@ -35,13 +32,13 @@ responses:
                 sections:
                   - title: "Escoge la pregunta"
                     rows:
-                      - id: "/orientacion_item02_consulta"
-                        title: "¿Qué es?"
-                      - id: "/orientacion_item02_necesidad"
-                        title: "¿Qué necesito?"
-                      - id: "/orientacion_item02_costo"
-                        title: "¿Cuánto cuesta?"
-                button: "Opciones"
+                      - id: "/orientacion_item03_consulta"
+                        title: "📄 ¿Qué es?"
+                      - id: "/orientacion_item03_necesidad"
+                        title: "📋 ¿Qué necesito?"
+                      - id: "/orientacion_item03_costo"
+                        title: "💵 ¿Cuánto cuesta?"
+                button: "✅ Opciones"
 
   # >> 3.3... CONSULTA
   utter_orientacion_item03_consulta:
@@ -53,9 +50,9 @@ responses:
               body: |
                 📜 Es el registro formal de la transferencia de propiedad de un inmueble en la municipalidad.
 
-                *🏘️ ¿Para qué es necesario?*
+                *¿Para qué es necesario?*
 
-                Para legalizar y actualizar el cambio de propietario ante los registros municipales.
+                🏘️ Para legalizar y actualizar el cambio de propietario ante los registros municipales.
 
   # >> 3.3... NECESIDAD
   utter_orientacion_item03_necesidad:
@@ -65,7 +62,7 @@ responses:
             text:
               preview_url: false
               body: |
-                *📋 Requisitos para el trámite:*
+                📋 *Requisitos para el trámite:*
 
                 1. 🖊️ Minuta con número de KARDEX o escritura pública.
 
@@ -79,4 +76,6 @@ responses:
             text:
               preview_url: false
               body: |
+                *Costo del trámite* 👇
+                
                 💸 GRATUITO

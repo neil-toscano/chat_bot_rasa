@@ -7,21 +7,25 @@ stories:
   steps:
   - intent: obras_item04
   - action: utter_obras_item04
+  - action: action_set_reminder
 
 # >> 5.4... STORIES - CONSULTA
 - story: licencia demolicion consulta
   steps:
   - intent: obras_item04_consulta
   - action: utter_obras_item04_consulta
+  - action: action_set_reminder
 
 # >> 5.4... STORIES - NECESIDAD
 - story: licencia demolicion necesidad
   steps:
   - intent: obras_item04_necesidad
   - action: utter_obras_item04_necesidad
+  - action: action_set_reminder
 
 # >> 5.4... STORIES - COSTO
 - story: licencia demolicion costo
   steps:
   - intent: obras_item04_costo
   - action: utter_obras_item04_costo
+  - action: action_set_reminder

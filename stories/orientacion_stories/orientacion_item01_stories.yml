@@ -6,21 +6,25 @@ stories:
     steps:
       - intent: orientacion_item01
       - action: utter_orientacion_item01
+      - action: action_set_reminder
 
   # >> 3.1... STORIES - CONSULTA
   - story: sucesion indivisa consulta
     steps:
       - intent: orientacion_item01_consulta
       - action: utter_orientacion_item01_consulta
+      - action: action_set_reminder
 
   # >> 3.1... STORIES - NECESIDAD
   - story: sucesion indivisa necesidad
     steps:
       - intent: orientacion_item01_necesidad
       - action: utter_orientacion_item01_necesidad
+      - action: action_set_reminder
 
   # >> 3.1... STORIES - COSTO
   - story: sucesion indivisa costo
     steps:
       - intent: orientacion_item01_costo
       - action: utter_orientacion_item01_costo
+      - action: action_set_reminder

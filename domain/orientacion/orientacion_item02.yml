@@ -13,20 +13,17 @@ responses:
           - type: interactive
             interactive:
               type: list
-              #header:
-              #  type: text
-              #  text: "Consulta Trámites"
               body:
                 text: |
-                  Haz seleccionado 🏠 *Inscripción por Sucesión Intestada*
+                  🏠 Has seleccionado *Inscripción por Sucesión Intestada*
 
-                  *🟢 Opciones de pregunta:*  
+                  ❓ *Opciones de pregunta:*  
 
-                  1️. 📘¿Qué es?  
+                  1. 📄 ¿Qué es?  
 
-                  2️. 📝¿Qué necesito?  
+                  2. 📋 ¿Qué necesito?  
 
-                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
 
                   ↪️ Puedes Iniciar trámite para solicitar cita para inscripción por suceción intestada en el siguiente link  👉: http://gestioncitas.munisjl.gob.pe/
 
@@ -38,12 +35,12 @@ responses:
                   - title: "Escoge la pregunta"
                     rows:
                       - id: "/orientacion_item02_consulta"
-                        title: "¿Qué es?"
+                        title: "📄 ¿Qué es?"
                       - id: "/orientacion_item02_necesidad"
-                        title: "¿Qué necesito?"
+                        title: "📋 ¿Qué necesito?"
                       - id: "/orientacion_item02_costo"
-                        title: "¿Cuánto cuesta?"
-                button: "Opciones"
+                        title: "💵 ¿Cuánto cuesta?"
+                button: "✅ Opciones"
 
   # >> 3.2... CONSULTA
   utter_orientacion_item02_consulta:
@@ -69,9 +66,11 @@ responses:
               body: |
                 1. 📜 Copia literal de la sucesión intestada.
 
-                2. 🏠 Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
+                2. ✅ Sucesión intestada con cambio de dominio.
 
                 3. 🆔 Exhibición del DNI de los herederos.
+
+                4. 🏠 Documento que acredite la propiedad del bien inmueble a nombre del fallecido.
 
   # >> 3.2... COSTO
   utter_orientacion_item02_costo:
@@ -81,4 +80,6 @@ responses:
             text:
               preview_url: false
               body: |
+                 *Costo del trámite* 👇
+
                 💸 GRATUITO
