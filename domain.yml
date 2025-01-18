@@ -28,6 +28,7 @@ intents:
   - estado_cuenta
   - consulta_tramites
   - EXTERNAL_reminder
+  - consulta_directorio
   - obras
   - obras_item01
   - obras_item02
@@ -390,7 +391,7 @@ responses:
         blocks:
           - type: image
             image:
-              id: '1144245547046868'
+              id: '668974715871159'
               # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
               # caption: MSJL
           - type: audio
@@ -418,6 +419,10 @@ responses:
                     reply:
                       id: /consulta_tramites
                       title: Consulta trámites
+                  - type: reply
+                    reply:
+                      id: /consulta_directorio
+                      title: 📞Números Telefónicos
   # utter_saludo:
   #   - custom:
   #       blocks:
@@ -590,6 +595,26 @@ responses:
   #                     - id: "/obras"
   #                       title: "Obras 🏗️"
   #               button: "Seleccionar trámite"
+
+  utter_directorio_telefonico:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📞 *DIRECTORIO TELEFÓNICO MUNICIPAL*
+
+                📱 *Alo Rentas*
+                • Teléfono: (01) 641-4300
+
+                📝 *Trámite Documentario*
+                • Teléfono: (01) 641-4300
+                • Anexo: 110
+
+                💼 *Subgerencia de Registro y Orientación Tributaria*
+                • Teléfono: (01) 641-4300
+                • Anexo: 107
 
   utter_obras:
     - custom:

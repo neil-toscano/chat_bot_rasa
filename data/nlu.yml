@@ -141,6 +141,15 @@ nlu:
     - quiero saber sobre los requisitos de algún trámite
     - cuales son los requisitos
 
+# >> CONSULTA DIRECTORIO :
+- intent: consulta_directorio
+  examples: |
+    - quiero saber sobre los números telefónicos de la municipalidad
+    - quiero saber sobre los números telefónicos de algún departamento
+    - cuales son los números telefónicos
+    - cuales son los números telefónicos de algún departamento
+    - cuales son los números telefónicos de algún departamento
+
 # >> OBRAS :
 - intent: obras
   examples: |

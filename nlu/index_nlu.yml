@@ -103,3 +103,11 @@ nlu:
       - quiero saber sobre tramites de la municipalidad
       - quiero saber sobre los requisitos de algún trámite
       - cuales son los requisitos
+
+  - intent: consulta_directorio
+    examples: |
+      - quiero saber sobre los números telefónicos de la municipalidad
+      - quiero saber sobre los números telefónicos de algún departamento
+      - cuales son los números telefónicos
+      - cuales son los números telefónicos de algún departamento
+      - cuales son los números telefónicos de algún departamento

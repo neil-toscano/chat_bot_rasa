@@ -47,6 +47,12 @@ stories:
       - action: utter_tramite
       - action: action_set_reminder
 
+  - story: directorio muni sjl path
+    steps:
+      - intent: consulta_directorio
+      - action: utter_directorio_telefonico
+      - action: action_set_reminder
+
 
 
   - story: responder al recordatorio
