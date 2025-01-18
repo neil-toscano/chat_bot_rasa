@@ -3340,9 +3340,13 @@ responses:
               body: |
                 📋 *Requisitos para el trámite:*
 
-                1. 🖊️ Minuta con número de KARDEX o escritura pública.
+                1. 📜 Copia del DNI
 
-                2. 📄 Copia literal.
+                2. 🖊️ Minuta con número de KARDEX o escritura pública.
+
+                3. 📄 Cetificado Literal SUNARP (solo omisos)
+
+                4. 🏘️ En caso en la compra venta intervenga una persona jurídica adjuntar vigencia de poder (vigencia de 3 meses)
 
   # >> 3.3... COSTO
   utter_orientacion_item03_costo:
