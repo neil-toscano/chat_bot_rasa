@@ -150,6 +150,17 @@ nlu:
     - cuales son los números telefónicos de algún departamento
     - cuales son los números telefónicos de algún departamento
 
+# >> CONSULTA DOCUMENTO TRAZABILIDAD :
+- intent: consulta_documento_trazabilidad
+  examples: |
+    - quiero saber el estado de mi trámite
+    - ¿Dónde puedo consultar el estado de mi trámite?
+    - ¿Cómo consulto mi código de seguimiento?
+    - ¿Me puedes dar el código de seguimiento?
+    - ¿Cómo puedo ver el estado de mi documento?
+    - ¿Dónde está mi trámite?
+    - ¿Puedo saber el estado de mi documento?
+
 # >> OBRAS :
 - intent: obras
   examples: |

@@ -86,7 +86,31 @@ class ActionReactToReminder(Action):
             print(f"Error al hacer el POST: {str(e)}")
 
         return []
+        
+class ActionConsultarDocumento(Action):
+    def name(self) -> str:
+        return "action_consultar_documento"
 
+    def run(self, dispatcher, tracker, domain):
+        # Obtener el DNI del slot
+        dni = tracker.get_slot('dni')
+
+        if dni:
+            # Llamada a la API con el DNI (reemplaza con la URL de tu API real)
+            api_url = f"https://api.ejemplo.com/consulta-tramite?dni={dni}"
+            response = requests.get(api_url)
+
+            if response.status_code == 200:
+                data = response.json()
+                estado = data.get("estado", "No se encontró información.")
+                mensaje = f"El estado de tu documento/trámite con DNI {dni} es: {estado}."
+            else:
+                mensaje = "Lo siento, no pude obtener información sobre tu documento en este momento."
+        else:
+            mensaje = "No proporcionaste un DNI válido."
+
+        dispatcher.utter_message(text=mensaje)
+        return []
 # class ForgetReminders(Action):
 
 #     def name(self) -> Text:

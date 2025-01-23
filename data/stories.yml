@@ -84,6 +84,13 @@ stories:
   - action: utter_directorio_telefonico
   - action: action_set_reminder
 
+# >> TRAZABILIDAD DOCUMENTO MUNI SJL PATH :
+- story: trazabilidad documento muni sjl path
+  steps:
+  - intent: consulta_trazabilidad_documento
+  - action: utter_trazabilidad_documento
+  - action: action_set_reminder
+
 # >> RESPONDER AL RECORDATORIO :
 - story: responder al recordatorio
   steps:

@@ -29,6 +29,7 @@ intents:
   - consulta_tramites
   - EXTERNAL_reminder
   - consulta_directorio
+  - consulta_documento_trazabilidad
   - obras
   - obras_item01
   - obras_item02
@@ -421,8 +422,12 @@ responses:
                       title: Consulta trámites
                   - type: reply
                     reply:
-                      id: /consulta_directorio
-                      title: 📞Números Telefónicos
+                      id: /trazabilidad_documento
+                      title: Traz. documento
+                  # - type: "reply"
+                  #   reply:
+                  #     id: "/consulta_directorio"
+                  #     title: "📞Números Telefónicos"
   # utter_saludo:
   #   - custom:
   #       blocks:

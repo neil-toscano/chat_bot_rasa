@@ -12,6 +12,7 @@ intents:
   - consulta_tramites
   - EXTERNAL_reminder
   - consulta_directorio
+  - consulta_documento_trazabilidad
 
 actions:
   - action_set_reminder
@@ -70,8 +71,12 @@ responses:
                       title: "Consulta trámites"
                   - type: "reply"
                     reply:
-                      id: "/consulta_directorio"
-                      title: "📞Números Telefónicos"
+                      id: "/trazabilidad_documento"
+                      title: "Traz. documento"
+                  # - type: "reply"
+                  #   reply:
+                  #     id: "/consulta_directorio"
+                  #     title: "📞Números Telefónicos"
   # utter_saludo:
   #   - custom:
   #       blocks:
@@ -264,6 +269,31 @@ responses:
                 💼 *Subgerencia de Registro y Orientación Tributaria*
                 • Teléfono: (01) 641-4300
                 • Anexo: 107
+
+utter_trazabilidad_documento:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+              🔍 *Por favor proporcione su código de seguimiento* (ejemplo: "ABC1234567")
+
+utter_ask_documento_id:
+  - text: "Por favor, proporciona tu número de seguimiento(1234) para buscar el estado de tu trámite."
+
+slots:
+  dni:
+    type: text
+    influence_conversation: false
+
+forms:
+  consulta_documento_form:
+    required_slots:
+      dni:
+        - type: from_text
+
+
 
 session_config:
   session_expiration_time: 60

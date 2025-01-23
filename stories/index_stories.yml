@@ -53,6 +53,20 @@ stories:
       - action: utter_directorio_telefonico
       - action: action_set_reminder
 
+  - story: trazabilidad documento muni sjl path
+    steps:
+      - intent: consulta_trazabilidad_documento
+      - action: consulta_
+      - action: action_set_reminder
+
+- story: consultar documento
+  steps:
+    - intent: consultar_documento_trazabilidad
+    - action: consulta_documento_form
+    - active_loop: consulta_documento_form
+    - slot_was_set:
+        - dni: "12345678"
+    - action: action_consultar_documento
 
 
   - story: responder al recordatorio
