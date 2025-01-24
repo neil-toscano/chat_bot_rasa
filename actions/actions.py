@@ -26,11 +26,12 @@
 #
 #         return []
 from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import ReminderScheduled, EventType
 from rasa_sdk.events import ReminderCancelled
 from datetime import datetime, timedelta
+from rasa_sdk.types import DomainDict
 import requests
 
 class ActionSetReminder(Action):
@@ -86,31 +87,40 @@ class ActionReactToReminder(Action):
             print(f"Error al hacer el POST: {str(e)}")
 
         return []
-        
-class ActionConsultarDocumento(Action):
-    def name(self) -> str:
-        return "action_consultar_documento"
 
-    def run(self, dispatcher, tracker, domain):
-        # Obtener el DNI del slot
-        dni = tracker.get_slot('dni')
+class ValidateConsultaDocumentoForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_consulta_documento_form"
 
-        if dni:
-            # Llamada a la API con el DNI (reemplaza con la URL de tu API real)
-            api_url = f"https://api.ejemplo.com/consulta-tramite?dni={dni}"
-            response = requests.get(api_url)
+    @staticmethod
+    def valid_dni_range() -> List[int]:
+        """Define un rango válido de DNI (ajustar según los requisitos)."""
+        return range(10000000, 99999999)  # Ejemplo para DNIs de 8 dígitos
 
-            if response.status_code == 200:
-                data = response.json()
-                estado = data.get("estado", "No se encontró información.")
-                mensaje = f"El estado de tu documento/trámite con DNI {dni} es: {estado}."
+    def validate_documentoId(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Valida el valor del slot documentoId."""
+
+        if isinstance(slot_value, str) and slot_value.isdigit():
+            dni = int(slot_value)
+            if dni in self.valid_dni_range():
+                # Validación exitosa
+                return {"documentoId": dni}
             else:
-                mensaje = "Lo siento, no pude obtener información sobre tu documento en este momento."
+                dispatcher.utter_message(
+                    text="El DNI proporcionado no está en el rango válido. Por favor, inténtalo de nuevo."
+                )
         else:
-            mensaje = "No proporcionaste un DNI válido."
-
-        dispatcher.utter_message(text=mensaje)
-        return []
+            dispatcher.utter_message(
+                text="El DNI ingresado no es válido. Asegúrate de ingresar un número de DNI correcto."
+            )
+        # Si la validación falla, se solicita nuevamente el slot
+        return {"documentoId": None}
 # class ForgetReminders(Action):
 
 #     def name(self) -> Text:

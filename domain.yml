@@ -2,7 +2,7 @@ version: '3.1'
 actions:
   - action_set_reminder
   - action_react_to_reminder
-  - action_consultar_documento
+  - validate_consulta_documento_form
 intents:
   - constancia_posesion
   - constancia_posesion_servicios_basicos
@@ -191,6 +191,8 @@ intents:
   - carnet_sanidad_no_manipular_alimentos_que_es
   - carnet_sanidad_no_manipular_alimentos_que_necesito
   - carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+entities:
+  - documentoId
 responses:
   utter_constancia_posesion:
     - custom:
@@ -641,9 +643,14 @@ responses:
                 - Lunes a Viernes: 8:00 AM - 5:00 PM
                 - Sábado: 8:00 AM - 1:00 PM
 
-  utter_ask_documento_id:
-    - text: Por favor, proporciona tu número de seguimiento(1234) para buscar el estado
-        de tu trámite.
+  utter_ask_documentoId:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                Por favor, proporciona tu número de seguimiento(1234) para buscar el estado de tu trámite
 
   utter_obras:
     - custom:
@@ -4169,17 +4176,17 @@ responses:
                 💰 *Costo del trámite:* S/ 15.00
 
 slots:
-  dni:
+  documentoId:
     type: text
-    influence_conversation: false
     mappings:
-      - type: from_text
+      - type: from_entity
+        entity: documentoId
 
 forms:
   consulta_documento_form:
     required_slots:
-      dni:
-        - type: from_text
+      - documentoId
+
 
 
 session_config:

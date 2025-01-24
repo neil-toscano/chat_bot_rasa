@@ -87,9 +87,9 @@ stories:
 # >> CONSULTAR DOCUMENTO :
 - story: consultar documento
   steps:
-  - intent: consultar_documento_trazabilidad
+  - intent: consulta_documento_trazabilidad
   - action: consulta_documento_form
-  - action: action_consultar_documento
+  - action: validate_consulta_documento_form
 
 # >> RESPONDER AL RECORDATORIO :
 - story: responder al recordatorio

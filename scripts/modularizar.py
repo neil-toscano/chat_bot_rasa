@@ -10,6 +10,7 @@ def consolidate_domain_files():
         "version": "3.1",
         "actions": [],
         "intents": [],
+        "entities": [],
         "responses": {},
         "slots": {},
         "forms": {},
@@ -34,6 +35,9 @@ def consolidate_domain_files():
                     # Combinar intents y responses de cada archivo
                     if "intents" in content:
                         combined_content["intents"].extend(content["intents"])
+                   
+                    if "entities" in content:
+                        combined_content["entities"].extend(content["entities"])
                     
                     if "responses" in content:
                         combined_content["responses"].update(content["responses"])

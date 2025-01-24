@@ -15,4 +15,11 @@ rules:
 - rule: Preguntar por documento id
   steps:
     - intent: consulta_documento_trazabilidad
-    - action: utter_ask_documento_id
+    - action: consulta_documento_form
+    - active_loop: consulta_documento_form
+
+- rule: Enviar documento id
+  condition:
+    - active_loop: consulta_documento_form
+  steps:
+    - action: validate_consulta_documento_form

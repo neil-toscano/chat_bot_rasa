@@ -55,13 +55,12 @@ stories:
 
   - story: consultar documento
     steps:
-      - intent: consultar_documento_trazabilidad
+      - intent: consulta_documento_trazabilidad
       - action: consulta_documento_form
       - active_loop: consulta_documento_form
       - slot_was_set:
-          - dni: "12345678"
-      - action: action_consultar_documento
-
+          - documentoId: "12345678"
+      - action: validate_consulta_documento_form
 
   - story: responder al recordatorio
     steps:
