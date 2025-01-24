@@ -11,6 +11,8 @@ def consolidate_domain_files():
         "actions": [],
         "intents": [],
         "responses": {},
+        "slots": {},
+        "forms": {},
         "session_config": {
             "session_expiration_time": 60,
             "carry_over_slots_to_new_session": True
@@ -38,6 +40,13 @@ def consolidate_domain_files():
 
                     if "actions" in content:  # Verificar y agregar las acciones
                         combined_content["actions"].extend(content["actions"])
+                    
+                    if "slots" in content:
+                        combined_content["slots"].update(content["slots"])
+
+                    # Combinar forms
+                    if "forms" in content:
+                        combined_content["forms"].update(content["forms"])
 
     # Escribir el archivo combinado en el archivo principal
     with open("domain.yml", 'w', encoding='utf-8') as output:

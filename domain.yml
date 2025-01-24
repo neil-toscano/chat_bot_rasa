@@ -2,6 +2,7 @@ version: '3.1'
 actions:
   - action_set_reminder
   - action_react_to_reminder
+  - action_consultar_documento
 intents:
   - constancia_posesion
   - constancia_posesion_servicios_basicos
@@ -422,12 +423,27 @@ responses:
                       title: Consulta trámites
                   - type: reply
                     reply:
-                      id: /trazabilidad_documento
+                      id: /consulta_documento_trazabilidad
                       title: Traz. documento
-                  # - type: "reply"
-                  #   reply:
-                  #     id: "/consulta_directorio"
-                  #     title: "📞Números Telefónicos"
+
+          # - type: interactive
+          #   interactive:
+          #     type: button
+          #     header:
+          #       type: text
+          #       text: "Otros servicios"
+          #     body:
+          #       text: |
+          #         Estos son algunos otras consultas que pueden interesarte
+
+          #     footer:
+          #       text: "seleccione la opción abajo 👇"
+          #     action:
+          #       buttons:
+          #         - type: "reply"
+          #           reply:
+          #             id: "/consulta_directorio"
+          #             title: "📞Números Telefónicos"
   # utter_saludo:
   #   - custom:
   #       blocks:
@@ -620,6 +636,14 @@ responses:
                 💼 *Subgerencia de Registro y Orientación Tributaria*
                 • Teléfono: (01) 641-4300
                 • Anexo: 107
+
+                ⏰ *Horarios de Atención:*
+                - Lunes a Viernes: 8:00 AM - 5:00 PM
+                - Sábado: 8:00 AM - 1:00 PM
+
+  utter_ask_documento_id:
+    - text: Por favor, proporciona tu número de seguimiento(1234) para buscar el estado
+        de tu trámite.
 
   utter_obras:
     - custom:
@@ -4143,6 +4167,20 @@ responses:
               preview_url: false
               body: |
                 💰 *Costo del trámite:* S/ 15.00
+
+slots:
+  dni:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+forms:
+  consulta_documento_form:
+    required_slots:
+      dni:
+        - type: from_text
+
 
 session_config:
   session_expiration_time: 60
