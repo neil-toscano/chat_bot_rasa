@@ -22,4 +22,9 @@ rules:
   condition:
     - active_loop: consulta_documento_form
   steps:
+    - action: consulta_documento_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
     - action: validate_consulta_documento_form
+

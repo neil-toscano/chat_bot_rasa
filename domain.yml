@@ -426,26 +426,23 @@ responses:
                   - type: reply
                     reply:
                       id: /consulta_documento_trazabilidad
-                      title: Traz. documento
+                      title: Estado documento
 
-          # - type: interactive
-          #   interactive:
-          #     type: button
-          #     header:
-          #       type: text
-          #       text: "Otros servicios"
-          #     body:
-          #       text: |
-          #         Estos son algunos otras consultas que pueden interesarte
-
-          #     footer:
-          #       text: "seleccione la opción abajo 👇"
-          #     action:
-          #       buttons:
-          #         - type: "reply"
-          #           reply:
-          #             id: "/consulta_directorio"
-          #             title: "📞Números Telefónicos"
+          - type: interactive
+            interactive:
+              type: button
+              header:
+                type: text
+                text: Otras consultas Disponibles 🚀
+              body:
+                text: |
+                  Estos son otras consultas que podrían interesarte. Selecciona una opción a continuación:
+              action:
+                buttons:
+                  - type: reply
+                    reply:
+                      id: /consulta_directorio
+                      title: 📞Números Telefónicos
   # utter_saludo:
   #   - custom:
   #       blocks:
@@ -650,7 +647,7 @@ responses:
             text:
               preview_url: false
               body: |
-                Por favor, proporciona tu número de seguimiento(1234) para buscar el estado de tu trámite
+                📝 Por favor, proporciona su nùmero de documento(Ej. S-0000264-2025) para informarle el estado de su trámite 📲
 
   utter_obras:
     - custom:
@@ -4182,10 +4179,12 @@ slots:
       - type: from_entity
         entity: documentoId
 
+
 forms:
   consulta_documento_form:
     required_slots:
       - documentoId
+
 
 
 

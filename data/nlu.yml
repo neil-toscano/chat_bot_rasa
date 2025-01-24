@@ -161,6 +161,12 @@ nlu:
     - ¿Dónde está mi trámite?
     - ¿Puedo saber el estado de mi documento?
 
+# >> INFORMACION DOC ID :
+- intent: informacion_doc_id
+  examples: |
+    - mi codigo es [123546558](documentoId)
+    - mi numero es [2536987456](documentoId)
+
 # >> OBRAS :
 - intent: obras
   examples: |

@@ -58,9 +58,8 @@ stories:
       - intent: consulta_documento_trazabilidad
       - action: consulta_documento_form
       - active_loop: consulta_documento_form
-      - slot_was_set:
-          - documentoId: "12345678"
       - action: validate_consulta_documento_form
+
 
   - story: responder al recordatorio
     steps:
