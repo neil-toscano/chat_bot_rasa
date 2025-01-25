@@ -39,6 +39,8 @@ stories:
       - intent: estado_cuenta
       - action: utter_estado_cuenta
       - action: action_set_reminder 
+      - action: action_deactivate_loop
+      - active_loop: null
 
 
   - story: tramite muni sjl path
@@ -46,20 +48,33 @@ stories:
       - intent: consulta_tramites
       - action: utter_tramite
       - action: action_set_reminder
+      - action: action_deactivate_loop
+      - active_loop: null
 
   - story: directorio muni sjl path
     steps:
       - intent: consulta_directorio
       - action: utter_directorio_telefonico
       - action: action_set_reminder
+      - action: action_deactivate_loop
+      - active_loop: null
 
   - story: consultar documento
     steps:
       - intent: consulta_documento_trazabilidad
       - action: consulta_documento_form
       - active_loop: consulta_documento_form
-      - action: validate_consulta_documento_form
+      - slot_was_set:
+        - requested_slot: documentoId
 
+  - story: no continua pidiendo tramite
+    steps:
+      - intent: consulta_documento_trazabilidad
+      - action: consulta_documento_form
+      - active_loop: consulta_documento_form
+      - intent: stop
+      - action: action_deactivate_loop
+      - active_loop: null
 
   - story: responder al recordatorio
     steps:

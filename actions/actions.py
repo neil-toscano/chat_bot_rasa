@@ -35,15 +35,18 @@ from datetime import datetime, timedelta
 from rasa_sdk.types import DomainDict
 import requests
 
+import pytz
+
 class ActionSetReminder(Action):
     def name(self) -> str:
         return "action_set_reminder"
 
     async def run(self, dispatcher: CollectingDispatcher, tracker, domain) -> list[EventType]:
-        # Configura el recordatorio para 5 minutos en el futuro
+        # Configura el recordatorio para 2 minutos en el futuro usando la hora de Lima (UTC-5)
         events = [ReminderCancelled()]
 
-        reminder_time = datetime.now() + timedelta(minutes=2)
+        lima_tz = pytz.timezone("America/Lima")  # Hora de Lima (Perú)
+        reminder_time = datetime.now(lima_tz) + timedelta(minutes=2)  # Hora de Lima + 2 minutos
         entities = tracker.latest_message.get("entities")
 
         reminder = ReminderScheduled(
@@ -77,7 +80,7 @@ class ActionReactToReminder(Action):
         }
 
         try:
-            response = requests.post('http://localhost:3000/api/v1/whatsapp', json=data)
+            response = requests.post('http://localhost:3006/api/v1/whatsapp', json=data)
             if response.status_code == 200:
                 dispatcher.utter_message(text=f"¡Hola de nuevo {sender_id}! Han pasado 5 minutos desde tu último mensaje.")
             else:
@@ -113,6 +116,8 @@ class ValidateConsultaDocumentoForm(FormValidationAction):
         """Valida el valor del slot documentoId."""
         print(f"Validando DNI con valor: {slot_value}")
 
+        sender_id = tracker.sender_id  
+        print(sender_id, 'sender')
         if isinstance(slot_value, str) and self.is_flexible_tracking_code(slot_value):
                 # Realizar la consulta al primer endpoint
             try:
@@ -142,13 +147,13 @@ class ValidateConsultaDocumentoForm(FormValidationAction):
                     if estado and dependencia:
                         data = {
                             "message": (
-                                f"El estado actual de tu solicitud es:\n"
+                                f"Aquí tienes la información sobre tu trámite:\n"
                                 f"📌 *Estado: '{estado}'*\n"
                                 f"🏢 *Dependencia: '{dependencia}'*\n\n"
                             ),
-                            "sender_id": "51946684130"
+                            "sender_id": sender_id
                         }
-                        response = requests.post('http://localhost:3000/api/v1/whatsapp', json=data)
+                        response = requests.post('http://localhost:3006/api/v1/whatsapp', json=data)
                     
                     return {"documentoId": slot_value}
 

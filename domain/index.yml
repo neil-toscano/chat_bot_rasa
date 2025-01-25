@@ -13,6 +13,8 @@ intents:
   - EXTERNAL_reminder
   - consulta_directorio
   - consulta_documento_trazabilidad
+  - informacion_doc_id
+  - stop
 
 entities:
   - documentoId
@@ -297,7 +299,7 @@ responses:
               text:
                 preview_url: false
                 body: |
-                  📝 Por favor, proporciona su nùmero de documento(Ej. S-0000264-2025) para informarle el estado de su trámite 📲
+                  📝 Por favor, proporciona su *número de documento correcto (Ej. S-0000264-2025)* para informarle el estado de su trámite 📲
 
 slots:
   documentoId:
