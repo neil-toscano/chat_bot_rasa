@@ -23,6 +23,19 @@ nlu:
       - hi
       - hello
       - how are you
+      - hola, espero que estés bien
+      - buenas, ¿cómo te encuentras hoy?
+      - hola, ¿puedes ayudarme?
+      - un saludo cordial
+      - hola, ¿qué tal tu día?
+      - muy buenos días, ¿cómo estás?
+      - hola, quiero hacer una consulta
+      - hola, ¿puedo preguntarte algo?
+      - saludos, ¿estás disponible?
+      - hola, quería saludarte
+      - hola, me gustaría saber algo
+      - buenas noches, necesito información
+
 
   - intent: despedida
     examples: |

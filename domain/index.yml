@@ -16,6 +16,7 @@ intents:
   - informacion_doc_id
   - proporciono_directo_documentoid
   - stop
+  - reto_bot
 
 entities:
   - documentoId
@@ -30,8 +31,13 @@ actions:
 
 responses:
   utter_animo:
-    - text: "Siento escuchar eso, aquí hay algo que te va dar ánimo"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: false
+              body: |
+                Siento escuchar eso, aquí hay algo que te va dar ánimo
 
   utter_sirvio_de_ayuda:
     - text: "¿Te ha ayudado?"
@@ -40,10 +46,22 @@ responses:
     - text: "Genial, continua así"
 
   utter_despedida:
-    - text: "Espero haberte ayudado, hasta luego"
-
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+              😊Espero haberte ayudado, hasta luego
+  
   utter_soy_bot:
-    - text: "Soy un bot, entrenado por la MDSJL."
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+              Soy un bot, entrenado por la MDSJL.
 
   # >> INDEX - MENU
   utter_saludo:
