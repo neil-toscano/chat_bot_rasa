@@ -54,6 +54,7 @@ stories:
   - story: directorio muni sjl path
     steps:
       - intent: consulta_directorio
+      - action: action_set_reminder 
       - action: utter_directorio_telefonico
       - action: action_set_reminder
       - action: action_deactivate_loop
@@ -62,6 +63,7 @@ stories:
   - story: documento tramite
     steps:
       - intent: consulta_documento_trazabilidad
+      - action: action_set_reminder 
       - action: action_reset_slots
       - action: consulta_documento_form
       - active_loop: consulta_documento_form
@@ -69,6 +71,7 @@ stories:
   - story: directo documento
     steps:
       - intent: proporciono_directo_documentoid
+      - action: action_set_reminder 
       - action: action_reset_slots
       - action: consulta_documento_form
       - active_loop: consulta_documento_form
