@@ -69,7 +69,6 @@ stories:
   - intent: estado_cuenta
   - action: utter_estado_cuenta
   - action: action_set_reminder
-  - action: action_deactivate_loop
 
 # >> TRAMITE MUNI SJL PATH :
 - story: tramite muni sjl path
@@ -77,7 +76,6 @@ stories:
   - intent: consulta_tramites
   - action: utter_tramite
   - action: action_set_reminder
-  - action: action_deactivate_loop
 
 # >> DIRECTORIO MUNI SJL PATH :
 - story: directorio muni sjl path
@@ -85,7 +83,6 @@ stories:
   - intent: consulta_directorio
   - action: action_set_reminder
   - action: utter_directorio_telefonico
-  - action: action_deactivate_loop
 
 # >> DOCUMENTO TRAMITE :
 - story: documento tramite
