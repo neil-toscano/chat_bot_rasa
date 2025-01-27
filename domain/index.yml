@@ -14,6 +14,7 @@ intents:
   - consulta_directorio
   - consulta_documento_trazabilidad
   - informacion_doc_id
+  - proporciono_directo_documentoid
   - stop
 
 entities:
@@ -23,6 +24,8 @@ actions:
   - action_set_reminder
   - action_react_to_reminder
   - validate_consulta_documento_form
+  - action_reset_consulta_documento_form
+  - action_reset_slots
 
 responses:
   utter_animo:
@@ -36,7 +39,7 @@ responses:
     - text: "Genial, continua así"
 
   utter_despedida:
-    - text: "Hasta luego"
+    - text: "Espero haberte ayudado, hasta luego"
 
   utter_soy_bot:
     - text: "Soy un bot, entrenado por la MDSJL."
@@ -48,8 +51,6 @@ responses:
           - type: image
             image:
               id: "668974715871159"
-              # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-              # caption: MSJL
           - type: audio
             audio:
               id: "957422266353539"
@@ -95,65 +96,6 @@ responses:
                     reply:
                       id: "/consulta_directorio"
                       title: "📞Números Telefónicos"
-  # utter_saludo:
-  #   - custom:
-  #       blocks:
-  #         - type: image
-  #           image:
-  #             id: "1144245547046868"
-  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-  #             # caption: MSJL
-  #         - type: audio
-  #           audio:
-  #             id: "957422266353539"
-  #         - type: interactive
-  #           interactive:
-  #             type: list
-  #             header:
-  #               type: text
-  #               text: "Servicios de la Municipalidad"
-  #             body:
-  #               text: |
-  #                 ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
-
-  #                 *1. 💰 ESTADO DE CUENTA*
-
-  #                 *2. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
-
-  #                 *3. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
-
-  #                 *4. 📋 INSCRIPCIÓN DE PREDIOS*
-
-  #                 *5. 🧾 MATRIMONIOS Y DIVORCIOS*
-
-  #                 *6. 🏗️ OBRAS PRIVADAS*
-
-  #                 *7. 📜 CONSTANCIA DE POSESIÓN*
-
-  #                 *8. 🩺 CARNET DE SANIDAD*
-  #             footer:
-  #               text: "seleccione la opción abajo 👇"
-  #             action:
-  #               sections:
-  #                 - title: "Escoja trámite"
-  #                   rows:
-  #                     - id: "/estado_cuenta"
-  #                       title: "Estado de cuenta 💼"
-  #                     - id: "/formalizacion_promocion_empresarial"
-  #                       title: "Licencias 💼"
-  #                     - id: "/gestion"
-  #                       title: "Certificados 🚨"
-  #                     - id: "/orientacion"
-  #                       title: "Inscripción 📋"
-  #                     - id: "/registro"
-  #                       title: "Matrimonios 🧾"
-  #                     - id: "/obras"
-  #                       title: "Obras 🏗️"
-  #                     - id: "/constancia_posesion_servicios_basicos"
-  #                       title: "Constancia 📜"
-  #                     - id: "/carnet_sanidad_no_manipular_alimentos"
-  #                       title: "Carnet 🩺"
-  #               button: "Seleccionar opción"
 
   utter_estado_cuenta:
     - custom:
@@ -163,17 +105,10 @@ responses:
               preview_url: true
               body: |
                 🌐 Puede revisar su estado de cuenta en el siguiente link👉: https://plataformavirtual.munisjl.gob.pe/
+
   utter_tramite:
     - custom:
         blocks:
-          #- type: image
-          #  image:
-          #    id: "1144245547046868"
-          # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-          # caption: MSJL
-          #- type: audio
-          #  audio:
-          #    id: "939730344345911"
           - type: interactive
             interactive:
               type: list
@@ -218,55 +153,6 @@ responses:
                       - id: "/carnet_sanidad_no_manipular_alimentos"
                         title: "7. Carnet 🩺"
                 button: "Seleccionar trámite"
-  # utter_saludo:
-  #   - custom:
-  #       blocks:
-  #         - type: image
-  #           image:
-  #             id: "1144245547046868"
-  #             # link: "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1020327556559790&ext=1730319696&hash=ATu_cs_d7PNGTvb386X-NNHQYwjo8qP1jXLM8_hhu_7YQg"
-  #             # caption: MSJL
-  #         - type: audio
-  #           audio:
-  #             id: "939730344345911"
-  #         - type: interactive
-  #           interactive:
-  #             type: list
-  #             header:
-  #               type: text
-  #               text: "Consulta Trámites"
-  #             body:
-  #               text: |
-  #                 ¡Hola! Soy el asistente virtual 🤖 de la MUNICIPALIDAD DISTRITAL SAN JUAN DE LURIGANCHO.
-
-  #                 ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
-
-  #                 *1. 💼 FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL*
-
-  #                 *2. 🚨 GESTIÓN DEL RIESGO DE DESASTRES*
-
-  #                 *3. 📋 ORIENTACIÓN Y REGISTRO*
-
-  #                 *4. 🧾 REGISTRO CIVIL*
-
-  #                 *5. 🏗️ OBRAS PRIVADAS Y HABILITACIÓN URBANA*
-  #             footer:
-  #               text: "seleccione el trámite abajo 👇"
-  #             action:
-  #               sections:
-  #                 - title: "Escoja trámite"
-  #                   rows:
-  #                     - id: "/formalizacion_promocion_empresarial"
-  #                       title: "Formalización 💼"
-  #                     - id: "/gestion"
-  #                       title: "Gestión 🚨"
-  #                     - id: "/orientacion"
-  #                       title: "Orientación 📋"
-  #                     - id: "/registro"
-  #                       title: "Registro 🧾"
-  #                     - id: "/obras"
-  #                       title: "Obras 🏗️"
-  #               button: "Seleccionar trámite"
 
   utter_directorio_telefonico:
     - custom:
@@ -279,6 +165,7 @@ responses:
 
                 📱 *Alo Rentas*
                 • Teléfono: (01) 641-4300
+                • Anexos: 411, 412, 413, 414, 415
 
                 📝 *Trámite Documentario*
                 • Teléfono: (01) 641-4300
@@ -308,15 +195,11 @@ slots:
       - type: from_entity
         entity: documentoId
 
-
 forms:
   consulta_documento_form:
     required_slots:
       - documentoId
 
-
-
-
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 1
+  carry_over_slots_to_new_session: false

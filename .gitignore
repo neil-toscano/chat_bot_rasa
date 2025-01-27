@@ -2,3 +2,6 @@
 /rasavenv
 /models/
 .rasa/
+domain.yml
+/actions/__pycache__
+.env

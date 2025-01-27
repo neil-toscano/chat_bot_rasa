@@ -35,6 +35,9 @@ nlu:
       - hasta la próxima
       - cuídate
       - nos vemos luego
+      - gracias
+      - se lo agradezco
+      - muchas gracias
 
   - intent: afirmacion
     examples: |
@@ -121,7 +124,91 @@ nlu:
       - ¿Cómo puedo ver el estado de mi documento?
       - ¿Dónde está mi trámite?
       - ¿Puedo saber el estado de mi documento?
+      - Oye, ¿sabes en qué va mi trámite?
+      - ¿Ya sabes algo de mi documento?
+      - ¿Cómo va mi trámite?
+      - ¿Tienes info sobre mi documento?
+      - ¿Qué onda con mi trámite?
+      - ¿Ya está listo mi documento?
+      - ¿Cuánto falta para que esté listo mi trámite?
+      - ¿Me puedes decir si ya avanzó mi trámite?
+      - ¿Cómo sé si mi documento ya está listo?
+      - ¿Dónde veo si mi trámite ya está aprobado?
+      - ¿Hay novedades con mi documento?
+      - ¿Cómo checo el estado de mi trámite?
+      - ¿Puedes revisar cómo va mi documento?
+      - ¿Qué tengo que hacer para saber el estado de mi trámite?
+      - ¿Me avisas si hay cambios en mi documento?
+      - ¿Cómo me entero si mi trámite ya está listo?
+      - ¿Dónde encuentro el número de seguimiento?
+      - ¿Cómo sé si mi documento ya está en proceso?
+      - ¿Me ayudas a ver el estado de mi trámite?
+      - ¿Qué tal va mi trámite?
+      - ¿Ya revisaste cómo va mi documento?
+      - ¿Cómo puedo rastrear mi trámite?
+      - ¿Dónde veo el estado de mi documento?
+      - ¿Me das una mano con el estado de mi trámite?
+      - ¿Cómo sé si mi trámite ya está finalizado?
+      - ¿Puedes decirme si mi documento ya está listo?
+      - ¿Cómo puedo seguir mi trámite?
+      - ¿Dónde puedo ver el progreso de mi documento?
+      - ¿Me puedes decir si mi trámite ya está listo?
+      - ¿Cómo sé si mi documento ya está aprobado?
+      - ¿Dónde puedo ver el estado de mi trámite?
+      - ¿Me ayudas a saber cómo va mi documento?
+      - ¿Cómo puedo saber si mi trámite ya está en revisión?
+      - ¿Dónde veo si mi documento ya está listo?
+      - ¿Me puedes decir si mi trámite ya está finalizado?
+      - ¿Cómo sé si mi documento ya está en trámite?
+      - ¿Dónde puedo checar el estado de mi trámite?
+      - ¿Me puedes ayudar a ver el estado de mi documento?
+      - ¿Cómo puedo saber si mi trámite ya está listo?
+      - ¿Dónde veo el progreso de mi documento?
+      - ¿Me puedes decir si mi trámite ya está aprobado?
+      - ¿Cómo sé si mi documento ya está en proceso?
+      - ¿Dónde puedo ver el estado de mi trámite?
+      - ¿Me ayudas a saber cómo va mi documento?
+      - ¿Cómo puedo saber si mi trámite ya está en revisión?
+      - ¿Dónde veo si mi documento ya está listo?
+      - ¿Me puedes decir si mi trámite ya está finalizado?
+      - ¿Cómo sé si mi documento ya está en trámite?
+      - ¿Dónde puedo checar el estado de mi trámite?
+      - ¿Me puedes ayudar a ver el estado de mi documento?
 
+  - intent: proporciono_directo_documentoid
+    examples: |
+      - Mi número de documento es [S-0000234-2025](documentoId)
+      - Documento: [S-1234567-2025](documentoId)
+      - Es [S-7654321-2024](documentoId)
+      - El número es [S-9876543-2023](documentoId)
+      - Mi código es [S-1357924-2022](documentoId)
+      - [S-2468135-2021](documentoId) es mi número
+      - El documento que busco es [S-1122334-2020](documentoId)
+      - Número de documento: [S-3344556-2019](documentoId)
+      - Aquí está mi documento: [S-5566778-2028](documentoId)
+      - Te doy mi número: [S-7788991-2030](documentoId)
+      - Busca este documento: [S-8899002-2027](documentoId)
+      - Documento asociado: [S-1010101-2026](documentoId)
+      - Mi número asignado es [S-1212121-2025](documentoId)
+      - Necesito verificar [S-3434343-2024](documentoId)
+      - Aquí está: [S-4545454-2023](documentoId)
+      - Puedes buscar el [S-5656565-2022](documentoId)
+      - Consulta el número [S-6767676-2021](documentoId)
+      - Revisa este documento: [S-7878787-2020](documentoId)
+      - El documento proporcionado es [S-8989898-2029](documentoId)
+      - [S-0000012-2025](documentoId)
+      - [S-9876543-2023](documentoId)
+      - [S-4567890-2022](documentoId)
+      - [S-1231231-2021](documentoId)
+      - [S-3213213-2020](documentoId)
+      - [S-5556667-2019](documentoId)
+      - [S-7778889-2028](documentoId)
+      - [S-2223334-2027](documentoId)
+      - [S-9090909-2026](documentoId)
+      - [S-6565656-2025](documentoId)
+      - [S-8787878-2024](documentoId)
+      - [123456789](documentoId)
+      - [123456778](documentoId)
   - intent: informacion_doc_id
     examples: |
       - mi codigo es [123546558](documentoId)

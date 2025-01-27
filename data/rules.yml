@@ -12,26 +12,5 @@ rules:
   - intent: reto_bot
   - action: utter_soy_bot
 
-- rule: Preguntar por documento id
-  steps:
-    - intent: consulta_documento_trazabilidad
-    - action: consulta_documento_form
-    - active_loop: consulta_documento_form
-
-- rule: Enviar documento id
-  condition:
-    - active_loop: consulta_documento_form
-  steps:
-    - action: validate_consulta_documento_form
-    - active_loop: null
-    - slot_was_set:
-        - requested_slot: null
 
 
-# - rule: Reiniciar formulario para consultar el estado del documento
-#   condition:
-#   - active_loop: consulta_documento_form
-#   steps:
-#   - intent: consulta_documento_trazabilidad
-#   - action: consulta_documento_form
-#   - active_loop: consulta_documento_form
