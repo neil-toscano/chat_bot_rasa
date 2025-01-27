@@ -26,6 +26,7 @@ actions:
   - validate_consulta_documento_form
   - action_reset_consulta_documento_form
   - action_reset_slots
+  
 
 responses:
   utter_animo:
