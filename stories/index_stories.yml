@@ -56,7 +56,6 @@ stories:
       - intent: consulta_directorio
       - action: action_set_reminder 
       - action: utter_directorio_telefonico
-      - action: action_set_reminder
       - action: action_deactivate_loop
       - active_loop: null
 
