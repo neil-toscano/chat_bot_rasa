@@ -81,7 +81,7 @@ class ActionReactToReminder(Action):
         }
 
         try:
-            response = requests.post('http://localhost:3000/api/v1/whatsapp', json=data)
+            response = requests.post('http://localhost:3006/api/v1/whatsapp', json=data)
             if response.status_code == 200:
                 dispatcher.utter_message(text=f"¡Hola de nuevo {sender_id}! Han pasado 5 minutos desde tu último mensaje.")
             else:
@@ -198,7 +198,7 @@ class ValidateConsultaDocumentoForm(FormValidationAction):
                                 "message": parte,
                                 "sender_id": sender_id
                             }
-                            response = requests.post('http://localhost:3000/api/v1/whatsapp', json=data)
+                            response = requests.post('http://localhost:3006/api/v1/whatsapp', json=data)
 
                         # Devolver el valor del slot para que el formulario continúe
                         return {"documentoId": slot_value}
@@ -210,7 +210,7 @@ class ValidateConsultaDocumentoForm(FormValidationAction):
                             "message": "No se encontró información de seguimiento para el documento proporcionado",
                             "sender_id": sender_id
                         }
-                    response = requests.post('http://localhost:3000/api/v1/whatsapp', json=data)
+                    response = requests.post('http://localhost:3006/api/v1/whatsapp', json=data)
                     return {"documentoId": None}
 
             except requests.RequestException as e:
@@ -219,7 +219,7 @@ class ValidateConsultaDocumentoForm(FormValidationAction):
                             "message": "Error al conectar con el servicio: Por favor, inténtalo más tarde.",
                             "sender_id": sender_id
                         }
-                response = requests.post('http://localhost:3000/api/v1/whatsapp', json=data)
+                response = requests.post('http://localhost:3006/api/v1/whatsapp', json=data)
                 return {"documentoId": None}
         else:
             return {"documentoId": None}
