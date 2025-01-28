@@ -1318,3 +1318,59 @@ stories:
   - intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
   - action: utter_carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
   - action: action_set_reminder
+
+# >> CARNET SANIDAD MANIPULACION ALIMENTOS :
+- story: carnet sanidad manipulacion alimentos
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos
+  - action: utter_carnet_sanidad_manipulacion_alimentos
+  - action: action_set_reminder
+
+# >> CARNET SANIDAD MANIPULACION ALIMENTOS QUE ES :
+- story: carnet sanidad manipulacion alimentos que es
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos_que_es
+  - action: utter_carnet_sanidad_manipulacion_alimentos_que_es
+  - action: action_set_reminder
+
+# >> CARNET SANIDAD MANIPULACION ALIMENTOS QUE NECESITO :
+- story: carnet sanidad manipulacion alimentos que necesito
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos_que_necesito
+  - action: utter_carnet_sanidad_manipulacion_alimentos_que_necesito
+  - action: action_set_reminder
+
+# >> CARNET SANIDAD MANIPULACION ALIMENTOS CUANTO CUESTA :
+- story: carnet sanidad manipulacion alimentos cuanto cuesta
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos_cuanto_cuesta
+  - action: utter_carnet_sanidad_manipulacion_alimentos_cuanto_cuesta
+  - action: action_set_reminder
+
+# >> CERTIFICADO PRENUPCIAL :
+- story: certificado prenupcial
+  steps:
+  - intent: certificado_prenupcial
+  - action: utter_certificado_prenupcial
+  - action: action_set_reminder
+
+# >> CERTIFICADO PRENUPCIAL QUE ES :
+- story: certificado prenupcial que es
+  steps:
+  - intent: certificado_prenupcial_que_es
+  - action: utter_certificado_prenupcial_que_es
+  - action: action_set_reminder
+
+# >> CERTIFICADO PRENUPCIAL QUE NECESITO :
+- story: certificado prenupcial que necesito
+  steps:
+  - intent: certificado_prenupcial_que_necesito
+  - action: utter_certificado_prenupcial_que_necesito
+  - action: action_set_reminder
+
+# >> CERTIFICADO PRENUPCIAL CUANTO CUESTA :
+- story: certificado prenupcial cuanto cuesta
+  steps:
+  - intent: certificado_prenupcial_cuanto_cuesta
+  - action: utter_certificado_prenupcial_cuanto_cuesta
+  - action: action_set_reminder

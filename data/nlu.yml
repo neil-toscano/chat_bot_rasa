@@ -1592,3 +1592,83 @@ nlu:
     - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
     - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
 
+# >> CARNET SANIDAD MANIPULACION ALIMENTOS :
+- intent: carnet_sanidad_manipulacion_alimentos
+  examples: |
+    - ¿Cómo puedo solicitar el carnet de sanidad para manipular alimentos?
+    - Quiero saber el procedimiento para obtener el carnet de sanidad para manipular alimentos
+    - Solicitar carnet de sanidad para manipular alimentos
+    - Procedimiento para emitir carnet de sanidad para manipular alimentos
+    - ¿Cómo acceder a los servicios públicos con el carnet de sanidad para manipular alimentos?
+    - ¿Qué se necesita para obtener el carnet de sanidad para manipular alimentos?
+    - Emisión de carnet de sanidad para manipular alimentos
+
+# >> CARNET SANIDAD MANIPULAR ALIMENTOS QUE ES :
+- intent: carnet_sanidad_manipular_alimentos_que_es
+  examples: |
+    - ¿Qué es el carnet de sanidad para manipular alimentos?
+    - Explícame qué es el carnet de sanidad para manipular alimentos
+    - ¿En qué consiste el carnet de sanidad para manipular alimentos?
+    - Definición de carnet de sanidad para manipular alimentos
+    - ¿Qué significa el carnet de sanidad para manipular alimentos?
+
+# >> CARNET SANIDAD MANIPULAR ALIMENTOS QUE NECESITO :
+- intent: carnet_sanidad_manipular_alimentos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el carnet de sanidad para manipular alimentos?
+    - Requisitos para el carnet de sanidad para manipular alimentos
+    - ¿Qué documentos se necesitan para el carnet de sanidad para manipular alimentos?
+    - ¿Cuáles son los requisitos para obtener el carnet de sanidad para manipular alimentos?
+    - Documentos necesarios para solicitar el carnet de sanidad para manipular alimentos
+
+# >> CARNET SANIDAD MANIPULAR ALIMENTOS CUANTO CUESTA :
+- intent: carnet_sanidad_manipular_alimentos_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el carnet de sanidad para manipular alimentos?
+    - Costo del carnet de sanidad para manipular alimentos
+    - ¿Qué tarifas se aplican para el carnet de sanidad para manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para manipular alimentos?
+    - Tarifas y costos para la emisión de carnet de sanidad para manipular alimentos
+    - ¿Cuánto cuesta el carnet de sanidad para manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para manipular alimentos?
+
+# >> CERTIFICADO PRENUPCIAL :
+- intent: certificado_prenupcial
+  examples: |
+    - ¿Cómo puedo solicitar el certificado prenupcial?
+    - Quiero saber el procedimiento para obtener el certificado prenupcial
+    - Solicitar certificado prenupcial
+    - Procedimiento para emitir certificado prenupcial
+    - ¿Cómo acceder a los servicios públicos con el certificado prenupcial?
+    - ¿Qué se necesita para obtener el certificado prenupcial?
+    - Emisión de certificado prenupcial
+
+# >> CERTIFICADO PRENUPCIAL QUE ES :
+- intent: certificado_prenupcial_que_es
+  examples: |
+    - ¿Qué es el certificado prenupcial?
+    - Explícame qué es el certificado prenupcial
+    - ¿En qué consiste el certificado prenupcial?
+    - Definición de certificado prenupcial
+    - ¿Qué significa el certificado prenupcial?
+
+# >> CERTIFICADO PRENUPCIAL QUE NECESITO :
+- intent: certificado_prenupcial_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el certificado prenupcial?
+    - Requisitos para el certificado prenupcial
+    - ¿Qué documentos se necesitan para el certificado prenupcial?
+    - ¿Cuáles son los requisitos para obtener el certificado prenupcial?
+    - Documentos necesarios para solicitar el certificado prenupcial
+
+# >> CERTIFICADO PRENUPCIAL CUANTO CUESTA :
+- intent: certificado_prenupcial_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el certificado prenupcial?
+    - Costo del certificado prenupcial
+    - ¿Qué tarifas se aplican para el certificado prenupcial?
+    - ¿Cuánto se paga por el certificado prenupcial?
+    - Tarifas y costos para la emisión del certificado prenupcial
+    - ¿Cuánto cuesta el certificado prenupcial?
+    - ¿Cuánto se paga por el certificado prenupcial?
+

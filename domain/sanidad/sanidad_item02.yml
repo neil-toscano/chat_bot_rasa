@@ -1,0 +1,76 @@
+version: "3.1"
+
+intents:
+  - carnet_sanidad_manipulacion_alimentos_que_es
+  - carnet_sanidad_manipulacion_alimentos_que_necesito
+  - carnet_sanidad_manipulacion_alimentos_cuanto_cuesta
+
+responses:
+  # >> 5.1. CARNET DE SANIDAD - MANIPULACIÓN DE ALIMENTOS
+  utter_carnet_sanidad_manipulacion_alimentos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Haz seleccionado Curso sobre manipulación de alimentos*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Requisitos?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/carnet_sanidad_manipulacion_alimentos_que_es"
+                        title: "¿Qué es? 📄"
+                      - id: "/carnet_sanidad_manipulacion_alimentos_que_necesito"
+                        title: "¿Requisitos? 📋"
+                      - id: "/carnet_sanidad_manipulacion_alimentos_cuanto_cuesta"
+                        title: "¿Cuánto cuesta? 💵"
+                button: "✅ Opciones"
+
+  # >> 5.1... CONSULTA
+  utter_carnet_sanidad_manipulacion_alimentos_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es un documento que certifica que una persona ha completado un curso sobre manipulación de alimentos y cumple con los requisitos sanitarios necesarios.
+
+  # >> 5.1... NECESIDAD
+  utter_carnet_sanidad_manipulacion_alimentos_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Requisitos para el trámite:*
+
+                1. 💰 Pago por derecho de servicio: S/. 20.00
+
+                2. 🆔 DNI y/o carnet de extranjería
+
+  # >> 5.1... COSTO
+  utter_carnet_sanidad_manipulacion_alimentos_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/. 20.00
+
+                *Duración:* 1 día

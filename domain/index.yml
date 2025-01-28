@@ -169,7 +169,7 @@ responses:
                         title: "5. Obras 🏗️"
                       - id: "/constancia_posesion_servicios_basicos"
                         title: "6. Constancia 📜"
-                      - id: "/carnet_sanidad_no_manipular_alimentos"
+                      - id: "/carnet_sanidad"
                         title: "7. Carnet 🩺"
                 button: "Seleccionar trámite"
 

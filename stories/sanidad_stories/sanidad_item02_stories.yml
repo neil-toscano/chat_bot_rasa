@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+# >> 1.1. STORIES - CARNET DE SANIDAD MANIPULADOR DE ALIMENTOS :
+- story: carnet sanidad manipulacion alimentos
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos
+  - action: utter_carnet_sanidad_manipulacion_alimentos
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - CONSULTA
+- story: carnet sanidad manipulacion alimentos que es
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos_que_es
+  - action: utter_carnet_sanidad_manipulacion_alimentos_que_es
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - NECESIDAD
+- story: carnet sanidad manipulacion alimentos que necesito
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos_que_necesito
+  - action: utter_carnet_sanidad_manipulacion_alimentos_que_necesito  
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - CUANTO CUESTA
+- story: carnet sanidad manipulacion alimentos cuanto cuesta
+  steps:
+  - intent: carnet_sanidad_manipulacion_alimentos_cuanto_cuesta
+  - action: utter_carnet_sanidad_manipulacion_alimentos_cuanto_cuesta
+  - action: action_set_reminder

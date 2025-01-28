@@ -3,6 +3,8 @@ version: "3.1"
 intents:
   - carnet_sanidad
   - carnet_sanidad_no_manipular_alimentos
+  - carnet_sanidad_manipulacion_alimentos
+  - certificado_prenupcial
 
 responses:
   # >> 5. SANIDAD :
@@ -18,6 +20,7 @@ responses:
               body:
                 text: |
                   1. 📜 Carnet de Sanidad no manipulador de alimentos
+                  2. 🍎 Curso sobre manipulaciòn de alimentos de alimentos
 
               footer:
                 text: "*Seleccione la opción abajo 👇*"
@@ -28,5 +31,9 @@ responses:
                   - title: "Escoge la opción"
                     rows:
                       - id: "/carnet_sanidad_no_manipular_alimentos"
-                        title: "📜 Carnet de Sanidad"
+                        title: "1.📜No manipular"
+                      - id: "/carnet_sanidad_manipulacion_alimentos"
+                        title: "2.🍴Manipulación"
+                      - id: "/certificado_prenupcial"
+                        title: "3.💍Prenupcial"
                 button: "Seleccionar Opción"
