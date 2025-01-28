@@ -16,7 +16,7 @@ responses:
               type: list
               header:
                 type: text
-                text: "🟢 Opciones de Carnet de Sanidad:"
+                text: "🟢 Opciones de Bienestar Social y Salud:"
               body:
                 text: |
                   1. 📜 Carnet de Sanidad no manipulador de alimentos

@@ -150,7 +150,7 @@ responses:
 
                   *6. 📜 CONSTANCIA DE POSESIÓN*
 
-                  *7. 🩺 CARNET DE SANIDAD*
+                  *7. 🩺 BIENESTAR SOCIAL Y SALUD*
               footer:
                 text: "seleccione el trámite abajo 👇"
               action:
@@ -170,7 +170,7 @@ responses:
                       - id: "/constancia_posesion_servicios_basicos"
                         title: "6. Constancia 📜"
                       - id: "/carnet_sanidad"
-                        title: "7. Carnet 🩺"
+                        title: "7. Bienestar Social🩺"
                 button: "Seleccionar trámite"
 
   utter_directorio_telefonico:
