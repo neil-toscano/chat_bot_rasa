@@ -37,6 +37,7 @@ nlu:
     - hola señor
     - qué tal
     - buenos días
+    - Buen día
     - buenas tardes
     - buenas noches
     - hola, ¿cómo estás?
@@ -50,6 +51,7 @@ nlu:
     - hola amigo
     - hola, buenas
     - hi
+    - Hola
     - hello
     - how are you
     - hola, espero que estés bien
@@ -64,6 +66,7 @@ nlu:
     - hola, quería saludarte
     - hola, me gustaría saber algo
     - buenas noches, necesito información
+    - buenas noches
 
 # >> DESPEDIDA :
 - intent: despedida
@@ -72,7 +75,6 @@ nlu:
     - nos vemos
     - hasta luego
     - que tengas un buen día
-    - buenas noches hasta luego
     - chau
     - hasta la próxima
     - cuídate
