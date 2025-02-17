@@ -205,6 +205,7 @@ responses:
               text:
                 preview_url: false
                 body: |
+                  📅 Las consultas pueden realizarse únicamente sobre trámites registrados a partir del año 2025
                   📝 Por favor, proporciona su *número de documento correctamente. Este número es único y se asigna a su trámite. (Ejemplo: S-0000264-2025)* para informarle el estado de su trámite 📲
                      -. Este número se encuentra en los documentos que recibió al iniciar su trámite.
 
