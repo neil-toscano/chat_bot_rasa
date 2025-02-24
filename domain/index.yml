@@ -69,10 +69,7 @@ responses:
         blocks:
           - type: image
             image:
-              id: "668974715871159"
-          - type: audio
-            audio:
-              id: "957422266353539"
+              id: "9118250178222208"
           - type: interactive
             interactive:
               type: button
@@ -81,7 +78,7 @@ responses:
                 text: "Servicios de la Municipalidad"
               body:
                 text: |
-                  ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
+                  *Hola soy Sanjuanbot 🤖*: ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
 
               footer:
                 text: "seleccione la opción abajo 👇"
