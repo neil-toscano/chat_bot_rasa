@@ -70,6 +70,9 @@ responses:
           - type: image
             image:
               id: "9118250178222208"
+          - type: video
+            video: 
+              id: "1134635934798417"
           - type: interactive
             interactive:
               type: button
@@ -108,6 +111,10 @@ responses:
                   Estos son otras consultas que podrían interesarte. Selecciona una opción a continuación:
               action:
                 buttons:
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_modulo_citas"
+                      title: "📝Módulo de citas"
                   - type: "reply"
                     reply:
                       id: "/consulta_directorio"
@@ -194,6 +201,24 @@ responses:
                 ⏰ *Horarios de Atención:*
                 - Lunes a Viernes: 8:00 AM - 5:00 PM
                 - Sábado: 8:00 AM - 1:00 PM
+
+  utter_modulo_citas:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                📄 *MÓDULO DE TRÁMITES MUNICIPALES*
+
+                En este módulo, puedes realizar diversos trámites, tales como:
+                • *Inscripción de Independización*
+                • *Inscripción de Subdivisión de Lotes*
+                • *Sucesión Intestada*
+
+                Para iniciar tu trámite, visita el siguiente enlace:
+                🌐 Gestiona tus trámites: https://gestioncitas.munisjl.gob.pe/
+
 
   utter_ask_documentoId:
     - custom:

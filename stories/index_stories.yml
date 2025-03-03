@@ -59,6 +59,14 @@ stories:
       - action: action_deactivate_loop
       - active_loop: null
 
+  - story: modulo citas
+    steps:
+      - intent: consulta_modulo_citas
+      - action: utter_modulo_citas
+      - action: action_set_reminder
+      - action: action_deactivate_loop
+      - active_loop: null
+
   - story: documento tramite
     steps:
       - intent: consulta_documento_trazabilidad

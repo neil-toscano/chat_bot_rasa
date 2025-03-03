@@ -130,6 +130,13 @@ nlu:
       - cuales son los números telefónicos de algún departamento
       - cuales son los números telefónicos de algún departamento
 
+  - intent: consulta_modulo_citas
+    examples: |
+      - quiero hacer citas en la municipalidad
+      - quiero hacer subdivison de lotes en la municipalidad
+      - quiero hacer sucesion intestada
+      - voy hacer sucion intestada
+
   - intent: consulta_documento_trazabilidad
     examples: |
       - quiero saber el estado de mi trámite

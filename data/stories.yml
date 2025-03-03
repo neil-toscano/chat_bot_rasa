@@ -87,6 +87,14 @@ stories:
   - action: action_set_reminder
   - action: action_deactivate_loop
 
+# >> MODULO CITAS :
+- story: modulo citas
+  steps:
+  - intent: consulta_modulo_citas
+  - action: utter_modulo_citas
+  - action: action_set_reminder
+  - action: action_deactivate_loop
+
 # >> DOCUMENTO TRAMITE :
 - story: documento tramite
   steps:
