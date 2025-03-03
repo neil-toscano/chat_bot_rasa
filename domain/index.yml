@@ -17,6 +17,7 @@ intents:
   - proporciono_directo_documentoid
   - stop
   - reto_bot
+  - consulta_modulo_citas
 
 entities:
   - documentoId
