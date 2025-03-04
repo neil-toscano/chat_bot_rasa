@@ -5,7 +5,7 @@ intents:
   - licencia_funcionamiento_edificacion_riesgo_bajo
 
 responses:
-  # >> 1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+  # >> 1. FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL:
   utter_formalizacion_promocion_empresarial:
     - custom:
         blocks:
@@ -14,39 +14,28 @@ responses:
               preview_url: false
               body: |
                 *Licencia de funcionamiento y anuncio publicitario*
-                1. 🟢Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo bajo
-                      _(con ITSE posterior)_
-
-                2. 🟡Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo medio
-                      _(con ITSE posterior)_
-
-                3. 🔴Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo alto
-                      _(con ITSE previa)_
-
-                4. ⚠️Licencia de funcionamiento para edificaciones calificadas con nivel de riesgo muy alto
-                      _(con ITSE previa)_
-
-                5. 🔄Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+                
+                *Grupo 1: Licencias y Cambios*
+                1. 🟢 Licencia de funcionamiento para edificaciones con riesgo bajo _(con ITSE posterior)_
+                2. 🟡 Licencia de funcionamiento para edificaciones con riesgo medio _(con ITSE posterior)_
+                3. 🔴 Licencia de funcionamiento para edificaciones con riesgo alto _(con ITSE previa)_
+                4. ⚠️ Licencia de funcionamiento para edificaciones con riesgo muy alto _(con ITSE previa)_
+                5. 🔄 Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+                6. 🔃 Licencia de funcionamiento para cambio de giro
 
           - type: text
             text:
-              # body: list
-              # header:
-              #   type: text
-              #   text: "Consulta Trámites"
               preview_url: false
               body: |
-                6. 🔃Licencia de funcionamiento para cambio de giro
-
-                7. 🖼️Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: afiche y plancheta publicitaria, en bienes de dominio privado
-
-                8. 🔤Autorización para la ubicación de elemento de publicidad exterior sencillos - tipo: letras recortadas, letrero, placa, y toldo, en bienes de dominio privado, vinculado a licencia de funcionamiento
-
-                9. 📄Duplicado del certificado de licencia de funcionamiento
-
-                10. 📜Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+                *Publicidad y Duplicados*
                 
-                11. 📜Cese de licencia de funcionamiento
+                7. 🖼️ Autorización para la ubicación de elemento de publicidad exterior sencillo – afiche y plancheta en bienes de dominio privado
+                8. 🔤 Autorización para la ubicación de elemento de publicidad exterior sencillo – letras recortadas, letrero, placa y toldo, vinculado a licencia de funcionamiento
+                9. 📄 Duplicado del certificado de licencia de funcionamiento
+                10. 📜 Duplicado de la resolución de autorización para la ubicación del elemento de publicidad exterior
+                11. 📜 Cese de licencia de funcionamiento
+                12. 📜 Transferencia de licencia de funcionamiento o cambio de denominación o nombre comercial de la persona jurídica
+                
                 *Seleccione la opción abajo 👇*
 
           - type: interactive
@@ -54,46 +43,45 @@ responses:
               type: list
               body:
                 text: |
-                  Seleccionar Publicidad - Duplicado
-
+                  Seleccionar Licencia y Cambio
               action:
                 sections:
                   - title: "Escoja Opción"
                     rows:
                       - id: "/licencia_funcionamiento_edificacion_riesgo_bajo"
-                        title: "1. RIESGO BAJO 🟢"
+                        title: "1. Riesgo Bajo 🟢"
                       - id: "/formalizacion_item02_edificacion_riesgo_medio"
-                        title: "2. RIESGO MEDIO 🟡"
+                        title: "2. Riesgo Medio 🟡"
                       - id: "/formalizacion_item03_edificacion_riesgo_alto"
-                        title: "3. RIESGO ALTO 🔴"
+                        title: "3. Riesgo Alto 🔴"
                       - id: "/formalizacion_item04_edificacion_riesgo_muy_alto"
-                        title: "4. RIESGO MUY ALTO ⚠️"
+                        title: "4. Riesgo Muy Alto ⚠️"
                       - id: "/formalizacion_item05_transferencia_licencia_funcionamiento"
-                        title: "5. TRANSFERENCIA 🔄"
+                        title: "5. Transferencia 🔄"
                       - id: "/formalizacion_item06_licencia_funcionamiento_cambio_giro"
-                        title: "6. CAMBIO DE GIRO 🔃"
+                        title: "6. Cambio de Giro 🔃"
                 button: "Seleccionar (1 - 6)"
+
           - type: interactive
             interactive:
               type: list
               body:
                 text: |
-                  Seleccionar Licencia - Transferencia
-
+                  Seleccionar Publicidad y Certificados
               action:
                 sections:
                   - title: "Escoja Opción"
                     rows:
                       - id: "/formalizacion_item07_autorizacion_publicidad_exterior_afiche"
-                        title: "7. PUBLICIDAD 🖼️"
+                        title: "7. Publicidad 🖼️"
                       - id: "/formalizacion_item08_autorizacion_publicidad_exterior_letras"
-                        title: "8. PUBLICIDAD LETRAS 🔤"
+                        title: "8. Publicidad Letras 🔤"
                       - id: "/formalizacion_item09_duplicado_certificado"
-                        title: "9. DUPLICADO 📄"
+                        title: "9. Duplicado 📄"
                       - id: "/formalizacion_item10_duplicado_resolucion"
-                        title: "10. DUP. RESOLUCIÓN 📜"
+                        title: "10. Dup. Resolución 📜"
                       - id: "/formalizacion_item11_cese_licencia"
-                        title: "11. CESE LICENCIA 📜"
+                        title: "11. Cese Licencia 📜"
                       - id: "/formalizacion_item12_transferencia_licencia"
-                        title: "12. TRANSFERENCIA 🔄"
-                button: "Seleccionar (7-12)"
+                        title: "12. Transferencia 🔄"
+                button: "Seleccionar (7 - 12)"
