@@ -1,0 +1,224 @@
+version: "3.1"
+
+# >> NLU - INDEX
+nlu:
+  - intent: saludo
+    examples: |
+      - hola
+      - hola señor
+      - qué tal
+      - buenos días
+      - Buen día
+      - buenas tardes
+      - buenas noches
+      - hola, ¿cómo estás?
+      - ¿qué onda?
+      - hola a todos
+      - cómo andas
+      - qué hay
+      - hey
+      - qué pasa
+      - saludos
+      - hola amigo
+      - hola, buenas
+      - hi
+      - Hola
+      - hello
+      - how are you
+      - hola, espero que estés bien
+      - buenas, ¿cómo te encuentras hoy?
+      - hola, ¿puedes ayudarme?
+      - un saludo cordial
+      - hola, ¿qué tal tu día?
+      - muy buenos días, ¿cómo estás?
+      - hola, quiero hacer una consulta
+      - hola, ¿puedo preguntarte algo?
+      - saludos, ¿estás disponible?
+      - hola, quería saludarte
+      - hola, me gustaría saber algo
+      - buenas noches, necesito información
+      - buenas noches
+
+
+  - intent: despedida
+    examples: |
+      - adiós
+      - nos vemos
+      - hasta luego
+      - que tengas un buen día
+      - chau
+      - hasta la próxima
+      - cuídate
+      - nos vemos luego
+      - gracias
+      - se lo agradezco
+      - muchas gracias
+
+  - intent: afirmacion
+    examples: |
+      - sí
+      - claro
+      - por supuesto
+      - correcto
+      - eso suena bien
+      - exacto
+
+  - intent: negacion
+    examples: |
+      - no
+      - nunca
+      - no me gusta eso
+      - de ninguna manera
+      - no lo creo
+      - no es así
+
+  - intent: animo_bien
+    examples: |
+      - perfecto
+      - genial
+      - increíble
+      - me siento como un rey
+      - maravilloso
+      - me siento muy bien
+      - estoy genial
+      - estoy increíble
+      - voy a salvar el mundo
+      - súper feliz
+      - extremadamente bien
+      - tan perfecto
+      - todo bien
+
+  - intent: animo_mal
+    examples: |
+      - mi día fue horrible
+      - estoy triste
+      - no me siento muy bien
+      - estoy decepcionado
+      - súper triste
+      - muy triste
+      - infeliz
+      - no estoy bien
+      - extremadamente triste
+      - tan triste
+
+  - intent: reto_bot
+    examples: |
+      - ¿eres un bot?
+      - ¿eres humano?
+      - ¿estoy hablando con un bot?
+      - ¿estoy hablando con un humano?
+
+  - intent: estado_cuenta
+    examples: |
+      - ¿Cuál es mi estado de cuenta?
+      - Cómo saber mi estado de cuenta
+      - Donde saber mi estado de cuenta
+      - Cuanto debo a la municpalidad
+      - Como pagar mi estado de cuenta
+
+  - intent: consulta_tramites
+    examples: |
+      - quiero saber sobre tramites de la municipalidad
+      - quiero saber sobre los requisitos de algún trámite
+      - cuales son los requisitos
+
+  - intent: consulta_directorio
+    examples: |
+      - quiero saber sobre los números telefónicos de la municipalidad
+      - quiero saber sobre los números telefónicos de algún departamento
+      - cuales son los números telefónicos
+      - cuales son los números telefónicos de algún departamento
+      - cuales son los números telefónicos de algún departamento
+
+  - intent: consulta_modulo_citas
+    examples: |
+      - quiero hacer citas en la municipalidad
+      - quiero hacer subdivison de lotes en la municipalidad
+      - quiero hacer sucesion intestada
+      - voy hacer sucion intestada
+
+  - intent: consulta_documento_trazabilidad
+    examples: |
+      - quiero saber el estado de mi trámite
+      - ¿Dónde puedo consultar el estado de mi trámite?
+      - ¿Cómo consulto mi código de seguimiento?
+      - ¿Me puedes dar el código de seguimiento?
+      - ¿Cómo puedo ver el estado de mi documento?
+      - ¿Dónde está mi trámite?
+      - ¿Puedo saber el estado de mi documento?
+      - Oye, ¿sabes en qué va mi trámite?
+      - ¿Ya sabes algo de mi documento?
+      - ¿Cómo va mi trámite?
+      - ¿Tienes info sobre mi documento?
+      - ¿Qué onda con mi trámite?
+      - ¿Ya está listo mi documento?
+      - ¿Cuánto falta para que esté listo mi trámite?
+      - ¿Me puedes decir si ya avanzó mi trámite?
+      - ¿Cómo sé si mi documento ya está listo?
+      - ¿Dónde veo si mi trámite ya está aprobado?
+      - ¿Hay novedades con mi documento?
+      - ¿Cómo checo el estado de mi trámite?
+      - ¿Puedes revisar cómo va mi documento?
+      - ¿Qué tengo que hacer para saber el estado de mi trámite?
+      - ¿Me avisas si hay cambios en mi documento?
+      - ¿Cómo me entero si mi trámite ya está listo?
+
+  - intent: proporciono_directo_documentoid
+    examples: |
+      - Mi número de documento es [S-0000234-2025](documentoId)
+      - Documento: [S-1234567-2025](documentoId)
+      - Es [S-7654321-2024](documentoId)
+      - El número es [S-9876543-2023](documentoId)
+      - Mi código es [S-1357924-2022](documentoId)
+      - [S-2468135-2021](documentoId) es mi número
+      - El documento que busco es [S-1122334-2020](documentoId)
+      - Número de documento: [S-3344556-2019](documentoId)
+      - Aquí está mi documento: [S-5566778-2028](documentoId)
+      - Te doy mi número: [S-7788991-2030](documentoId)
+      - Busca este documento: [S-8899002-2027](documentoId)
+      - Documento asociado: [S-1010101-2026](documentoId)
+      - Mi número asignado es [S-1212121-2025](documentoId)
+      - Necesito verificar [S-3434343-2024](documentoId)
+      - Aquí está: [S-4545454-2023](documentoId)
+      - Puedes buscar el [S-5656565-2022](documentoId)
+      - Consulta el número [S-6767676-2021](documentoId)
+      - Revisa este documento: [S-7878787-2020](documentoId)
+      - El documento proporcionado es [S-8989898-2029](documentoId)
+      - [S-0000012-2025](documentoId)
+      - [S-9876543-2023](documentoId)
+      - [S-4567890-2022](documentoId)
+      - [S-1231231-2021](documentoId)
+      - [S-3213213-2020](documentoId)
+      - [S-5556667-2019](documentoId)
+      - [S-7778889-2028](documentoId)
+      - [S-2223334-2027](documentoId)
+      - [S-9090909-2026](documentoId)
+      - [S-6565656-2025](documentoId)
+      - [S-8787878-2024](documentoId)
+      - [123456789](documentoId)
+      - [123456778](documentoId)
+  - intent: informacion_doc_id
+    examples: |
+      - mi codigo es [123546558](documentoId)
+      - mi numero es [2536987456](documentoId)
+
+  - intent: stop
+    examples: |
+      - ya no quiero
+      - otro día lo haré
+      - ahora ya no lo necesito
+      - quiero salir
+      - mejor después
+      - olvídalo
+      - no quiero continuar
+      - déjalo
+      - paro aquí
+      - ya terminé
+      - no es necesario
+      - quiero cambiar de tema
+      - detente
+      - cancelar
+      - no seguir
+      - no más por ahora
+
+

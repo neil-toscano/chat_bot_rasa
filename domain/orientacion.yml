@@ -1,0 +1,48 @@
+version: "3.1"
+
+intents:
+  - orientacion
+  - orientacion_item01
+  - orientacion_item02
+  - orientacion_item03
+  - orientacion_item04
+
+responses:
+  # >> 3. INSCRIPCIÓN DE PREDIOS :
+  utter_orientacion:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  🟢 Has seleccionado *Inscripción de Predios*
+
+                  👇 Opciones de trámite:
+
+                  1. 📜 Inscripción por Sucesión Indivisa  
+
+                  2. 🏠 Inscripción por Sucesión Intestada
+
+                  3. 💼 Inscripción por Compra-Venta
+
+                  4. 🗺️ Inscripción de una Independización o Subdivisión de Lotes
+
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge el trámite"
+                    rows:
+                      - id: "/orientacion_item01"
+                        title: "1. 📜 SUC. INDIVISA"
+                      - id: "/orientacion_item02"
+                        title: "2. 🏠 SUC. INTESTADA"
+                      - id: "/orientacion_item03"
+                        title: "3. 💼 COMPRA-VENTA"
+                      - id: "/orientacion_item04"
+                        title: "4. 🗺️ INDEPENDIZACIÓN"
+                button: "✅ Opciones"

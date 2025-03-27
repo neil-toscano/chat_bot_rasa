@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+  # >> 3.4. STORIES - INDEPENDIZACIÓN O SUBDIVISIÓN DE LOTES :
+  - story: independizacion
+    steps:
+      - intent: orientacion_item04
+      - action: utter_orientacion_item04
+      - action: action_set_reminder
+
+  # >> 3.4... STORIES - CONSULTA
+  - story: independizacion consulta
+    steps:
+      - intent: orientacion_item04_consulta
+      - action: utter_orientacion_item04_consulta
+      - action: action_set_reminder
+
+  # >> 3.4... STORIES - NECESIDAD
+  - story: independizacion necesidad
+    steps:
+      - intent: orientacion_item04_necesidad
+      - action: utter_orientacion_item04_necesidad
+      - action: action_set_reminder
+
+  # >> 3.4... STORIES - COSTO
+  - story: independizacion costo
+    steps:
+      - intent: orientacion_item04_costo
+      - action: utter_orientacion_item04_costo
+      - action: action_set_reminder

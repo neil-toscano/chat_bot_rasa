@@ -1,0 +1,87 @@
+version: "3.1"
+
+intents:
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  - formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+
+responses:
+  # ===========2.1====================
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado autorización para pubicidad exterior tipo afiches..etc.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoja la pregunta"
+                    rows:
+                      - id: "/formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es"
+                        title: "¿Qué es? 📘"
+                      - id: "/formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito"
+                        title: "¿Qué necesito? 📝"
+                      - id: "/formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta"
+                        title: "¿Cuánto cuesta? 💰"
+                button: "Opciones"
+
+  # ==========***=======================
+
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: false
+              body: |
+                📄Permiso para colocar elementos publicitarios simples, como afiches y planchetas, en propiedades privadas.
+
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                a. 📄 Solicitud con caràcter de declaración jurada
+                    https://citasbackend.munisjl.gob.pe/api/files/pdf/57e3a9b4-6b84-461b-93cf-75a47c8b9920.pdf
+                b. 📝 Carta de responsabilidad de instalación suscrita por el responsable competente (Arq. o Ing. Civil)
+                c. 📁 *Documentos necesarios*
+                    1. 🎨 Un diseño o arte del elemento publicitario con detalles y medidas.
+                    2. 📸 Una foto actual del lugar donde se instalará el elemento, mostrando su entorno.
+                    3. 🖼️ Un fotomontaje o imagen virtual mostrando cómo se verá el elemento en su ubicación.
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                d. 📄 En caso de que otra persona realice el trámite, incluir carta poder
+                e. 📜 Declaración jurada de mantenimiento y compromiso de retiro si es necesario
+                f. 🛠️ Descripción del elemento, procedimiento de instalación y mantenimiento
+                g. 🏛️ Aprobación del Ministerio de Cultura si el elemento está en una zona protegida
+                h. 📑 En el caso de personas jurídicas, Declaración jurada de representante legal, N° de partida electrónico y asiento de inscripción SUNARP (vigente)
+
+  utter_formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 119.00
+
+# =============================================

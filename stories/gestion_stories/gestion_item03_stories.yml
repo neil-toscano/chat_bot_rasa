@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 2.3. STORIES - INSPECCIÓN RIESGO MEDIO :
+- story: inscripcion riesgo medio
+  steps:
+  - intent: gestion_item03
+  - action: utter_gestion_item03
+  - action: action_set_reminder
+
+# >> 2.3... STORIES - CONSULTA
+- story: inscripcion riesgo medio consulta
+  steps:
+  - intent: gestion_item03_consulta
+  - action: utter_gestion_item03_consulta
+  - action: action_set_reminder
+
+# >> 2.3... STORIES - NECESIDAD
+- story: inscripcion riesgo medio necesidad
+  steps:
+  - intent: gestion_item03_necesidad
+  - action: utter_gestion_item03_necesidad
+  - action: action_set_reminder
+
+# >> 2.3... STORIES - COSTO
+- story: inscripcion riesgo medio costo
+  steps:
+  - intent: gestion_item03_costo
+  - action: utter_gestion_item03_costo
+  - action: action_set_reminder

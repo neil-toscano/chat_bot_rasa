@@ -1,0 +1,15 @@
+version: "3.1"
+
+# >> 1. NLU - CONSTANCIA DE POSESIÓN :
+nlu:
+- intent: constancia_posesion
+  examples: |
+    - Necesito una constancia de posesión para servicios básicos
+    - ¿Cómo obtengo una constancia de posesión para servicios básicos?
+    - Información sobre la constancia de posesión
+    - Quiero hablar sobre la constancia de posesión
+    - Constancia de posesión para fines de servicios básicos
+    - Hablemos de cómo obtener la constancia de posesión
+    - Ayuda con la constancia de posesión para servicios básicos
+    - ¿Qué es la constancia de posesión?
+    

@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES DE RIESGO MUY ALTO:
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento
+  examples: |
+    - Transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Cambio de nombre comercial en licencia de edificaciones de riesgo muy alto
+    - Solicitud de transferencia de licencia para edificios de riesgo muy alto
+    - Autorización de cambio de denominación en licencia de funcionamiento
+    - Proceso de transferencia de licencia en edificaciones de riesgo muy alto
+
+# >> 2.1. NLU - CONSULTA
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  examples: |
+    - Qué es la transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - En qué consiste el cambio de nombre comercial en la licencia de funcionamiento
+    - Explicación sobre transferencia de licencia para edificaciones de riesgo muy alto
+    - Cómo funciona la transferencia de licencia para edificios de riesgo muy alto
+    - Qué implica cambiar la denominación comercial en la licencia de riesgo muy alto
+
+# >> 2.1. NLU - NECESIDAD
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  examples: |
+    - Qué necesito para transferir la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para cambiar el nombre comercial en licencia de edificaciones de riesgo muy alto
+    - Documentación para transferencia de licencia de funcionamiento
+    - Qué se necesita para cambio de denominación en licencia de riesgo muy alto
+    - Requisitos para transferencia de licencia en edificaciones calificadas como riesgo muy alto
+
+# >> 2.1. NLU - COSTO
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio de cambio de nombre comercial en licencia para edificios de riesgo muy alto
+    - Tarifa para transferencia de licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de cambiar la denominación comercial en la licencia
+    - Precio de transferencia de permiso para edificaciones calificadas en riesgo muy alto

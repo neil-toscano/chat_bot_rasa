@@ -1,0 +1,81 @@
+version: "3.1"
+
+intents:
+  - gestion
+  - gestion_item01
+  - gestion_item02
+  - gestion_item03
+  - gestion_item04
+  - gestion_item05
+  - gestion_item06
+  - gestion_item07
+  - gestion_item08
+  - gestion_item09
+  - gestion_item10
+
+responses:
+  # >> 2. CERRTIFICADO DE DEFENSA CIVIL :
+  utter_gestion:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *🟢 Opciones de Trámite:*  
+
+                1. 🏢🟢 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Bajo*  
+
+                2. 🔄🟢 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Bajo*  
+
+                3. 🏢🟡 Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con **Nivel de Riesgo Medio*  
+
+                4. 🔄🟡 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Medio*  
+
+                5. 🏢🟠 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Alto*
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  6. 🔄🟠 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Alto*  
+
+                  7. 🏢🔴 Inspección Técnica de Seguridad en edificaciones previa al inicio de actividades para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Muy Alto*  
+
+                  8. 🔄🔴 Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con *Nivel de Riesgo Muy Alto*  
+
+                  9. 🏟️ Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta *3,000 personas* 
+
+                  10. 📄 Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/gestion_item01"
+                        title: "1. 🏢🟢 INSPECCIÓN BAJO"
+                      - id: "/gestion_item02"
+                        title: "2. 🔄🟢 RENOVACIÓN BAJO"
+                      - id: "/gestion_item03"
+                        title: "3. 🏢🟡 INSPECCIÓN MEDIO"
+                      - id: "/gestion_item04"
+                        title: "4. 🔄🟡 RENOVACIÓN MEDIO"
+                      - id: "/gestion_item05"
+                        title: "5. 🏢🟠 INSPECCIÓN ALTO"
+                      - id: "/gestion_item06"
+                        title: "6. 🔄🟠 RENOVACIÓN ALTO"
+                      - id: "/gestion_item07"
+                        title: "7. 🏢🔴 INSP. MUY ALTO"
+                      - id: "/gestion_item08"
+                        title: "8. 🔄🔴 RENOV. MUY ALTO"
+                      - id: "/gestion_item09"
+                        title: "9. 🏟️ EVALUACIÓN"
+                      - id: "/gestion_item10"
+                        title: "10. 📄 DUPLICADO"
+                button: "Seleccionar Opción"
+

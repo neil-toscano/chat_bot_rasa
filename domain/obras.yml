@@ -1,0 +1,48 @@
+version: "3.1"
+
+intents:
+  - obras
+  - obras_item01
+  - obras_item02
+  - obras_item03
+  - obras_item04
+
+responses:
+  # >> 5. OBRAS PRIVADAS Y HABILITACIÓN URBANA :
+  utter_obras:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  🟢 Has seleccionado *Obras Privadas y Habilitación Urbana*
+
+                  👇 Opciones de trámite:
+
+                  1. 🏢 Certificado de Parámetros Urbanísticos y Edificatorios
+
+                  2. 📐 Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+
+                  3. 🏠 Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+
+                  4. 🔨 Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótano y sótanos, siempre que no haga uso de explosivos
+
+              footer:
+                text: "*Seleccione la opción abajo* 👇"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge el trámite"
+                    rows:
+                      - id: "/obras_item01"
+                        title: "1. 📝 CERTIFICADO"
+                      - id: "/obras_item02"
+                        title: "2. ✏️ VISACIÓN"
+                      - id: "/obras_item03"
+                        title: "3. 🛠️ LIC.CONSTRUCCIÓN"
+                      - id: "/obras_item04"
+                        title: "4. 🏚️ LIC.DEMOLICIÓN"
+                button: "✅ Opciones"

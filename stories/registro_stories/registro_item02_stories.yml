@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+  # >> 4.2. STORIES - PUBLICACIÓN DE EDICTO MATRIMONIAL  :
+  - story: publicacion edicto matrimonial
+    steps:
+      - intent: registro_item02
+      - action: utter_registro_item02
+      - action: action_set_reminder
+
+  # >> 4.2... STORIES - CONSULTA
+  - story: publicacion edicto matrimonial consulta
+    steps:
+      - intent: registro_item02_consulta
+      - action: utter_registro_item02_consulta
+      - action: action_set_reminder
+
+  # >> 4.2... STORIES - NECESIDAD
+  - story: publicacion edicto matrimonial necesidad
+    steps:
+      - intent: registro_item02_necesidad
+      - action: utter_registro_item02_necesidad
+      - action: action_set_reminder
+
+  # >> 4.2... STORIES - COSTO
+  - story: publicacion edicto matrimonial costo
+    steps:
+      - intent: registro_item02_costo
+      - action: utter_registro_item02_costo
+      - action: action_set_reminder

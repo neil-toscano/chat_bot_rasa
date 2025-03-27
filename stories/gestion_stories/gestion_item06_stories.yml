@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 2.6. STORIES - RENOVACIÓN RIESGO ALTO :
+- story: renovacion riesgo alto
+  steps:
+  - intent: gestion_item06
+  - action: utter_gestion_item06
+  - action: action_set_reminder
+
+# >> 2.6... STORIES - CONSULTA
+- story: renovacion riesgo alto consulta
+  steps:
+  - intent: gestion_item06_consulta
+  - action: utter_gestion_item06_consulta
+  - action: action_set_reminder
+
+# >> 2.6... STORIES - NECESIDAD
+- story: renovacion riesgo alto necesidad
+  steps:
+  - intent: gestion_item06_necesidad
+  - action: utter_gestion_item06_necesidad
+  - action: action_set_reminder
+
+# >> 2.6... STORIES - COSTO
+- story: renovacion riesgo alto costo
+  steps:
+  - intent: gestion_item06_costo
+  - action: utter_gestion_item06_costo
+  - action: action_set_reminder

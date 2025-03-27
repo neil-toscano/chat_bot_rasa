@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+  # >> 2.1. NLU - DUPLICADO DE LA RESOLUCIÓN DE AUTORIZACIÓN:
+  - intent: formalizacion_item10_duplicado_resolucion
+    examples: |
+      - Solicitud de duplicado de la resolución de autorización para publicidad exterior
+      - Obtener duplicado de la resolución de autorización para ubicación de elemento publicitario
+      - Reposición de resolución de autorización para publicidad exterior
+      - Duplicado de mi resolución de autorización para publicidad exterior
+      - Cómo solicitar un duplicado de la resolución de autorización para publicidad exterior
+
+  # >> 2.1. NLU - CONSULTA
+  - intent: formalizacion_item10_duplicado_resolucion_que_es
+    examples: |
+      - Qué es el duplicado de la resolución de autorización para publicidad exterior
+      - Para qué sirve un duplicado de la resolución de autorización para publicidad exterior
+      - Explicación sobre duplicado de resolución de autorización para publicidad exterior
+      - En qué consiste la reposición de la resolución de autorización para publicidad exterior
+      - Qué cubre el duplicado de la resolución de autorización para publicidad exterior
+
+  # >> 2.1. NLU - NECESIDAD
+  - intent: formalizacion_item10_duplicado_resolucion_que_necesito
+    examples: |
+      - Qué necesito para solicitar un duplicado de la resolución de autorización para publicidad exterior
+      - Requisitos para duplicado de la resolución de autorización de publicidad exterior
+      - Documentación para obtener duplicado de resolución de autorización de publicidad exterior
+      - Qué se requiere para la reposición de resolución de autorización para publicidad exterior
+      - Requisitos para pedir un duplicado de la resolución de autorización para publicidad exterior
+
+  # >> 2.1. NLU - COSTO
+  - intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+    examples: |
+      - Cuánto cuesta el duplicado de la resolución de autorización para publicidad exterior
+      - Precio para obtener duplicado de resolución de autorización para publicidad exterior
+      - Tarifa para reposición de la resolución de autorización para publicidad exterior
+      - Cuál es el costo de un duplicado de resolución de autorización para publicidad exterior
+      - Precio para duplicado de resolución de autorización para publicidad exterior

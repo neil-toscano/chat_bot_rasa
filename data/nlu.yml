@@ -1,11 +1,43 @@
 version: "3.1"
 
 nlu:
+# >> CONSTANCIA POSESION :
+- intent: constancia_posesion
+  examples: |
+    - Necesito una constancia de posesión para servicios básicos
+    - ¿Cómo obtengo una constancia de posesión para servicios básicos?
+    - Información sobre la constancia de posesión
+    - Quiero hablar sobre la constancia de posesión
+    - Constancia de posesión para fines de servicios básicos
+    - Hablemos de cómo obtener la constancia de posesión
+    - Ayuda con la constancia de posesión para servicios básicos
+    - ¿Qué es la constancia de posesión?
+
+# >> FORMALIZACION PROMOCION EMPRESARIAL :
+- intent: formalizacion_promocion_empresarial
+  examples: |
+    - Quiero hablar sobre formalización y promoción empresarial
+    - hablemos sobre formalización
+    - Formalización
+    - Promoción empresarial
+
+# >> GESTION :
+- intent: gestion
+  examples: |
+    - Quiero hablar sobre gestión del riesgo de desastres
+    - hablemos sobre gestión
+    - Gestión
+    - Riesgo de desastres
+    - desastres
+
+# >> SALUDO :
 - intent: saludo
   examples: |
     - hola
+    - hola señor
     - qué tal
     - buenos días
+    - Buen día
     - buenas tardes
     - buenas noches
     - hola, ¿cómo estás?
@@ -18,19 +50,40 @@ nlu:
     - saludos
     - hola amigo
     - hola, buenas
+    - hi
+    - Hola
+    - hello
+    - how are you
+    - hola, espero que estés bien
+    - buenas, ¿cómo te encuentras hoy?
+    - hola, ¿puedes ayudarme?
+    - un saludo cordial
+    - hola, ¿qué tal tu día?
+    - muy buenos días, ¿cómo estás?
+    - hola, quiero hacer una consulta
+    - hola, ¿puedo preguntarte algo?
+    - saludos, ¿estás disponible?
+    - hola, quería saludarte
+    - hola, me gustaría saber algo
+    - buenas noches, necesito información
+    - buenas noches
 
+# >> DESPEDIDA :
 - intent: despedida
   examples: |
     - adiós
     - nos vemos
     - hasta luego
     - que tengas un buen día
-    - buenas noches
     - chau
     - hasta la próxima
     - cuídate
     - nos vemos luego
+    - gracias
+    - se lo agradezco
+    - muchas gracias
 
+# >> AFIRMACION :
 - intent: afirmacion
   examples: |
     - sí
@@ -40,6 +93,7 @@ nlu:
     - eso suena bien
     - exacto
 
+# >> NEGACION :
 - intent: negacion
   examples: |
     - no
@@ -49,6 +103,7 @@ nlu:
     - no lo creo
     - no es así
 
+# >> ANIMO BIEN :
 - intent: animo_bien
   examples: |
     - perfecto
@@ -65,6 +120,7 @@ nlu:
     - tan perfecto
     - todo bien
 
+# >> ANIMO MAL :
 - intent: animo_mal
   examples: |
     - mi día fue horrible
@@ -78,9 +134,1551 @@ nlu:
     - extremadamente triste
     - tan triste
 
+# >> RETO BOT :
 - intent: reto_bot
   examples: |
     - ¿eres un bot?
     - ¿eres humano?
     - ¿estoy hablando con un bot?
     - ¿estoy hablando con un humano?
+
+# >> ESTADO CUENTA :
+- intent: estado_cuenta
+  examples: |
+    - ¿Cuál es mi estado de cuenta?
+    - Cómo saber mi estado de cuenta
+    - Donde saber mi estado de cuenta
+    - Cuanto debo a la municpalidad
+    - Como pagar mi estado de cuenta
+
+# >> CONSULTA TRAMITES :
+- intent: consulta_tramites
+  examples: |
+    - quiero saber sobre tramites de la municipalidad
+    - quiero saber sobre los requisitos de algún trámite
+    - cuales son los requisitos
+
+# >> CONSULTA DIRECTORIO :
+- intent: consulta_directorio
+  examples: |
+    - quiero saber sobre los números telefónicos de la municipalidad
+    - quiero saber sobre los números telefónicos de algún departamento
+    - cuales son los números telefónicos
+    - cuales son los números telefónicos de algún departamento
+    - cuales son los números telefónicos de algún departamento
+
+# >> CONSULTA MODULO CITAS :
+- intent: consulta_modulo_citas
+  examples: |
+    - quiero hacer citas en la municipalidad
+    - quiero hacer subdivison de lotes en la municipalidad
+    - quiero hacer sucesion intestada
+    - voy hacer sucion intestada
+
+# >> CONSULTA DOCUMENTO TRAZABILIDAD :
+- intent: consulta_documento_trazabilidad
+  examples: |
+    - quiero saber el estado de mi trámite
+    - ¿Dónde puedo consultar el estado de mi trámite?
+    - ¿Cómo consulto mi código de seguimiento?
+    - ¿Me puedes dar el código de seguimiento?
+    - ¿Cómo puedo ver el estado de mi documento?
+    - ¿Dónde está mi trámite?
+    - ¿Puedo saber el estado de mi documento?
+    - Oye, ¿sabes en qué va mi trámite?
+    - ¿Ya sabes algo de mi documento?
+    - ¿Cómo va mi trámite?
+    - ¿Tienes info sobre mi documento?
+    - ¿Qué onda con mi trámite?
+    - ¿Ya está listo mi documento?
+    - ¿Cuánto falta para que esté listo mi trámite?
+    - ¿Me puedes decir si ya avanzó mi trámite?
+    - ¿Cómo sé si mi documento ya está listo?
+    - ¿Dónde veo si mi trámite ya está aprobado?
+    - ¿Hay novedades con mi documento?
+    - ¿Cómo checo el estado de mi trámite?
+    - ¿Puedes revisar cómo va mi documento?
+    - ¿Qué tengo que hacer para saber el estado de mi trámite?
+    - ¿Me avisas si hay cambios en mi documento?
+    - ¿Cómo me entero si mi trámite ya está listo?
+
+# >> PROPORCIONO DIRECTO DOCUMENTOID :
+- intent: proporciono_directo_documentoid
+  examples: |
+    - Mi número de documento es [S-0000234-2025](documentoId)
+    - Documento: [S-1234567-2025](documentoId)
+    - Es [S-7654321-2024](documentoId)
+    - El número es [S-9876543-2023](documentoId)
+    - Mi código es [S-1357924-2022](documentoId)
+    - [S-2468135-2021](documentoId) es mi número
+    - El documento que busco es [S-1122334-2020](documentoId)
+    - Número de documento: [S-3344556-2019](documentoId)
+    - Aquí está mi documento: [S-5566778-2028](documentoId)
+    - Te doy mi número: [S-7788991-2030](documentoId)
+    - Busca este documento: [S-8899002-2027](documentoId)
+    - Documento asociado: [S-1010101-2026](documentoId)
+    - Mi número asignado es [S-1212121-2025](documentoId)
+    - Necesito verificar [S-3434343-2024](documentoId)
+    - Aquí está: [S-4545454-2023](documentoId)
+    - Puedes buscar el [S-5656565-2022](documentoId)
+    - Consulta el número [S-6767676-2021](documentoId)
+    - Revisa este documento: [S-7878787-2020](documentoId)
+    - El documento proporcionado es [S-8989898-2029](documentoId)
+    - [S-0000012-2025](documentoId)
+    - [S-9876543-2023](documentoId)
+    - [S-4567890-2022](documentoId)
+    - [S-1231231-2021](documentoId)
+    - [S-3213213-2020](documentoId)
+    - [S-5556667-2019](documentoId)
+    - [S-7778889-2028](documentoId)
+    - [S-2223334-2027](documentoId)
+    - [S-9090909-2026](documentoId)
+    - [S-6565656-2025](documentoId)
+    - [S-8787878-2024](documentoId)
+    - [123456789](documentoId)
+    - [123456778](documentoId)
+
+# >> INFORMACION DOC ID :
+- intent: informacion_doc_id
+  examples: |
+    - mi codigo es [123546558](documentoId)
+    - mi numero es [2536987456](documentoId)
+
+# >> STOP :
+- intent: stop
+  examples: |
+    - ya no quiero
+    - otro día lo haré
+    - ahora ya no lo necesito
+    - quiero salir
+    - mejor después
+    - olvídalo
+    - no quiero continuar
+    - déjalo
+    - paro aquí
+    - ya terminé
+    - no es necesario
+    - quiero cambiar de tema
+    - detente
+    - cancelar
+    - no seguir
+    - no más por ahora
+
+# >> OBRAS :
+- intent: obras
+  examples: |
+    - Quiero hablar sobre obras privadas y habilitación urbana
+    - hablemos sobre obras privadas
+    - hablemos sobre habilitación urbana
+    - Obras privadas
+    - Habilitación urbana
+    - quiero saber acerca de obras privadas
+
+# >> ORIENTACION :
+- intent: orientacion
+  examples: |
+    - Quiero hablar sobre orientación y registro
+    - hablemos sobre orientación
+    - Orientación y registro
+    - orientacion
+    - Háblame más de orientación
+
+# >> REGISTRO :
+- intent: registro
+  examples: |
+    - Quiero hablar sobre registro civil
+    - hablemos sobre registro civil
+    - Registro civil
+    - Civil
+    - dime acerca de registro civil
+
+# >> CARNET SANIDAD :
+- intent: carnet_sanidad
+  examples: |
+    - Necesito un carnet de sanidad
+    - ¿Cómo obtengo un carnet de sanidad?
+    - Información sobre el carnet de sanidad
+    - Quiero hablar sobre el carnet de sanidad
+    - Carnet de sanidad para fines de servicios básicos
+    - Hablemos de cómo obtener el carnet de sanidad
+    - Ayuda con el carnet de sanidad
+    - ¿Qué es el carnet de sanidad?
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS :
+- intent: constancia_posesion_servicios_basicos
+  examples: |
+    - ¿Cómo puedo solicitar la constancia de posesión para acceder a los servicios públicos?
+    - Quiero saber el procedimiento para la constancia de posesión de un predio
+    - Solicitar constancia de posesión para acceder a servicios públicos
+    - Procedimiento para emitir constancia de posesión de un predio
+    - ¿Cómo acceder a los servicios públicos con la constancia de posesión?
+    - ¿Qué se necesita para obtener la constancia de posesión para servicios públicos?
+    - Emisión de constancia de posesión para efectos de servicios públicos
+    - Requisitos para la constancia de posesión y acceso a servicios básicos
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS QUE ES :
+- intent: constancia_posesion_servicios_basicos_que_es
+  examples: |
+    - ¿Qué es la constancia de posesión para servicios básicos?
+    - Explícame qué es la constancia de posesión
+    - ¿En qué consiste la constancia de posesión para servicios públicos?
+    - Definición de constancia de posesión
+    - ¿Qué significa la constancia de posesión para acceder a servicios básicos?
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS QUE NECESITO :
+- intent: constancia_posesion_servicios_basicos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener la constancia de posesión?
+    - Requisitos para la constancia de posesión para servicios básicos
+    - ¿Qué documentos se necesitan para la constancia de posesión?
+    - ¿Cuáles son los requisitos para obtener la constancia de posesión?
+    - Documentos necesarios para solicitar la constancia de posesión
+
+# >> CONSTANCIA POSESION SERVICIOS BASICOS CUANTO CUESTA :
+- intent: constancia_posesion_servicios_basicos_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta la constancia de posesión para servicios básicos?
+    - Costo de la constancia de posesión para servicios públicos
+    - ¿Qué tarifas se aplican para la constancia de posesión?
+    - ¿Cuánto se paga por la constancia de posesión?
+    - Tarifas y costos para la emisión de constancia de posesión
+    - ¿Cuánto cuesta la constancia de posesión para servicios públicos?
+    - ¿Cuánto se paga por la constancia de posesión para servicios básicos?
+
+# >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO :
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  examples: |
+    - Funcionamiento para edificaciones
+    - Licencia de funcionamiento para edificaciones
+    - Edificaciones calificadas con nivel de riesgo bajo
+
+# >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO QUE ES :
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO QUE NECESITO :
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> SERVICIO DE SALUD :
+- intent: servicio_de_salud
+  examples: |
+    - Licencia para servicio de salud
+    - Licencia de funcionamiento para edificaciones de servicio de salud
+
+# >> ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento
+    - Permiso para actividad comercial
+
+# >> MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural
+    - Autorización para uso de monumento histórico
+
+# >> LICENCIA FUNCIONAMIENTO EDIFICACION RIESGO BAJO CUANTO CUESTA :
+- intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo bajo
+
+# >> FORMALIZACION ITEM02 EDIFICACION RIESGO MEDIO :
+- intent: formalizacion_item02_edificacion_riesgo_medio
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo medio
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo medio
+    - Solicitud de licencia para edificios de riesgo medio
+    - Autorización de funcionamiento en edificaciones de riesgo medio
+    - Edificaciones calificadas con nivel de riesgo medio
+
+# >> FORMALIZACION ITEM02 RIESGO MEDIO QUE ES :
+- intent: formalizacion_item02_riesgo_medio_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo medio
+    - En qué consiste la licencia para edificaciones de riesgo medio
+    - Explicación sobre licencia de edificaciones de riesgo medio
+    - Cómo funciona la licencia para edificios de riesgo medio
+    - Qué cubre la licencia de riesgo medio en edificaciones
+
+# >> FORMALIZACION ITEM02 RIESGO MEDIO QUE NECESITO :
+- intent: formalizacion_item02_riesgo_medio_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo medio
+    - Requisitos para licencia de riesgo medio en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo medio
+    - Qué se necesita para permiso de riesgo medio en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo medio
+
+# >> FORMALIZACION ITEM02 SERVICIO DE SALUD :
+- intent: formalizacion_item02_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo medio
+    - Autorización para funcionamiento en edificaciones de salud de riesgo medio
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo medio
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo medio
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo medio
+
+# >> FORMALIZACION ITEM02 ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: formalizacion_item02_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo medio
+    - Permiso para actividad comercial en riesgo medio
+    - Autorización requerida para eventos en edificios de riesgo medio
+    - Actividades que requieren licencia de riesgo medio
+    - Se necesita autorización para eventos en riesgo medio
+
+# >> FORMALIZACION ITEM02 MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: formalizacion_item02_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo medio
+    - Autorización para uso de monumento histórico de riesgo medio
+    - Permiso para actividades en monumentos históricos de riesgo medio
+    - Actividad en patrimonio cultural de riesgo medio
+    - Uso de monumento en edificaciones de riesgo medio
+
+# >> FORMALIZACION ITEM02 RIESGO MEDIO CUANTO CUESTA :
+- intent: formalizacion_item02_riesgo_medio_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo medio
+    - Precio de licencia de funcionamiento en edificios de riesgo medio
+    - Tarifa para licencia de edificaciones de riesgo medio
+    - Cuál es el costo de una licencia para edificios de riesgo medio
+    - Precio de permiso para edificaciones calificadas en riesgo medio
+
+# >> FORMALIZACION ITEM03 EDIFICACION RIESGO ALTO :
+- intent: formalizacion_item03_edificacion_riesgo_alto
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo alto
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo alto
+    - Solicitud de licencia para edificios de riesgo alto
+    - Autorización de funcionamiento en edificaciones de riesgo alto
+    - Edificaciones calificadas con nivel de riesgo alto
+
+# >> FORMALIZACION ITEM03 RIESGO ALTO QUE ES :
+- intent: formalizacion_item03_riesgo_alto_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo alto
+    - En qué consiste la licencia para edificaciones de riesgo alto
+    - Explicación sobre licencia de edificaciones de riesgo alto
+    - Cómo funciona la licencia para edificios de riesgo alto
+    - Qué cubre la licencia de riesgo alto en edificaciones
+
+# >> FORMALIZACION ITEM03 RIESGO ALTO QUE NECESITO :
+- intent: formalizacion_item03_riesgo_alto_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo alto
+    - Requisitos para licencia de riesgo alto en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo alto
+    - Qué se necesita para permiso de riesgo alto en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo alto
+
+# >> FORMALIZACION ITEM03 SERVICIO DE SALUD :
+- intent: formalizacion_item03_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo alto
+    - Autorización para funcionamiento en edificaciones de salud de riesgo alto
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo alto
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo alto
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo alto
+
+# >> FORMALIZACION ITEM03 ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: formalizacion_item03_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo alto
+    - Permiso para actividad comercial en riesgo alto
+    - Autorización requerida para eventos en edificios de riesgo alto
+    - Actividades que requieren licencia de riesgo alto
+    - Se necesita autorización para eventos en riesgo alto
+
+# >> FORMALIZACION ITEM03 MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: formalizacion_item03_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo alto
+    - Autorización para uso de monumento histórico de riesgo alto
+    - Permiso para actividades en monumentos históricos de riesgo alto
+    - Actividad en patrimonio cultural de riesgo alto
+    - Uso de monumento en edificaciones de riesgo alto
+
+# >> FORMALIZACION ITEM03 RIESGO ALTO CUANTO CUESTA :
+- intent: formalizacion_item03_riesgo_alto_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo alto
+    - Precio de licencia de funcionamiento en edificios de riesgo alto
+    - Tarifa para licencia de edificaciones de riesgo alto
+    - Cuál es el costo de una licencia para edificios de riesgo alto
+    - Precio de permiso para edificaciones calificadas en riesgo alto
+
+# >> FORMALIZACION ITEM04 EDIFICACION RIESGO MUY ALTO :
+- intent: formalizacion_item04_edificacion_riesgo_muy_alto
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo muy alto
+    - Solicitud de licencia para edificios de riesgo muy alto
+    - Autorización de funcionamiento en edificaciones de riesgo muy alto
+    - Edificaciones calificadas con nivel de riesgo muy alto
+
+# >> FORMALIZACION ITEM04 RIESGO MUY ALTO QUE ES :
+- intent: formalizacion_item04_riesgo_muy_alto_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - En qué consiste la licencia para edificaciones de riesgo muy alto
+    - Explicación sobre licencia de edificaciones de riesgo muy alto
+    - Cómo funciona la licencia para edificios de riesgo muy alto
+    - Qué cubre la licencia de riesgo muy alto en edificaciones
+
+# >> FORMALIZACION ITEM04 RIESGO MUY ALTO QUE NECESITO :
+- intent: formalizacion_item04_riesgo_muy_alto_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para licencia de riesgo muy alto en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo muy alto
+    - Qué se necesita para permiso de riesgo muy alto en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM04 SERVICIO DE SALUD :
+- intent: formalizacion_item04_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo muy alto
+    - Autorización para funcionamiento en edificaciones de salud de riesgo muy alto
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo muy alto
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo muy alto
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo muy alto
+
+# >> FORMALIZACION ITEM04 ACTIVIDAD REQUIERE AUTORIZACION :
+- intent: formalizacion_item04_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo muy alto
+    - Permiso para actividad comercial en riesgo muy alto
+    - Autorización requerida para eventos en edificios de riesgo muy alto
+    - Actividades que requieren licencia de riesgo muy alto
+    - Se necesita autorización para eventos en riesgo muy alto
+
+# >> FORMALIZACION ITEM04 MONUMENTO DEL PATRIMONIO CULTURAL :
+- intent: formalizacion_item04_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo muy alto
+    - Autorización para uso de monumento histórico de riesgo muy alto
+    - Permiso para actividades en monumentos históricos de riesgo muy alto
+    - Actividad en patrimonio cultural de riesgo muy alto
+    - Uso de monumento en edificaciones de riesgo muy alto
+
+# >> FORMALIZACION ITEM04 RIESGO MUY ALTO CUANTO CUESTA :
+- intent: formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio de licencia de funcionamiento en edificios de riesgo muy alto
+    - Tarifa para licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de una licencia para edificios de riesgo muy alto
+    - Precio de permiso para edificaciones calificadas en riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento
+  examples: |
+    - Transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Cambio de nombre comercial en licencia de edificaciones de riesgo muy alto
+    - Solicitud de transferencia de licencia para edificios de riesgo muy alto
+    - Autorización de cambio de denominación en licencia de funcionamiento
+    - Proceso de transferencia de licencia en edificaciones de riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE ES :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_es
+  examples: |
+    - Qué es la transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - En qué consiste el cambio de nombre comercial en la licencia de funcionamiento
+    - Explicación sobre transferencia de licencia para edificaciones de riesgo muy alto
+    - Cómo funciona la transferencia de licencia para edificios de riesgo muy alto
+    - Qué implica cambiar la denominación comercial en la licencia de riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO QUE NECESITO :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_que_necesito
+  examples: |
+    - Qué necesito para transferir la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para cambiar el nombre comercial en licencia de edificaciones de riesgo muy alto
+    - Documentación para transferencia de licencia de funcionamiento
+    - Qué se necesita para cambio de denominación en licencia de riesgo muy alto
+    - Requisitos para transferencia de licencia en edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM05 TRANSFERENCIA LICENCIA FUNCIONAMIENTO CUANTO CUESTA :
+- intent: formalizacion_item05_transferencia_licencia_funcionamiento_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la transferencia de licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio de cambio de nombre comercial en licencia para edificios de riesgo muy alto
+    - Tarifa para transferencia de licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de cambiar la denominación comercial en la licencia
+    - Precio de transferencia de permiso para edificaciones calificadas en riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro
+  examples: |
+    - Licencia de funcionamiento para cambio de giro en edificaciones de riesgo muy alto
+    - Solicitud de licencia para cambio de giro en edificios de riesgo muy alto
+    - Autorización para cambio de giro en edificaciones de riesgo muy alto
+    - Cambio de giro en licencia de funcionamiento para edificaciones de alto riesgo
+    - Cómo gestionar el cambio de giro en licencia de edificaciones de riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO QUE ES :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para cambio de giro en edificaciones de riesgo muy alto
+    - En qué consiste el cambio de giro en la licencia de funcionamiento
+    - Explicación sobre cambio de giro en licencia de edificaciones de riesgo muy alto
+    - Cómo se realiza el cambio de giro en una licencia para edificios de riesgo muy alto
+    - Qué implica el cambio de giro en la licencia de riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO QUE NECESITO :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_que_necesito
+  examples: |
+    - Qué necesito para cambiar el giro en la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para cambiar el giro en la licencia de edificaciones de riesgo muy alto
+    - Documentación necesaria para cambio de giro en licencia de funcionamiento
+    - Qué se requiere para cambio de giro en licencia de riesgo muy alto
+    - Requisitos para modificar el giro en licencia de edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM06 LICENCIA FUNCIONAMIENTO CAMBIO GIRO CUANTO CUESTA :
+- intent: formalizacion_item06_licencia_funcionamiento_cambio_giro_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el cambio de giro en la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio del cambio de giro en licencia para edificios de riesgo muy alto
+    - Tarifa para modificar el giro en la licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de cambiar el giro en la licencia
+    - Precio por cambio de giro en edificaciones calificadas como riesgo muy alto
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche
+  examples: |
+    - Autorización para ubicación de afiches publicitarios en bienes privados
+    - Permiso para colocar publicidad exterior en planchetas en propiedad privada
+    - Solicitud de autorización para afiches de publicidad exterior
+    - Autorización de afiches publicitarios en dominio privado
+    - Colocación de planchetas publicitarias en bienes de dominio privado
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE ES :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_es
+  examples: |
+    - Qué es la autorización para publicidad exterior en bienes privados
+    - En qué consiste la autorización de publicidad exterior en afiches
+    - Explicación sobre permiso para planchetas publicitarias en dominio privado
+    - Cómo funciona la autorización de afiches publicitarios en propiedad privada
+    - Qué cubre la autorización de publicidad exterior en bienes privados
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE QUE NECESITO :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_que_necesito
+  examples: |
+    - Qué necesito para la autorización de publicidad exterior en bienes privados
+    - Requisitos para colocar afiches publicitarios en dominio privado
+    - Documentación para autorización de planchetas publicitarias en propiedad privada
+    - Qué se necesita para permiso de afiches publicitarios en bienes de dominio privado
+    - Requisitos para autorización de publicidad exterior tipo afiche en bienes privados
+
+# >> FORMALIZACION ITEM07 AUTORIZACION PUBLICIDAD EXTERIOR AFICHE CUANTO CUESTA :
+- intent: formalizacion_item07_autorizacion_publicidad_exterior_afiche_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la autorización para publicidad exterior en bienes privados
+    - Precio de permiso para colocar afiches en dominio privado
+    - Tarifa para autorización de planchetas publicitarias en propiedad privada
+    - Cuál es el costo de una autorización para afiches publicitarios en bienes privados
+    - Precio para permiso de publicidad exterior tipo afiche en bienes de dominio privado
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras
+  examples: |
+    - Autorización para ubicar letras recortadas en bienes privados
+    - Permiso para colocar letreros en propiedades privadas
+    - Solicitud de autorización para toldos publicitarios en bienes privados
+    - Autorización de placas publicitarias en dominio privado
+    - Colocación de elementos publicitarios (letrero, placa, toldo) en bienes de dominio privado
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE ES :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_es
+  examples: |
+    - Qué es la autorización para letras recortadas en bienes privados
+    - En qué consiste la autorización de letreros publicitarios en propiedades privadas
+    - Explicación sobre permiso para toldos en dominio privado
+    - Cómo funciona la autorización de placas publicitarias en propiedad privada
+    - Qué cubre la autorización de elementos publicitarios en bienes de dominio privado
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS QUE NECESITO :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_que_necesito
+  examples: |
+    - Qué necesito para la autorización de letreros en bienes privados
+    - Requisitos para colocar letras recortadas en dominio privado
+    - Documentación para autorización de toldos publicitarios en propiedad privada
+    - Qué se necesita para permiso de placas publicitarias en bienes de dominio privado
+    - Requisitos para autorización de elementos de publicidad exterior en bienes privados
+
+# >> FORMALIZACION ITEM08 AUTORIZACION PUBLICIDAD EXTERIOR LETRAS CUANTO CUESTA :
+- intent: formalizacion_item08_autorizacion_publicidad_exterior_letras_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la autorización para letras recortadas en bienes privados
+    - Precio de permiso para colocar letreros en dominio privado
+    - Tarifa para autorización de toldos publicitarios en propiedad privada
+    - Cuál es el costo de una autorización para placas publicitarias en bienes privados
+    - Precio para permiso de publicidad exterior tipo letrero en bienes de dominio privado
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO :
+- intent: formalizacion_item09_duplicado_certificado
+  examples: |
+    - Solicitud de duplicado del certificado de licencia de funcionamiento
+    - Obtener duplicado de licencia de funcionamiento
+    - Reposición de certificado de licencia de funcionamiento
+    - Duplicado de mi licencia de funcionamiento
+    - Cómo pedir un duplicado del certificado de funcionamiento
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO QUE ES :
+- intent: formalizacion_item09_duplicado_certificado_que_es
+  examples: |
+    - Qué es el duplicado del certificado de licencia de funcionamiento
+    - Para qué sirve un duplicado de licencia de funcionamiento
+    - Explicación sobre duplicado de certificado de funcionamiento
+    - En qué consiste la reposición de licencia de funcionamiento
+    - Qué cubre el duplicado de certificado de funcionamiento
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO QUE NECESITO :
+- intent: formalizacion_item09_duplicado_certificado_que_necesito
+  examples: |
+    - Qué necesito para solicitar un duplicado de la licencia de funcionamiento
+    - Requisitos para duplicado del certificado de funcionamiento
+    - Documentación para obtener duplicado de licencia de funcionamiento
+    - Qué se necesita para la reposición de la licencia de funcionamiento
+    - Requisitos para pedir un duplicado del certificado de funcionamiento
+
+# >> FORMALIZACION ITEM09 DUPLICADO CERTIFICADO CUANTO CUESTA :
+- intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el duplicado del certificado de licencia de funcionamiento
+    - Precio para obtener duplicado de licencia de funcionamiento
+    - Tarifa para reposición de licencia de funcionamiento
+    - Cuál es el costo de un duplicado de certificado de funcionamiento
+    - Precio para duplicado de licencia de funcionamiento
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION :
+- intent: formalizacion_item10_duplicado_resolucion
+  examples: |
+    - Solicitud de duplicado de la resolución de autorización para publicidad exterior
+    - Obtener duplicado de la resolución de autorización para ubicación de elemento publicitario
+    - Reposición de resolución de autorización para publicidad exterior
+    - Duplicado de mi resolución de autorización para publicidad exterior
+    - Cómo solicitar un duplicado de la resolución de autorización para publicidad exterior
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION QUE ES :
+- intent: formalizacion_item10_duplicado_resolucion_que_es
+  examples: |
+    - Qué es el duplicado de la resolución de autorización para publicidad exterior
+    - Para qué sirve un duplicado de la resolución de autorización para publicidad exterior
+    - Explicación sobre duplicado de resolución de autorización para publicidad exterior
+    - En qué consiste la reposición de la resolución de autorización para publicidad exterior
+    - Qué cubre el duplicado de la resolución de autorización para publicidad exterior
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION QUE NECESITO :
+- intent: formalizacion_item10_duplicado_resolucion_que_necesito
+  examples: |
+    - Qué necesito para solicitar un duplicado de la resolución de autorización para publicidad exterior
+    - Requisitos para duplicado de la resolución de autorización de publicidad exterior
+    - Documentación para obtener duplicado de resolución de autorización de publicidad exterior
+    - Qué se requiere para la reposición de resolución de autorización para publicidad exterior
+    - Requisitos para pedir un duplicado de la resolución de autorización para publicidad exterior
+
+# >> FORMALIZACION ITEM10 DUPLICADO RESOLUCION CUANTO CUESTA :
+- intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta el duplicado de la resolución de autorización para publicidad exterior
+    - Precio para obtener duplicado de resolución de autorización para publicidad exterior
+    - Tarifa para reposición de la resolución de autorización para publicidad exterior
+    - Cuál es el costo de un duplicado de resolución de autorización para publicidad exterior
+    - Precio para duplicado de resolución de autorización para publicidad exterior
+
+# >> GESTION ITEM01 :
+- intent: gestion_item01
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Inspección Técnica Seguridad Riesgo Bajo
+    - Inspección Técnica Riesgo Bajo
+
+# >> GESTION ITEM01 CONSULTA :
+- intent: gestion_item01_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué es la Inspección Técnica Seguridad Riesgo Bajo
+    - En que consiste la Inspección Técnica Seguridad Riesgo Bajo
+
+# >> GESTION ITEM01 NECESIDAD :
+- intent: gestion_item01_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Bajo
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Bajo
+
+# >> GESTION ITEM01 COSTO :
+- intent: gestion_item01_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Bajo
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Bajo
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Bajo
+
+# >> GESTION ITEM02 :
+- intent: gestion_item02
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Bajo
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Renovación de Inspección Técnica Riesgo Bajo
+    - Renovación Riesgo Bajo
+
+# >> GESTION ITEM02 CONSULTA :
+- intent: gestion_item02_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - Qué es la Renovación de Inspección Técnica Riesgo Bajo
+    - Qué es la Renovación Riesgo Bajo
+
+# >> GESTION ITEM02 NECESIDAD :
+- intent: gestion_item02_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Bajo
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Bajo
+
+# >> GESTION ITEM02 COSTO :
+- intent: gestion_item02_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Bajo
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Bajo
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Bajo
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Bajo
+
+# >> GESTION ITEM03 :
+- intent: gestion_item03
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Inspección Técnica Seguridad Riesgo Medio
+    - Inspección Técnica Riesgo Medio
+
+# >> GESTION ITEM03 CONSULTA :
+- intent: gestion_item03_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué es la Inspección Técnica Seguridad Riesgo Medio
+    - En que consiste la Inspección Técnica Seguridad Riesgo Medio
+
+# >> GESTION ITEM03 NECESIDAD :
+- intent: gestion_item03_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Medio
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Medio
+
+# >> GESTION ITEM03 COSTO :
+- intent: gestion_item03_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Medio
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Medio
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Medio
+
+# >> GESTION ITEM04 :
+- intent: gestion_item04
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Renovación de Inspección Técnica Riesgo Medio
+    - Renovación Riesgo Medio
+
+# >> GESTION ITEM04 CONSULTA :
+- intent: gestion_item04_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - Qué es la Renovación de Inspección Técnica Riesgo Medio
+    - Qué es la Renovación Riesgo Medio
+
+# >> GESTION ITEM04 NECESIDAD :
+- intent: gestion_item04_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Medio
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Medio
+
+# >> GESTION ITEM04 COSTO :
+- intent: gestion_item04_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Medio
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Medio
+
+# >> GESTION ITEM05 :
+- intent: gestion_item05
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Inspección Técnica Seguridad Riesgo Alto
+    - Inspección Técnica Riesgo Alto
+
+# >> GESTION ITEM05 CONSULTA :
+- intent: gestion_item05_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué es la Inspección Técnica Seguridad Riesgo Alto
+    - En que consiste la Inspección Técnica Seguridad Riesgo Alto
+
+# >> GESTION ITEM05 NECESIDAD :
+- intent: gestion_item05_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Alto
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Alto
+
+# >> GESTION ITEM05 COSTO :
+- intent: gestion_item05_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Alto
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Alto
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Alto
+
+# >> GESTION ITEM06 :
+- intent: gestion_item06
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Renovación de Inspección Técnica Riesgo Alto
+    - Renovación Riesgo Alto
+
+# >> GESTION ITEM06 CONSULTA :
+- intent: gestion_item06_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - Qué es la Renovación de Inspección Técnica Riesgo Alto
+    - Qué es la Renovación Riesgo Alto
+
+# >> GESTION ITEM06 NECESIDAD :
+- intent: gestion_item06_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Alto
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Alto
+
+# >> GESTION ITEM06 COSTO :
+- intent: gestion_item06_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Alto
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Alto
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Alto
+
+# >> GESTION ITEM07 :
+- intent: gestion_item07
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Inspección Técnica Seguridad Riesgo Muy Alto
+    - Inspección Técnica Riesgo Muy Alto
+
+# >> GESTION ITEM07 CONSULTA :
+- intent: gestion_item07_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Qué es la Inspección Técnica Seguridad Riesgo Muy Alto
+    - En que consiste la Inspección Técnica Seguridad Riesgo Muy Alto
+
+# >> GESTION ITEM07 NECESIDAD :
+- intent: gestion_item07_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Muy Alto
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Muy Alto
+
+# >> GESTION ITEM07 COSTO :
+- intent: gestion_item07_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Muy Alto
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Muy Alto
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Muy Alto
+
+# >> GESTION ITEM08 :
+- intent: gestion_item08
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Muy Alto
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Renovación de Inspección Técnica Riesgo Muy Alto
+    - Renovación Riesgo Muy Alto
+
+# >> GESTION ITEM08 CONSULTA :
+- intent: gestion_item08_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Muy Alto
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Muy Alto
+    - Qué es la Renovación de Inspección Técnica Riesgo Muy Alto
+    - Qué es la Renovación Riesgo Muy Alto
+
+# >> GESTION ITEM08 NECESIDAD :
+- intent: gestion_item08_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Muy Alto
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Muy Alto
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Muy Alto
+
+# >> GESTION ITEM08 COSTO :
+- intent: gestion_item08_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Muy Alto
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Muy Alto
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Muy Alto
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Muy Alto
+
+# >> GESTION ITEM09 :
+- intent: gestion_item09
+  examples: |
+    - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos (ECSE) con una concurrencia de hasta 3,000 personas
+    - Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Evaluación de Condiciones de Seguridad Espectáculos
+
+# >> GESTION ITEM09 CONSULTA :
+- intent: gestion_item09_consulta
+  examples: |
+    - Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Qué es la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - En que consiste la Evaluación de Condiciones de Seguridad en espectáculos públicos
+
+# >> GESTION ITEM09 NECESIDAD :
+- intent: gestion_item09_necesidad
+  examples: |
+    - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Qué necesito para la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Qué requisitos piden para la Evaluación de Condiciones de Seguridad en espectáculos públicos
+
+# >> GESTION ITEM09 COSTO :
+- intent: gestion_item09_costo
+  examples: |
+    - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos públicos deportivos y no deportivos
+    - Cuánto cuesta la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Cuánto debo pagar por la Evaluación de Condiciones de Seguridad en espectáculos públicos
+    - Cuánto es el monto de la Evaluación de Condiciones de Seguridad en espectáculos públicos
+
+# >> GESTION ITEM10 :
+- intent: gestion_item10
+  examples: |
+    - Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Duplicado del Certificado de Inspección en edificaciones
+    - Duplicado del Certificado Edificaciones
+
+# >> GESTION ITEM10 CONSULTA :
+- intent: gestion_item10_consulta
+  examples: |
+    - Qué es el Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Qué es el Duplicado del Certificado de Inspección en edificaciones
+    - En que consiste el Duplicado del Certificado de Inspección en edificaciones
+
+# >> GESTION ITEM10 NECESIDAD :
+- intent: gestion_item10_necesidad
+  examples: |
+    - Qué necesito para el Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Qué necesito para el Duplicado del Certificado de Inspección en edificaciones
+    - Qué requisitos piden para el Duplicado del Certificado de Inspección en edificaciones
+
+# >> GESTION ITEM10 COSTO :
+- intent: gestion_item10_costo
+  examples: |
+    - Cuánto cuesta el Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones
+    - Cuánto cuesta el Duplicado del Certificado de Inspección en edificaciones
+    - Cuánto debo pagar por el Duplicado del Certificado de Inspección en edificaciones
+    - Cuánto es el monto del Duplicado del Certificado de Inspección en edificaciones
+
+# >> OBRAS ITEM01 :
+- intent: obras_item01
+  examples: |
+    - Certificado de Parámetros Urbanísticos y Edificatorios
+    - Certificado de Parámetros Urbanos y Edificios
+    - Certificado de Parámetros Urbanos
+    - Certificado de Parámetros
+
+# >> OBRAS ITEM01 CONSULTA :
+- intent: obras_item01_consulta
+  examples: |
+    - Qué es el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Qué es el Certificado de Parámetros Urbanos
+    - En que consiste el Certificado de Parámetros Urbanos
+
+# >> OBRAS ITEM01 NECESIDAD :
+- intent: obras_item01_necesidad
+  examples: |
+    - Qué necesito para el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Qué necesito para el Certificado de Parámetros
+    - Qué requisitos piden para el Certificado de Parámetros Urbanísticos y Edificatorios
+
+# >> OBRAS ITEM01 COSTO :
+- intent: obras_item01_costo
+  examples: |
+    - Cuánto cuesta el Certificado de Parámetros Urbanísticos y Edificatorios
+    - Cuánto cuesta el Certificado de Parámetros
+    - Cuánto debo pagar por el Certificado de Parámetros
+    - Cuánto es el monto de el Certificado de Parámetros
+
+# >> OBRAS ITEM02 :
+- intent: obras_item02
+  examples: |
+    - Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas (Para predios urbanos)
+    - Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Visación de Planos
+
+# >> OBRAS ITEM02 CONSULTA :
+- intent: obras_item02_consulta
+  examples: |
+    - Qué es la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Qué es la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - En que consiste la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> OBRAS ITEM02 NECESIDAD :
+- intent: obras_item02_necesidad
+  examples: |
+    - Qué necesito para la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Qué necesito para la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Qué requisitos piden para la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> OBRAS ITEM02 COSTO :
+- intent: obras_item02_costo
+  examples: |
+    - Cuánto cuesta la Visación de Planos para Trámites de Prescripción Adquisitiva de Dominio, Título Supletorio y Rectificación de Linderos y Áreas
+    - Cuánto cuesta la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+    - Cuánto debo pagar por la Visación de Planos para Trámites de Prescripción, Título y Rectificacióno
+    - Cuánto es el monto de la Visación de Planos para Trámites de Prescripción, Título y Rectificación
+
+# >> OBRAS ITEM03 :
+- intent: obras_item03
+  examples: |
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos, siempre que constituya la única edificación en el lote
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos
+    - Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Licencia de Edificación Aprobación Construcción
+
+# >> OBRAS ITEM03 CONSULTA :
+- intent: obras_item03_consulta
+  examples: |
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Construcción de una Vivienda Unifamiliar de hasta 120 m2 construidos
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - En que consiste la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> OBRAS ITEM03 NECESIDAD :
+- intent: obras_item03_necesidad
+  examples: |
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Qué requisitos piden para la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> OBRAS ITEM03 COSTO :
+- intent: obras_item03_costo
+  examples: |
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación Automática - Construcción de una Vivienda Unifamiliar
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Cuánto debo pagar por la Licencia de Edificación Modalidad a: Aprobación - Construcción
+    - Cuánto es el monto de la Licencia de Edificación Modalidad a: Aprobación - Construcción
+
+# >> OBRAS ITEM04 :
+- intent: obras_item04
+  examples: |
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres pisos que no cuenten con semisótanos y sótanos
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Licencia de Edificación Aprobación Demolición
+
+# >> OBRAS ITEM04 CONSULTA :
+- intent: obras_item04_consulta
+  examples: |
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - En que consiste la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> OBRAS ITEM04 NECESIDAD :
+- intent: obras_item04_necesidad
+  examples: |
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Qué requisitos piden para la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> OBRAS ITEM04 COSTO :
+- intent: obras_item04_costo
+  examples: |
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Cuánto debo pagar por la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Cuánto es el monto de la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> ORIENTACION ITEM01 :
+- intent: orientacion_item01
+  examples: |
+    - Inscripción por Sucesión Indivisa
+    - Inscripción Sucesión Indivisa
+    - Sucesión Indivisa
+
+# >> ORIENTACION ITEM01 CONSULTA :
+- intent: orientacion_item01_consulta
+  examples: |
+    - Qué es la Inscripción por Sucesión Indivisa
+    - Qué es la Sucesión Indivisa
+    - En que consiste la Inscripción por Sucesión Indivisa
+
+# >> ORIENTACION ITEM01 NECESIDAD :
+- intent: orientacion_item01_necesidad
+  examples: |
+    - Qué necesito para la Inscripción por Sucesión Indivisa
+    - Qué necesito para la Sucesión Indivisa
+    - Qué requisitos piden para la Inscripción por Sucesión Indivisa
+
+# >> ORIENTACION ITEM01 COSTO :
+- intent: orientacion_item01_costo
+  examples: |
+    - Cuánto cuesta la Inscripción por Sucesión Indivisa
+    - Cuánto cuesta la Sucesión Indivisa
+    - Cuánto debo pagar por la Inscripción por Sucesión Indivisa
+    - Cuánto es el monto de la Inscripción por Sucesión Indivisa
+
+# >> ORIENTACION ITEM02 :
+- intent: orientacion_item02
+  examples: |
+    - Inscripción por Sucesión Intestada
+    - Inscripción Sucesión Intestada
+    - Sucesión Intestada
+
+# >> ORIENTACION ITEM02 CONSULTA :
+- intent: orientacion_item02_consulta
+  examples: |
+    - Qué es la Inscripción por Sucesión Intestada
+    - Qué es la Sucesión Intestada
+    - En que consiste la Inscripción por Sucesión Intestada
+
+# >> ORIENTACION ITEM02 NECESIDAD :
+- intent: orientacion_item02_necesidad
+  examples: |
+    - Qué necesito para la Inscripción por Sucesión Intestada
+    - Qué necesito para la Sucesión Intestada
+    - Qué requisitos piden para la Inscripción por Sucesión Intestada
+
+# >> ORIENTACION ITEM02 COSTO :
+- intent: orientacion_item02_costo
+  examples: |
+    - Cuánto cuesta la Inscripción por Sucesión Intestada
+    - Cuánto cuesta la Sucesión Intestada
+    - Cuánto debo pagar por la Inscripción por Sucesión Intestada
+    - Cuánto es el monto de la Inscripción por Sucesión Intestada
+
+# >> ORIENTACION ITEM03 :
+- intent: orientacion_item03
+  examples: |
+    - Inscripción por Compra-Venta
+    - Inscripción por Compra Venta
+    - Compra Venta
+
+# >> ORIENTACION ITEM03 CONSULTA :
+- intent: orientacion_item03_consulta
+  examples: |
+    - Qué es la Inscripción por Compra-Venta
+    - Qué es la Compra Venta
+    - En que consiste la Inscripción por Compra-Venta
+
+# >> ORIENTACION ITEM03 NECESIDAD :
+- intent: orientacion_item03_necesidad
+  examples: |
+    - Qué necesito para la Inscripción por Compra-Venta
+    - Qué necesito para la Compra Venta
+    - Qué requisitos piden para la Inscripción por Compra-Venta
+
+# >> ORIENTACION ITEM03 COSTO :
+- intent: orientacion_item03_costo
+  examples: |
+    - Cuánto cuesta la Inscripción por Compra-Venta
+    - Cuánto cuesta la Compra Venta
+    - Cuánto debo pagar por la Inscripción por Compra-Venta
+    - Cuánto es el monto de la Inscripción por Compra-Venta
+
+# >> ORIENTACION ITEM04 :
+- intent: orientacion_item04
+  examples: |
+    - Inscripción de una Independización o Subdivisión de Lotes
+    - Inscripción de una Independización o Subdivisión
+    - Independización o Subdivisión de Lotes
+
+# >> ORIENTACION ITEM04 CONSULTA :
+- intent: orientacion_item04_consulta
+  examples: |
+    - Qué es la Inscripción de una Independización o Subdivisión de Lotes
+    - Qué es la Independización o Subdivisión de Lotes
+    - En que consiste la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> ORIENTACION ITEM04 NECESIDAD :
+- intent: orientacion_item04_necesidad
+  examples: |
+    - Qué necesito para la Inscripción de una Independización o Subdivisión de Lotes
+    - Qué necesito para la Independización o Subdivisión de Lotes
+    - Qué requisitos piden para la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> ORIENTACION ITEM04 COSTO :
+- intent: orientacion_item04_costo
+  examples: |
+    - Cuánto cuesta la Inscripción de una Independización o Subdivisión de Lotes
+    - Cuánto cuesta la Independización o Subdivisión de Lotes
+    - Cuánto debo pagar por la Inscripción de una Independización o Subdivisión de Lotes
+    - Cuánto es el monto de la Inscripción de una Independización o Subdivisión de Lotes
+
+# >> REGISTRO ITEM01 :
+- intent: registro_item01
+  examples: |
+    - Matrimonio Civil
+    - Matrimonio
+
+# >> REGISTRO ITEM01 CONSULTA :
+- intent: registro_item01_consulta
+  examples: |
+    - Qué es el Matrimonio Civil
+    - Qué es el Matrimonio
+    - En que consiste el Matrimonio Civil
+
+# >> REGISTRO ITEM01 NECESIDAD :
+- intent: registro_item01_necesidad
+  examples: |
+    - Qué necesito para el Matrimonio Civil
+    - Qué necesito para el Matrimonio
+    - Qué necesidades piden para el Matrimonio Civil
+
+# >> REGISTRO ITEM01 COSTO :
+- intent: registro_item01_costo
+  examples: |
+    - Cuánto cuesta el Matrimonio Civil
+    - Cuánto cuesta el Matrimonio
+    - Cuánto debo pagar por el Matrimonio Civil
+    - Cuánto es el monto del Matrimonio Civil
+
+# >> REGISTRO ITEM01 REQUISITOS :
+- intent: registro_item01_requisitos
+  examples: |
+    - Qué requisitos adicionales piden para el Matrimonio Civil
+    - Qué requisitos adicionales para el Matrimonio Civil
+    - Qué requisitos adicionales piden para el matrimonio
+    - Piden algo adicional para el matrimonio
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 01 :
+- intent: registro_item01_subnecesidad_01
+  examples: |
+    - Qué requisitos adicionales piden para los divorciados
+    - Que requisitos piden para los divorciados
+    - Que más piden para los divorciados
+    - Que requisitos necesitan los divorciados
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 02 :
+- intent: registro_item01_subnecesidad_02
+  examples: |
+    - Qué requisitos adicionales piden para los viudos
+    - Que requisitos piden para los viudos
+    - Que más piden para los viudos
+    - Que requisitos necesitan los viudos
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 03 :
+- intent: registro_item01_subnecesidad_03
+  examples: |
+    - Qué requisitos adicionales piden para los extranjeros
+    - Que requisitos piden para los extranjeros
+    - Que más piden para los extranjeros
+    - Que requisitos necesitan los extranjeros
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 04 :
+- intent: registro_item01_subnecesidad_04
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios por poder
+    - Que requisitos piden para matrimonios por poder
+    - Que más piden para matrimonios por poder
+    - Que requisitos necesitan los matrimonios por poder
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 05 :
+- intent: registro_item01_subnecesidad_05
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios por parentescos entre si
+    - Que requisitos piden para matrimonios por parentescos
+    - Que más piden para matrimonios por parantescos
+    - Que requisitos necesitan los matrimonios por parantescos
+
+# >> REGISTRO ITEM01 SUBNECESIDAD 06 :
+- intent: registro_item01_subnecesidad_06
+  examples: |
+    - Qué requisitos adicionales piden para matrimonios con personas con discapacidad
+    - Que requisitos piden para matrimonios para discapacitados
+    - Que más piden para matrimonios para discapacitados
+    - Que requisitos necesitan los matrimonios para discapacitados
+
+# >> REGISTRO ITEM02 :
+- intent: registro_item02
+  examples: |
+    - Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM02 CONSULTA :
+- intent: registro_item02_consulta
+  examples: |
+    - Qué es la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Qué es la Publicación de Edicto Matrimonial
+    - En que consiste la Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM02 NECESIDAD :
+- intent: registro_item02_necesidad
+  examples: |
+    - Qué necesito para la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Qué necesito para la Publicación de Edicto Matrimonial
+    - Qué requisitos piden para la Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM02 COSTO :
+- intent: registro_item02_costo
+  examples: |
+    - Cuánto cuesta la Publicación de Edicto Matrimonial tramitado en otros distritos
+    - Cuánto cuesta la Publicación de Edicto Matrimonial
+    - Cuánto debo pagar por la Publicación de Edicto Matrimonial
+    - Cuánto es el monto de la Publicación de Edicto Matrimonial
+
+# >> REGISTRO ITEM03 :
+- intent: registro_item03
+  examples: |
+    - Reprogramación de fecha y hora de Ceremonia Matrimonial
+    - Reprogramación de Ceremonia Matrimonial
+    - Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM03 CONSULTA :
+- intent: registro_item03_consulta
+  examples: |
+    - Qué es la Reprogramación de Ceremonia Matrimonial
+    - Qué es la Reprogramación de Matrimonio
+    - En que consiste la Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM03 NECESIDAD :
+- intent: registro_item03_necesidad
+  examples: |
+    - Qué necesito para la Reprogramación de Ceremonia Matrimonial
+    - Qué necesito para la Reprogramación de Matrimonio
+    - Qué requisitos piden para la Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM03 COSTO :
+- intent: registro_item03_costo
+  examples: |
+    - Cuánto cuesta la Reprogramación de Ceremonia Matrimonial
+    - Cuánto cuesta la Reprogramación de Matrimonio
+    - Cuánto debo pagar por la Reprogramación de Matrimonio
+    - Cuánto es el monto de la Reprogramación de Matrimonio
+
+# >> REGISTRO ITEM04 :
+- intent: registro_item04
+  examples: |
+    - Separación Convencional y Divorcio Ulterior: Separación Convencional
+    - Separación Convencional y Divorcio Ulterior
+    - Separación Convencional
+    - Divorcio Ulterior
+    - Separación y Divorcio
+
+# >> REGISTRO ITEM04 CONSULTA :
+- intent: registro_item04_consulta
+  examples: |
+    - Qué es la Separación Convencional y Divorcio Ulterior
+    - Qué es la Separación Convencional
+    - Qué es el Divorcio Ulterior
+    - En que consiste la Separación Convencional y Divorcio Ulterior
+
+# >> REGISTRO ITEM04 NECESIDAD :
+- intent: registro_item04_necesidad
+  examples: |
+    - Qué necesito para la Separación Convencional y Divorcio Ulterior
+    - Qué necesito para la Separación y Divorcio
+    - Qué necesito para la Separación Convencional
+    - Qué necesito para el Divorcio Ulterior
+    - Qué requisitos piden para la Separación Convencional y Divorcio Ulterior
+
+# >> REGISTRO ITEM04 COSTO :
+- intent: registro_item04_costo
+  examples: |
+    - Cuánto cuesta la Separación Convencional y Divorcio Ulterior
+    - Cuánto cuesta la Separación y Divorcio
+    - Cuánto cuesta la Separación Convencional
+    - Cuánto cuesta el Divorcio Ulterior
+    - Cuánto debo pagar por la Separación Convencional y Divorcio Ulterior
+    - Cuánto es el monto de la Separación Convencional y Divorcio Ulterior
+
+# >> REGISTRO ITEM04 DOCUMENTOS :
+- intent: registro_item04_documentos
+  examples: |
+    - Qué documentos necesarios para casos especiales tiene la Separación Convencional y Divorcio Ulterior
+    - Qué documentos necesito para casos especiales de Separación y Divorcio
+    - Para casos especiales de Separación y Divorcio que necesito
+    - Que necesito en separación para casos especiales
+    - Que necesito en divorcio para casos especiales
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 01 :
+- intent: registro_item04_subnecesidad_01
+  examples: |
+    - Qué documentos necesarios necesito en caso de no tener hijos
+    - Que documentos son necesarios en caso de no tener hijos
+    - Que documentos necesito si no tengo hijos
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 02 :
+- intent: registro_item04_subnecesidad_02
+  examples: |
+    - Qué documentos necesarios necesito en caso de tener hijos menores
+    - Que documentos son necesarios en caso de tener hijos menores
+    - Que documentos necesito si tengo hijos menores
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 03 :
+- intent: registro_item04_subnecesidad_03
+  examples: |
+    - Qué documentos necesarios necesito en caso de tener hijos mayores discapacitados
+    - Que documentos son necesarios en caso de tener hijos mayores discapacitados
+    - Que documentos necesito si no tengo hijos mayores discapacitados
+    - Que documentos necesito si no tengo hijos mayores con discapacidad
+
+# >> REGISTRO ITEM04 SUBNECESIDAD 04 :
+- intent: registro_item04_subnecesidad_04
+  examples: |
+    - Qué documentos necesarios necesito en caso el requisito sea relacionado con el patrimonio
+    - Que documentos son necesarios en caso sea relacionado con el patrimonio
+    - Que documentos necesito si es relacionado con el patrimonio
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS :
+- intent: carnet_sanidad_no_manipular_alimentos
+  examples: |
+    - ¿Cómo puedo solicitar el carnet de sanidad para no manipular alimentos?
+    - Quiero saber el procedimiento para obtener el carnet de sanidad
+    - Solicitar carnet de sanidad para no manipular alimentos
+    - Procedimiento para emitir carnet de sanidad para no manipular alimentos
+    - ¿Cómo acceder a los servicios públicos con el carnet de sanidad?
+    - ¿Qué se necesita para obtener el carnet de sanidad para no manipular alimentos?
+    - Emisión de carnet de sanidad para no manipular alimentos
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE ES :
+- intent: carnet_sanidad_no_manipular_alimentos_que_es
+  examples: |
+    - ¿Qué es el carnet de sanidad para no manipular alimentos?
+    - Explícame qué es el carnet de sanidad para no manipular alimentos
+    - ¿En qué consiste el carnet de sanidad para no manipular alimentos?
+    - Definición de carnet de sanidad para no manipular alimentos
+    - ¿Qué significa el carnet de sanidad para no manipular alimentos?
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS QUE NECESITO :
+- intent: carnet_sanidad_no_manipular_alimentos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el carnet de sanidad para no manipular alimentos?
+    - Requisitos para el carnet de sanidad para no manipular alimentos
+    - ¿Qué documentos se necesitan para el carnet de sanidad para no manipular alimentos?
+    - ¿Cuáles son los requisitos para obtener el carnet de sanidad para no manipular alimentos?
+    - Documentos necesarios para solicitar el carnet de sanidad para no manipular alimentos
+
+# >> CARNET SANIDAD NO MANIPULAR ALIMENTOS CUANTO CUESTA :
+- intent: carnet_sanidad_no_manipular_alimentos_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
+    - Costo del carnet de sanidad para no manipular alimentos
+    - ¿Qué tarifas se aplican para el carnet de sanidad para no manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
+    - Tarifas y costos para la emisión de carnet de sanidad para no manipular alimentos
+    - ¿Cuánto cuesta el carnet de sanidad para no manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para no manipular alimentos?
+
+# >> CARNET SANIDAD MANIPULACION ALIMENTOS :
+- intent: carnet_sanidad_manipulacion_alimentos
+  examples: |
+    - ¿Cómo puedo solicitar el carnet de sanidad para manipular alimentos?
+    - Quiero saber el procedimiento para obtener el carnet de sanidad para manipular alimentos
+    - Solicitar carnet de sanidad para manipular alimentos
+    - Procedimiento para emitir carnet de sanidad para manipular alimentos
+    - ¿Cómo acceder a los servicios públicos con el carnet de sanidad para manipular alimentos?
+    - ¿Qué se necesita para obtener el carnet de sanidad para manipular alimentos?
+    - Emisión de carnet de sanidad para manipular alimentos
+
+# >> CARNET SANIDAD MANIPULAR ALIMENTOS QUE ES :
+- intent: carnet_sanidad_manipular_alimentos_que_es
+  examples: |
+    - ¿Qué es el carnet de sanidad para manipular alimentos?
+    - Explícame qué es el carnet de sanidad para manipular alimentos
+    - ¿En qué consiste el carnet de sanidad para manipular alimentos?
+    - Definición de carnet de sanidad para manipular alimentos
+    - ¿Qué significa el carnet de sanidad para manipular alimentos?
+
+# >> CARNET SANIDAD MANIPULAR ALIMENTOS QUE NECESITO :
+- intent: carnet_sanidad_manipular_alimentos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el carnet de sanidad para manipular alimentos?
+    - Requisitos para el carnet de sanidad para manipular alimentos
+    - ¿Qué documentos se necesitan para el carnet de sanidad para manipular alimentos?
+    - ¿Cuáles son los requisitos para obtener el carnet de sanidad para manipular alimentos?
+    - Documentos necesarios para solicitar el carnet de sanidad para manipular alimentos
+
+# >> CARNET SANIDAD MANIPULAR ALIMENTOS CUANTO CUESTA :
+- intent: carnet_sanidad_manipular_alimentos_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el carnet de sanidad para manipular alimentos?
+    - Costo del carnet de sanidad para manipular alimentos
+    - ¿Qué tarifas se aplican para el carnet de sanidad para manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para manipular alimentos?
+    - Tarifas y costos para la emisión de carnet de sanidad para manipular alimentos
+    - ¿Cuánto cuesta el carnet de sanidad para manipular alimentos?
+    - ¿Cuánto se paga por el carnet de sanidad para manipular alimentos?
+
+# >> CERTIFICADO PRENUPCIAL :
+- intent: certificado_prenupcial
+  examples: |
+    - ¿Cómo puedo solicitar el certificado prenupcial?
+    - Quiero saber el procedimiento para obtener el certificado prenupcial
+    - Solicitar certificado prenupcial
+    - Procedimiento para emitir certificado prenupcial
+    - ¿Cómo acceder a los servicios públicos con el certificado prenupcial?
+    - ¿Qué se necesita para obtener el certificado prenupcial?
+    - Emisión de certificado prenupcial
+
+# >> CERTIFICADO PRENUPCIAL QUE ES :
+- intent: certificado_prenupcial_que_es
+  examples: |
+    - ¿Qué es el certificado prenupcial?
+    - Explícame qué es el certificado prenupcial
+    - ¿En qué consiste el certificado prenupcial?
+    - Definición de certificado prenupcial
+    - ¿Qué significa el certificado prenupcial?
+
+# >> CERTIFICADO PRENUPCIAL QUE NECESITO :
+- intent: certificado_prenupcial_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el certificado prenupcial?
+    - Requisitos para el certificado prenupcial
+    - ¿Qué documentos se necesitan para el certificado prenupcial?
+    - ¿Cuáles son los requisitos para obtener el certificado prenupcial?
+    - Documentos necesarios para solicitar el certificado prenupcial
+
+# >> CERTIFICADO PRENUPCIAL CUANTO CUESTA :
+- intent: certificado_prenupcial_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el certificado prenupcial?
+    - Costo del certificado prenupcial
+    - ¿Qué tarifas se aplican para el certificado prenupcial?
+    - ¿Cuánto se paga por el certificado prenupcial?
+    - Tarifas y costos para la emisión del certificado prenupcial
+    - ¿Cuánto cuesta el certificado prenupcial?
+    - ¿Cuánto se paga por el certificado prenupcial?
+

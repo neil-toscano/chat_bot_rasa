@@ -1,0 +1,42 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - CERTIFICADO PRENUPCIAL:
+- intent: certificado_prenupcial
+  examples: |
+    - ¿Cómo puedo solicitar el certificado prenupcial?
+    - Quiero saber el procedimiento para obtener el certificado prenupcial
+    - Solicitar certificado prenupcial
+    - Procedimiento para emitir certificado prenupcial
+    - ¿Cómo acceder a los servicios públicos con el certificado prenupcial?
+    - ¿Qué se necesita para obtener el certificado prenupcial?
+    - Emisión de certificado prenupcial
+
+# >> 2.2... NLU - CONSULTA
+- intent: certificado_prenupcial_que_es
+  examples: |
+    - ¿Qué es el certificado prenupcial?
+    - Explícame qué es el certificado prenupcial
+    - ¿En qué consiste el certificado prenupcial?
+    - Definición de certificado prenupcial
+    - ¿Qué significa el certificado prenupcial?
+
+# >> 2.3... NLU - NECESIDAD
+- intent: certificado_prenupcial_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener el certificado prenupcial?
+    - Requisitos para el certificado prenupcial
+    - ¿Qué documentos se necesitan para el certificado prenupcial?
+    - ¿Cuáles son los requisitos para obtener el certificado prenupcial?
+    - Documentos necesarios para solicitar el certificado prenupcial
+
+# >> 2.4... NLU - COSTO
+- intent: certificado_prenupcial_cuanto_cuesta
+  examples: |
+    - ¿Cuánto cuesta el certificado prenupcial?
+    - Costo del certificado prenupcial
+    - ¿Qué tarifas se aplican para el certificado prenupcial?
+    - ¿Cuánto se paga por el certificado prenupcial?
+    - Tarifas y costos para la emisión del certificado prenupcial
+    - ¿Cuánto cuesta el certificado prenupcial?
+    - ¿Cuánto se paga por el certificado prenupcial?

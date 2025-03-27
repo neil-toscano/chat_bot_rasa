@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 5.2. STORIES - VISACIÓN :
+- story: visacion de planos
+  steps:
+  - intent: obras_item02
+  - action: utter_obras_item02
+  - action: action_set_reminder
+
+# >> 5.2... STORIES - CONSULTA
+- story: visacion de planos consulta
+  steps:
+  - intent: obras_item02_consulta
+  - action: utter_obras_item02_consulta
+  - action: action_set_reminder
+
+# >> 5.2... STORIES - NECESIDAD
+- story: visacion de planos necesidad
+  steps:
+  - intent: obras_item02_necesidad
+  - action: utter_obras_item02_necesidad
+  - action: action_set_reminder
+
+# >> 5.2... STORIES - COSTO
+- story: visacion de planos costo
+  steps:
+  - intent: obras_item02_costo
+  - action: utter_obras_item02_costo
+  - action: action_set_reminder

@@ -1,0 +1,89 @@
+version: "3.1"
+
+intents:
+  - gestion_item06_consulta
+  - gestion_item06_necesidad
+  - gestion_item06_costo
+
+responses:
+  # >> 2.6. RENOVACIÓN RIESGO ALTO
+  utter_gestion_item06:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
+              body:
+                text: |
+                  Haz seleccionado *Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto*
+
+                  *🟢 Opciones de pregunta:*  
+
+                  1️. 📘¿Qué es?  
+
+                  2️. 📝¿Qué necesito?  
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/gestion_item06_consulta"
+                        title: "📘 ¿Qué es?"
+                      - id: "/gestion_item06_necesidad"
+                        title: "📝 ¿Qué necesito?"
+                      - id: "/gestion_item06_costo"
+                        title: "💰 ¿Cuánto cuesta?"
+                button: "Opciones"
+
+  # >> 2.6... CONSULTA
+  utter_gestion_item06_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                🏢 Es el proceso para actualizar el certificado de inspección técnica de seguridad en edificaciones para establecimientos con un nivel de riesgo alto.
+
+                *¿Para qué sirve?*
+
+                ✅ Asegura que el establecimiento continúa cumpliendo con las normativas de seguridad y mantiene un entorno seguro para ocupantes y visitantes.
+
+  # >> 2.6... NECESIDAD
+  utter_gestion_item06_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                a. 🖋️ Declaración jurada de cumplimiento de Seguridad en Edificaciones.
+
+                http://sut.pcm.gob.pe/sutArchivos/file_1487_20230418_112413.pdf
+                b. 📝 Solicitud de inspección técnica de seguridad en edificaciones (ITSE) y de evaluación de condiciones de seguridad en espectáculos públicos deportivos y no deportivos (ECSE) (Anexo 1)  
+                  👉https://web.munisjl.gob.pe/web/pdf/rdesastres/ANEXO01.pdf
+
+                c. 🗂️ Declaración jurada para renovación del certificado de inspección técnica de seguridad en edificaciones (Anexo 5)  
+                  👉https://cdn.www.gob.pe/uploads/document/file/6084753/5384902-anexo-5-declaracion-jurada-para-la-renovacion-del-certificado-de-inspeccion-tecnica-de-seguridad-de-edificaciones.pdf
+
+                d. 🏢 Copia de licencia de funcionamiento  
+                e. ✅ Copia del certificado ITSE vigente  
+                f. 🆔 En caso de persona jurídica traer DNI físicamente, vigencia de poder y plano de ubicación
+
+  # >> 2.6... COSTO
+  utter_gestion_item06_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 S/ 374.80

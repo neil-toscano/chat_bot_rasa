@@ -1,0 +1,78 @@
+version: "3.1"
+
+intents:
+  - gestion_item10_consulta
+  - gestion_item10_necesidad
+  - gestion_item10_costo
+
+responses:
+  # >> 2.10. DUPLICADO CERTIFICADO DE INSPECCIÓN TÉCNICA
+  utter_gestion_item10:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              #header:
+              #  type: text
+              #  text: "Consulta Trámites"
+              body:
+                text: |
+                  Haz seleccionado *Duplicado del Certificado de Inspección Técnica de Seguridad en edificaciones*
+
+                  *🟢 Opciones de pregunta:*  
+
+                  1️. 📘¿Qué es?  
+
+                  2️. 📝¿Qué necesito?  
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/gestion_item10_consulta"
+                        title: "📘 ¿Qué es?"
+                      - id: "/gestion_item10_necesidad"
+                        title: "📝 ¿Qué necesito?"
+                      - id: "/gestion_item10_costo"
+                        title: "💰 ¿Cuánto cuesta?"
+                button: "Opciones"
+
+  # >> 2.10... CONSULTA
+  utter_gestion_item10_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📄 Es una copia adicional del certificado que verifica la inspección técnica de seguridad en edificaciones.
+
+                *¿Para qué es?*
+
+                ✅ Para proporcionar una prueba adicional del cumplimiento de las normativas de seguridad, en caso de pérdida o necesidad de presentar el documento en diferentes lugares.
+
+  # >> 2.10... NECESIDAD
+  utter_gestion_item10_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📝 Solicitud, indicando número y fecha de pago por el derecho de trámite.
+
+  # >> 2.10... COSTO
+  utter_gestion_item10_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 S/ 67.80

@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.5. NLU - INSPECCIÓN RIESGO ALTO :
+- intent: gestion_item05
+  examples: |
+    - Inspección Técnica de Seguridad en edificaciones posterior al inicio de actividades para establecimientos objeto de inspección clasificados con Nivel de Riesgo Alto
+    - Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Inspección Técnica Seguridad Riesgo Alto
+    - Inspección Técnica Riesgo Alto
+
+# >> 2.5... NLU - CONSULTA
+- intent: gestion_item05_consulta
+  examples: |
+    - Qué es la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué es la Inspección Técnica Seguridad Riesgo Alto
+    - En que consiste la Inspección Técnica Seguridad Riesgo Alto
+
+# >> 2.5... NLU - NECESIDAD
+- intent: gestion_item05_necesidad
+  examples: |
+    - Qué necesito para la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Qué necesito para la Inspección Técnica Seguridad Riesgo Alto
+    - Qué requisitos piden para la Inspección Técnica Seguridad Riesgo Alto
+
+# >> 2.5... NLU - COSTO
+- intent: gestion_item05_costo
+  examples: |
+    - Cuánto cuesta la Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Alto
+    - Cuánto cuesta la Inspección Técnica Seguridad Riesgo Alto
+    - Cuánto debo pagar por la Inspección Técnica Seguridad Riesgo Alto
+    - Cuánto es el monto de la Inspección Técnica Seguridad Riesgo Alto

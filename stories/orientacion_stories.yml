@@ -1,0 +1,12 @@
+version: "3.1"
+
+# >> 3. STORIES - ORIENTACIÓN Y REGISTRO :
+stories:
+
+- story: orientacion y registro
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: orientacion
+  - action: utter_orientacion
+  - action: action_set_reminder

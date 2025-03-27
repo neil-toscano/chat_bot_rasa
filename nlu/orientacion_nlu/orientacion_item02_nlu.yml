@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+  # >> 3.2. NLU - CERTIFICADO DE PARÁMETROS :
+  - intent: orientacion_item02
+    examples: |
+      - Inscripción por Sucesión Intestada
+      - Inscripción Sucesión Intestada
+      - Sucesión Intestada
+
+  # >> 3.2... NLU - CONSULTA
+  - intent: orientacion_item02_consulta
+    examples: |
+      - Qué es la Inscripción por Sucesión Intestada
+      - Qué es la Sucesión Intestada
+      - En que consiste la Inscripción por Sucesión Intestada
+
+  # >> 3.2... NLU - NECESIDAD
+  - intent: orientacion_item02_necesidad
+    examples: |
+      - Qué necesito para la Inscripción por Sucesión Intestada
+      - Qué necesito para la Sucesión Intestada
+      - Qué requisitos piden para la Inscripción por Sucesión Intestada
+
+  # >> 3.2... NLU - COSTO
+  - intent: orientacion_item02_costo
+    examples: |
+      - Cuánto cuesta la Inscripción por Sucesión Intestada
+      - Cuánto cuesta la Sucesión Intestada
+      - Cuánto debo pagar por la Inscripción por Sucesión Intestada
+      - Cuánto es el monto de la Inscripción por Sucesión Intestada

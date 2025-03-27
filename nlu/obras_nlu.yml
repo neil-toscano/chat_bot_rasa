@@ -1,0 +1,12 @@
+version: "3.1"
+
+# >> 5. NLU - OBRAS PRIVADAS Y HABILITACIÓN URBANA :
+nlu:
+- intent: obras
+  examples: |
+    - Quiero hablar sobre obras privadas y habilitación urbana
+    - hablemos sobre obras privadas
+    - hablemos sobre habilitación urbana
+    - Obras privadas
+    - Habilitación urbana
+    - quiero saber acerca de obras privadas

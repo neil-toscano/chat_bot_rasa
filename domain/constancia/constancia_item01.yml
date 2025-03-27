@@ -1,0 +1,79 @@
+version: "3.1"
+
+intents:
+  - constancia_posesion_servicios_basicos_que_es
+  - constancia_posesion_servicios_basicos_que_necesito
+  - constancia_posesion_servicios_basicos_cuanto_cuesta
+
+responses:
+  # >> 5.1. CONSTANCIA DE POSESIÓN
+  utter_constancia_posesion_servicios_basicos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              # header:
+              #   type: text
+              #   text: "Consulta Trámites"
+              body:
+                text: |
+                  *🎉 Haz seleccionado Constancia de Posesión*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄¿Qué es?
+
+                  2. 📋¿Requisitos?
+
+                  3. 💵¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/constancia_posesion_servicios_basicos_que_es"
+                        title: "¿Qué es? 📄"
+                      - id: "/constancia_posesion_servicios_basicos_que_necesito"
+                        title: "¿Requisitos? 📋"
+                      - id: "/constancia_posesion_servicios_basicos_cuanto_cuesta"
+                        title: "¿Cuánto cuesta? 💵"
+                button: "✅ Opciones"
+
+  # >> 5.1... CONSULTA
+  utter_constancia_posesion_servicios_basicos_que_es:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Procedimiento mediante el cual el posesionario de un predio, solicita la emisión de una constancia señalando la posesión del predio para efectos de acceder a los servicios públicos.
+
+  # >> 5.1... NECESIDAD
+  utter_constancia_posesion_servicios_basicos_que_necesito:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Requisitos para el trámite:*
+
+                1. 🖊️Presentar solicitud firmada por el administrado, señalando el número de recibo y la fecha del pago efectuado por el derecho de tramitación.
+
+                2. 📍Plano simple de ubicación del Predio
+
+                3. 📂Indicar número y fecha de expedición del Acta de verificación de posesión efectiva del predio emitida por la Municipalidad Distrital de San Juan de Lurigancho, y suscrita por todos los colindantes del predio, o Acta policial de posesión suscrita por todos los colindantes de dicho predio.
+
+  # >> 5.1... COSTO
+  utter_constancia_posesion_servicios_basicos_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 *Costo del trámite:* S/ 55.20

@@ -1,0 +1,73 @@
+version: "3.1"
+
+intents:
+  - formalizacion_item10_duplicado_resolucion
+  - formalizacion_item10_duplicado_resolucion_que_es
+  - formalizacion_item10_duplicado_resolucion_que_necesito
+  - formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+
+responses:
+  # ===========2.1====================
+  utter_formalizacion_item10_duplicado_resolucion:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  *🎉 Has seleccionado duplicación de la resolución de autorización.*
+
+                  *❓ Opciones de pregunta:*
+
+                  1️. 📘¿Qué es?
+
+                  2️. 📝¿Qué necesito?
+
+                  3️. 💰¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoja la pregunta"
+                    rows:
+                      - id: "/formalizacion_item10_duplicado_resolucion_que_es"
+                        title: "¿Qué es? 📘"
+                      - id: "/formalizacion_item10_duplicado_resolucion_que_necesito"
+                        title: "¿Qué necesito? 📝"
+                      - id: "/formalizacion_item10_duplicado_resolucion_cuanto_cuesta"
+                        title: "¿Cuánto cuesta? 💰"
+                button: "Opciones"
+
+  # ==========***=======================
+
+  utter_formalizacion_item10_duplicado_resolucion_que_es:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: false
+              body: |
+                📄Es un duplicado del documento que autoriza la instalación de elementos de publicidad exterior (como letreros o toldos) en propiedades privadas.
+
+  utter_formalizacion_item10_duplicado_resolucion_que_necesito:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                a. 🗂️ Solicitud simple con el número de Resolución
+                b. 📅 Indicar fecha y número de constancia de pago
+
+  utter_formalizacion_item10_duplicado_resolucion_cuanto_cuesta:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: false
+              body: |
+                💵 S/ 77.20
+
+# =============================================

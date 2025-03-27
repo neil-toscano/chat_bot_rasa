@@ -7,9 +7,13 @@
 ## Instalación
 
 Sigue estos pasos para configurar el proyecto en tu máquina local:
+
 1. Instalar rasa ia en tu entorno
+
    ```bash
    pip3 install rasa
+
+   ```
 
 2. Clona este repositorio:
 
@@ -17,17 +21,38 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
    git clone url...
    cd nombre-del-repositorio
 
-3. Entrena el modelo
-   
+   ```
+
+3. Correr el script de Python
+
+   ```bash
+   py scripts/modularizar.py
+
+   ```
+
+4. Entrena el modelo
+
    ```bash
    rasa train
 
-4. Ejecuta el modelo
+   ```
 
-    ```bash
-    rasa run
+5. Ejecuta el modelo
 
-5. Interactua con el modelo
+   ```bash
+   rasa run
 
-    ```bash
-    rasa shell
+   ```
+
+6. Interactua con el modelo
+
+   ```bash
+   rasa shell
+
+   ```
+
+7. Interactua con el modelo
+
+   ```bash
+   rasa run --enable-api --cors "*"
+   ```

@@ -1,0 +1,34 @@
+version: "3.1"
+
+nlu:
+
+# >> 5.4. NLU - LICENCIA DEMODILCIÓN :
+- intent: obras_item04
+  examples: |
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres (03) pisos de altura, que no cuenten con semisótanos y sótanos, siempre que no haga uso de explosivos
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones de hasta tres pisos que no cuenten con semisótanos y sótanos
+    - Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Licencia de Edificación Aprobación Demolición
+
+# >> 5.4... NLU - CONSULTA
+- intent: obras_item04_consulta
+  examples: |
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Qué es la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - En que consiste la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> 5.4... NLU - NECESIDAD
+- intent: obras_item04_necesidad
+  examples: |
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Qué necesito para la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Qué requisitos piden para la Licencia de Edificación Modalidad a: Aprobación - Demolición
+
+# >> 5.4... NLU - COSTO
+- intent: obras_item04_costo
+  examples: |
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales - Demolición Total de Edificaciones
+    - Cuánto cuesta la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Cuánto debo pagar por la Licencia de Edificación Modalidad a: Aprobación - Demolición
+    - Cuánto es el monto de la Licencia de Edificación Modalidad a: Aprobación - Demolición

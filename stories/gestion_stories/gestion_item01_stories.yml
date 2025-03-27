@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 2.1. STORIES - INSPECCIÓN RIESGO BAJO :
+- story: inspeccion riesgo bajo
+  steps:
+  - intent: gestion_item01
+  - action: utter_gestion_item01
+  - action: action_set_reminder
+
+# >> 2.1... STORIES - CONSULTA
+- story: inspeccion riesgo bajo consulta
+  steps:
+  - intent: gestion_item01_consulta
+  - action: utter_gestion_item01_consulta
+  - action: action_set_reminder
+
+# >> 2.1... STORIES - NECESIDAD
+- story: inspeccion riesgo bajo necesidad
+  steps:
+  - intent: gestion_item01_necesidad
+  - action: utter_gestion_item01_necesidad
+  - action: action_set_reminder
+
+# >> 2.1... STORIES - COSTO
+- story: inspeccion riesgo bajo costo
+  steps:
+  - intent: gestion_item01_costo
+  - action: utter_gestion_item01_costo
+  - action: action_set_reminder

@@ -1,0 +1,51 @@
+  - intent: formalizacion_item11_cese_licencia
+    examples: |
+      - Quiero dejar sin efecto mi licencia de funcionamiento
+      - Necesito cesar mi licencia de funcionamiento
+      - Cómo solicito el cese de actividades de mi licencia
+      - Soy un tercero y quiero solicitar el cese de una licencia
+      - Necesito hacer el cese automático de una licencia
+      - Quiero acreditar mi interés legítimo para cesar una licencia
+      - Procedimiento para cesar una licencia de funcionamiento
+      - Cómo inicio el trámite de cese de licencia
+      - Solicitud de cese de actividades comerciales
+      - Quiero dar de baja mi licencia de funcionamiento
+
+  - intent: formalizacion_item10_duplicado_resolucion_que_es
+    examples: |
+      - Qué es el cese de licencia de funcionamiento
+      - Para qué sirve el cese de una licencia
+      - En qué consiste dejar sin efecto una licencia de funcionamiento
+      - Me pueden explicar qué significa cesar actividades comerciales
+      - Qué implica el cese automático de una licencia
+      - Qué es el procedimiento de cese de actividades
+      - En qué casos puedo solicitar el cese de licencia
+      - Qué significa dejar sin efecto una licencia municipal
+      - Cuál es el propósito del cese de licencia de funcionamiento
+      - Qué es la baja de una licencia comercial
+
+  - intent: formalizacion_item10_duplicado_resolucion_que_necesito
+    examples: |
+      - Qué documentos necesito para cesar mi licencia
+      - Requisitos para solicitar el cese de licencia de funcionamiento
+      - Qué debo presentar para el cese automático de licencia
+      - Documentación necesaria para cesar actividades comerciales
+      - Cómo acredito ser un tercero con interés legítimo
+      - Qué papeles necesito para dar de baja una licencia
+      - Requisitos para tramitar el cese de actividades
+      - Qué documentación requiero como tercero para cesar una licencia
+      - Qué necesito para dejar sin efecto una licencia municipal
+      - Documentos para solicitar el cese de funcionamiento
+
+  - intent: formalizacion_item10_duplicado_resolucion_cuanto_cuesta
+    examples: |
+      - Cuánto cuesta tramitar el cese de licencia
+      - Precio del trámite de cese de actividades
+      - Costo para dar de baja una licencia de funcionamiento
+      - Cuál es el precio del cese automático de licencia
+      - Tarifa para cesar una licencia municipal
+      - Valor del trámite de cese de funcionamiento
+      - Cuánto se paga por el cese de actividades comerciales
+      - Costo del procedimiento de cese de licencia
+      - Precio para dejar sin efecto una licencia
+      - Cuánto debo pagar para cesar mi licencia

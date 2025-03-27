@@ -1,0 +1,44 @@
+version: "3.1"
+
+nlu:
+# >> 1.1. NLU - CONSTANCIA DE POSESIÓN PARA SERVICIOS BÁSICOS:
+- intent: constancia_posesion_servicios_basicos
+  examples: |
+    - ¿Cómo puedo solicitar la constancia de posesión para acceder a los servicios públicos?
+    - Quiero saber el procedimiento para la constancia de posesión de un predio
+    - Solicitar constancia de posesión para acceder a servicios públicos
+    - Procedimiento para emitir constancia de posesión de un predio
+    - ¿Cómo acceder a los servicios públicos con la constancia de posesión?
+    - ¿Qué se necesita para obtener la constancia de posesión para servicios públicos?
+    - Emisión de constancia de posesión para efectos de servicios públicos
+    - Requisitos para la constancia de posesión y acceso a servicios básicos
+
+# >> 1.1... NLU - CONSULTA
+- intent: constancia_posesion_servicios_basicos_que_es
+  examples: |
+    - ¿Qué es la constancia de posesión para servicios básicos?
+    - Explícame qué es la constancia de posesión
+    - ¿En qué consiste la constancia de posesión para servicios públicos?
+    - Definición de constancia de posesión
+    - ¿Qué significa la constancia de posesión para acceder a servicios básicos?
+
+# >> 1.1... NLU - NECESIDAD
+- intent: constancia_posesion_servicios_basicos_que_necesito
+  examples: |
+    - ¿Qué necesito para obtener la constancia de posesión?
+    - Requisitos para la constancia de posesión para servicios básicos
+    - ¿Qué documentos se necesitan para la constancia de posesión?
+    - ¿Cuáles son los requisitos para obtener la constancia de posesión?
+    - Documentos necesarios para solicitar la constancia de posesión
+
+# >> 1.1... NLU - COSTO
+- intent: constancia_posesion_servicios_basicos_cuanto_cuesta 
+  examples: |
+    - ¿Cuánto cuesta la constancia de posesión para servicios básicos?
+    - Costo de la constancia de posesión para servicios públicos
+    - ¿Qué tarifas se aplican para la constancia de posesión?
+    - ¿Cuánto se paga por la constancia de posesión?
+    - Tarifas y costos para la emisión de constancia de posesión
+    - ¿Cuánto cuesta la constancia de posesión para servicios públicos?
+    - ¿Cuánto se paga por la constancia de posesión para servicios básicos?
+

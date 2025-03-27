@@ -1,0 +1,114 @@
+version: "3.1"
+
+intents:
+  - obras_item03_consulta
+  - obras_item03_necesidad
+  - obras_item03_costo
+
+responses:
+  # >> 5.3. LICENCIA CONSTRUCCIÓN
+  utter_obras_item03:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  🏠 Has seleccionado *Licencia de Edificación Modalidad a: Aprobación Automática con firma de profesionales para construcción de una Vivienda Unifamiliar de hasta 120 m² construidos, siempre que constituya la única edificación en el lote*
+
+                  *❓ Opciones de pregunta:*
+
+                  1. 📄 ¿Qué es?
+
+                  2. 📋 ¿Qué necesito?
+
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/obras_item03_consulta"
+                        title: "📄 ¿Qué es?"
+                      - id: "/obras_item03_necesidad"
+                        title: "📋 ¿Qué necesito?"
+                      - id: "/obras_item03_costo"
+                        title: "💵 ¿Cuánto cuesta?"
+                button: "✅ Opciones"
+
+  # >> 5.3... CONSULTA
+  utter_obras_item03_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el permiso que entrega la municipalidad antes de construir.
+
+                *¿Para qué es necesario?*
+
+                🏗️ Para la construcción de una vivienda y garantizar que se construye de acuerdo a las normas.
+
+  # >> 5.3... NECESIDAD
+  utter_obras_item03_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Formulario Único de Edificación - FUE:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/II-FUE_%20ANEXO%20II_LICENCIA%20DE%20OBRA_REV.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona natural:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/V-FUE_ANEXO%20A_PERSONAS%20NATURALES.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 Datos de Condóminos en caso de ser persona jurídica:
+
+                🔗 https://web.munisjl.gob.pe/web/pdf/edificacion/VI-FUE_ANEXO%20B_PERSONAS%20JUR%C3%8DDICAS_REV.pdf
+
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📋 *Requisitos adicionales:*
+
+                1. 📄 Documento que acredite el derecho a edificar.
+
+                2. 💿 CD con documentos en original.
+
+                3. 📍 Plano de ubicación y localización.
+
+                4. 🏠 Plano de arquitectura (Plano de techos, cortes y elevaciones).
+
+                5. 🏗️ Planos de estructuras.
+
+                6. 🚰 Planos de instalaciones sanitarias.
+
+                7. 💡 Plano de instalaciones eléctricas.
+
+  # >> 5.3... COSTO
+  utter_obras_item03_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Costo del trámite* 👇
+
+                💰 S/ 450.30

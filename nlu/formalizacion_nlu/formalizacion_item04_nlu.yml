@@ -1,0 +1,65 @@
+version: "3.1"
+
+nlu:
+# >> 2.1. NLU - LICENCIA DE FUNCIONAMIENTO PARA EDIFICACIONES DE RIESGO MUY ALTO:
+- intent: formalizacion_item04_edificacion_riesgo_muy_alto
+  examples: |
+    - Licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Permiso de funcionamiento para edificaciones calificadas como riesgo muy alto
+    - Solicitud de licencia para edificios de riesgo muy alto
+    - Autorización de funcionamiento en edificaciones de riesgo muy alto
+    - Edificaciones calificadas con nivel de riesgo muy alto
+
+# >> 2.1. NLU - CONSULTA
+- intent: formalizacion_item04_riesgo_muy_alto_que_es
+  examples: |
+    - Qué es la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - En qué consiste la licencia para edificaciones de riesgo muy alto
+    - Explicación sobre licencia de edificaciones de riesgo muy alto
+    - Cómo funciona la licencia para edificios de riesgo muy alto
+    - Qué cubre la licencia de riesgo muy alto en edificaciones
+
+# >> 2.1. NLU - NECESIDAD
+- intent: formalizacion_item04_riesgo_muy_alto_que_necesito
+  examples: |
+    - Qué necesito para la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Requisitos para licencia de riesgo muy alto en edificaciones
+    - Documentación para licencia de funcionamiento en riesgo muy alto
+    - Qué se necesita para permiso de riesgo muy alto en edificios
+    - Requisitos para licencia de edificaciones calificadas como riesgo muy alto
+
+# >> 2.1. NLU - SERVICIO SALUD
+- intent: formalizacion_item04_servicio_de_salud
+  examples: |
+    - Licencia para edificaciones de servicios de salud de riesgo muy alto
+    - Autorización para funcionamiento en edificaciones de salud de riesgo muy alto
+    - Permiso de funcionamiento para edificios de atención en salud de riesgo muy alto
+    - Licencia de funcionamiento para servicio de salud en edificaciones calificadas con riesgo muy alto
+    - Solicitud de licencia para edificaciones de servicios de salud de riesgo muy alto
+
+# >> 2.1. NLU - REQUIERE AUTORIZACIÓN
+- intent: formalizacion_item04_actividad_requiere_autorizacion
+  examples: |
+    - Solicitud de autorización para evento en edificaciones de riesgo muy alto
+    - Permiso para actividad comercial en riesgo muy alto
+    - Autorización requerida para eventos en edificios de riesgo muy alto
+    - Actividades que requieren licencia de riesgo muy alto
+    - Se necesita autorización para eventos en riesgo muy alto
+
+# >> 2.1. NLU - PATRIMONIO CULTURAL
+- intent: formalizacion_item04_monumento_del_patrimonio_cultural
+  examples: |
+    - Licencia para monumento del patrimonio cultural en riesgo muy alto
+    - Autorización para uso de monumento histórico de riesgo muy alto
+    - Permiso para actividades en monumentos históricos de riesgo muy alto
+    - Actividad en patrimonio cultural de riesgo muy alto
+    - Uso de monumento en edificaciones de riesgo muy alto
+
+# >> 2.1. NLU - COSTO
+- intent: formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  examples: |
+    - Cuánto cuesta la licencia de funcionamiento para edificaciones de riesgo muy alto
+    - Precio de licencia de funcionamiento en edificios de riesgo muy alto
+    - Tarifa para licencia de edificaciones de riesgo muy alto
+    - Cuál es el costo de una licencia para edificios de riesgo muy alto
+    - Precio de permiso para edificaciones calificadas en riesgo muy alto

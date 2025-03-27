@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+  # >> 3.3. NLU - COMPRA-VENTA :
+  - intent: orientacion_item03
+    examples: |
+      - Inscripción por Compra-Venta
+      - Inscripción por Compra Venta
+      - Compra Venta
+
+  # >> 3.3... NLU - CONSULTA
+  - intent: orientacion_item03_consulta
+    examples: |
+      - Qué es la Inscripción por Compra-Venta
+      - Qué es la Compra Venta
+      - En que consiste la Inscripción por Compra-Venta
+
+  # >> 3.3... NLU - NECESIDAD
+  - intent: orientacion_item03_necesidad
+    examples: |
+      - Qué necesito para la Inscripción por Compra-Venta
+      - Qué necesito para la Compra Venta
+      - Qué requisitos piden para la Inscripción por Compra-Venta
+
+  # >> 3.3... NLU - COSTO
+  - intent: orientacion_item03_costo
+    examples: |
+      - Cuánto cuesta la Inscripción por Compra-Venta
+      - Cuánto cuesta la Compra Venta
+      - Cuánto debo pagar por la Inscripción por Compra-Venta
+      - Cuánto es el monto de la Inscripción por Compra-Venta

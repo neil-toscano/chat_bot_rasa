@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 5.1. STORIES - CERTIFICADO :
+- story: certificado de parametros
+  steps:
+  - intent: obras_item01
+  - action: utter_obras_item01
+  - action: action_set_reminder
+
+# >> 5.1... STORIES - CONSULTA
+- story: certificado de parametros consulta
+  steps:
+  - intent: obras_item01_consulta
+  - action: utter_obras_item01_consulta
+  - action: action_set_reminder
+
+# >> 5.1... STORIES - NECESIDAD
+- story: certificado de parametros necesidad
+  steps:
+  - intent: obras_item01_necesidad
+  - action: utter_obras_item01_necesidad
+  - action: action_set_reminder
+
+# >> 5.1... STORIES - COSTO
+- story: certificado de parametros costo
+  steps:
+  - intent: obras_item01_costo
+  - action: utter_obras_item01_costo
+  - action: action_set_reminder

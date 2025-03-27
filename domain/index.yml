@@ -1,0 +1,249 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - afirmacion
+  - negacion
+  - animo_bien
+  - animo_mal
+  - bot_challenge
+  - estado_cuenta
+  - consulta_tramites
+  - EXTERNAL_reminder
+  - consulta_directorio
+  - consulta_documento_trazabilidad
+  - informacion_doc_id
+  - proporciono_directo_documentoid
+  - stop
+  - reto_bot
+  - consulta_modulo_citas
+
+entities:
+  - documentoId
+
+actions:
+  - action_set_reminder
+  - action_react_to_reminder
+  - validate_consulta_documento_form
+  - action_reset_consulta_documento_form
+  - action_reset_slots
+  
+
+responses:
+  utter_animo:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: false
+              body: |
+                Siento escuchar eso, aquí hay algo que te va dar ánimo
+
+  utter_sirvio_de_ayuda:
+    - text: "¿Te ha ayudado?"
+
+  utter_feliz:
+    - text: "Genial, continua así"
+
+  utter_despedida:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+              😊Espero haberte ayudado, hasta luego
+  
+  utter_soy_bot:
+  - custom:
+      blocks:
+        - type: "text"
+          text:
+            preview_url: false
+            body: |
+              Soy un bot, entrenado por la MDSJL.
+
+  # >> INDEX - MENU
+  utter_saludo:
+    - custom:
+        blocks:
+          - type: image
+            image:
+              id: "3413840228751388"
+          - type: video
+            video: 
+              id: "1134635934798417"
+          - type: interactive
+            interactive:
+              type: button
+              header:
+                type: text
+                text: "Servicios de la Municipalidad"
+              body:
+                text: |
+                  *Hola soy Sanjuanbot 🤖*: ¿Qué trámite o servicio municipal desea consultar? Estoy aquí para ayudarle por favor, elige una de las siguientes opciones:
+
+              footer:
+                text: "seleccione la opción abajo 👇"
+              action:
+                buttons:
+                  - type: "reply"
+                    reply:
+                      id: "/estado_cuenta"
+                      title: "Estado de cuenta"
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_tramites"
+                      title: "Consulta trámites"
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_documento_trazabilidad"
+                      title: "Estado documento"
+
+          - type: interactive
+            interactive:
+              type: button
+              header:
+                type: text
+                text: "Otras consultas Disponibles 🚀"
+              body:
+                text: |
+                  Estos son otras consultas que podrían interesarte. Selecciona una opción a continuación:
+              action:
+                buttons:
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_modulo_citas"
+                      title: "📝Módulo de citas"
+                  - type: "reply"
+                    reply:
+                      id: "/consulta_directorio"
+                      title: "📞Números Telefónicos"
+
+  utter_estado_cuenta:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                🌐 Puede revisar su estado de cuenta en el siguiente link👉: https://plataformavirtual.munisjl.gob.pe/
+
+  utter_tramite:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "Consulta Trámites"
+              body:
+                text: |
+                  ¿Sobre qué área te gustaría obtener información? Por favor, elige una de las siguientes opciones:
+
+                  *1. 💼 LICENCIA DE FUNCIONAMIENTO Y ANUNCIO PUBLICITARIO*
+
+                  *2. 🚨 CERTIFICADOS DE DEFENSA CIVIL*
+
+                  *3. 📋 INSCRIPCIÓN DE PREDIOS*
+
+                  *4. 🧾 MATRIMONIOS Y DIVORCIOS*
+
+                  *5. 🏗️ OBRAS PRIVADAS*
+
+                  *6. 📜 CONSTANCIA DE POSESIÓN*
+
+                  *7. 🩺 BIENESTAR SOCIAL Y SALUD*
+              footer:
+                text: "seleccione el trámite abajo 👇"
+              action:
+                sections:
+                  - title: "Escoja trámite"
+                    rows:
+                      - id: "/formalizacion_promocion_empresarial"
+                        title: "1. Licencias 💼"
+                      - id: "/gestion"
+                        title: "2. Certificados 🚨"
+                      - id: "/orientacion"
+                        title: "3. Inscripción 📋"
+                      - id: "/registro"
+                        title: "4. Matrimonios 🧾"
+                      - id: "/obras"
+                        title: "5. Obras 🏗️"
+                      - id: "/constancia_posesion_servicios_basicos"
+                        title: "6. Constancia 📜"
+                      - id: "/carnet_sanidad"
+                        title: "7. Bienestar Social🩺"
+                button: "Seleccionar trámite"
+
+  utter_directorio_telefonico:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                📞 *DIRECTORIO TELEFÓNICO MUNICIPAL*
+
+                📱 *Alo Rentas*
+                • Teléfono: (01) 641-4300
+                • Anexos: 411, 412, 413, 414, 415
+
+                📝 *Trámite Documentario*
+                • Teléfono: (01) 641-4300
+                • Anexo: 110
+
+                💼 *Subgerencia de Registro y Orientación Tributaria*
+                • Teléfono: (01) 641-4300
+                • Anexo: 107
+
+                ⏰ *Horarios de Atención:*
+                - Lunes a Viernes: 8:00 AM - 5:00 PM
+                - Sábado: 8:00 AM - 1:00 PM
+
+  utter_modulo_citas:
+    - custom:
+        blocks:
+          - type: "text"
+            text:
+              preview_url: true
+              body: |
+                📄 *MÓDULO DE TRÁMITES MUNICIPALES*
+
+                En este módulo, puedes realizar diversos trámites, tales como:
+                • *Inscripción de Independización*
+                • *Inscripción de Subdivisión de Lotes*
+                • *Sucesión Intestada*
+
+                Para iniciar tu trámite, visita el siguiente enlace:
+                🌐 Gestiona tus trámites: https://gestioncitas.munisjl.gob.pe/
+
+
+  utter_ask_documentoId:
+    - custom:
+          blocks:
+            - type: "text"
+              text:
+                preview_url: false
+                body: |
+                  📅 Las consultas pueden realizarse únicamente sobre trámites registrados a partir del año 2025
+                  📝 Por favor, proporciona su *número de documento correctamente. Este número es único y se asigna a su trámite. (Ejemplo: S-0000264-2025)* para informarle el estado de su trámite 📲
+                     -. Este número se encuentra en los documentos que recibió al iniciar su trámite.
+
+slots:
+  documentoId:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: documentoId
+
+forms:
+  consulta_documento_form:
+    required_slots:
+      - documentoId
+
+session_config:
+  session_expiration_time: 1
+  carry_over_slots_to_new_session: false

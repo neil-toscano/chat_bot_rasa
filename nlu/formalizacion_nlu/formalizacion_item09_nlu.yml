@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+  # >> 2.1. NLU - DUPLICADO DEL CERTIFICADO DE LICENCIA DE FUNCIONAMIENTO:
+  - intent: formalizacion_item09_duplicado_certificado
+    examples: |
+      - Solicitud de duplicado del certificado de licencia de funcionamiento
+      - Obtener duplicado de licencia de funcionamiento
+      - Reposición de certificado de licencia de funcionamiento
+      - Duplicado de mi licencia de funcionamiento
+      - Cómo pedir un duplicado del certificado de funcionamiento
+
+  # >> 2.1. NLU - CONSULTA
+  - intent: formalizacion_item09_duplicado_certificado_que_es
+    examples: |
+      - Qué es el duplicado del certificado de licencia de funcionamiento
+      - Para qué sirve un duplicado de licencia de funcionamiento
+      - Explicación sobre duplicado de certificado de funcionamiento
+      - En qué consiste la reposición de licencia de funcionamiento
+      - Qué cubre el duplicado de certificado de funcionamiento
+
+  # >> 2.1. NLU - NECESIDAD
+  - intent: formalizacion_item09_duplicado_certificado_que_necesito
+    examples: |
+      - Qué necesito para solicitar un duplicado de la licencia de funcionamiento
+      - Requisitos para duplicado del certificado de funcionamiento
+      - Documentación para obtener duplicado de licencia de funcionamiento
+      - Qué se necesita para la reposición de la licencia de funcionamiento
+      - Requisitos para pedir un duplicado del certificado de funcionamiento
+
+  # >> 2.1. NLU - COSTO
+  - intent: formalizacion_item09_duplicado_certificado_cuanto_cuesta
+    examples: |
+      - Cuánto cuesta el duplicado del certificado de licencia de funcionamiento
+      - Precio para obtener duplicado de licencia de funcionamiento
+      - Tarifa para reposición de licencia de funcionamiento
+      - Cuál es el costo de un duplicado de certificado de funcionamiento
+      - Precio para duplicado de licencia de funcionamiento

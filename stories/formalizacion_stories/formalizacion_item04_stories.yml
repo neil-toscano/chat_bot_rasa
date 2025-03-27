@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO MEDIO:
+- story: licencia funcionamiento riesgo muy alto
+  steps:
+  - intent: formalizacion_item04_edificacion_riesgo_muy_alto
+  - action: utter_formalizacion_item04_edificacion_riesgo_muy_alto
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - CONSULTA
+- story: licencia funcionamiento riesgo muy alto que es
+  steps:
+  - intent: formalizacion_item04_riesgo_muy_alto_que_es
+  - action: utter_formalizacion_item04_riesgo_muy_alto_que_es
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - NECESIDAD
+- story: licencia funcionamiento riesgo muy alto que necesito
+  steps:
+  - intent: formalizacion_item04_riesgo_muy_alto_que_necesito
+  - action: utter_formalizacion_item04_riesgo_muy_alto_que_necesito
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - REQUISITO ESPECIAL SALUD
+- story: licencia funcionamiento riesgo muy alto requisito especial salud
+  steps:
+  - intent: formalizacion_item04_servicio_de_salud
+  - action: utter_formalizacion_item04_servicio_de_salud
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - REQUISITO ESPECIAL AUTORIZACION
+- story: licencia funcionamiento riesgo muy alto requisito especial autorizacion
+  steps:
+  - intent: formalizacion_item04_actividad_requiere_autorizacion
+  - action: utter_formalizacion_item04_actividad_requiere_autorizacion
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - REQUISITO ESPECIAL PATRIMONIO CULTURAL
+- story: licencia funcionamiento riesgo muy alto requisito especial patrimonio cultural
+  steps:
+  - intent: formalizacion_item04_monumento_del_patrimonio_cultural
+  - action: utter_formalizacion_item04_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - CUANTO CUESTA
+- story: licencia funcionamiento riesgo muy alto cuanto cuesta
+  steps:
+  - intent: formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  - action: utter_formalizacion_item04_riesgo_muy_alto_cuanto_cuesta
+  - action: action_set_reminder

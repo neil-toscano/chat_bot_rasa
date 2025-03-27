@@ -1,0 +1,89 @@
+version: "3.1"
+
+# >> STORIES - INDEX
+stories:
+  - story: happy path
+    steps:
+      - intent: saludo
+      - action: utter_saludo
+      - intent: animo_bien
+      - action: utter_feliz
+
+  - story: sad path 1
+    steps:
+      - intent: saludo
+      - action: utter_saludo
+      - intent: animo_mal
+      - action: utter_animo
+      - action: utter_sirvio_de_ayuda
+      - intent: afirmacion
+      - action: utter_feliz
+
+  - story: sad path 2
+    steps:
+      - intent: saludo
+      - action: utter_saludo
+      - intent: animo_mal
+      - action: utter_animo
+      - action: utter_sirvio_de_ayuda
+      - intent: negacion
+      - action: utter_despedida
+
+  - story: despedida path
+    steps:
+      - intent: despedida
+      - action: utter_despedida
+
+  - story: estado cuenta path
+    steps:
+      - intent: estado_cuenta
+      - action: utter_estado_cuenta
+      - action: action_set_reminder 
+      - action: action_deactivate_loop
+      - active_loop: null
+
+
+  - story: tramite muni sjl path
+    steps:
+      - intent: consulta_tramites
+      - action: utter_tramite
+      - action: action_set_reminder
+      - action: action_deactivate_loop
+      - active_loop: null
+
+  - story: directorio muni sjl path
+    steps:
+      - intent: consulta_directorio
+      - action: utter_directorio_telefonico
+      - action: action_set_reminder
+      - action: action_deactivate_loop
+      - active_loop: null
+
+  - story: modulo citas
+    steps:
+      - intent: consulta_modulo_citas
+      - action: utter_modulo_citas
+      - action: action_set_reminder
+      - action: action_deactivate_loop
+      - active_loop: null
+
+  - story: documento tramite
+    steps:
+      - intent: consulta_documento_trazabilidad
+      - action: action_set_reminder 
+      - action: action_reset_slots
+      - action: consulta_documento_form
+      - active_loop: consulta_documento_form
+
+  - story: directo documento
+    steps:
+      - intent: proporciono_directo_documentoid
+      - action: action_set_reminder 
+      - action: action_reset_slots
+      - action: consulta_documento_form
+      - active_loop: consulta_documento_form
+
+  - story: responder al recordatorio
+    steps:
+      - intent: EXTERNAL_reminder
+      - action: action_react_to_reminder

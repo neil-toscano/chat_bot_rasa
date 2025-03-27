@@ -1,0 +1,218 @@
+version: "3.1"
+
+intents:
+  - registro_item04_consulta
+  - registro_item04_necesidad
+  - registro_item04_costo
+  - registro_item04_documentos
+  - registro_item04_subnecesidad_01
+  - registro_item04_subnecesidad_02
+  - registro_item04_subnecesidad_03
+  - registro_item04_subnecesidad_04
+
+responses:
+  # >> 4.4. SEPARACIÓN Y DIVORCIO
+  utter_registro_item04:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  💔 Has seleccionado *Separación Convencional y Divorcio Ulterior: Separación Convencional*
+
+                  ❓ *Opciones de pregunta:*
+
+                  1. 📄 ¿Qué es?  
+
+                  2. 📋 ¿Qué necesito?  
+
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
+
+              footer:
+                text: "*Seleccione la pregunta abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/registro_item04_consulta"
+                        title: "📄 ¿Qué es?"
+                      - id: "/registro_item04_necesidad"
+                        title: "📋 ¿Qué necesito?"
+                      - id: "/registro_item04_costo"
+                        title: "💵 ¿Cuánto cuesta?"
+                button: "✅ Opciones"
+
+  # >> 4.4... CONSULTA
+  utter_registro_item04_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💔 Procedimiento mediante el cual ambos cónyuges manifiestan ante la autoridad municipal su voluntad de separarse.
+
+                *¿Para qué es necesario?*
+
+                📝 La separación convencional sirve para que los cónyuges formalicen su decisión de vivir separados sin disolver inmediatamente el matrimonio.
+
+  # >> 4.4... NECESIDAD
+  utter_registro_item04_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                1. 📝 Solicitud al alcalde manifestando su voluntad de separación, con DNI, dirección, firma y huella de los cónyugues.
+
+                2. 📑 Copia certificada del acta o de la partida de matrimonio.
+
+                3. 🏠 Declaración jurada del último domicilio conyugal.
+
+                4. ✍️ En caso de haber representantes, adjuntar un poder notarial específico registrado.
+
+                5. 🆔 Exhibición de los DNI de ambos cónyuges y de los representantes legales, si los hay.
+
+                6. 💵 Indicar fecha y número de constancia de pago.
+
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  🤔 ¿Deseas saber los documentos necesarios en casos especiales?
+
+              action:
+                sections:
+                  - title: "Escoge la opción..."
+                    rows:
+                      - id: "/registro_item04_documentos"
+                        title: "✅ Sí, deseo"
+                      - id: "/registro_item04"
+                        title: "❌ No, gracias"
+                button: "Opciones"
+
+  # >> 4.4... COSTO
+  utter_registro_item04_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                💰 S/ 372.30
+
+  # >> 4.4... DOCUMENTOS
+  utter_registro_item04_documentos:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  Se presenta una serie de documentos necesarios en casos especiales dependiendo de la opción que usted elija...
+
+                  1. 🚫 En caso de no tener hijos
+
+                  2. 👶 En caso de tener hijos menores
+
+                  3. 👵 En caso de tener hijos mayores discapacitados
+
+                  4. 🏠 Requisitos relacionados con el patrimonio
+
+              action:
+                sections:
+                  - title: "Selecciona la opción"
+                    rows:
+                      - id: "/registro_item04_subnecesidad_01"
+                        title: "🚫 No hijos"
+                      - id: "/registro_item04_subnecesidad_02"
+                        title: "👶 Hijos menores"
+                      - id: "/registro_item04_subnecesidad_03"
+                        title: "👵 Discapacitados"
+                      - id: "/registro_item04_subnecesidad_04"
+                        title: "🏠 Patrimonio"
+                      - id: "/registro_item04_necesidad"
+                        title: "🔙 Volver"
+                button: "Opciones"
+
+  # >> 4.4.1... SUBNECESIDAD 01
+  utter_registro_item04_subnecesidad_01:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 *¿Qué necesito?*
+
+                📑 Declaración Jurada de no tener hijos menores de edad:
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737132063/DECLARACION_JURADA_DE_NO_TENER_HIJOS_MENORES_DE_EDAD_enqhmt.pdf
+
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📑 Declaración Jurada de no tener hijos mayores con incapacidad:
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737131469/DECLARACION_JURADA_DE_NO_TENER_HIJOS_MAYORES_CON_INCAPACIDAD_mr86fz.pdf
+
+  # >> 4.4.2... SUBNECESIDAD 02
+  utter_registro_item04_subnecesidad_02:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📋 ¿Qué necesito? 
+
+                1. 📑 Adjuntar copia certificada de acta de nacimiento.
+
+                2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+
+  # >> 4.4.3... SUBNECESIDAD 03
+  utter_registro_item04_subnecesidad_03:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📋 *¿Qué necesito?*
+
+                1. 📑 Adjuntar copia certificada de acta de nacimiento.
+
+                2. 📝 Copia certificada de la sentencia judicial firme o acta de conciliación respecto de los regímenes del ejercicio de la patria potestad, alimentos, tenencia y visita.
+
+                3. 🏛️ Anexar copias certificadas de las sentencias judiciales firmes que declaren la interdicción del hijo mayor con incapacidad.
+
+  # >> 4.4.4... SUBNECESIDAD 04
+  utter_registro_item04_subnecesidad_04:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: true
+              body: |
+                📋 *¿Qué necesito?*
+
+                🚫 *En caso de no tener bienes:*
+                
+                📑 Declaración Jurada de carecer bienes sujetos al Régimen de Sociedad de Gananciales
+
+                🔗 https://res.cloudinary.com/dvult5ws1/image/upload/v1737131454/DECLARACION_JURADA_DE_CARECER_DE_BIENES_SUJETOS_AL_REGIMEN_DE_SOCIEDADES_GANANCIALES_ghbnve.pdf
+
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                🏠 *En caso de separación de patrimonios:* Presentar escritura pública registrada.
+
+                🔄 *En caso de cambio o liquidación de régimen:* Presentar escritura pública registrada del cambio o liquidación.

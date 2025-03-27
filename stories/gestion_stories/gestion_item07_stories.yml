@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 2.7. STORIES - INSPECCIÓN RIESGO MUY ALTO :
+- story: inspeccion riesgo muy alto
+  steps:
+  - intent: gestion_item07
+  - action: utter_gestion_item07
+  - action: action_set_reminder
+
+# >> 2.7... STORIES - CONSULTA
+- story: inspeccion riesgo muy alto consulta
+  steps:
+  - intent: gestion_item07_consulta
+  - action: utter_gestion_item07_consulta
+  - action: action_set_reminder
+
+# >> 2.7... STORIES - NECESIDAD
+- story: inspeccion riesgo muy alto necesidad
+  steps:
+  - intent: gestion_item07_necesidad
+  - action: utter_gestion_item07_necesidad
+  - action: action_set_reminder
+
+# >> 2.7... STORIES - COSTO
+- story: inspeccion riesgo muy alto costo
+  steps:
+  - intent: gestion_item07_costo
+  - action: utter_gestion_item07_costo
+  - action: action_set_reminder

@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+# >> 2.10. STORIES - DUPLICADO CERTIFICADO DE INSPECCIÓN TÉCNICA :
+- story: renovacion riesgo muy alto
+  steps:
+  - intent: gestion_item10
+  - action: utter_gestion_item10
+  - action: action_set_reminder
+
+# >> 2.10... STORIES - CONSULTA
+- story: renovacion riesgo muy alto consulta
+  steps:
+  - intent: gestion_item10_consulta
+  - action: utter_gestion_item10_consulta
+  - action: action_set_reminder
+
+# >> 2.10... STORIES - NECESIDAD
+- story: renovacion riesgo muy alto necesidad
+  steps:
+  - intent: gestion_item10_necesidad
+  - action: utter_gestion_item10_necesidad
+  - action: action_set_reminder
+
+# >> 2.10... STORIES - COSTO
+- story: renovacion riesgo muy alto costo
+  steps:
+  - intent: gestion_item10_costo
+  - action: utter_gestion_item10_costo
+  - action: action_set_reminder

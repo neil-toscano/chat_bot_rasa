@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+# >> 1.1. STORIES - LICENCIA DE FUNCIONAMIENTO DE EDIFICACIONES DE RIESGO BAJO :
+- story: licencia funcionamiento riesgo bajo
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - CONSULTA
+- story: licencia funcionamiento riego bajo que es
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_es
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - NECESIDAD
+- story: licencia funcionamiento riesgo bajo que necesito
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_que_necesito
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - REQUISITO ESPECIAL SALUD
+- story: licencia funcionamiento riesgo bajo requisito especial salud
+  steps:
+  - intent: servicio_de_salud
+  - action: utter_servicio_de_salud
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - REQUISITO ESPECIAL AUTORIZACION
+- story: licencia funcionamiento riesgo bajo requisito especial autorizacion
+  steps:
+  - intent: actividad_requiere_autorizacion
+  - action: utter_actividad_requiere_autorizacion
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - REQUISITO ESPECIAL PATRIMONIO CULTURAL
+- story: licencia funcionamiento riesgo bajo requisito especial patrimonio cultural
+  steps:
+  - intent: monumento_del_patrimonio_cultural
+  - action: utter_monumento_del_patrimonio_cultural
+  - action: action_set_reminder
+
+# >> 1.1... STORIES - CUANTO CUESTA
+- story: licencia funcionamiento riesgo bajo que cuanto cuesta
+  steps:
+  - intent: licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: utter_licencia_funcionamiento_edificacion_riesgo_bajo_cuanto_cuesta
+  - action: action_set_reminder

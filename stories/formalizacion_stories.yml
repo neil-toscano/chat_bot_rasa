@@ -1,0 +1,12 @@
+version: "3.1"
+
+# >> 1. STORIES - FORMALIZACIÓN Y PROMOCIÓN EMPRESARIAL :
+stories:
+
+- story: formalizacion y promocion empresarial
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: formalizacion_promocion_empresarial
+  - action: utter_formalizacion_promocion_empresarial
+  - action: action_set_reminder

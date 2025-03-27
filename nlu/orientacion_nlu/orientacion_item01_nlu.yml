@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+  # >> 3.1. NLU - CERTIFICADO DE PARÁMETROS :
+  - intent: orientacion_item01
+    examples: |
+      - Inscripción por Sucesión Indivisa
+      - Inscripción Sucesión Indivisa
+      - Sucesión Indivisa
+
+  # >> 3.1... NLU - CONSULTA
+  - intent: orientacion_item01_consulta
+    examples: |
+      - Qué es la Inscripción por Sucesión Indivisa
+      - Qué es la Sucesión Indivisa
+      - En que consiste la Inscripción por Sucesión Indivisa
+
+  # >> 3.1... NLU - NECESIDAD
+  - intent: orientacion_item01_necesidad
+    examples: |
+      - Qué necesito para la Inscripción por Sucesión Indivisa
+      - Qué necesito para la Sucesión Indivisa
+      - Qué requisitos piden para la Inscripción por Sucesión Indivisa
+
+  # >> 3.1... NLU - COSTO
+  - intent: orientacion_item01_costo
+    examples: |
+      - Cuánto cuesta la Inscripción por Sucesión Indivisa
+      - Cuánto cuesta la Sucesión Indivisa
+      - Cuánto debo pagar por la Inscripción por Sucesión Indivisa
+      - Cuánto es el monto de la Inscripción por Sucesión Indivisa

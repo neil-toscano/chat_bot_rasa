@@ -1,0 +1,40 @@
+version: "3.1"
+
+intents:
+  - carnet_sanidad
+  - carnet_sanidad_no_manipular_alimentos
+  - carnet_sanidad_manipulacion_alimentos
+  - certificado_prenupcial
+
+responses:
+  # >> 5. SANIDAD :
+  utter_carnet_sanidad:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              header:
+                type: text
+                text: "🟢 Opciones de Bienestar Social y Salud:"
+              body:
+                text: |
+                  1. 📜 Carnet de Sanidad no manipulador de alimentos
+                  2. 🍎 Curso sobre manipulaciòn de alimentos
+                  3. 📜 Certificado pre nupcial por persona
+
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoge la opción"
+                    rows:
+                      - id: "/carnet_sanidad_no_manipular_alimentos"
+                        title: "1.📜No manipular"
+                      - id: "/carnet_sanidad_manipulacion_alimentos"
+                        title: "2.🍴Manipulación"
+                      - id: "/certificado_prenupcial"
+                        title: "3.💍Prenupcial"
+                button: "Seleccionar Opción"

@@ -1,0 +1,85 @@
+version: "3.1"
+
+intents:
+  - orientacion_item04_consulta
+  - orientacion_item04_necesidad
+  - orientacion_item04_costo
+
+responses:
+  # >> 3.4. INDEPENDIZACIÓN O SUBDIVISIÓN DE LOTES
+  utter_orientacion_item04:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  🗺️ Has seleccionado *Inscripción de una Independización o Subdivisión de Lotes*
+
+                  ❓ *Opciones de pregunta:* 
+
+                  1. 📄 ¿Qué es?  
+
+                  2. 📋 ¿Qué necesito?  
+
+                  3. 💵 ¿Cuánto cuesta el derecho de trámite?
+
+                  ↪️ Puedes iniciar el trámite para solicitar cita para inscripción por sucesión intestada en el siguiente link  👉: http://gestioncitas.munisjl.gob.pe/
+
+              footer:
+                text: "*Seleccione la opción abajo 👇*"
+
+              action:
+                sections:
+                  - title: "Escoge la pregunta"
+                    rows:
+                      - id: "/orientacion_item04_consulta"
+                        title: "📄 ¿Qué es?"
+                      - id: "/orientacion_item04_necesidad"
+                        title: "📋 ¿Qué necesito?"
+                      - id: "/orientacion_item04_costo"
+                        title: "💵 ¿Cuánto cuesta?"
+                button: "✅ Opciones"
+
+  # >> 3.4... CONSULTA
+  utter_orientacion_item04_consulta:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📜 Es el registro de la división de un terreno o propiedad en lotes individuales.
+
+                *¿Para qué es necesario?*
+
+                🏘️ Para formalizar y legalizar la subdivisión, permitiendo que cada lote tenga su propia partida registral y pueda ser vendido o gestionado independientemente.
+
+  # >> 3.4... NECESIDAD
+  utter_orientacion_item04_necesidad:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                📋 *Requisitos para el trámite:*
+
+                1. 📄 Copia literal o partida electrónica con todos los asientos.
+
+                2. 📜 Certificados literales o partidas electrónicas de las unidades inmobiliarias, secciones, sublotes y otros.
+
+                3. 🆔 Exhibición del DNI.
+
+  # >> 3.4... COSTO
+  utter_orientacion_item04_costo:
+    - custom:
+        blocks:
+          - type: text
+            text:
+              preview_url: false
+              body: |
+                *Costo del trámite* 👇
+                
+                💸 GRATUITO

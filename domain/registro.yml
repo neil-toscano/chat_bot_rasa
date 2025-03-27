@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - registro
+  - registro_item01
+  - registro_item02
+  - registro_item03
+  - registro_item04
+
+responses:
+  # >> 4. REGISTRO CIVIL :
+  utter_registro:
+    - custom:
+        blocks:
+          - type: interactive
+            interactive:
+              type: list
+              body:
+                text: |
+                  🟢 Has seleccionado *Matrimonios y Divorcios*
+
+                  👇 Opciones de trámite:
+
+                  1. 💍 Matrimonio Civil  
+
+                  2. 📜 Publicación de Edicto Matrimonial tramitado en otros distritos  
+
+                  3. 🔄 Reprogramación de fecha y hora de Ceremonia Matrimonial  
+
+                  4. 💔 Separación Convencional y Divorcio Ulterior: Separación Convencional
+
+                  🌐 La documentación necesaria lo encontrará en el siguiente LINK 👉: https://web.munisjl.gob.pe/web/matrimonios.php
+
+              footer:
+                text: "*Seleccione la opción abajo* 👇"
+
+              # >> LISTADO DE OPCIONES :
+              action:
+                sections:
+                  - title: "Escoga el trámite"
+                    rows:
+                      - id: "/registro_item01"
+                        title: "1. 💍 MATRIMONIO"
+                      - id: "/registro_item02"
+                        title: "2. 📜 PUBLICACIÓN"
+                      - id: "/registro_item03"
+                        title: "3. 🔄 REPROGRAMACIÓN"
+                      - id: "/registro_item04"
+                        title: "4. 💔 SEPARACIÓN"
+                button: "✅ Opciones"

@@ -1,0 +1,37 @@
+version: "3.1"
+
+nlu:
+
+# >> 2.4. NLU - RENOVACIÓN RIESGO MEDIO :
+- intent: gestion_item04
+  examples: |
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones para establecimientos objeto de inspección clasificados con Nivel de Riesgo Medio
+    - Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Renovación de Inspección Técnica Riesgo Medio
+    - Renovación Riesgo Medio
+
+# >> 2.4... NLU - CONSULTA
+- intent: gestion_item04_consulta
+  examples: |
+    - Qué es la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué es la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - En que consiste la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - Qué es la Renovación de Inspección Técnica Riesgo Medio
+    - Qué es la Renovación Riesgo Medio
+
+# >> 2.4... NLU - NECESIDAD
+- intent: gestion_item04_necesidad
+  examples: |
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Qué necesito para la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - Qué necesito para la Renovación Inspección Técnica Riesgo Medio
+    - Qué requisitos piden para la la Renovación de Inspección Técnica Riesgo Medio
+
+# >> 2.4... NLU - COSTO
+- intent: gestion_item04_costo
+  examples: |
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Seguridad en edificaciones de Nivel Riesgo Medio
+    - Cuánto cuesta la Renovación del Certificado de Inspección Técnica de Nivel Riesgo Medio
+    - Cuánto debo pagar por la Renovación Inspección Técnica Riesgo Medio
+    - Cuánto es el monto de la Renovación Inspección Técnica Riesgo Medio
